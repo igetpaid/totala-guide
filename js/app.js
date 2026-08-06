@@ -1,10 +1,11 @@
-// app.js — Routing and app logic
-
 const App = {
   currentView: "home",
   currentTier: 1,
   currentTab: "units",
   history: [],
+  _unitDetailId: null,
+  _scrollPosition: 0,
+  _buildTab: "t1",
 
   init() {
     this.render();
@@ -12,10 +13,14 @@ const App = {
   },
 
   navigate(view, params) {
+    this._scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    
     this.history.push({
       view: this.currentView,
       tier: this.currentTier,
-      tab: this.currentTab
+      tab: this.currentTab,
+      scroll: this._scrollPosition,
+      buildTab: this._buildTab
     });
 
     this.currentView = view;
@@ -24,13 +29,17 @@ const App = {
       this.currentTab = "units";
       this.currentTier = (params && params.tier) || this.currentTier;
     } else if (view === "buildings") {
-      this.currentTab = (params && params.tab) || "t1";
+      this.currentTab = "buildings";
+      this._buildTab = (params && params.tab) || this._buildTab || "t1";
       this.currentTier = (params && params.tier) || this.currentTier;
     } else if (view === "unit-detail") {
       this._unitDetailId = params ? params.unitId : null;
     }
 
     this.render();
+    if (view === "unit-detail") {
+      window.scrollTo(0, 0);
+    }
   },
 
   render() {
@@ -46,7 +55,7 @@ const App = {
         content = UI.renderUnitGrid(this.currentTier);
         break;
       case "buildings":
-        content = UI.renderBuildingGrid(this.currentTab);
+        content = UI.renderBuildingGrid(this._buildTab || "t1");
         break;
       case "unit-detail":
         content = UI.renderUnitDetail(this._unitDetailId);
@@ -66,7 +75,13 @@ const App = {
 
     content += this.renderBottomNav();
     el.innerHTML = content;
-    window.scrollTo(0, 0);
+    
+    if (this.history.length > 0 && this.currentView !== "unit-detail") {
+      const lastEntry = this.history[this.history.length - 1];
+      if (lastEntry && lastEntry.scroll) {
+        requestAnimationFrame(() => window.scrollTo(0, lastEntry.scroll));
+      }
+    }
   },
 
   goBack() {
@@ -79,39 +94,51 @@ const App = {
     this.currentView = prev.view;
     this.currentTier = prev.tier;
     this.currentTab = prev.tab;
+    if (prev.buildTab) this._buildTab = prev.buildTab;
     this.render();
+    if (prev.scroll) {
+      requestAnimationFrame(() => window.scrollTo(0, prev.scroll));
+    }
   },
 
   setTier(tier) {
     this.currentTier = tier;
     this.render();
+    window.scrollTo(0, 0);
   },
 
   setTab(tab) {
     this.currentTab = tab;
-    if (tab === 'units') {
-      this.currentView = 'units';
-    } else if (tab === 'buildings' || tab === 'commander' || tab === 't1' || tab === 't2' || tab === 't3' || tab === 't4') {
-      this.currentView = 'buildings';
-      if (tab === 'buildings') {
-        this.currentTab = 't1';
-      }
-    } else {
-      this.currentView = tab;
-    }
+    this.currentView = tab;
     this.history = [];
     this.render();
+    window.scrollTo(0, 0);
   },
 
   setBuildTab(subtab) {
-    this.currentTab = subtab;
+    this._buildTab = subtab;
     this.render();
+    window.scrollTo(0, 0);
+  },
+
+  getFontSize() {
+    const stored = localStorage.getItem('ta-font-size');
+    return stored ? parseInt(stored) : 100;
+  },
+
+  changeFontSize(delta) {
+    let size = this.getFontSize() + (delta * 10);
+    size = Math.max(70, Math.min(150, size));
+    localStorage.setItem('ta-font-size', size);
+    document.documentElement.style.fontSize = size + '%';
+    const display = document.getElementById('font-size-display');
+    if (display) display.textContent = size + '%';
   },
 
   renderBottomNav() {
     const items = [
       { view: "units", icon: "&#9876;", label: "Юниты" },
-      { view: "t1", icon: "&#9881;", label: "Постройки" },
+      { view: "buildings", icon: "&#9881;", label: "Постройки" },
       { view: "tips", icon: "&#128161;", label: "Советы" },
       { view: "faq", icon: "&#10067;", label: "FAQ" }
     ];
@@ -120,7 +147,7 @@ const App = {
     for (const item of items) {
       let active = false;
       if (item.view === "units" && this.currentView === "units") active = true;
-      if (item.view === "t1" && this.currentView === "buildings") active = true;
+      if (item.view === "buildings" && this.currentView === "buildings") active = true;
       if (item.view === "tips" && this.currentView === "tips") active = true;
       if (item.view === "faq" && this.currentView === "faq") active = true;
 
@@ -135,4 +162,8 @@ const App = {
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => App.init());
+document.addEventListener("DOMContentLoaded", () => {
+  const savedSize = localStorage.getItem('ta-font-size');
+  if (savedSize) document.documentElement.style.fontSize = savedSize + '%';
+  App.init();
+});

@@ -282,6 +282,45 @@ const CATEGORY_COLORS = {
   "Other": "#bdbdbd"
 };
 
+const BUILDER_IMAGES = {
+  "Kbot Lab": "ARMLAB.png",
+  "Vehicle Plant": "ARMVP.png",
+  "Aircraft Plant": "ARMAP.png",
+  "Shipyard": "ARMSY.png",
+  "Hovercraft Platform": "ARMHP.png",
+  "Adv. Kbot Lab": "ARMALAB.png",
+  "Adv. Vehicle Plant": "ARMAVP.png",
+  "Adv. Aircraft Plant": "ARMAAP.png",
+  "Adv. Shipyard": "ARMASY.png",
+  "Adv. Hovercraft Platform": "ARMAHP.png",
+  "Ultra Kbot Assembler": "ARMELAB.png",
+  "Ultra Vehicle Plant": "ARMGANT.png",
+  "Ultra Aircraft Hangar": "ARMFAB.png",
+  "Capital Shipyard": "ARMESY.png",
+  "Ultra Hovercraft Lab": "ARMEHP.png",
+  "Fleet Shipyard": "ARMSSY.png",
+  "Construction KBot": "ARMCK.png",
+  "Construction Vehicle": "ARMCV.png",
+  "Construction Aircraft": "ARMCA.png",
+  "Construction Ship": "ARMCS.png",
+  "Construction Hovercraft": "ARMCH.png",
+  "Adv. Construction KBot": "ARMACK.png",
+  "Adv. Construction Vehicle": "ARMACV.png",
+  "Adv. Construction Aircraft": "ARMACA.png",
+  "Adv. Construction Ship": "ARMACSUB.png",
+  "Adv. Construction Hovercraft": "ARMACH.png",
+  "Ultra Construction Kbot": "ARMECK.png",
+  "Ultra Construction Vehicle": "ARMECV.png",
+  "Ultra Construction Aircraft": "ARMECA.png",
+  "Ultra Construction Ship": "ARMECS.png",
+  "Ultra Construction Hovercraft": "ARMECH.png",
+  "Exp. Construction Vehicle": "ARMVCAR.png",
+  "Exp. Construction Hovercraft": "ARMUCH.png",
+  "Exp. Unit Fabricator": "ARMGANT.png",
+  "Research Facility": "ARMTECH.png",
+  "Defense Facility T3": "ARMSTUN.png",
+};
+
 const UI = {
   renderHome() {
     return `
@@ -312,6 +351,11 @@ const UI = {
             <span>Настройки</span>
           </button>
         </div>
+        <div class="font-controls">
+          <button class="font-btn" onclick="App.changeFontSize(-1)">A-</button>
+          <span class="font-size-label" id="font-size-display">${App.getFontSize()}%</span>
+          <button class="font-btn" onclick="App.changeFontSize(1)">A+</button>
+        </div>
       </div>
     `;
   },
@@ -323,18 +367,34 @@ const UI = {
       <h2>Юниты — T${tier}</h2>
     </div>`;
     html += this.renderTierTabs(tier, "units");
-
+  
+    // Category dropdown
     const categories = ["Kbot", "Vehicle", "Aircraft", "Navy", "Hovercraft"];
+    const presentCats = categories.filter(c => groups[c] && groups[c].length > 0);
+    if (presentCats.length > 1) {
+      html += `<div class="cat-dropdown">
+        <button class="cat-dropdown-btn" onclick="document.getElementById('cat-menu').classList.toggle('open')">
+          Род войск &#9662;
+        </button>
+        <div id="cat-menu" class="cat-dropdown-menu">
+          ${presentCats.map(c => {
+            const color = this.getCategoryColor(c);
+            return `<div class="cat-dropdown-item" style="color:${color}" onclick="document.getElementById('cat-menu').classList.remove('open');document.getElementById('cat-${c.toLowerCase()}').scrollIntoView({behavior:'smooth'})">${c}</div>`;
+          }).join('')}
+        </div>
+      </div>`;
+    }
+
     for (const cat of categories) {
       const units = groups[cat];
       if (!units || units.length === 0) continue;
       const color = this.getCategoryColor(cat);
-      html += `<div class="category-header" style="color:${color}">${cat}</div>`;
+      html += `<div id="cat-${cat.toLowerCase()}" class="category-header" style="color:${color}">${cat}</div>`;
       html += `<div class="card-grid">`;
       for (const u of units) {
         const img = this.getUnitImage(u);
         const imgTag = img
-          ? `<img src="unitpics/${img}" alt="${u.name}" class="card-icon" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-icon-placeholder" style="display:none">${u.name.charAt(0)}</div>`
+          ? `<img src="unitpics/${img}" alt="${u.name}" class="card-icon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-icon-placeholder" style="display:none">${u.name.charAt(0)}</div>`
           : `<div class="card-icon-placeholder">${u.name.charAt(0)}</div>`;
         html += `
           <div class="card" onclick="App.navigate('unit-detail',{unitId:'${u.id}'})">
@@ -357,16 +417,32 @@ const UI = {
     html += this.renderBuildTabs(builderType);
 
     const categories = ["Defensive Structures", "Buildings", "Economy", "Other"];
+    const presentCats = categories.filter(c => groups[c] && groups[c].length > 0);
+    if (presentCats.length > 1) {
+      html += `<div class="cat-dropdown">
+        <button class="cat-dropdown-btn" onclick="document.getElementById('cat-menu').classList.toggle('open')">
+          Род войск &#9662;
+        </button>
+        <div id="cat-menu" class="cat-dropdown-menu">
+          ${presentCats.map(c => {
+            const color = this.getCategoryColor(c);
+            return `<div class="cat-dropdown-item" style="color:${color}" onclick="document.getElementById('cat-menu').classList.remove('open');document.getElementById('cat-${c.toLowerCase().replace(/ /g, '-')}').scrollIntoView({behavior:'smooth'})">${c}</div>`;
+          }).join('')}
+        </div>
+      </div>`;
+    }
+
     for (const cat of categories) {
       const units = groups[cat];
       if (!units || units.length === 0) continue;
       const color = this.getCategoryColor(cat);
-      html += `<div class="category-header" style="color:${color}">${cat}</div>`;
+      const catId = cat.toLowerCase().replace(/ /g, '-');
+      html += `<div id="cat-${catId}" class="category-header" style="color:${color}">${cat}</div>`;
       html += `<div class="card-grid">`;
       for (const u of units) {
         const img = this.getUnitImage(u);
         const imgTag = img
-          ? `<img src="unitpics/${img}" alt="${u.name}" class="card-icon" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-icon-placeholder" style="display:none">${u.name.charAt(0)}</div>`
+          ? `<img src="unitpics/${img}" alt="${u.name}" class="card-icon" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="card-icon-placeholder" style="display:none">${u.name.charAt(0)}</div>`
           : `<div class="card-icon-placeholder">${u.name.charAt(0)}</div>`;
         html += `
           <div class="card" onclick="App.navigate('unit-detail',{unitId:'${u.id}'})">
@@ -448,14 +524,10 @@ const UI = {
     if (unit.weaknesses && unit.weaknesses.length) {
       html += `<div class="detail-section"><h3>Слабые стороны</h3>${this.renderTags(unit.weaknesses, "weakness")}</div>`;
     }
-    if (unit.counters && unit.counters.length) {
-      html += `<div class="detail-section"><h3>Считает</h3>${this.renderTags(unit.counters, "info")}</div>`;
-    }
-    if (unit.counteredBy && unit.counteredBy.length) {
-      html += `<div class="detail-section"><h3>Считается</h3>${this.renderTags(unit.counteredBy, "info")}</div>`;
-    }
     if (unit.builtAt) {
-      html += `<div class="detail-section"><h3>Строится в</h3><p>${unit.builtAt}</p></div>`;
+      const builderImg = BUILDER_IMAGES[unit.builtAt];
+      const builderImgTag = builderImg ? `<img src="unitpics/${builderImg}" style="width:24px;height:24px;vertical-align:middle;margin-right:6px;border-radius:3px" onerror="this.style.display='none'">` : '';
+      html += `<div class="detail-section"><h3>Строится в</h3><p>${builderImgTag}${unit.builtAt}</p></div>`;
     }
     if (unit.abilities && unit.abilities.length) {
       html += `<div class="detail-section"><h3>Особые способности</h3>${this.renderTags(unit.abilities, "special")}</div>`;
@@ -508,8 +580,8 @@ const UI = {
 
   renderFAQ() {
     const items = [
-      { q: "Как автоматически убирать деревья?", a: "В ESC: Conveyors собирают ресурсы автоматически. Или используй Reclaim." },
-      { q: "Как закрепить юнита за другим (Guard)?", a: "Выдели юнита \u2192 нажми G \u2192 кликни на цель. Юнит будет чинить и защищать." },
+      { q: "Как автоматически убирать деревья?", a: "Нужно выбрать летающего рабочего, нажать Patrol и отправить его в нужное место. Он уберет все деревья по пути. Проверено только на летающих рабочих." },
+      { q: "Как закрепить юнита за другим (Guard)?", a: "Выдели первый юнит, нажми Guard (защищать), нажми на второй юнит. Первый будет ходить вокруг второго, защищать и по возможности чинить его." },
       { q: "Что делает Adjacency Bonus?", a: "Здание рядом с источником энергии получает бонус к производству." },
       { q: "Как работают щиты?", a: "Щиты (Shield Generator) поглощают урон. Self-Heal восстанавливает их." },
       { q: "Как работает телепорт?", a: "Teleporter Kbot или Galactic Gates перемещают юнитов на огромные расстояния." },

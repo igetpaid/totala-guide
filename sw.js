@@ -1,5 +1,5 @@
-const CACHE_NAME = 'ta-esc-guide-v1';
-const ASSETS = [
+const CACHE_NAME = 'ta-esc-guide-v2';
+const STATIC_ASSETS = [
   '.',
   'index.html',
   'css/style.css',
@@ -14,7 +14,7 @@ const ASSETS = [
 self.addEventListener('install', e => {
   e.waitUntil(
     caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(ASSETS))
+      .then(cache => cache.addAll(STATIC_ASSETS))
       .then(() => self.skipWaiting())
   );
 });
@@ -29,6 +29,19 @@ self.addEventListener('activate', e => {
 
 self.addEventListener('fetch', e => {
   e.respondWith(
-    caches.match(e.request).then(r => r || fetch(e.request))
+    caches.match(e.request).then(r => {
+      if (r) return r;
+      return fetch(e.request).then(response => {
+        if (response.ok && e.request.url.includes('unitpics/')) {
+          const cloned = response.clone();
+          caches.open(CACHE_NAME).then(cache => cache.put(e.request, cloned));
+        }
+        return response;
+      }).catch(() => {
+        if (e.request.url.includes('unitpics/')) {
+          return new Response('', { status: 404 });
+        }
+      });
+    })
   );
 });
