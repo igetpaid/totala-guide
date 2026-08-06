@@ -24,7 +24,7 @@ const App = {
       this.currentTab = "units";
       this.currentTier = (params && params.tier) || this.currentTier;
     } else if (view === "buildings") {
-      this.currentTab = "buildings";
+      this.currentTab = (params && params.tab) || "t1";
       this.currentTier = (params && params.tier) || this.currentTier;
     } else if (view === "unit-detail") {
       this._unitDetailId = params ? params.unitId : null;
@@ -46,7 +46,7 @@ const App = {
         content = UI.renderUnitGrid(this.currentTier);
         break;
       case "buildings":
-        content = UI.renderBuildingGrid(this.currentTier);
+        content = UI.renderBuildingGrid(this.currentTab);
         break;
       case "unit-detail":
         content = UI.renderUnitDetail(this._unitDetailId);
@@ -89,15 +89,29 @@ const App = {
 
   setTab(tab) {
     this.currentTab = tab;
-    this.currentView = tab === "buildings" ? "buildings" : "units";
+    if (tab === 'units') {
+      this.currentView = 'units';
+    } else if (tab === 'buildings' || tab === 'commander' || tab === 't1' || tab === 't2' || tab === 't3' || tab === 't4') {
+      this.currentView = 'buildings';
+      if (tab === 'buildings') {
+        this.currentTab = 't1';
+      }
+    } else {
+      this.currentView = tab;
+    }
     this.history = [];
+    this.render();
+  },
+
+  setBuildTab(subtab) {
+    this.currentTab = subtab;
     this.render();
   },
 
   renderBottomNav() {
     const items = [
       { view: "units", icon: "&#9876;", label: "Юниты" },
-      { view: "buildings", icon: "&#9881;", label: "Постройки" },
+      { view: "t1", icon: "&#9881;", label: "Постройки" },
       { view: "tips", icon: "&#128161;", label: "Советы" },
       { view: "faq", icon: "&#10067;", label: "FAQ" }
     ];
@@ -106,7 +120,7 @@ const App = {
     for (const item of items) {
       let active = false;
       if (item.view === "units" && this.currentView === "units") active = true;
-      if (item.view === "buildings" && this.currentView === "buildings") active = true;
+      if (item.view === "t1" && this.currentView === "buildings") active = true;
       if (item.view === "tips" && this.currentView === "tips") active = true;
       if (item.view === "faq" && this.currentView === "faq") active = true;
 

@@ -79,6 +79,41 @@ const UNIT_IMAGES = {
   arm_maverick: "ARMMAV.png",
   arm_shooter: "ARMSNIPE.png",
   arm_pelican: "ARMAMPH.png",
+  arm_ackbot: "ARMACK.png",
+  arm_acv: "ARMACV.png",
+  arm_aea: "ARMACA.png",
+  arm_acsub: "ARMACSUB.png",
+  arm_jammer: "ARMJAM.png",
+  arm_freedom: "ARMFIG.png",
+  arm_commander2: "ARMDECOM.png",
+  arm_luger: "ARMMART.png",
+  arm_phalanx: "ARMYORK.png",
+  arm_scarab: "ARMSCAB.png",
+  arm_spot: "ARMSPOT.png",
+  arm_skycrane: "ARMMUAT.png",
+  arm_archer: "ARMAAS.png",
+  arm_ahover: "ARMACH.png",
+  arm_ucbot: "ARMECK.png",
+  arm_cerberus2: "ARMCERB.png",
+  arm_ucv: "ARMECV.png",
+  arm_uca: "ARMECA.png",
+  arm_ucus: "ARMECS.png",
+  arm_fibber3: "ARMSCRAM.png",
+  arm_uchover: "ARMECH.png",
+  arm_oracle: "ARMHOMNI.png",
+  arm_umme: "ARMUWMAS.png",
+  arm_rfac: "ARMTECH.png",
+  arm_mme: "ARMMAS.png",
+  arm_supremacy: "ARMFFLAG.png",
+  arm_liberator: "ARMHFLAG.png",
+  arm_armada: "ARMUSCAR.png",
+  arm_abyssal: "ARMUSUB.png",
+  arm_apocalypse: "ARMNUKEBOMBER.png",
+  arm_econ: "ARMUCH.png",
+  arm_panopticon: "ARMZIG.png",
+  arm_max_intel: "ALL_OMNI.png",
+  arm_triumph: "ARMFLAG.png",
+  arm_custodian: "ARMVCAR.png",
   arm_cv2: "ARMACV.png",
   arm_seer: "ARMSEER.png",
   arm_bulldog: "ARMBULL.png",
@@ -175,6 +210,64 @@ const UNIT_IMAGES = {
   arm_mantle: "ARMMAS.png",
   arm_aegis: "ARMSHGEN.png",
   arm_tantalus: "ARMOMNI.png",
+  arm_vulcan: "ARMVULC.png",
+  arm_tidal: "ARMTIDE.png",
+  arm_wind: "ARMWIN.png",
+  arm_solar: "ARMSOLAR.png",
+  arm_ewstore: "ARMESTOR.png",
+  arm_mstorage: "ARMMSTOR.png",
+  arm_mex: "ARMMEX.png",
+  arm_mm: "ARMMAKR.png",
+  arm_geo: "ARMGEO.png",
+  arm_radar: "ARMRAD.png",
+  arm_repair: "ARMASP.png",
+  arm_dteeth: "ARMDRAG.png",
+  arm_fradar: "ARMFRAD.png",
+  arm_uw_estore: "ARMUWES.png",
+  arm_uw_mstore: "ARMUWMS.png",
+  arm_uw_mex: "ARMUWMEX.png",
+  arm_uw_mm: "ARMFMKR.png",
+  arm_sea_teeth: "ARMFDRAG.png",
+  arm_sonar: "ARMSONAR.png",
+  arm_llt: "ARMLLT.png",
+  arm_fllt: "ARMFLLT.png",
+  arm_sentry: "ARMFRT.png",
+  arm_defender: "ARMRL.png",
+  arm_sentinel: "ARMHLT.png",
+  arm_guardian: "ARMGUARD.png",
+  arm_stingray: "ARMFHLT.png",
+  arm_trident: "ARMFGUARD.png",
+  arm_harpoon: "ARMTL.png",
+  arm_fusion: "ARMFUS.png",
+  arm_rgen: "ARMGEN.png",
+  arm_adv_estore: "ARMSES.png",
+  arm_moho: "ARMMOHO.png",
+  arm_moho_mm: "ARMMMKR.png",
+  arm_adv_radar: "ARMARAD.png",
+  arm_flakker: "ARMFLAK.png",
+  arm_annihilator: "ARMANNI.png",
+  arm_bulwark: "ARMARL.png",
+  arm_slingshot: "ARMAAA.png",
+  arm_orion_t2: "ARMORION.png",
+  arm_ambusher: "ARMAMB.png",
+  arm_moray: "ARMATL.png",
+  arm_veil: "ARMJAMMER.png",
+  arm_protector: "ARMAMD.png",
+  arm_adv_sonar: "ARMASON.png",
+  arm_sonar_jammer: "ARMSONJAM.png",
+  arm_repulsor: "ARMEMP.png",
+  arm_big_bertha: "ARMBRTHA.png",
+  arm_uw_fusion: "ARMUWFUS.png",
+  arm_uw_powerplant: "ARMUWMFUS.png",
+  arm_uw_combined: "ARMUWCS.png",
+  arm_uw_moho: "ARMUWMOHO.png",
+  arm_uw_moho_mm: "ARMUWMMM.png",
+  arm_fort: "ARMFORT.png",
+  arm_umme: "ARMUWMAS.png",
+  arm_rfac: "ARMTECH.png",
+  arm_mme: "ARMMAS.png",
+  arm_aegis: "ARMSHGEN.png",
+  arm_tantalus: "ARMOMNI.png",
   arm_vulcan: "ARMVULC.png"
 };
 
@@ -255,13 +348,13 @@ const UI = {
     return html;
   },
 
-  renderBuildingGrid(tier) {
-    const groups = this.getBuildingsByCategory(tier);
+  renderBuildingGrid(builderType) {
+    const groups = this.getBuildingsByBuilder(builderType);
     let html = `<div class="page-header">
       <button class="back-btn" onclick="App.goBack()">&#8592;</button>
-      <h2>Постройки — T${tier}</h2>
+      <h2>Постройки</h2>
     </div>`;
-    html += this.renderTierTabs(tier, "buildings");
+    html += this.renderBuildTabs(builderType);
 
     const categories = ["Defensive Structures", "Buildings", "Economy", "Other"];
     for (const cat of categories) {
@@ -284,6 +377,23 @@ const UI = {
       }
       html += `</div>`;
     }
+    return html;
+  },
+
+  renderBuildTabs(activeTab) {
+    const tabs = [
+      { id: 'commander', label: 'C' },
+      { id: 't1', label: 'T1' },
+      { id: 't2', label: 'T2' },
+      { id: 't3', label: 'T3' },
+      { id: 't4', label: 'T4' }
+    ];
+    let html = `<div class="tier-tabs">`;
+    for (const tab of tabs) {
+      const cls = tab.id === activeTab ? "tier-tab active" : "tier-tab";
+      html += `<button class="${cls}" onclick="App.setBuildTab('${tab.id}')">${tab.label}</button>`;
+    }
+    html += `</div>`;
     return html;
   },
 
@@ -462,17 +572,46 @@ const UI = {
     return result;
   },
 
-  getBuildingsByCategory(tier) {
+  getBuildingsByBuilder(builderType) {
     const data = (typeof ARM_DATA !== "undefined") ? ARM_DATA : {};
     const units = data.units || [];
     const result = {};
+
     for (const u of units) {
-      if (u.tier === tier && (u.category === "Defense" || u.category === "Building")) {
+      if (u.category !== "Defense" && u.category !== "Building") continue;
+
+      const builtAt = (u.builtAt || "").toLowerCase();
+      const tier = u.tier || 0;
+      let matches = false;
+
+      switch (builderType) {
+        case 'commander':
+          matches = builtAt.includes("commander");
+          break;
+        case 't1':
+          matches = (builtAt.includes("construction kbot") ||
+                     builtAt.includes("construction vehicle") ||
+                     builtAt.includes("construction ship") ||
+                     builtAt.includes("construction hover")) && tier <= 1;
+          break;
+        case 't2':
+          matches = builtAt.includes("adv. construction") && tier <= 2;
+          break;
+        case 't3':
+          matches = builtAt.includes("ultra construction") && tier <= 3;
+          break;
+        case 't4':
+          matches = tier === 4;
+          break;
+      }
+
+      if (matches) {
         const cat = u.category === "Defense" ? "Defensive Structures" : "Buildings";
         if (!result[cat]) result[cat] = [];
         result[cat].push(u);
       }
     }
+
     return result;
   },
 
