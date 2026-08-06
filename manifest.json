@@ -1,0 +1,24 @@
+{
+  "name": "TA:Escalation — Справочник ARM",
+  "short_name": "TA:ESC Guide",
+  "description": "Справочник по юнитам и постройкам ARM — Total Annihilation: Escalation",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#1a1a2e",
+  "theme_color": "#1a1a2e",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "img/icons/icon-192.svg",
+      "sizes": "192x192",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "img/icons/icon-512.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

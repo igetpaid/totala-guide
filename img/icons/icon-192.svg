@@ -1,0 +1,7 @@
+﻿<svg xmlns="http://www.w3.org/2000/svg" width="192" height="192" viewBox="0 0 192 192">
+  <rect width="192" height="192" rx="20" fill="#1a1a2e"/>
+  <rect x="8" y="8" width="176" height="176" rx="16" fill="none" stroke="#e94560" stroke-width="3"/>
+  <text x="96" y="75" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="bold" fill="#e94560">TA</text>
+  <text x="96" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-size="16" fill="#FFF">ESCALATION</text>
+  <text x="96" y="140" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" fill="#888">GUIDE</text>
+</svg>
