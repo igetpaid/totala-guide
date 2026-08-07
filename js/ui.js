@@ -744,21 +744,79 @@ const UI = {
     return html;
   },
 
-  renderTips() {
-    const tips = [
-      { title: "Начало игры", text: "Сначала построй Metal Extractor и Energy. Не забудь про Radar." },
-      { title: "Экономика", text: "Metal = основной ресурс. Energy нужна для стрельбы и щитов. Балансируй." },
-      { title: "Когда строить T2", text: "Когда есть стабильный поток Metal/Energy и оборона." },
-      { title: "Оборона vs Атака", text: "Не только башни! Мобильные юниты важнее." },
-      { title: "AA (Anti-Air)", text: "Всегда имей AA юнитов. Авиация убивает быстро." },
-      { title: "Adjacency Bonus", text: "Ставь фабрики рядом с Fusion Reactor для бонуса." },
-      { title: "Guard", text: "Используй G (Guard) чтобы юниты чинили друг друга." },
-      { title: "Сбор обломков", text: "Используй Flea/Wisp/Scavenger для сбора Metal с обломков." }
-    ];
+  renderTips(subPage) {
+    if (!subPage || subPage === "menu") {
+      return this.renderTipsMenu();
+    } else if (subPage === "general") {
+      return this.renderTipsGeneral();
+    } else if (subPage === "economy") {
+      return this.renderTipsEconomy();
+    } else if (subPage === "combat") {
+      return this.renderTipsCombat();
+    }
+    return this.renderTipsMenu();
+  },
 
+  renderTipsMenu() {
     let html = `<div class="page-header">
       <button class="back-btn" onclick="App.goBack()">&#8592;</button>
       <h2>Советы</h2>
+    </div>
+    <div class="tips-page">`;
+    html += `<div class="menu-btn" onclick="App.navigate('tips',{sub:'general'})" style="margin-bottom:10px">
+      <span class="menu-icon">&#128220;</span><span>Общие советы</span>
+    </div>`;
+    html += `<div class="menu-btn" onclick="App.navigate('tips',{sub:'economy'})" style="margin-bottom:10px">
+      <span class="menu-icon">&#128176;</span><span>Экономика</span>
+    </div>`;
+    html += `<div class="menu-btn" onclick="App.navigate('tips',{sub:'combat'})" style="margin-bottom:10px">
+      <span class="menu-icon">&#9876;</span><span>Бой и тактика</span>
+    </div>`;
+    html += `</div>`;
+    return html;
+  },
+
+  renderTipsGeneral() {
+    const tips = [
+      { title: "Начало игры", text: "Построй Metal Extractor и Energy. Не забудь про Radar." },
+      { title: "AA (Anti-Air)", text: "Всегда имей AA юнитов. Авиация убивает быстро." },
+      { title: "Adjacency Bonus", text: "Ставь фабрики рядом с Fusion Reactor для бонуса." },
+      { title: "Guard", text: "Используй G (Guard) чтобы юниты чинили друг друга." },
+      { title: "Сбор обломков", text: "Используй Flea/Wisp/Scavenger для сбора Metal с обломков." },
+      { title: "Разведка", text: "Отправляй разведчиков регулярно. Знай, где враг." }
+    ];
+    return this.renderTipsList("Общие советы", tips);
+  },
+
+  renderTipsEconomy() {
+    const tips = [
+      { title: "1. Энергетика (+300 E)", text: "Построй несколько солнечных панелей или ветряных мельниц, чтобы выйти в +300 Energy. Это минимальный запуск экономики." },
+      { title: "2. Самолётный завод", text: "Построй самолётный завод (Aircraft Plant)." },
+      { title: "3. Командир на заводе", text: "Закрепи Commander за заводом. Нажми на командира, затем Move, затем на завод. Таким образом самолёты будут строиться быстрее." },
+      { title: "4. Разведчик + рабочие", text: "Сделай самолёт-разведчик и поставь в очередь побольше самолётов-рабочих (Construction Aircraft)." },
+      { title: "5. Рабочий строит панели", text: "Как только сделался рабочий, дай ему команду строить 15-25 солнечных панелей. Чтобы было быстрее, можно с помощью Move добавить к нему в помощь другие самолёты. Либо помогать командиром, но в таком случае нужно точечно помогать строить каждую солнечную панель. Наземные войска не могут следовать за воздушными через Move." },
+      { title: "6. Разведка", text: "Как появится свободное время — отправляй разведчика. Можно управлять им вручную. А можно проще: задать один пункт назначения и проверить его через несколько секунд. Если самолёт не выжил — там враг." },
+      { title: "7. Металл", text: "К этому моменту обычно начинает заканчиваться металл. Самое время построить около 20 экстракторов первого уровня. Начиная с самых богатых и близко расположенных жил." },
+      { title: "8. Баланс", text: "Продолжаем строить до тех пор, пока добыча энергии и металла не станет превышать расходы." },
+      { title: "9. Приоритеты на следующем этапе:", text: "• Оборона от первых атак\n• Завод второго уровня\n• Создание небольшой армии" }
+    ];
+    return this.renderTipsList("Экономика", tips);
+  },
+
+  renderTipsCombat() {
+    const tips = [
+      { title: "Когда строить T2", text: "Когда есть стабильный поток Metal/Energy и оборона." },
+      { title: "Оборона vs Атака", text: "Не только башни! Мобильные юниты важнее." },
+      { title: "Роль AA", text: "Авиация решает исход боя. Без ПВО проиграешь." },
+      { title: "D-Gun", text: "У командора есть D-Gun — оружие мгновенного уничтожения. Используй в крайнем случае." }
+    ];
+    return this.renderTipsList("Бой и тактика", tips);
+  },
+
+  renderTipsList(title, tips) {
+    let html = `<div class="page-header">
+      <button class="back-btn" onclick="App.navigate('tips')">&#8592;</button>
+      <h2>${title}</h2>
     </div>
     <div class="tips-page">`;
     for (let i = 0; i < tips.length; i++) {

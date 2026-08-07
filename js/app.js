@@ -6,6 +6,7 @@ const App = {
   _unitDetailId: null,
   _scrollPosition: 0,
   _buildTab: "t1",
+  _tipsSubPage: null,
   faction: localStorage.getItem('ta-faction') || 'arm',
 
   init() {
@@ -36,6 +37,8 @@ const App = {
       this.currentTier = (params && params.tier) || this.currentTier;
     } else if (view === "unit-detail") {
       this._unitDetailId = params ? params.unitId : null;
+    } else if (view === "tips") {
+      this._tipsSubPage = (params && params.sub) || null;
     }
 
     this.render();
@@ -64,7 +67,7 @@ const App = {
         content = UI.renderUnitDetail(this._unitDetailId);
         break;
       case "tips":
-        content = UI.renderTips();
+        content = UI.renderTips(this._tipsSubPage);
         break;
       case "faq":
         content = UI.renderFAQ();
