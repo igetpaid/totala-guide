@@ -502,11 +502,40 @@ const UI = {
         <div class="stat-row">
           <span>HP: <b>${unit.hp || 0}</b></span>
           <span>Speed: <b>${unit.speed || 0}</b></span>
-          <span>Range: <b>${unit.range || 0}</b></span>
-          <span>Damage: <b>${unit.damage || 0}</b></span>
-          <span>Weapon: <b>${unit.weaponType || "-"}</b></span>
         </div>
       </div>`;
+
+    // Weapon section — separate block with per-weapon details
+    const weapons = unit.weaponDetails || [];
+    if (weapons.length > 0 && unit.damage > 0) {
+      html += `<div class="detail-section"><h3>Оружие</h3>`;
+      for (const w of weapons) {
+        const dps = w.reload > 0 ? ((w.damage * (w.burst || 1)) / w.reload).toFixed(1) : "0";
+        html += `
+          <div style="padding:8px 0;border-bottom:1px solid var(--border)">
+            <div style="font-size:15px;font-weight:600;color:var(--yellow)">${w.id}</div>
+            <div style="font-size:14px;color:var(--text-secondary);margin:4px 0">${w.name || ""}</div>
+            <div class="stat-row" style="flex-wrap:wrap;gap:8px">
+              <span>Урон: <b>${w.damage}</b></span>
+              <span>Дальность: <b>${w.range}</b></span>
+              <span>ДПС: <b>${dps}</b></span>
+              ${w.reload > 0 ? `<span>Перезарядка: <b>${w.reload}с</b></span>` : ''}
+              ${w.aoe > 0 ? `<span>АоЕ: <b>${w.aoe}</b></span>` : ''}
+              ${w.burst > 1 ? `<span>Очередь: <b>${w.burst}</b></span>` : ''}
+            </div>
+          </div>`;
+      }
+      html += `</div>`;
+    } else if (unit.weaponType && unit.weaponType !== "None" && unit.damage > 0) {
+      // Fallback for units with weaponType but no weaponDetails
+      html += `<div class="detail-section"><h3>Оружие</h3>
+        <div class="stat-row">
+          <span>Тип: <b>${unit.weaponType}</b></span>
+          <span>Урон: <b>${unit.damage || 0}</b></span>
+          <span>Дальность: <b>${unit.range || 0}</b></span>
+        </div>
+      </div>`;
+    }
 
     if (unit.description) {
       html += `<div class="detail-section"><h3>Описание</h3><p>${unit.description}</p></div>`;
