@@ -27,3 +27,6 @@ package-lock.json
 
 # User screenshots (not for repo)
 orig_screenshots/
+
+# Extracted game data (local use only)
+game_data/
