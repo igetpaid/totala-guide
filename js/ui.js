@@ -368,13 +368,13 @@ const UI = {
     </div>`;
     html += this.renderTierTabs(tier, "units");
   
-    // Category dropdown
+    // Category dropdown — sticky right-aligned
     const categories = ["Kbot", "Vehicle", "Aircraft", "Navy", "Hovercraft"];
     const presentCats = categories.filter(c => groups[c] && groups[c].length > 0);
     if (presentCats.length > 1) {
-      html += `<div class="cat-dropdown">
-        <button class="cat-dropdown-btn" onclick="document.getElementById('cat-menu').classList.toggle('open')">
-          Род войск &#9662;
+      html += `<div class="cat-fab" id="cat-fab">
+        <button class="cat-fab-btn" onclick="document.getElementById('cat-menu').classList.toggle('open')">
+          Тип &#9660;
         </button>
         <div id="cat-menu" class="cat-dropdown-menu">
           ${presentCats.map(c => {
@@ -419,9 +419,9 @@ const UI = {
     const categories = ["Defensive Structures", "Buildings", "Economy", "Other"];
     const presentCats = categories.filter(c => groups[c] && groups[c].length > 0);
     if (presentCats.length > 1) {
-      html += `<div class="cat-dropdown">
-        <button class="cat-dropdown-btn" onclick="document.getElementById('cat-menu').classList.toggle('open')">
-          Род войск &#9662;
+      html += `<div class="cat-fab" id="cat-fab">
+        <button class="cat-fab-btn" onclick="document.getElementById('cat-menu').classList.toggle('open')">
+          Тип &#9660;
         </button>
         <div id="cat-menu" class="cat-dropdown-menu">
           ${presentCats.map(c => {
@@ -458,7 +458,6 @@ const UI = {
 
   renderBuildTabs(activeTab) {
     const tabs = [
-      { id: 'commander', label: 'C' },
       { id: 't1', label: 'T1' },
       { id: 't2', label: 'T2' },
       { id: 't3', label: 'T3' },
@@ -495,7 +494,7 @@ const UI = {
       </div>
 
       <div class="detail-section">
-        <h3>Стоимость</h3>
+        <h3>Стоимость</h3><span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span> Примерные значения</span>
         <div class="cost-row">
           <span>Metal: <b>${(unit.cost && unit.cost.metal) || 0}</b></span>
           <span>Energy: <b>${(unit.cost && unit.cost.energy) || 0}</b></span>
@@ -504,7 +503,7 @@ const UI = {
       </div>
 
       <div class="detail-section">
-        <h3>Характеристики</h3>
+        <h3>Характеристики</h3><span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span> Примерные значения</span>
         <div class="stat-row">
           <span>HP: <b>${unit.hp || 0}</b></span>
           <span>Speed: <b>${unit.speed || 0}</b></span>
@@ -526,8 +525,8 @@ const UI = {
     }
     if (unit.builtAt) {
       const builderImg = BUILDER_IMAGES[unit.builtAt];
-      const builderImgTag = builderImg ? `<img src="unitpics/${builderImg}" style="width:24px;height:24px;vertical-align:middle;margin-right:6px;border-radius:3px" onerror="this.style.display='none'">` : '';
-      html += `<div class="detail-section"><h3>Строится в</h3><p>${builderImgTag}${unit.builtAt}</p></div>`;
+      const builderImgTag = builderImg ? `<img src="unitpics/${builderImg}" style="width:100px;height:100px;object-fit:cover;border-radius:8px;border:2px solid var(--border);margin-bottom:8px;display:block" onerror="this.style.display='none'">` : '';
+      html += `<div class="detail-section"><h3>Строится в</h3>${builderImgTag}<p>${unit.builtAt}</p></div>`;
     }
     if (unit.abilities && unit.abilities.length) {
       html += `<div class="detail-section"><h3>Особые способности</h3>${this.renderTags(unit.abilities, "special")}</div>`;
@@ -670,7 +669,7 @@ const UI = {
           matches = builtAt.includes("adv. construction") && tier <= 2;
           break;
         case 't3':
-          matches = builtAt.includes("ultra construction") && tier <= 3;
+          matches = tier <= 3;
           break;
         case 't4':
           matches = tier === 4;

@@ -75,12 +75,12 @@ const App = {
 
     content += this.renderBottomNav();
     el.innerHTML = content;
-    
-    if (this.history.length > 0 && this.currentView !== "unit-detail") {
-      const lastEntry = this.history[this.history.length - 1];
-      if (lastEntry && lastEntry.scroll) {
-        requestAnimationFrame(() => window.scrollTo(0, lastEntry.scroll));
-      }
+
+    // Always scroll to top for detail pages and non-list views
+    if (this.currentView === "unit-detail" || this.currentView === "tips" || this.currentView === "faq" || this.currentView === "settings") {
+      window.scrollTo(0, 0);
+      document.documentElement.scrollTop = 0;
+      document.body.scrollTop = 0;
     }
   },
 
