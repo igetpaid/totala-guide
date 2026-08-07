@@ -565,6 +565,7 @@ const UI = {
             ${imgTag}
             <div class="card-name">${u.name}</div>
             <div class="card-desc">${u.role || ""}</div>
+            ${(u.tags || []).length > 0 ? `<div class="card-tags">${(u.tags || []).slice(0, 3).map(t => '<span class="unit-tag">' + t + '</span>').join('')}</div>` : ''}
           </div>`;
       }
       html += `</div>`;
@@ -613,6 +614,7 @@ const UI = {
             ${imgTag}
             <div class="card-name">${u.name}</div>
             <div class="card-desc">${u.role || ""}</div>
+            ${(u.tags || []).length > 0 ? `<div class="card-tags">${(u.tags || []).slice(0, 3).map(t => '<span class="unit-tag">' + t + '</span>').join('')}</div>` : ''}
           </div>`;
       }
       html += `</div>`;
@@ -656,6 +658,19 @@ const UI = {
           <div class="tier-badge">T${unit.tier || "?"}</div>
         </div>
       </div>
+
+      ${(() => {
+        const tags = unit.tags || [];
+        if (tags.length > 0) {
+          return `<div class="detail-section">
+            <h3>Теги</h3>
+            <div class="tag-list">
+              ${tags.map(t => '<span class="unit-tag">' + t + '</span>').join('')}
+            </div>
+          </div>`;
+        }
+        return '';
+      })()}
 
       <div class="detail-section">
         <h3>Стоимость</h3>${this.renderSourceBadge(unit.sourceCost)}

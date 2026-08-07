@@ -322,6 +322,31 @@ body {
 .tag-info { background: rgba(96,165,250,0.12); color: var(--blue); border: 1px solid rgba(96,165,250,0.25); }
 .tag-special { background: rgba(251,191,36,0.12); color: var(--yellow); border: 1px solid rgba(251,191,36,0.25); }
 
+/* Unit tags */
+.unit-tag {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  background: rgba(233, 69, 96, 0.12);
+  color: var(--accent);
+  border: 1px solid rgba(233, 69, 96, 0.25);
+  white-space: nowrap;
+}
+
+.card-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0 8px 6px;
+}
+
+.card-tags .unit-tag {
+  font-size: 10px;
+  padding: 1px 5px;
+}
+
 /* ═══════ TERMS ═══════ */
 .terms-list { font-size: 14px; }
 .term { padding: 4px 0; color: var(--text-secondary); }
