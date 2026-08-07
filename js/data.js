@@ -68,7 +68,7 @@ const ARM_DATA = {
       counteredBy: ["Фрегаты", "Тяжёлые танки", "Артиллерия"],
       builtAt: "Commander (начальный юнит)",
       specialAbilities: ["Строительство всех зданий", "Восстановление сооружений", "Несёт Nuke", "Модули улучшения"],
-      tags: ["Штурм", "Командир", "Дизинтегратор"],
+      tags: ["Командир"],
       image: null,
       hotkey: ""
     },
@@ -100,7 +100,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Kbot Lab",
       specialAbilities: ["Строительство зданий T1", "Ремонт"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -231,7 +231,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды пехоты", "Истребители", "Подвижная артиллерия"],
       builtAt: "Kbot Lab",
       specialAbilities: ["Climbing"],
-      tags: ["Штурм", "Артиллерия", "Ползущий"],
+      tags: ["Артиллерия", "Ползущий"],
       image: null,
       hotkey: "T"
     },
@@ -264,7 +264,7 @@ const ARM_DATA = {
       counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Kbot Lab",
       specialAbilities: [],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: "Y"
     },
@@ -393,7 +393,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Vehicle Plant",
       specialAbilities: ["Строительство зданий T1", "Ремонт"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -558,7 +558,7 @@ const ARM_DATA = {
       counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: "Y"
     },
@@ -622,7 +622,7 @@ const ARM_DATA = {
       counteredBy: ["Flea", "Лёгкие танки", "Артиллерия"],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
-      tags: ["Штурм"],
+      tags: ["Уничтожитель"],
       image: null,
       hotkey: "I"
     },
@@ -654,7 +654,7 @@ const ARM_DATA = {
       counteredBy: ["ПВО", "Истребители"],
       builtAt: "Air Factory",
       specialAbilities: ["Строительство зданий T1", "Ремонт"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -752,7 +752,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитные ракеты", "Истребители", "Маскировка"],
       builtAt: "Air Factory",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия", "Бомбардировщик"],
+      tags: ["Уничтожитель", "Бомбардировщик"],
       image: null,
       hotkey: "R"
     },
@@ -849,7 +849,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Naval Yard",
       specialAbilities: ["Строительство морских зданий"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -915,7 +915,7 @@ const ARM_DATA = {
       counteredBy: ["Zephyr", "Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard",
       specialAbilities: ["Stealth"],
-      tags: ["Торпеды", "Артиллерия"],
+      tags: ["Уничтожитель", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: "E"
     },
@@ -981,7 +981,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard",
       specialAbilities: ["Anti-Submarine"],
-      tags: ["Торпеды", "Артиллерия"],
+      tags: ["Штурм", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: "T"
     },
@@ -1109,7 +1109,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious", "Строительство зданий T1"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -1142,7 +1142,7 @@ const ARM_DATA = {
       counteredBy: ["Zapper", "Танки", "ПВО"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious"],
-      tags: ["Штурм", "Амфибия", "Радар"],
+      tags: ["Амфибия", "Радар"],
       image: null,
       hotkey: "W"
     },
@@ -1206,7 +1206,7 @@ const ARM_DATA = {
       counteredBy: ["Flea", "Лёгкие танки", "Артиллерия"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious"],
-      tags: ["Штурм", "Амфибия"],
+      tags: ["Амфибия"],
       image: null,
       hotkey: "R"
     },
@@ -1239,7 +1239,7 @@ const ARM_DATA = {
       counteredBy: ["Bulldog", "Тяжёлые танки"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious"],
-      tags: ["Штурм", "Амфибия"],
+      tags: ["Амфибия"],
       image: null,
       hotkey: "T"
     },
@@ -1272,7 +1272,7 @@ const ARM_DATA = {
       counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious", "Anti-Air", "Anti-Submarine"],
-      tags: ["ПВО", "Торпеды", "Артиллерия", "Амфибия"],
+      tags: ["Штурм", "ПВО", "Торпеды", "Артиллерия", "Амфибия"],
       image: null,
       hotkey: "Y"
     },
@@ -1336,7 +1336,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious", "Hovercraft Transport"],
-      tags: ["Транспорт", "Амфибия"],
+      tags: ["Уничтожитель", "Транспорт", "Амфибия"],
       image: null,
       hotkey: "I"
     },
@@ -1368,7 +1368,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Kbot Lab T2",
       specialAbilities: ["Строительство зданий T2", "Ремонт"],
-      tags: ["Ползущий"],
+      tags: ["Строитель", "Ползущий"],
       image: null,
       hotkey: "Q"
     },
@@ -1563,7 +1563,7 @@ const ARM_DATA = {
       counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Kbot Lab T2",
       specialAbilities: ["Cloak", "Amphibious", "Radar Jamming"],
-      tags: ["Штурм", "Артиллерия", "Амфибия", "Маскировка", "Радар"],
+      tags: ["Артиллерия", "Амфибия", "Маскировка", "Радар"],
       image: null,
       hotkey: "U"
     },
@@ -1661,7 +1661,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды пехоты", "Артиллерия"],
       builtAt: "Kbot Lab T2",
       specialAbilities: [],
-      tags: ["Рейлган", "Штурм", "Артиллерия"],
+      tags: ["Рейлган", "Артиллерия"],
       image: null,
       hotkey: "P"
     },
@@ -1694,7 +1694,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлые танки", "Артиллерия"],
       builtAt: "Kbot Lab T2",
       specialAbilities: ["Amphibious"],
-      tags: ["Торпеды", "Амфибия"],
+      tags: ["Штурм", "Торпеды", "Амфибия"],
       image: null,
       hotkey: "P"
     },
@@ -1727,7 +1727,7 @@ const ARM_DATA = {
       counteredBy: ["Фрегаты", "Тяжёлые танки", "Артиллерия"],
       builtAt: "Commander (улучшенный)",
       specialAbilities: ["Строительство всех зданий", "Восстановление сооружений", "Несёт Nuke", "Модули улучшения"],
-      tags: ["Штурм", "Командир", "Дизинтегратор"],
+      tags: ["Штурм", "Командир"],
       image: null,
       hotkey: ""
     },
@@ -1759,7 +1759,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: ["Строительство зданий T2", "Ремонт"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -1857,7 +1857,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды пехоты", "Истребители"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: [],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: "R"
     },
@@ -2019,7 +2019,7 @@ const ARM_DATA = {
       counteredBy: ["Bulldog", "Тяжёлые танки"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: ["Stun"],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: "O"
     },
@@ -2052,7 +2052,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды пехоты", "Артиллерия"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Уничтожитель", "Артиллерия"],
       image: null,
       hotkey: "P"
     },
@@ -2148,7 +2148,7 @@ const ARM_DATA = {
       counteredBy: ["ПВО", "Истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Строительство зданий T2", "Ремонт"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -2213,7 +2213,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Stealth"],
-      tags: ["Штурм", "Артиллерия", "Стелс"],
+      tags: ["Стелс"],
       image: null,
       hotkey: "E"
     },
@@ -2245,7 +2245,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: [],
-      tags: ["Бомбардировщик"],
+      tags: ["Уничтожитель", "Бомбардировщик"],
       image: null,
       hotkey: "R"
     },
@@ -2311,7 +2311,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Anti-Submarine"],
-      tags: ["Торпеды", "Артиллерия", "Бомбардировщик"],
+      tags: ["Торпеды", "Бомбардировщик"],
       image: null,
       hotkey: "Y"
     },
@@ -2374,7 +2374,7 @@ const ARM_DATA = {
       counteredBy: ["Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Строительство морских зданий T2"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -2407,7 +2407,7 @@ const ARM_DATA = {
       counteredBy: ["Крейсеры", "Эсминцы"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Anti-Submarine"],
-      tags: ["Торпеды", "Артиллерия"],
+      tags: ["Штурм", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: "W"
     },
@@ -2539,7 +2539,7 @@ const ARM_DATA = {
       counteredBy: ["Крейсеры", "Подводные лодки"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Anti-Submarine"],
-      tags: ["ПВО", "Торпеды", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: "Y"
     },
@@ -2637,7 +2637,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T2",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Уничтожитель", "Артиллерия"],
       image: null,
       hotkey: "O"
     },
@@ -2918,7 +2918,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["Строительство зданий T3", "Ремонт"],
-      tags: ["Ползущий"],
+      tags: ["Строитель", "Ползущий"],
       image: null,
       hotkey: "Q"
     },
@@ -2951,7 +2951,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды пехоты", "Истребители"],
       builtAt: "Kbot Lab T3",
       specialAbilities: [],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: "W"
     },
@@ -2984,7 +2984,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Kbot Lab T3",
       specialAbilities: [],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: "E"
     },
@@ -3017,7 +3017,7 @@ const ARM_DATA = {
       counteredBy: ["Дальний обстрел", "Авиация"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["EMP", "Amphibious"],
-      tags: ["EMP", "Штурм", "Артиллерия"],
+      tags: ["Штурм", "EMP", "Артиллерия"],
       image: null,
       hotkey: "R"
     },
@@ -3083,7 +3083,7 @@ const ARM_DATA = {
       counteredBy: ["Танки", "Артиллерия"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["Teleporter", "Amphibious"],
-      tags: ["Телепорт"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "Y"
     },
@@ -3209,7 +3209,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Строительство зданий T3", "Ремонт"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -3308,7 +3308,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Авиация"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Stun"],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "R"
     },
@@ -3341,7 +3341,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды пехоты", "Авиация"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: [],
-      tags: ["Рейлган", "Штурм", "Артиллерия"],
+      tags: ["Рейлган", "Артиллерия"],
       image: null,
       hotkey: "T"
     },
@@ -3374,7 +3374,7 @@ const ARM_DATA = {
       counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия", "Радар"],
+      tags: ["Артиллерия", "Радар"],
       image: null,
       hotkey: "Y"
     },
@@ -3472,7 +3472,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Self-Heal"],
-      tags: ["Штурм", "Артиллерия", "Самоисцеление", "Радар"],
+      tags: ["Уничтожитель", "Артиллерия", "Самоисцеление", "Радар"],
       image: null,
       hotkey: "O"
     },
@@ -3504,7 +3504,7 @@ const ARM_DATA = {
       counteredBy: ["ПВО", "Истребители"],
       builtAt: "Air Factory T3",
       specialAbilities: ["Строительство зданий T3", "Ремонт"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -3603,7 +3603,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитные ракеты", "Стелс-детекторы"],
       builtAt: "Air Factory T3",
       specialAbilities: ["Stealth"],
-      tags: ["Штурм", "Артиллерия", "Бомбардировщик", "Стелс"],
+      tags: ["Уничтожитель", "Бомбардировщик", "Стелс"],
       image: null,
       hotkey: "R"
     },
@@ -3636,7 +3636,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T3",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "T"
     },
@@ -3669,7 +3669,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T3",
       specialAbilities: ["Anti-Submarine"],
-      tags: ["Торпеды", "Артиллерия", "Бомбардировщик", "Амфибия"],
+      tags: ["Торпеды", "Бомбардировщик", "Амфибия"],
       image: null,
       hotkey: "Y"
     },
@@ -3795,7 +3795,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Строительство морских зданий T3", "Ремонт"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -3861,7 +3861,7 @@ const ARM_DATA = {
       counteredBy: ["Ракетные крейсеры", "Подводные лодки"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Anti-Submarine"],
-      tags: ["Торпеды", "Артиллерия"],
+      tags: ["Штурм", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: "E"
     },
@@ -3894,7 +3894,7 @@ const ARM_DATA = {
       counteredBy: ["Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Stealth", "Nuclear"],
-      tags: ["Торпеды", "Артиллерия"],
+      tags: ["Штурм", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: "R"
     },
@@ -3960,7 +3960,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T3",
       specialAbilities: [],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: "Y"
     },
@@ -4058,7 +4058,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Self-Heal"],
-      tags: ["Штурм", "Артиллерия", "Самоисцеление", "Радар"],
+      tags: ["Уничтожитель", "Артиллерия", "Самоисцеление", "Радар"],
       image: null,
       hotkey: "O"
     },
@@ -4090,7 +4090,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious", "Строительство зданий T3"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Q"
     },
@@ -4122,7 +4122,7 @@ const ARM_DATA = {
       counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious", "Stealth", "Wide Area Scout"],
-      tags: ["Стелс", "Радар", "Антирадар"],
+      tags: ["Уничтожитель", "Стелс", "Радар", "Антирадар"],
       image: null,
       hotkey: "W"
     },
@@ -4188,7 +4188,7 @@ const ARM_DATA = {
       counteredBy: ["Крейсеры", "Линкоры"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious", "Anti-Ship"],
-      tags: ["Торпеды", "Артиллерия", "Амфибия"],
+      tags: ["Штурм", "Торпеды", "Артиллерия", "Амфибия"],
       image: null,
       hotkey: "R"
     },
@@ -4221,7 +4221,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Авиация"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious"],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: "T"
     },
@@ -4415,7 +4415,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Auto-Targeting", "Commander Upgrade"],
-      tags: ["Автонаведение"],
+      tags: ["Командир"],
       image: null,
       hotkey: "W"
     },
@@ -4511,7 +4511,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Omni Sensor"],
-      tags: ["Радар", "Антирадар"],
+      tags: ["Антирадар"],
       image: null,
       hotkey: "T"
     },
@@ -4544,7 +4544,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: [],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "Y"
     },
@@ -4676,7 +4676,7 @@ const ARM_DATA = {
       counteredBy: ["Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard T4",
       specialAbilities: ["Stealth", "Nuclear", "Command Unit"],
-      tags: ["Торпеды", "Ядерное оружие", "Артиллерия", "Радар"],
+      tags: ["Штурм", "Торпеды", "Ядерное оружие", "Артиллерия", "Радар"],
       image: null,
       hotkey: "R"
     },
@@ -4709,7 +4709,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T4",
       specialAbilities: ["Nuclear"],
-      tags: ["ПВО", "Артиллерия", "Бомбардировщик", "Радар"],
+      tags: ["Уничтожитель", "ПВО", "Бомбардировщик", "Радар"],
       image: null,
       hotkey: "T"
     },
@@ -4741,7 +4741,7 @@ const ARM_DATA = {
       counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Hovercraft Platform T4",
       specialAbilities: ["Amphibious", "Experimental Construction"],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: "Y"
     },
@@ -4773,7 +4773,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Omni Sensor", "Cloak"],
-      tags: ["Радар"],
+      tags: ["Маскировка"],
       image: null,
       hotkey: "U"
     },
@@ -4838,7 +4838,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T4",
       specialAbilities: ["Command Unit"],
-      tags: ["Штурм", "Артиллерия", "Радар"],
+      tags: ["Уничтожитель", "Артиллерия", "Радар"],
       image: null,
       hotkey: "O"
     },
@@ -4902,7 +4902,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Vehicle Plant T4",
       specialAbilities: ["Amphibious", "Nuclear"],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Уничтожитель", "Артиллерия"],
       image: null,
       hotkey: "Q"
     },
@@ -5033,7 +5033,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Kbot Lab T4",
       specialAbilities: ["Amphibious", "Radar", "Radar Jamming", "Disruptor", "Upgradable", "+5000 Energy"],
-      tags: ["ПВО", "Артиллерия", "Амфибия", "Радар"],
+      tags: ["Штурм", "ПВО", "Артиллерия", "Амфибия", "Радар"],
       image: null,
       hotkey: "T"
     },
@@ -5066,7 +5066,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Авиация"],
       builtAt: "Vehicle Plant T4",
       specialAbilities: ["Amphibious", "Nuclear"],
-      tags: ["Штурм", "Артиллерия", "Амфибия", "Камикадзе"],
+      tags: ["Строитель", "Артиллерия", "Амфибия", "Камикадзе"],
       image: null,
       hotkey: "Y"
     },
@@ -5355,7 +5355,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction KBot",
       specialAbilities: ["Upgradable"],
-      tags: ["+E", "Ground Def"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "8"
     },
@@ -5774,7 +5774,7 @@ const ARM_DATA = {
       counteredBy: ["Пехота", "Танки"],
       builtAt: "Construction Ship",
       specialAbilities: [],
-      tags: ["Пушка", "ПВО"],
+      tags: ["ПВО", "Артиллерия"],
       image: null,
       hotkey: "E"
     },
@@ -5807,7 +5807,7 @@ const ARM_DATA = {
       counteredBy: ["Танки", "Артиллерия"],
       builtAt: "Construction KBot",
       specialAbilities: [],
-      tags: ["Пушка", "ПВО"],
+      tags: ["ПВО", "Артиллерия"],
       image: null,
       hotkey: "R"
     },
@@ -5840,7 +5840,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction KBot",
       specialAbilities: ["Upgradable"],
-      tags: ["Лазер"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "T"
     },
@@ -5873,7 +5873,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction KBot",
       specialAbilities: ["Upgradable"],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "Y"
     },
@@ -5906,7 +5906,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Ship",
       specialAbilities: [],
-      tags: ["Лазер"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "U"
     },
@@ -5939,7 +5939,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Ship",
       specialAbilities: [],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "I"
     },
@@ -5972,7 +5972,7 @@ const ARM_DATA = {
       counteredBy: ["Десантные юниты", "Артиллерия"],
       builtAt: "Construction Ship",
       specialAbilities: [],
-      tags: ["Торпеды"],
+      tags: ["Штурм", "Торпеды"],
       image: null,
       hotkey: "O"
     },
@@ -6229,7 +6229,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
-      tags: ["Ground Def"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "W"
     },
@@ -6262,7 +6262,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Pop-up"],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "E"
     },
@@ -6327,7 +6327,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Pop-up", "Radar Jamming"],
-      tags: ["Лазер"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "T"
     },
@@ -6360,7 +6360,7 @@ const ARM_DATA = {
       counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Pop-up"],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "Y"
     },
@@ -6393,7 +6393,7 @@ const ARM_DATA = {
       counteredBy: ["Десантные юниты", "Артиллерия"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: [],
-      tags: ["Торпеды"],
+      tags: ["Штурм", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: "U"
     },
@@ -6554,7 +6554,7 @@ const ARM_DATA = {
       counteredBy: ["Противоракетная оборона", "Диверсанты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Nuclear"],
-      tags: ["Ядерное оружие"],
+      tags: ["Ядерное оружие", "Артиллерия"],
       image: null,
       hotkey: "1"
     },
@@ -6587,7 +6587,7 @@ const ARM_DATA = {
       counteredBy: ["Тактические ракеты", "Диверсанты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Upgradable"],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "2"
     },
@@ -6843,7 +6843,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: ""
     },
@@ -6875,7 +6875,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
-      tags: ["Ползущий"],
+      tags: ["Строитель", "Ползущий"],
       image: null,
       hotkey: ""
     },
@@ -6907,7 +6907,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: ""
     },
@@ -6939,7 +6939,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: ""
     },
@@ -6971,7 +6971,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
-      tags: ["ПВО", "Торпеды", "Артиллерия", "Амфибия"],
+      tags: ["Штурм", "ПВО", "Торпеды", "Артиллерия", "Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -7067,7 +7067,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
-      tags: ["Торпеды", "Амфибия"],
+      tags: ["Штурм", "Торпеды", "Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -7195,7 +7195,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
-      tags: ["ПВО", "Торпеды", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -7323,7 +7323,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
-      tags: ["Торпеды"],
+      tags: ["Штурм", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -7419,7 +7419,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Уничтожитель", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -7451,7 +7451,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Ultra Construction Kbot",
       specialAbilities: [],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -7483,7 +7483,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: ""
     },
@@ -7579,7 +7579,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: ""
     },
@@ -7611,7 +7611,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: ""
     },
@@ -7643,7 +7643,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Commander (начальный юнит)",
       specialAbilities: [],
-      tags: ["Штурм", "Командир", "Дизинтегратор"],
+      tags: ["Командир"],
       image: null,
       hotkey: ""
     },
@@ -7739,7 +7739,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: ""
     },
@@ -7771,7 +7771,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Seaplane Platform",
       specialAbilities: [],
-      tags: ["Амфибия"],
+      tags: ["Строитель", "Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -7803,7 +7803,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
-      tags: [],
+      tags: ["Строитель"],
       image: null,
       hotkey: ""
     },
@@ -7835,7 +7835,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Commander (начальный юнит)",
       specialAbilities: [],
-      tags: ["Штурм", "Командир", "Дизинтегратор"],
+      tags: ["Командир"],
       image: null,
       hotkey: ""
     },
@@ -7867,7 +7867,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
-      tags: ["Лазер"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -8091,7 +8091,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
-      tags: ["Лазер"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -8283,7 +8283,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
-      tags: ["Пушка", "ПВО"],
+      tags: ["ПВО", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -8379,7 +8379,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Ultra Construction Kbot",
       specialAbilities: [],
-      tags: ["Телепорт"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -8475,7 +8475,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -8507,7 +8507,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
-      tags: ["Лазер"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -8539,7 +8539,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
-      tags: [],
+      tags: ["Уничтожитель", "Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -8667,7 +8667,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Ultra Construction Kbot",
       specialAbilities: [],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -8699,7 +8699,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Ultra Kbot Gantry",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия", "Амфибия", "Самоисцеление"],
+      tags: ["Артиллерия", "Амфибия", "Самоисцеление"],
       image: null,
       hotkey: ""
     },
@@ -8763,7 +8763,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
-      tags: ["Штурм"],
+      tags: ["Уничтожитель"],
       image: null,
       hotkey: ""
     },
@@ -8955,7 +8955,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
-      tags: ["Штурм", "Амфибия"],
+      tags: ["Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -8987,7 +8987,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
-      tags: ["ПВО", "Артиллерия"],
+      tags: ["Штурм", "ПВО", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -9083,7 +9083,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия", "Ползущий"],
+      tags: ["Артиллерия", "Ползущий"],
       image: null,
       hotkey: ""
     },
@@ -9307,7 +9307,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -9467,7 +9467,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
-      tags: ["Пушка", "ПВО"],
+      tags: ["ПВО", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -9531,7 +9531,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
-      tags: ["Торпеды", "Артиллерия"],
+      tags: ["Штурм", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -9563,7 +9563,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
-      tags: ["Штурм", "Амфибия"],
+      tags: ["Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -9595,7 +9595,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Seaplane Platform",
       specialAbilities: [],
-      tags: ["Торпеды", "Артиллерия", "Бомбардировщик", "Амфибия"],
+      tags: ["Уничтожитель", "Торпеды", "Бомбардировщик", "Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -9691,7 +9691,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
-      tags: ["Штурм", "Амфибия"],
+      tags: ["Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -9723,7 +9723,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия", "Бомбардировщик"],
+      tags: ["Уничтожитель", "Бомбардировщик"],
       image: null,
       hotkey: ""
     },
@@ -9755,7 +9755,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
-      tags: ["Торпеды", "Артиллерия"],
+      tags: ["Штурм", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -9787,7 +9787,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Ultra Construction Kbot",
       specialAbilities: [],
-      tags: ["Ядерное оружие"],
+      tags: ["Ядерное оружие", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -9851,7 +9851,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
-      tags: ["Штурм", "Амфибия"],
+      tags: ["Амфибия"],
       image: null,
       hotkey: ""
     },
@@ -9979,7 +9979,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия", "Амфибия", "Маскировка", "Радар"],
+      tags: ["Артиллерия", "Амфибия", "Маскировка", "Радар"],
       image: null,
       hotkey: ""
     },
@@ -10075,7 +10075,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
-      tags: ["Торпеды", "Артиллерия"],
+      tags: ["Уничтожитель", "Торпеды", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -10107,7 +10107,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Уничтожитель", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -10203,7 +10203,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия", "Ползущий"],
+      tags: ["Артиллерия", "Ползущий"],
       image: null,
       hotkey: ""
     },
@@ -10267,7 +10267,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
-      tags: ["Торпеды", "Артиллерия", "Бомбардировщик"],
+      tags: ["Штурм", "Торпеды", "Бомбардировщик"],
       image: null,
       hotkey: ""
     },
@@ -10299,7 +10299,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
-      tags: ["Торпеды"],
+      tags: ["Штурм", "Торпеды"],
       image: null,
       hotkey: ""
     },
@@ -10331,7 +10331,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
-      tags: ["Пушка"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -10363,7 +10363,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
-      tags: ["Ядерное оружие"],
+      tags: ["Ядерное оружие", "Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -10587,7 +10587,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия", "Стелс"],
+      tags: ["Стелс"],
       image: null,
       hotkey: ""
     },
@@ -10651,7 +10651,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
-      tags: ["Лазер"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -10929,8 +10929,8 @@ const COR_DATA = {
   ]
 };
 
-// FACTIONS wrapper — unified access to both factions
+// FACTIONS wrapper — filter units by ID prefix from ARM_DATA
 const FACTIONS = {
-  arm: ARM_DATA,
-  cor: COR_DATA
+  arm: { ...ARM_DATA, units: ARM_DATA.units.filter(function(u) { return u.id.startsWith("arm_"); }) },
+  cor: { ...ARM_DATA, units: ARM_DATA.units.filter(function(u) { return u.id.startsWith("cor_"); }) }
 };
