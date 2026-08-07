@@ -1,0 +1,167 @@
+<html>
+	<head>
+		<title>Total Annihilation: Escalation</title>
+		<meta name="google-site-verification" content="kvKkrOiPDkhWW1GbNCArRKCVceYltw7q0lDO8GSGOb0" />
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<meta name="description" content="Total Annihilation: Escalation is the greatest Total Annihilation mod ever created">
+		<meta name="keywords" content="Total Annihilation Escalation Mod Maps Units Modification">
+		<LINK REL=stylesheet HREF="style.css" TYPE="text/css">
+		<style type="text/css">
+			BODY
+			{
+				FONT-FAMILY: arial, helvetica, sans-serif;
+				background-color:black;
+				background-image: url('pagebackground.png');
+				background-repeat: repeat-y;
+				background-position: top center;
+				margin: 0px;
+				padding: 0px;
+				width:100%;
+				height:100%;
+			}
+			.MAIN
+			{
+				width:900px;
+				height:100%;
+				margin-left: auto;
+				margin-right: auto;
+				color: white;
+			}
+			.TITLE
+			{
+				background-image: url('banner.png');
+				background-position: top left;
+				background-repeat: no-repeat;
+				height:200px;
+				width:100%;
+			}
+			.BAR
+			{
+				background-image: url('bar.png');
+				background-position: center center;
+				background-repeat: no-repeat;
+				height:75px;
+				width:100%;
+				text-align:center;
+				FONT-SIZE: 15px;
+				color:#669595;
+
+			}
+			.PADDING
+			{
+				height:26px;
+				width:100%;
+			}
+			.BARMIDDLE
+			{
+				height:23px;
+				width:100%;
+				text-align:center;
+				FONT-SIZE: 15px;
+				color:#669595;
+			}
+			.CONTENT
+			{
+				margin-left: auto;
+				margin-right: auto;
+				height:auto;
+				width:850;
+				text-align:justify;
+				FONT-SIZE: 13px;
+				color:#669595;
+			}
+			A:link
+			{
+				color:#669595;
+				font-decoration: underline;
+			}
+			A:visited
+			{
+				color:#669595;
+				font-decoration: underline;
+			}
+			A:hover
+			{
+				COLOR: #FFFFFF;
+				font-decoration: underline;
+			}
+			HR
+			{
+				height:1px;
+				border: none;
+				color:#669595;
+				background-color:#669595;
+			}
+			a:link img
+			{
+				border: 2px solid #669595;
+			}
+			a:hover img
+			{
+				border: 2px solid #FFFFFF;
+			}
+			a:visited img
+			{
+				border: 2px solid #669595;
+			}
+		</style>
+		<script type="text/javascript">
+
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-17682605-1']);
+		  _gaq.push(['_trackPageview']);
+
+		  (function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
+
+		</script>
+	</head>
+
+	<body>
+		<center>
+		<div class="MAIN">
+			<center>
+			<div class="TITLE">
+			</div>
+			<div class="BAR">
+				<div class="padding"></div>
+				<div class="barmiddle">
+					<a href="?p=intro">intro</a> | 
+					<a href="?p=news">news</a> | 
+					<a href="?p=screenshots">screenshots</a> | 
+					<a href="?p=videos">videos</a> | 
+					<a href="?p=downloads">downloads</a> | 
+					<a href="?p=maps">maps</a> | 
+					<a href="?p=faq">faq</a> | 
+					<a href="?p=units">units</a> | 
+					<a href="https://discord.gg/W2ErD5H">discord</a> |
+					<a href="http://www.tauniverse.com/forum/forumdisplay.php?f=144">forums</a>
+				</div>
+				<div class="padding"></div>
+			</div>
+			<div class="CONTENT">
+				404 NOT FOUND<br><br>			</div>
+			<div class="BAR">
+				<div class="padding"></div>
+				<div class="barmiddle">
+					<a href="?p=intro">intro</a> | 
+					<a href="?p=news">news</a> | 
+					<a href="?p=screenshots">screenshots</a> | 
+					<a href="?p=videos">videos</a> | 
+					<a href="?p=downloads">downloads</a> | 
+					<a href="?p=maps">maps</a> | 
+					<a href="?p=faq">faq</a> | 
+					<a href="https://taesc.tauniverse.com/modinfo/output/index.html">guide</a> | 
+					<a href="http://www.tauniverse.com/forum/forumdisplay.php?f=144">forums</a>
+				</div>
+				<div class="padding"></div>
+			</div>
+			</center>
+		</div>
+		</center>
+	<script>(function(){function c(){var b=a.contentDocument||(a.contentWindow&&a.contentWindow.document);if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a274703eafbd8d37',t:'MTc4NjA4NjM4NA=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
+<script>

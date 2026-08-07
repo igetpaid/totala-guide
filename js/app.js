@@ -6,6 +6,7 @@ const App = {
   _unitDetailId: null,
   _scrollPosition: 0,
   _buildTab: "t1",
+  faction: localStorage.getItem('ta-faction') || 'arm',
 
   init() {
     this.render();
@@ -118,6 +119,17 @@ const App = {
 
   setBuildTab(subtab) {
     this._buildTab = subtab;
+    this.render();
+    const el = document.getElementById("app");
+    if (el) el.scrollTop = 0;
+  },
+
+  setFaction(faction) {
+    if (faction !== "arm" && faction !== "cor") return;
+    this.faction = faction;
+    localStorage.setItem('ta-faction', faction);
+    this.history = [];
+    this.currentView = "home";
     this.render();
     const el = document.getElementById("app");
     if (el) el.scrollTop = 0;

@@ -352,6 +352,27 @@ body {
 .setting-value { font-weight: 600; color: var(--green); }
 .setting-note { font-size: 14px; color: var(--text-muted); padding: 8px 0; }
 
+/* ═══════ FACTION BUTTONS ═══════ */
+.faction-btn {
+  padding: 8px 18px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-left: 6px;
+}
+.faction-btn:first-child { margin-left: 0; }
+.faction-btn:hover { border-color: var(--accent); }
+.faction-btn.active {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
 /* ═══════ BOTTOM NAV ═══════ */
 .bottom-nav {
   display: flex; background: var(--bg-secondary);

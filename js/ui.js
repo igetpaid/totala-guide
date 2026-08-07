@@ -1,6 +1,7 @@
 // ui.js — Rendering functions
 
-const UNIT_IMAGES = {
+// ARM unit images (FBI name -> filename)
+const ARM_UNIT_IMAGES = {
   arm_commander: "ARMCOM.png",
   arm_peewee: "ARMPW.png",
   arm_rocko: "ARMROCK.png",
@@ -271,6 +272,143 @@ const UNIT_IMAGES = {
   arm_vulcan: "ARMVULC.png"
 };
 
+// COR unit images (FBI name -> filename)
+const COR_UNIT_IMAGES = {
+  cor_com: "CORCOM.png",
+  cor_decom: "CORDECOM.png",
+  cor_ck: "CORCK.png",
+  cor_ack: "CORACK.png",
+  cor_cv: "CORCV.png",
+  cor_acv: "CORACV.png",
+  cor_ca: "CORCA.png",
+  cor_aca: "CORACA.png",
+  cor_cs: "CORCS.png",
+  cor_acsub: "CORACSUB.png",
+  cor_ch: "CORCH.png",
+  cor_ak: "CORAK.png",
+  cor_crash: "CORCRASH.png",
+  cor_fav: "CORFAV.png",
+  cor_gator: "CORGATOR.png",
+  cor_levlr: "CORLEVLR.png",
+  cor_storm: "CORSTORM.png",
+  cor_thud: "CORTHUD.png",
+  cor_voyr: "CORVOYR.png",
+  cor_mist: "CORMIST.png",
+  cor_raid: "CORRAID.png",
+  cor_sent: "CORSENT.png",
+  cor_snap: "CORSNAP.png",
+  cor_vrad: "CORVRAD.png",
+  cor_vroc: "CORVROC.png",
+  cor_reap: "CORREAP.png",
+  cor_mart: "CORMART.png",
+  cor_hrk: "CORHRK.png",
+  cor_fast: "CORFAST.png",
+  cor_can: "CORCAN.png",
+  cor_amph: "CORAMPH.png",
+  cor_seal: "CORSEAL.png",
+  cor_mort: "CORMORT.png",
+  cor_pyro: "CORPYRO.png",
+  cor_spy: "CORSPY.png",
+  cor_necro: "CORNECRO.png",
+  cor_spec: "CORSPEC.png",
+  cor_doom: "CORDOOM.png",
+  cor_sumo: "CORSUMO.png",
+  cor_krog: "CORKROG.png",
+  cor_gol: "CORGOL.png",
+  cor_eter: "CORETER.png",
+  cor_ah: "CORAH.png",
+  cor_mh: "CORMH.png",
+  cor_sh: "CORSH.png",
+  cor_thovr: "CORTHROVR.png",
+  cor_veng: "CORVENG.png",
+  cor_fink: "CORFINK.png",
+  cor_shad: "CORSHAD.png",
+  cor_ape: "CORAPE.png",
+  cor_hurc: "CORHURC.png",
+  cor_vamp: "CORVAMP.png",
+  cor_valk: "CORVALK.png",
+  cor_sfig: "CORSFIG.png",
+  cor_titan: "CORTITAN.png",
+  cor_seap: "CORSEAP.png",
+  cor_roy: "CORROY.png",
+  cor_crus: "CORCRUS.png",
+  cor_bats: "CORBATS.png",
+  cor_mship: "CORMSHIP.png",
+  cor_arch: "CORARCH.png",
+  cor_sub: "CORSUB.png",
+  cor_ssub: "CORSSUB.png",
+  cor_shark: "CORSHARK.png",
+  cor_csa: "CORCSA.png",
+  cor_tship: "CORTSHIP.png",
+  cor_pt: "CORPT.png",
+  cor_carry: "CORCARRY.png",
+  cor_sjam: "CORSJAM.png",
+  cor_hunt: "CORHUNT.png",
+  cor_awac: "CORAWAC.png",
+  cor_llt: "CORLLT.png",
+  cor_hlt: "CORHLT.png",
+  cor_rl: "CORRL.png",
+  cor_frt: "CORFRT.png",
+  cor_fhlt: "CORFHLT.png",
+  cor_flak: "CORFLAK.png",
+  cor_pun: "CORPUN.png",
+  cor_toast: "CORTOAST.png",
+  cor_vipe: "CORVIPE.png",
+  cor_plas: "CORPLAS.png",
+  cor_tl: "CORTL.png",
+  cor_drag: "CORDRAG.png",
+  cor_fdrag: "CORFDRAG.png",
+  cor_fort: "CORFORT.png",
+  cor_fmd: "CORFMD.png",
+  cor_buzz: "CORBUZZ.png",
+  cor_int: "CORINT.png",
+  cor_silo: "CORSILO.png",
+  cor_tron: "CORTRON.png",
+  cor_gate: "CORGATE.png",
+  cor_mex: "CORMEX.png",
+  cor_uwmex: "CORUWMEX.png",
+  cor_estor: "CORESTOR.png",
+  cor_mstor: "CORMSTOR.png",
+  cor_uwes: "CORUWES.png",
+  cor_uwms: "CORUWMS.png",
+  cor_solar: "CORSOLAR.png",
+  cor_win: "CORWIN.png",
+  cor_tide: "CORTIDE.png",
+  cor_geo: "CORGE.png",
+  cor_fus: "CORFUS.png",
+  cor_uwfus: "CORUWFUS.png",
+  cor_makr: "CORMAKR.png",
+  cor_mmkr: "CORMMKR.png",
+  cor_moho: "CORMOHO.png",
+  cor_fmkr: "CORFMKR.png",
+  cor_rad: "CORRAD.png",
+  cor_arad: "CORARAD.png",
+  cor_sonar: "CORSONAR.png",
+  cor_ason: "CORASON.png",
+  cor_asp: "CORASP.png",
+  cor_sjam: "CORSJAM.png",
+  cor_lab: "CORLAB.png",
+  cor_alab: "CORALAB.png",
+  cor_vp: "CORVP.png",
+  cor_avp: "CORAVP.png",
+  cor_ap: "CORAP.png",
+  cor_aap: "CORAAP.png",
+  cor_sy: "CORSY.png",
+  cor_asy: "CORASY.png",
+  cor_hp: "CORHP.png",
+  cor_gant: "CORGANT.png",
+  cor_plat: "CORPLAT.png",
+  cor_ah: "CORAH.png",
+  cor_roach: "CORROACH.png",
+  cor_ink: "CORINK.png",
+  cor_veng: "CORVENG.png",
+  cor_slingshot: "CORSLING.png",
+  cor_sling: "CORSLING.png"
+};
+
+// Unified image lookup
+const ALL_UNIT_IMAGES = Object.assign({}, ARM_UNIT_IMAGES, COR_UNIT_IMAGES);
+
 const CATEGORY_COLORS = {
   "Kbot": "#4fc3f7",
   "Vehicle": "#81c784",
@@ -319,15 +457,47 @@ const BUILDER_IMAGES = {
   "Exp. Unit Fabricator": "ARMGANT.png",
   "Research Facility": "ARMTECH.png",
   "Defense Facility T3": "ARMSTUN.png",
+  // COR builder images
+  "Commander (начальный юнит)": "CORCOM.png",
+  "Commander (Decoy)": "CORDECOM.png",
+};
+
+// COR-specific builder images (same names, different faction images)
+const COR_BUILDER_IMAGES = {
+  "Kbot Lab": "CORLAB.png",
+  "Vehicle Plant": "CORVP.png",
+  "Aircraft Plant": "CORAP.png",
+  "Shipyard": "CORSY.png",
+  "Hovercraft Platform": "CORHP.png",
+  "Adv. Kbot Lab": "CORALAB.png",
+  "Adv. Vehicle Plant": "CORAVP.png",
+  "Adv. Aircraft Plant": "CORAAP.png",
+  "Adv. Shipyard": "CORASY.png",
+  "Adv. Hovercraft Platform": "CORHP.png",
+  "Ultra Kbot Gantry": "CORGANT.png",
+  "Seaplane Platform": "CORPLAT.png",
+  "Construction KBot": "CORCK.png",
+  "Construction Vehicle": "CORCV.png",
+  "Construction Aircraft": "CORCA.png",
+  "Construction Ship": "CORCS.png",
+  "Construction Hovercraft": "CORCH.png",
+  "Adv. Construction KBot": "CORACK.png",
+  "Adv. Construction Vehicle": "CORACV.png",
+  "Adv. Construction Aircraft": "CORACA.png",
+  "Adv. Construction Ship": "CORACSUB.png",
+  "Adv. Construction Hovercraft": "CORCH.png",
 };
 
 const UI = {
   renderHome() {
+    const faction = (typeof App !== "undefined" && App.faction) || "arm";
+    const factionLabel = faction === "cor" ? "CORE" : "ARM";
+    const factionColor = faction === "cor" ? "#e57373" : "#4fc3f7";
     return `
       <div class="home">
         <div class="home-header">
           <h1 class="home-title">TA:<span class="accent">ESCALATION</span></h1>
-          <div class="home-badge">ARM</div>
+          <div class="home-badge" style="background:${factionColor}">${factionLabel}</div>
         </div>
         <div class="home-menu">
           <button class="menu-btn" onclick="App.navigate('units')">
@@ -548,7 +718,10 @@ const UI = {
       html += `<div class="detail-section"><h3>Слабые стороны</h3>${this.renderTags(unit.weaknesses, "weakness")}</div>`;
     }
     if (unit.builtAt) {
-      const builderImg = BUILDER_IMAGES[unit.builtAt];
+      const faction = (typeof App !== "undefined" && App.faction) || "arm";
+      const builderImgs = faction === "cor" ? COR_BUILDER_IMAGES : BUILDER_IMAGES;
+      const allBuilderImgs = Object.assign({}, BUILDER_IMAGES, COR_BUILDER_IMAGES);
+      const builderImg = allBuilderImgs[unit.builtAt] || builderImgs[unit.builtAt] || BUILDER_IMAGES[unit.builtAt];
       const builderImgTag = builderImg ? `<img src="unitpics/${builderImg}" style="width:100px;height:100px;object-fit:cover;border-radius:8px;border:2px solid var(--border);margin-bottom:8px;display:block" onerror="this.style.display='none'">` : '';
       html += `<div class="detail-section"><h3>Строится в</h3>${builderImgTag}<p>${unit.builtAt}</p></div>`;
     }
@@ -629,6 +802,7 @@ const UI = {
   },
 
   renderSettings() {
+    const faction = (typeof App !== "undefined" && App.faction) || "arm";
     return `<div class="page-header">
       <button class="back-btn" onclick="App.goBack()">&#8592;</button>
       <h2>Настройки</h2>
@@ -636,9 +810,12 @@ const UI = {
     <div class="settings-page">
       <div class="setting-item">
         <span>Фракция</span>
-        <div class="setting-value active">ARM</div>
+        <div>
+          <button onclick="App.setFaction('arm')" class="faction-btn ${faction === 'arm' ? 'active' : ''}">ARM</button>
+          <button onclick="App.setFaction('cor')" class="faction-btn ${faction === 'cor' ? 'active' : ''}">CORE</button>
+        </div>
       </div>
-      <div class="setting-note">Core фракция будет добавлена позже.</div>
+      <div class="setting-note">Переключение между фракциями ARM и CORE.</div>
     </div>`;
   },
 
@@ -654,7 +831,7 @@ const UI = {
   },
 
   getUnitsByCategory(tier) {
-    const data = (typeof ARM_DATA !== "undefined") ? ARM_DATA : {};
+    const data = (typeof FACTIONS !== "undefined" && App.faction) ? (FACTIONS[App.faction] || FACTIONS.arm) : (typeof ARM_DATA !== "undefined" ? ARM_DATA : {});
     const units = data.units || [];
     const result = {};
     for (const u of units) {
@@ -668,7 +845,7 @@ const UI = {
   },
 
   getBuildingsByBuilder(builderType) {
-    const data = (typeof ARM_DATA !== "undefined") ? ARM_DATA : {};
+    const data = (typeof FACTIONS !== "undefined" && App.faction) ? (FACTIONS[App.faction] || FACTIONS.arm) : (typeof ARM_DATA !== "undefined" ? ARM_DATA : {});
     const units = data.units || [];
     const result = {};
 
@@ -709,7 +886,7 @@ const UI = {
   },
 
   getUnitImage(unit) {
-    return UNIT_IMAGES[unit.id] || null;
+    return ALL_UNIT_IMAGES[unit.id] || null;
   },
 
   renderTags(items, type) {
@@ -724,7 +901,7 @@ const UI = {
   },
 
   getRelevantTerms(unit) {
-    const data = (typeof ARM_DATA !== "undefined") ? ARM_DATA : {};
+    const data = (typeof FACTIONS !== "undefined" && App.faction) ? (FACTIONS[App.faction] || FACTIONS.arm) : (typeof ARM_DATA !== "undefined" ? ARM_DATA : {});
     const termsObj = data.terms || {};
     const text = [
       unit.description || "",
@@ -747,7 +924,7 @@ const UI = {
   },
 
   _findUnit(unitId) {
-    const data = (typeof ARM_DATA !== "undefined") ? ARM_DATA : {};
+    const data = (typeof FACTIONS !== "undefined" && App.faction) ? (FACTIONS[App.faction] || FACTIONS.arm) : (typeof ARM_DATA !== "undefined" ? ARM_DATA : {});
     const units = data.units || [];
     return units.find(u => u.id === unitId) || null;
   }
