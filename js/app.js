@@ -13,7 +13,8 @@ const App = {
   },
 
   navigate(view, params) {
-    this._scrollPosition = window.scrollY || document.documentElement.scrollTop;
+    const el = document.getElementById("app");
+    this._scrollPosition = el ? el.scrollTop : 0;
     
     this.history.push({
       view: this.currentView,
@@ -38,7 +39,8 @@ const App = {
 
     this.render();
     if (view === "unit-detail") {
-      window.scrollTo(0, 0);
+      const el = document.getElementById("app");
+      if (el) el.scrollTop = 0;
     }
   },
 
@@ -91,14 +93,18 @@ const App = {
     if (prev.buildTab) this._buildTab = prev.buildTab;
     this.render();
     if (prev.scroll) {
-      requestAnimationFrame(() => window.scrollTo(0, prev.scroll));
+      requestAnimationFrame(() => {
+        const el = document.getElementById("app");
+        if (el) el.scrollTop = prev.scroll;
+      });
     }
   },
 
   setTier(tier) {
     this.currentTier = tier;
     this.render();
-    window.scrollTo(0, 0);
+    const el = document.getElementById("app");
+    if (el) el.scrollTop = 0;
   },
 
   setTab(tab) {
@@ -106,13 +112,15 @@ const App = {
     this.currentView = tab;
     this.history = [];
     this.render();
-    window.scrollTo(0, 0);
+    const el = document.getElementById("app");
+    if (el) el.scrollTop = 0;
   },
 
   setBuildTab(subtab) {
     this._buildTab = subtab;
     this.render();
-    window.scrollTo(0, 0);
+    const el = document.getElementById("app");
+    if (el) el.scrollTop = 0;
   },
 
   renderBottomNav() {
