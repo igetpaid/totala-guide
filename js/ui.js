@@ -489,7 +489,7 @@ const UI = {
       </div>
 
       <div class="detail-section">
-        <h3>Стоимость</h3>${unit.approximate === true ? '<span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span> Примерные значения</span>' : ''}
+        <h3>Стоимость</h3>${unit.verifiedCost ? '<span style="color:#4ade80;font-size:16px;margin-left:8px" title="Данные из файлов игры">&#10003;</span>' : unit.approximate === true ? '<span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span></span>' : ''}
         <div class="cost-row">
           <span>Metal: <b>${(unit.cost && unit.cost.metal) || 0}</b></span>
           <span>Energy: <b>${(unit.cost && unit.cost.energy) || 0}</b></span>
@@ -498,7 +498,7 @@ const UI = {
       </div>
 
       <div class="detail-section">
-        <h3>Характеристики</h3>${unit.approximate === true ? '<span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span> Примерные значения</span>' : ''}
+        <h3>Характеристики</h3>${unit.verifiedStats ? '<span style="color:#4ade80;font-size:16px;margin-left:8px" title="Данные из файлов игры">&#10003;</span>' : unit.approximate === true ? '<span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span></span>' : ''}
         <div class="stat-row">
           <span>HP: <b>${unit.hp || 0}</b></span>
           <span>Speed: <b>${unit.speed || 0}</b></span>
@@ -508,7 +508,7 @@ const UI = {
     // Weapon section — separate block with per-weapon details
     const weapons = unit.weaponDetails || [];
     if (weapons.length > 0 && unit.damage > 0) {
-      html += `<div class="detail-section"><h3>Оружие</h3>`;
+      html += `<div class="detail-section"><h3>Оружие</h3>${unit.verifiedWeapons ? '<span style="color:#4ade80;font-size:16px;margin-left:8px" title="Данные из файлов игры">&#10003;</span>' : ''}`;
       for (const w of weapons) {
         const dps = w.reload > 0 ? ((w.damage * (w.burst || 1)) / w.reload).toFixed(1) : "0";
         html += `
@@ -520,7 +520,7 @@ const UI = {
               <span>Дальность: <b>${w.range}</b></span>
               <span>ДПС: <b>${dps}</b></span>
               ${w.reload > 0 ? `<span>Перезарядка: <b>${w.reload}с</b></span>` : ''}
-              ${w.aoe > 0 ? `<span>АоЕ: <b>${w.aoe}</b></span>` : ''}
+              ${w.aoe > 0 ? `<span>Радиус: <b>${w.aoe}</b></span>` : ''}
               ${w.burst > 1 ? `<span>Очередь: <b>${w.burst}</b></span>` : ''}
             </div>
           </div>`;
