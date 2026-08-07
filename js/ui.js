@@ -658,26 +658,26 @@ const UI = {
       </div>
 
       <div class="detail-section">
-        <h3>Стоимость</h3>${unit.verifiedCost ? '<span style="color:#4ade80;font-size:16px;margin-left:8px" title="Данные из файлов игры">&#10003;</span>' : unit.approximate === true ? '<span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span></span>' : ''}
+        <h3>Стоимость</h3>${this.renderSourceBadge(unit.sourceCost)}
         <div class="cost-row">
-          <span>Metal: <b>${(unit.cost && unit.cost.metal) || 0}</b></span>
-          <span>Energy: <b>${(unit.cost && unit.cost.energy) || 0}</b></span>
-          <span>Build Time: <b>${unit.buildTime || 0}</b></span>
+          <span>Metal: <b>${(unit.cost && unit.cost.metal) ? unit.cost.metal : "-"}</b></span>
+          <span>Energy: <b>${(unit.cost && unit.cost.energy) ? unit.cost.energy : "-"}</b></span>
+          <span>Build Time: <b>${unit.buildTime ? unit.buildTime : "-"}</b></span>
         </div>
       </div>
 
       <div class="detail-section">
-        <h3>Характеристики</h3>${unit.verifiedStats ? '<span style="color:#4ade80;font-size:16px;margin-left:8px" title="Данные из файлов игры">&#10003;</span>' : unit.approximate === true ? '<span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span></span>' : ''}
+        <h3>Характеристики</h3>${this.renderSourceBadge(unit.sourceStats)}
         <div class="stat-row">
-          <span>HP: <b>${unit.hp || 0}</b></span>
-          <span>Speed: <b>${unit.speed || 0}</b></span>
+          <span>HP: <b>${unit.hp ? unit.hp : "-"}</b></span>
+          <span>Speed: <b>${unit.speed ? unit.speed : "-"}</b></span>
         </div>
       </div>`;
 
     // Weapon section — separate block with per-weapon details
     const weapons = unit.weaponDetails || [];
-    if (weapons.length > 0 && unit.damage > 0) {
-      html += `<div class="detail-section"><h3>Оружие</h3>${unit.verifiedWeapons ? '<span style="color:#4ade80;font-size:16px;margin-left:8px" title="Данные из файлов игры">&#10003;</span>' : ''}`;
+    if (weapons.length > 0 && (unit.damage > 0 || unit.sourceWeapons === 'fbi' || unit.sourceWeapons === 'wiki')) {
+      html += `<div class="detail-section"><h3>Оружие</h3>${this.renderSourceBadge(unit.sourceWeapons)}`;
       for (const w of weapons) {
         const dps = w.reload > 0 ? ((w.damage * (w.burst || 1)) / w.reload).toFixed(1) : "0";
         html += `
@@ -741,6 +741,15 @@ const UI = {
 
     html += `</div>`;
     return html;
+  },
+
+  renderSourceBadge(source) {
+    const badges = {
+      'fbi': '<span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(74,222,128,0.12);border:1px solid rgba(74,222,128,0.25);font-size:12px;font-weight:600;color:#4ade80;margin-left:8px" title="Файлы игры (100%)">&#128190; ИГРА</span>',
+      'wiki': '<span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(96,165,250,0.12);border:1px solid rgba(96,165,250,0.25);font-size:12px;font-weight:600;color:#60a5fa;margin-left:8px" title="taesc.tauniverse.com (старая версия)">TAESC</span>',
+      'ai': '<span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(248,113,113,0.12);border:1px solid rgba(248,113,113,0.25);font-size:12px;font-weight:600;color:#f87171;margin-left:8px" title="Нет данных">&#10005; НЕТ ДАННЫХ</span>'
+    };
+    return badges[source] || badges['ai'];
   },
 
   renderTips(subPage) {
