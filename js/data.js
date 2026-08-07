@@ -719,7 +719,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
       builtAt: "Air Factory",
       specialAbilities: [],
-      tags: ["Штурм"],
+      tags: ["ПВО"],
       image: null,
       hotkey: "E"
     },
@@ -2213,7 +2213,7 @@ const ARM_DATA = {
       counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Stealth"],
-      tags: ["Стелс"],
+      tags: ["ПВО", "Стелс"],
       image: null,
       hotkey: "E"
     },
@@ -9659,7 +9659,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Seaplane Platform",
       specialAbilities: [],
-      tags: [],
+      tags: ["ПВО"],
       image: null,
       hotkey: ""
     },
@@ -10619,7 +10619,7 @@ const ARM_DATA = {
       counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
-      tags: ["Штурм"],
+      tags: ["ПВО"],
       image: null,
       hotkey: ""
     },
