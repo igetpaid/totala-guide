@@ -6574,7 +6574,7 @@ const ARM_DATA = {
       specialAbilities: ["Wall"],
       image: null,
       hotkey: "8"
-    }
+    },
     {
       id: "cor_aap",
       name: "Adv. Aircraft Plant",
