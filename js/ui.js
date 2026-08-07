@@ -351,11 +351,6 @@ const UI = {
             <span>Настройки</span>
           </button>
         </div>
-        <div class="font-controls">
-          <button class="font-btn" onclick="App.changeFontSize(-1)">A-</button>
-          <span class="font-size-label" id="font-size-display">${App.getFontSize()}%</span>
-          <button class="font-btn" onclick="App.changeFontSize(1)">A+</button>
-        </div>
       </div>
     `;
   },
@@ -494,7 +489,7 @@ const UI = {
       </div>
 
       <div class="detail-section">
-        <h3>Стоимость</h3><span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span> Примерные значения</span>
+        <h3>Стоимость</h3>${unit.approximate === true ? '<span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span> Примерные значения</span>' : ''}
         <div class="cost-row">
           <span>Metal: <b>${(unit.cost && unit.cost.metal) || 0}</b></span>
           <span>Energy: <b>${(unit.cost && unit.cost.energy) || 0}</b></span>
@@ -503,7 +498,7 @@ const UI = {
       </div>
 
       <div class="detail-section">
-        <h3>Характеристики</h3><span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span> Примерные значения</span>
+        <h3>Характеристики</h3>${unit.approximate === true ? '<span style="display:inline-flex;align-items:center;gap:4px;color:#f97316;font-size:14px;font-weight:500;margin-left:8px"><span style="display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#f97316;color:#fff;font-size:12px;font-weight:700">!</span> Примерные значения</span>' : ''}
         <div class="stat-row">
           <span>HP: <b>${unit.hp || 0}</b></span>
           <span>Speed: <b>${unit.speed || 0}</b></span>

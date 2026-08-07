@@ -115,20 +115,6 @@ const App = {
     window.scrollTo(0, 0);
   },
 
-  getFontSize() {
-    const stored = localStorage.getItem('ta-font-size');
-    return stored ? parseInt(stored) : 100;
-  },
-
-  changeFontSize(delta) {
-    let size = this.getFontSize() + (delta * 10);
-    size = Math.max(70, Math.min(150, size));
-    localStorage.setItem('ta-font-size', size);
-    document.documentElement.style.fontSize = size + '%';
-    const display = document.getElementById('font-size-display');
-    if (display) display.textContent = size + '%';
-  },
-
   renderBottomNav() {
     const items = [
       { view: "units", icon: "&#9876;", label: "Юниты" },
@@ -157,7 +143,5 @@ const App = {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  const savedSize = localStorage.getItem('ta-font-size');
-  if (savedSize) document.documentElement.style.fontSize = savedSize + '%';
   App.init();
 });
