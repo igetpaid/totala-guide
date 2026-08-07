@@ -666,6 +666,22 @@ const UI = {
         </div>
       </div>
 
+      ${(() => {
+        const tags = unit.tags || [];
+        if (tags.length > 0) {
+          let tagHtml = '<div class="detail-section"><h3>Теги</h3><div class="tag-list">';
+          for (const t of tags) {
+            const desc = (typeof TAG_DESCRIPTIONS !== "undefined" && TAG_DESCRIPTIONS[t]) ? TAG_DESCRIPTIONS[t] : "";
+            tagHtml += `<div style="margin-bottom:8px"><span class="unit-tag">${t}</span>`;
+            if (desc) tagHtml += ` <span style="color:var(--text-secondary);font-size:14px">— ${desc}</span>`;
+            tagHtml += '</div>';
+          }
+          tagHtml += '</div></div>';
+          return tagHtml;
+        }
+        return '';
+      })()}
+
       <div class="detail-section">
         <h3>Стоимость</h3>${this.renderSourceBadge(unit.sourceCost)}
         <div class="cost-row">
@@ -732,11 +748,6 @@ const UI = {
       const builderImg = allBuilderImgs[unit.builtAt] || builderImgs[unit.builtAt] || BUILDER_IMAGES[unit.builtAt];
       const builderImgTag = builderImg ? `<img src="unitpics/${builderImg}" style="width:100px;height:100px;object-fit:cover;border-radius:8px;border:2px solid var(--border);margin-bottom:8px;display:block" onerror="this.style.display='none'">` : '';
       html += `<div class="detail-section"><h3>Строится в</h3>${builderImgTag}<p>${unit.builtAt}</p></div>`;
-    }
-    if (unit.abilities && unit.abilities.length) {
-      html += `<div class="detail-section"><h3>Особые способности</h3>${this.renderTags(unit.abilities, "special")}</div>`;
-    } else if (unit.specialAbilities && unit.specialAbilities.length) {
-      html += `<div class="detail-section"><h3>Особые способности</h3>${this.renderTags(unit.specialAbilities, "special")}</div>`;
     }
 
     const terms = this.getRelevantTerms(unit);
