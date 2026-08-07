@@ -490,14 +490,17 @@ const COR_BUILDER_IMAGES = {
 
 const UI = {
   renderHome() {
-    const faction = (typeof App !== "undefined" && App.faction) || "arm";
-    const factionLabel = faction === "cor" ? "CORE" : "ARM";
-    const factionColor = faction === "cor" ? "#e57373" : "#4fc3f7";
+    const faction = App.faction;
+    const armCls = faction === 'arm' ? 'faction-btn-home active' : 'faction-btn-home';
+    const corCls = faction === 'cor' ? 'faction-btn-home active' : 'faction-btn-home';
     return `
       <div class="home">
         <div class="home-header">
           <h1 class="home-title">TA:<span class="accent">ESCALATION</span></h1>
-          <div class="home-badge" style="background:${factionColor}">${factionLabel}</div>
+          <div class="faction-switcher-home">
+            <button class="${armCls}" onclick="App.setFaction('arm')">ARM</button>
+            <button class="${corCls}" onclick="App.setFaction('cor')">CORE</button>
+          </div>
         </div>
         <div class="home-menu">
           <button class="menu-btn" onclick="App.navigate('units')">
@@ -515,10 +518,6 @@ const UI = {
           <button class="menu-btn" onclick="App.navigate('faq')">
             <span class="menu-icon">&#10067;</span>
             <span>FAQ</span>
-          </button>
-          <button class="menu-btn" onclick="App.navigate('settings')">
-            <span class="menu-icon">&#9881;</span>
-            <span>Настройки</span>
           </button>
         </div>
       </div>

@@ -73,6 +73,27 @@ body {
   background: rgba(74,222,128,0.12); color: var(--green);
   border: 1px solid rgba(74,222,128,0.3);
 }
+.faction-switcher-home {
+  display: flex; gap: 10px; justify-content: center; margin-top: 16px;
+}
+.faction-btn-home {
+  flex: 1; max-width: 160px;
+  padding: 14px 24px; border-radius: var(--radius);
+  font-size: 18px; font-weight: 800; letter-spacing: 2px;
+  cursor: pointer; transition: all var(--transition);
+  border: 2px solid var(--border);
+  background: var(--bg-card); color: var(--text-muted);
+  min-height: 52px;
+}
+.faction-btn-home.active {
+  background: var(--bg-card-hover);
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.faction-btn-home:not(.active):hover {
+  border-color: var(--text-muted);
+  color: var(--text-secondary);
+}
 .home-menu { display: flex; flex-direction: column; gap: 10px; margin-top: 24px; }
 .menu-btn {
   display: flex; align-items: center; gap: 14px;

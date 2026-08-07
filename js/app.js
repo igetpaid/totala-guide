@@ -72,9 +72,6 @@ const App = {
       case "faq":
         content = UI.renderFAQ();
         break;
-      case "settings":
-        content = UI.renderSettings();
-        break;
       default:
         content = UI.renderHome();
     }
