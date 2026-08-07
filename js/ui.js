@@ -656,21 +656,15 @@ const UI = {
         <div class="detail-info">
           <div class="detail-role">${unit.role || ""}</div>
           <div class="tier-badge">T${unit.tier || "?"}</div>
+          ${(() => {
+            const tags = unit.tags || [];
+            if (tags.length > 0) {
+              return `<div class="card-tags" style="margin-top:6px">${tags.map(t => '<span class="unit-tag">' + t + '</span>').join('')}</div>`;
+            }
+            return '';
+          })()}
         </div>
       </div>
-
-      ${(() => {
-        const tags = unit.tags || [];
-        if (tags.length > 0) {
-          return `<div class="detail-section">
-            <h3>Теги</h3>
-            <div class="tag-list">
-              ${tags.map(t => '<span class="unit-tag">' + t + '</span>').join('')}
-            </div>
-          </div>`;
-        }
-        return '';
-      })()}
 
       <div class="detail-section">
         <h3>Стоимость</h3>${this.renderSourceBadge(unit.sourceCost)}
