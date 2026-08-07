@@ -656,20 +656,14 @@ const UI = {
       let matches = false;
 
       switch (builderType) {
-        case 'commander':
-          matches = builtAt.includes("commander");
-          break;
         case 't1':
-          matches = (builtAt.includes("construction kbot") ||
-                     builtAt.includes("construction vehicle") ||
-                     builtAt.includes("construction ship") ||
-                     builtAt.includes("construction hover")) && tier <= 1;
+          matches = tier === 1;
           break;
         case 't2':
-          matches = builtAt.includes("adv. construction") && tier <= 2;
+          matches = tier === 2;
           break;
         case 't3':
-          matches = tier <= 3;
+          matches = tier === 3;
           break;
         case 't4':
           matches = tier === 4;

@@ -75,13 +75,7 @@ const App = {
 
     content += this.renderBottomNav();
     el.innerHTML = content;
-
-    // Always scroll to top for detail pages and non-list views
-    if (this.currentView === "unit-detail" || this.currentView === "tips" || this.currentView === "faq" || this.currentView === "settings") {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }
+    el.scrollTop = 0;
   },
 
   goBack() {
