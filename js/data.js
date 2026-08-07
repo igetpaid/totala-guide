@@ -3828,7 +3828,7 @@ const ARM_DATA = {
       counteredBy: ["Крейсеры", "Эсминцы"],
       builtAt: "Naval Yard T3",
       specialAbilities: [],
-      tags: ["ПВО", "Стелс"],
+      tags: ["ПВО"],
       image: null,
       hotkey: "W"
     },
@@ -3861,7 +3861,7 @@ const ARM_DATA = {
       counteredBy: ["Ракетные крейсеры", "Подводные лодки"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Anti-Submarine"],
-      tags: ["Торпеды"],
+      tags: ["Штурм", "Торпеды"],
       image: null,
       hotkey: "E"
     },
@@ -3894,7 +3894,7 @@ const ARM_DATA = {
       counteredBy: ["Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Stealth", "Nuclear"],
-      tags: ["Торпеды"],
+      tags: [],
       image: null,
       hotkey: "R"
     },
@@ -3927,7 +3927,7 @@ const ARM_DATA = {
       counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T3",
       specialAbilities: [],
-      tags: [],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: "T"
     },
