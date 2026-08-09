@@ -504,3 +504,55 @@ body {
 .cat-fab .cat-dropdown-item:hover {
   background: var(--bg-card-hover);
 }
+
+/* ═══════ FULL STATS (Все характеристики) ═══════ */
+.full-stats {
+  font-size: 14px;
+}
+
+.full-stats summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--yellow);
+  padding: 4px 0;
+  outline: none;
+}
+
+.full-stats summary::-webkit-details-marker {
+  display: none;
+}
+
+.full-stats summary::before {
+  content: "▸ ";
+  display: inline-block;
+  transition: transform 0.15s ease;
+  color: var(--text-secondary);
+}
+
+.full-stats[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.full-stats-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 5px 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.full-stats-row:last-child {
+  border-bottom: none;
+}
+
+.full-stats-label {
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+.full-stats-value {
+  color: var(--text-primary);
+  font-weight: 600;
+  text-align: right;
+  word-break: break-word;
+}

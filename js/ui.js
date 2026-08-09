@@ -457,9 +457,31 @@ const BUILDER_IMAGES = {
   "Exp. Unit Fabricator": "ARMGANT.png",
   "Research Facility": "ARMTECH.png",
   "Defense Facility T3": "ARMSTUN.png",
+
+  // ARM tier-suffixed names used in data.js
+  "Kbot Lab T2": "ARMALAB.png",
+  "Kbot Lab T3": "ARMELAB.png",
+  "Kbot Lab T4": "ARMELAB.png",
+  "Vehicle Plant T2": "ARMAVP.png",
+  "Vehicle Plant T3": "ARMGANT.png",
+  "Vehicle Plant T4": "ARMGANT.png",
+  "Hovercraft Platform T2": "ARMAHP.png",
+  "Hovercraft Platform T3": "ARMEHP.png",
+  "Hovercraft Platform T4": "ARMEHP.png",
+  "Air Factory": "ARMAP.png",
+  "Air Factory T2": "ARMAAP.png",
+  "Air Factory T3": "ARMFAB.png",
+  "Air Factory T4": "ARMFAB.png",
+  "Naval Yard": "ARMSY.png",
+  "Naval Yard T2": "ARMASY.png",
+  "Naval Yard T3": "ARMESY.png",
+  "Naval Yard T4": "ARMSSY.png",
+  "Panopticon": "ARMTECH.png",
+
   // COR builder images
   "Commander (начальный юнит)": "CORCOM.png",
   "Commander (Decoy)": "CORDECOM.png",
+  "Commander (улучшенный)": "CORCOM.png",
 };
 
 // COR-specific builder images (same names, different faction images)
@@ -475,6 +497,10 @@ const COR_BUILDER_IMAGES = {
   "Adv. Shipyard": "CORASY.png",
   "Adv. Hovercraft Platform": "CORHP.png",
   "Ultra Kbot Gantry": "CORGANT.png",
+  "Ultra Vehicle Plant": "CORGANT.png",
+  "Ultra Aircraft Hangar": "CORPLAT.png",
+  "Capital Shipyard": "CORASY.png",
+  "Fleet Shipyard": "CORASY.png",
   "Seaplane Platform": "CORPLAT.png",
   "Construction KBot": "CORCK.png",
   "Construction Vehicle": "CORCV.png",
@@ -486,6 +512,130 @@ const COR_BUILDER_IMAGES = {
   "Adv. Construction Aircraft": "CORACA.png",
   "Adv. Construction Ship": "CORACSUB.png",
   "Adv. Construction Hovercraft": "CORCH.png",
+  "Ultra Construction Kbot": "CORACK.png",
+  "Ultra Construction Vehicle": "CORACV.png",
+  "Ultra Construction Aircraft": "CORACA.png",
+  "Ultra Construction Ship": "CORACSUB.png",
+  "Exp. Construction Vehicle": "CORACV.png",
+  "Exp. Unit Fabricator": "CORGANT.png",
+
+  // COR tier-suffixed names (future-proof, same mapping as ARM)
+  "Kbot Lab T2": "CORALAB.png",
+  "Kbot Lab T3": "CORGANT.png",
+  "Kbot Lab T4": "CORGANT.png",
+  "Vehicle Plant T2": "CORAVP.png",
+  "Vehicle Plant T3": "CORGANT.png",
+  "Vehicle Plant T4": "CORGANT.png",
+  "Hovercraft Platform T2": "CORHP.png",
+  "Hovercraft Platform T3": "CORPLAT.png",
+  "Hovercraft Platform T4": "CORPLAT.png",
+  "Air Factory": "CORAP.png",
+  "Air Factory T2": "CORAAP.png",
+  "Air Factory T3": "CORPLAT.png",
+  "Air Factory T4": "CORPLAT.png",
+  "Naval Yard": "CORSY.png",
+  "Naval Yard T2": "CORASY.png",
+  "Naval Yard T3": "CORASY.png",
+  "Naval Yard T4": "CORASY.png",
+  "Defense Facility T3": "CORGANT.png",
+};
+
+// ═══════════════════════════════════════════════════════════
+// ОСНОВНЫЕ ХАРАКТЕРИСТИКИ — конфигурируемый набор полей
+// ═══════════════════════════════════════════════════════════
+// Это ДУБЛИКАТ полей из fullStats юнита. Каждая строка = одно поле
+// в «Основных характеристиках». Чтобы добавить/убрать поле для ВСЕХ
+// юнитов — просто добавь/удали одну строку ниже.
+// key  — поле в unit.fullStats
+// label — подпись
+// fmt   — формат: 'num' (число), 'dps' (с делением на reload), 'flag' (да/нет)
+const MAIN_STATS = [
+  { key: "metal", label: "Металл", fmt: "num" },
+  { key: "energy", label: "Энергия", fmt: "num" },
+  { key: "buildTime", label: "Время постройки", fmt: "num" },
+  { key: "hp", label: "Здоровье", fmt: "num" },
+  { key: "speed", label: "Скорость", fmt: "num" },
+  { key: "sight", label: "Обзор", fmt: "num" },
+  { key: "radar", label: "Радар", fmt: "num" },
+  { key: "range", label: "Дальность", fmt: "num" },
+  { key: "damage", label: "Урон", fmt: "num" },
+];
+
+// Форматтер для «Все характеристики» — подписи полей fullStats
+const FULL_STATS_LABELS = {
+  metal: "Металл",
+  energy: "Энергия",
+  buildTime: "Время постройки",
+  hp: "Здоровье (HP)",
+  speed: "Скорость",
+  sight: "Обзор (LOS)",
+  radar: "Дальность радара",
+  sonar: "Дальность сонара",
+  radarJam: "Радар-джаммер",
+  sonarJam: "Сонар-джаммер",
+  range: "Дальность",
+  damage: "Урон",
+  turnRate: "Скорость поворота",
+  acceleration: "Ускорение",
+  brakeRate: "Торможение",
+  maxSlope: "Макс. уклон",
+  maxWaterDepth: "Макс. глубина воды",
+  minWaterDepth: "Мин. глубина воды",
+  energyMake: "Производство энергии",
+  energyUse: "Потребление энергии",
+  metalMake: "Производство металла",
+  metalStorage: "Хранилище металла",
+  energyStorage: "Хранилище энергии",
+  extractsMetal: "Добыча металла",
+  workerTime: "Worker Time",
+  buildDistance: "Дальность стройки",
+  footprintX: "Размер X",
+  footprintZ: "Размер Z",
+  movementClass: "Класс движения",
+  tedClass: "Класс TED",
+  designation: "Обозначение",
+  category: "Категория",
+  veterancyThresholds: "Пороги ветеранства",
+  veterancyAccuracyBuffRate: "Бонус ветеранства",
+  canMove: "Может двигаться",
+  canFly: "Летает",
+  canHover: "Ховер",
+  floater: "Плавает",
+  amphibious: "Амфибия",
+  canAttack: "Может атаковать",
+  canPatrol: "Может патрулировать",
+  canStop: "Может останавливаться",
+  canGuard: "Может охранять",
+  canBuild: "Строитель",
+  canCapture: "Может захватывать",
+  canReclaim: "Может перерабатывать",
+  canResurrect: "Может воскрешать",
+  canRepair: "Может чинить",
+  canTransport: "Транспорт",
+  stealth: "Стелс",
+  cloakCost: "Стоимость маскировки",
+  cloakCostMoving: "Маскировка в движении",
+  initCloaked: "Изначально скрыт",
+  kamikaze: "Камикадзе",
+  kamikazeDistance: "Дистанция камикадзе",
+  transportCapacity: "Вместимость (шт)",
+  transportSize: "Размер груза",
+  transportMaxUnits: "Макс. юнитов",
+  cruiseAlt: "Высота полёта",
+  noAutoFire: "Нет авт. огня",
+  onOffable: "Вкл/выкл",
+  canBeTransported: "Перевозимый",
+  immuneToParalyzer: "Иммунитет к EMP",
+  hideDamage: "Скрывает HP",
+  healTime: "Саморемонт",
+  damageModifier: "Модификатор урона",
+  upright: "Вертикальная ориентация",
+  waterLine: "Ватерлиния",
+  explodeAs: "Тип взрыва",
+  selfDestructAs: "Тип самоподрыва",
+  selfDestructCountdown: "Таймер самоподрыва",
+  defaultMissionType: "Миссия по умолчанию",
+  maneuverLeashLength: "Leash",
 };
 
 const UI = {
@@ -683,19 +833,20 @@ const UI = {
       })()}
 
       <div class="detail-section">
-        <h3>Стоимость</h3>${this.renderSourceBadge(unit.sourceCost)}
-        <div class="cost-row">
-          <span>Metal: <b>${(unit.cost && unit.cost.metal) ? unit.cost.metal : "-"}</b></span>
-          <span>Energy: <b>${(unit.cost && unit.cost.energy) ? unit.cost.energy : "-"}</b></span>
-          <span>Build Time: <b>${unit.buildTime ? unit.buildTime : "-"}</b></span>
-        </div>
-      </div>
-
-      <div class="detail-section">
-        <h3>Характеристики</h3>${this.renderSourceBadge(unit.sourceStats)}
+        <h3>Основные характеристики</h3>${this.renderSourceBadge(unit.sourceStats)}
         <div class="stat-row">
-          <span>HP: <b>${unit.hp ? unit.hp : "-"}</b></span>
-          <span>Speed: <b>${unit.speed ? unit.speed : "-"}</b></span>
+          ${MAIN_STATS.map(f => {
+            const val = unit.fullStats ? unit.fullStats[f.key] : unit[f.key];
+            let txt;
+            if (val === null || val === undefined || val === "" || val === 0 || val === false) {
+              txt = "-";
+            } else if (f.fmt === "flag") {
+              txt = val ? "Да" : "Нет";
+            } else {
+              txt = val;
+            }
+            return `<span>${f.label}: <b>${txt}</b></span>`;
+          }).join('')}
         </div>
       </div>`;
 
@@ -708,7 +859,7 @@ const UI = {
         html += `
           <div style="padding:8px 0;border-bottom:1px solid var(--border)">
             <div style="font-size:15px;font-weight:600;color:var(--yellow)">${w.id}</div>
-            <div style="font-size:14px;color:var(--text-secondary);margin:4px 0">${w.name || ""}</div>
+            <div style="font-size:14px;color:var(--text-secondary);margin:4px 0">${w.name || ""}${w.type ? ` <span style="font-size:12px">(${w.type})</span>` : ""}</div>
             <div class="stat-row" style="flex-wrap:wrap;gap:8px">
               <span>Урон: <b>${w.damage}</b></span>
               <span>Дальность: <b>${w.range}</b></span>
@@ -716,6 +867,15 @@ const UI = {
               ${w.reload > 0 ? `<span>Перезарядка: <b>${w.reload}с</b></span>` : ''}
               ${w.aoe > 0 ? `<span>Радиус: <b>${w.aoe}</b></span>` : ''}
               ${w.burst > 1 ? `<span>Очередь: <b>${w.burst}</b></span>` : ''}
+              ${w.velocity > 0 ? `<span>Скор. снаряда: <b>${w.velocity}</b></span>` : ''}
+              ${w.tolerance > 0 ? `<span>Точность: <b>${w.tolerance}</b></span>` : ''}
+              ${w.lineOfSight > 0 ? `<span>Требует LOS: <b>Да</b></span>` : ''}
+              ${w.energyPerShot > 0 ? `<span>Энергия/выстрел: <b>${w.energyPerShot}</b></span>` : ''}
+              ${w.metalPerShot > 0 ? `<span>Металл/выстрел: <b>${w.metalPerShot}</b></span>` : ''}
+              ${w.ballistic ? `<span>Баллистика</span>` : ''}
+              ${w.beamWeapon ? `<span>Луч</span>` : ''}
+              ${w.guidance ? `<span>Самонаведение</span>` : ''}
+              ${w.paralyzer ? `<span style="color:#a78bfa">Оглушение</span>` : ''}
             </div>
           </div>`;
       }
@@ -728,6 +888,26 @@ const UI = {
           <span>Урон: <b>${unit.damage || 0}</b></span>
           <span>Дальность: <b>${unit.range || 0}</b></span>
         </div>
+      </div>`;
+    }
+
+    // Все характеристики — раскрывающийся блок (details/summary)
+    if (unit.fullStats) {
+      html += `<div class="detail-section">
+        <details class="full-stats">
+          <summary>Все характеристики <span style="color:var(--text-secondary);font-weight:400;font-size:12px">(нажми, чтобы развернуть)</span></summary>
+          <div style="margin-top:10px">
+            ${Object.keys(unit.fullStats).sort().map(k => {
+              let v = unit.fullStats[k];
+              let txt;
+              if (typeof v === "boolean") { txt = v ? "Да" : "Нет"; }
+              else if (v === null || v === undefined || v === "") { txt = "-"; }
+              else { txt = v; }
+              const label = FULL_STATS_LABELS[k] || k;
+              return `<div class="full-stats-row"><span class="full-stats-label">${label}</span><span class="full-stats-value">${txt}</span></div>`;
+            }).join('')}
+          </div>
+        </details>
       </div>`;
     }
 
