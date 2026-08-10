@@ -855,7 +855,11 @@ const UI = {
     if (weapons.length > 0 && (unit.damage > 0 || unit.sourceWeapons === 'fbi' || unit.sourceWeapons === 'wiki')) {
       html += `<div class="detail-section"><h3>Оружие</h3>${this.renderSourceBadge(unit.sourceWeapons)}`;
       for (const w of weapons) {
-        const dps = w.reload > 0 ? ((w.damage * (w.burst || 1)) / w.reload).toFixed(1) : "0";
+        // DPS accounts for burst: total cycle = burst shots + reload
+        // cycle time = (burst - 1) * burstrate + reload
+        const cycle = w.reload > 0 ? (w.reload + ((w.burst || 1) - 1) * (w.burstrate || 0)) : 0;
+        const dps = cycle > 0 ? ((w.damage * (w.burst || 1)) / cycle).toFixed(1) : "0";
+        const burstTime = (w.burst > 1 && w.burstrate > 0) ? (w.burstrate * ((w.burst || 1) - 1)).toFixed(2) : 0;
         html += `
           <div style="padding:8px 0;border-bottom:1px solid var(--border)">
             <div style="font-size:15px;font-weight:600;color:var(--yellow)">${w.id}</div>
@@ -865,8 +869,8 @@ const UI = {
               <span>Дальность: <b>${w.range}</b></span>
               <span>ДПС: <b>${dps}</b></span>
               ${w.reload > 0 ? `<span>Перезарядка: <b>${w.reload}с</b></span>` : ''}
+              ${w.burst > 1 ? `<span>Очередь: <b>${w.burst}</b>${w.burstrate > 0 ? ` (интервал ${w.burstrate}с, вся очередь ${burstTime}с)` : ""}</span>` : ''}
               ${w.aoe > 0 ? `<span>Радиус: <b>${w.aoe}</b></span>` : ''}
-              ${w.burst > 1 ? `<span>Очередь: <b>${w.burst}</b></span>` : ''}
               ${w.velocity > 0 ? `<span>Скор. снаряда: <b>${w.velocity}</b></span>` : ''}
               ${w.tolerance > 0 ? `<span>Точность: <b>${w.tolerance}</b></span>` : ''}
               ${w.lineOfSight > 0 ? `<span>Требует LOS: <b>Да</b></span>` : ''}

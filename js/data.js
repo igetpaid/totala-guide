@@ -60,8 +60,8 @@ const ARM_DATA = {
       range: 480,
       damage: 30000,
       weaponType: "LASER_COM",
-      weaponDetails: [{"id": "LASER_COM", "name": "J7 Laser", "damage": 90, "range": 320, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_COM", "name": "Starburst Missile", "damage": 240, "range": 480, "burst": 1, "reload": 0.6, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}, {"id": "DGUN_ARM", "name": "Disintegrator", "damage": 30000, "range": 240, "burst": 1, "reload": 1.2, "velocity": 200, "aoe": 72, "type": "", "energyPerShot": 500, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "J7 Laser",
-      strengths: ["Универсальный строитель", "Несёт ядерное оружие", "Высокое здоровье", "Ремонт и восстановление"],      weaknesses: ["Гибель = проигрыш", "Медленный", "Приоритетная цель противника"],
+      weaponDetails: [{"id": "LASER_COM", "name": "J7 Laser", "damage": 90, "range": 320, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_COM", "name": "Starburst Missile", "damage": 240, "range": 480, "burst": 1, "reload": 0.6, "burstrate": 0, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}, {"id": "DGUN_ARM", "name": "Disintegrator", "damage": 30000, "range": 240, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 200, "aoe": 72, "type": "", "energyPerShot": 500, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "J7 Laser",
+      strengths: ["Универсальный строитель", "Несёт ядерное оружие", "Высокое здоровье", "Ремонт и восстановление"],      weaknesses: ["Гибель = проигрыш", "Медленный", "Приоритетная цель противника"],      counters: ["Дальний обстрел", "EMP-оружие"],
 
       fullStats: {
       acceleration: 0.15,
@@ -137,8 +137,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 360
-    },      counters: ["Дальний обстрел", "EMP-оружие"],
-      counteredBy: ["Фрегаты", "Тяжёлые танки", "Артиллерия"],
+    },      counteredBy: ["Фрегаты", "Тяжёлые танки", "Артиллерия"],
       builtAt: "Commander (начальный юнит)",
       specialAbilities: ["Строительство всех зданий", "Восстановление сооружений", "Несёт Nuke", "Модули улучшения"],
       tags: ["Строитель", "Cloak"],
@@ -166,7 +165,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T1", "Ремонт сооружений", "Дешёвый"],      weaknesses: ["Почти безоружён", "Хрупкий", "Медленный"],
+      weaponDetails: [],      strengths: ["Строит здания T1", "Ремонт сооружений", "Дешёвый"],      weaknesses: ["Почти безоружён", "Хрупкий", "Медленный"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.12,
@@ -242,8 +241,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 90
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Kbot Lab",
       specialAbilities: ["Строительство зданий T1", "Ремонт"],
       tags: ["Строитель"],
@@ -271,7 +269,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Дальний радар", "Малая стоимость", "Раннее предупреждение"],      weaknesses: ["Слабое вооружение", "Хрупкий", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Дальний радар", "Малая стоимость", "Раннее предупреждение"],      weaknesses: ["Слабое вооружение", "Хрупкий", "Приоритетная цель"],      counters: ["Стелс-юниты"],
 
       fullStats: {
       acceleration: 0.045,
@@ -347,8 +345,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-юниты"],
-      counteredBy: ["Любой боевой юнит", "Воздушные рейды"],
+    },      counteredBy: ["Любой боевой юнит", "Воздушные рейды"],
       builtAt: "Kbot Lab",
       specialAbilities: ["Радар"],
       tags: ["Радар"],
@@ -376,8 +373,8 @@ const ARM_DATA = {
       range: 180,
       damage: 8,
       weaponType: "EMG",
-      weaponDetails: [{"id": "EMG", "name": "E.M.G.", "damage": 8, "range": 180, "burst": 3, "reload": 0.4, "velocity": 300, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "E.M.G.",
-      strengths: ["Очень быстрый", "Дешёвый", "Хорошая скорость стрельбы", "Массовое производство"],      weaknesses: ["Низкое здоровье", "Слабый урон", "Уступает тяжёлым юнитам"],
+      weaponDetails: [{"id": "EMG", "name": "E.M.G.", "damage": 8, "range": 180, "burst": 3, "reload": 0.4, "burstrate": 0.1, "velocity": 300, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "E.M.G.",
+      strengths: ["Очень быстрый", "Дешёвый", "Хорошая скорость стрельбы", "Массовое производство"],      weaknesses: ["Низкое здоровье", "Слабый урон", "Уступает тяжёлым юнитам"],      counters: ["Танки", "Укреплённые позиции"],
 
       fullStats: {
       acceleration: 0.1,
@@ -453,8 +450,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Танки", "Укреплённые позиции"],
-      counteredBy: ["Samson", "Средние танки", "Турели"],
+    },      counteredBy: ["Samson", "Средние танки", "Турели"],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -482,8 +478,8 @@ const ARM_DATA = {
       range: 450,
       damage: 108,
       weaponType: "ROCKET",
-      weaponDetails: [{"id": "ROCKET", "name": "Rockets", "damage": 108, "range": 450, "burst": 1, "reload": 1.5, "velocity": 540, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 405}],      weaponName: "Rockets",
-      strengths: ["Хорошая дальность", "Сильный урон", "Поддержка пехоты"],      weaknesses: ["Медленная скорострельность", "Уязвим в ближнем бою", "Средняя скорость"],
+      weaponDetails: [{"id": "ROCKET", "name": "Rockets", "damage": 108, "range": 450, "burst": 1, "reload": 1.5, "burstrate": 0, "velocity": 540, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 405}],      weaponName: "Rockets",
+      strengths: ["Хорошая дальность", "Сильный урон", "Поддержка пехоты"],      weaknesses: ["Медленная скорострельность", "Уязвим в ближнем бою", "Средняя скорость"],      counters: ["Быстрые рейды", "Воздушные юниты"],
 
       fullStats: {
       acceleration: 0.035,
@@ -559,8 +555,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные юниты"],
-      counteredBy: ["Flea", "Лёгкие танки", "Артиллерия"],
+    },      counteredBy: ["Flea", "Лёгкие танки", "Артиллерия"],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -588,8 +583,8 @@ const ARM_DATA = {
       range: 675,
       damage: 84,
       weaponType: "CANNON_ART_LIGHT",
-      weaponDetails: [{"id": "CANNON_ART_LIGHT", "name": "Light Artillery Cannon", "damage": 84, "range": 675, "burst": 1, "reload": 2, "velocity": 285, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Light Artillery Cannon",
-      strengths: ["Дальняя дистанция", "Стреляет через преграды", "Высокий урон"],      weaknesses: ["Очень медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_ART_LIGHT", "name": "Light Artillery Cannon", "damage": 84, "range": 675, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 285, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Light Artillery Cannon",
+      strengths: ["Дальняя дистанция", "Стреляет через преграды", "Высокий урон"],      weaknesses: ["Очень медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],      counters: ["Быстрые рейды", "Воздушные атаки"],
 
       fullStats: {
       acceleration: 0.04,
@@ -665,8 +660,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные атаки"],
-      counteredBy: ["Рейды пехоты", "Истребители", "Подвижная артиллерия"],
+    },      counteredBy: ["Рейды пехоты", "Истребители", "Подвижная артиллерия"],
       builtAt: "Kbot Lab",
       specialAbilities: ["Climbing"],
       tags: ["Артиллерия", "Ползущий"],
@@ -692,10 +686,10 @@ const ARM_DATA = {
       hp: 470,
       speed: 1.4,
       range: 825,
-      damage: 30,
+      damage: 480,
       weaponType: "MISSILE_GF_MEDIUM",
-      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Missiles",
-      strengths: ["Эффективен против воздуха", "Хорошая дальность", "Дешёвый"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],
+      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Missiles",
+      strengths: ["Эффективен против воздуха", "Хорошая дальность", "Дешёвый"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0.1,
@@ -721,7 +715,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 30,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ARM-KML",
@@ -771,8 +765,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки", "Артиллерия"],
+    },      counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -800,7 +793,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Очень быстрый", "Стелс", "Дешёвый", "Идеален для разведки"],      weaknesses: ["Очень хрупкий", "Слабый урон", "Не эффективен в открытом бою"],
+      weaponDetails: [],      strengths: ["Очень быстрый", "Стелс", "Дешёвый", "Идеален для разведки"],      weaknesses: ["Очень хрупкий", "Слабый урон", "Не эффективен в открытом бою"],      counters: ["Стелс-детекторы", "Радар"],
 
       fullStats: {
       acceleration: 0.1,
@@ -876,8 +869,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 30
-    },      counters: ["Стелс-детекторы", "Радар"],
-      counteredBy: ["Радарные башни", "Массовая оборона"],
+    },      counteredBy: ["Радарные башни", "Массовая оборона"],
       builtAt: "Kbot Lab",
       specialAbilities: ["Stealth"],
       tags: ["Ползущий", "Стелс"],
@@ -902,10 +894,11 @@ const ARM_DATA = {
       sourceWeapons: "fbi",
       hp: 444,
       speed: 2,
-      range: 0,
-      damage: 0,
-      weaponType: "None",
-      weaponDetails: [],      strengths: ["Огромный урон при взрыве", "Маскировка", "Лазание по горам", "Обход оборонительных линий"],      weaknesses: ["Одноразовый", "Хрупкий", "Медленный", "Обнаруживается стелс-детекторами"],
+      range: 112,
+      damage: 1440,
+      weaponType: "CRAWL_BLASTMED",
+      weaponName: "Medium Crawling Bomb",
+      weaponDetails: [{"id": "CRAWL_BLASTMED", "name": "Medium Crawling Bomb", "damage": 1440, "range": 112, "burst": 1, "reload": 3.6, "burstrate": 0, "velocity": 250, "aoe": 300, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Огромный урон при взрыве", "Маскировка", "Лазание по горам", "Обход оборонительных линий"],      weaknesses: ["Одноразовый", "Хрупкий", "Медленный", "Обнаруживается стелс-детекторами"],      counters: ["Стелс-детекторы", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.99,
@@ -931,7 +924,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 40000000,
       cruiseAlt: 0,
-      damage: 0,
+      damage: 1440,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ARM-CB",
@@ -963,7 +956,7 @@ const ARM_DATA = {
       onOffable: false,
       radar: 24,
       radarJam: 0,
-      range: 0,
+      range: 112,
       selfDestructAs: "CRAWL_BLASTMED",
       selfDestructCountdown: 0,
       sight: 512,
@@ -981,11 +974,10 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-детекторы", "Дальний обстрел"],
-      counteredBy: ["Радар", "Противопехотные турели", "Раннее обнаружение"],
+    },      counteredBy: ["Радар", "Противопехотные турели", "Раннее обнаружение"],
       builtAt: "Kbot Lab",
       specialAbilities: ["Cloak", "Climbing", "Suicide"],
-      tags: ["Ползущий", "Камикадзе"],
+      tags: ["Штурм", "Ползущий", "Камикадзе"],
       image: null,
       hotkey: "I"
     },
@@ -1010,8 +1002,8 @@ const ARM_DATA = {
       range: 240,
       damage: 44,
       weaponType: "GAUSS_SPRAY",
-      weaponDetails: [{"id": "GAUSS_SPRAY", "name": "Shotgun Cannon", "damage": 44, "range": 240, "burst": 3, "reload": 0.375, "velocity": 720, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Shotgun Cannon",
-      strengths: ["Хорошее здоровье", "Сильный урон", "Универсальность"],      weaknesses: ["Средняя скорость", "Уступает тяжёлым танкам"],
+      weaponDetails: [{"id": "GAUSS_SPRAY", "name": "Shotgun Cannon", "damage": 44, "range": 240, "burst": 3, "reload": 0.375, "burstrate": 0.033, "velocity": 720, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Shotgun Cannon",
+      strengths: ["Хорошее здоровье", "Сильный урон", "Универсальность"],      weaknesses: ["Средняя скорость", "Уступает тяжёлым танкам"],      counters: ["Тяжёлая броня", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.1,
@@ -1087,8 +1079,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня", "Артиллерия"],
-      counteredBy: ["Stumpy", "Тяжёлые киборги", "Турели"],
+    },      counteredBy: ["Stumpy", "Тяжёлые киборги", "Турели"],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -1116,7 +1107,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Быстрое строительство", "Нормальное здоровье", "Дешёвый"],      weaknesses: ["Слабое вооружение", "Менее манёвренный, чем KBot"],
+      weaponDetails: [],      strengths: ["Быстрое строительство", "Нормальное здоровье", "Дешёвый"],      weaknesses: ["Слабое вооружение", "Менее манёвренный, чем KBot"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.015,
@@ -1192,8 +1183,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 120
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Vehicle Plant",
       specialAbilities: ["Строительство зданий T1", "Ремонт"],
       tags: ["Строитель"],
@@ -1221,8 +1211,8 @@ const ARM_DATA = {
       range: 180,
       damage: 36,
       weaponType: "LASER_FAV",
-      weaponDetails: [{"id": "LASER_FAV", "name": "Laser", "damage": 36, "range": 180, "burst": 1, "reload": 1, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Laser",
-      strengths: ["Самый быстрый T1 транспорт", "Дешёвый", "Идеален для разведки"],      weaknesses: ["Очень хрупкий", "Слабое вооружение"],
+      weaponDetails: [{"id": "LASER_FAV", "name": "Laser", "damage": 36, "range": 180, "burst": 1, "reload": 1, "burstrate": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Laser",
+      strengths: ["Самый быстрый T1 транспорт", "Дешёвый", "Идеален для разведки"],      weaknesses: ["Очень хрупкий", "Слабое вооружение"],      counters: ["Стационарная оборона"],
 
       fullStats: {
       acceleration: 0.04,
@@ -1298,8 +1288,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стационарная оборона"],
-      counteredBy: ["Турели", "Массовая оборона"],
+    },      counteredBy: ["Турели", "Массовая оборона"],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -1327,8 +1316,8 @@ const ARM_DATA = {
       range: 180,
       damage: 8,
       weaponType: "EMG",
-      weaponDetails: [{"id": "EMG", "name": "E.M.G.", "damage": 8, "range": 180, "burst": 3, "reload": 0.4, "velocity": 300, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "E.M.G.",
-      strengths: ["Быстрый", "Хорошая скорость стрельбы", "Дешёвый"],      weaknesses: ["Слабая броня", "Уступает средним танкам"],
+      weaponDetails: [{"id": "EMG", "name": "E.M.G.", "damage": 8, "range": 180, "burst": 3, "reload": 0.4, "burstrate": 0.1, "velocity": 300, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "E.M.G.",
+      strengths: ["Быстрый", "Хорошая скорость стрельбы", "Дешёвый"],      weaknesses: ["Слабая броня", "Уступает средним танкам"],      counters: ["Средние танки", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.017,
@@ -1404,8 +1393,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Средние танки", "Артиллерия"],
-      counteredBy: ["Stumpy", "Тяжёлые танки", "ПТ-оружие"],
+    },      counteredBy: ["Stumpy", "Тяжёлые танки", "ПТ-оружие"],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -1433,8 +1421,8 @@ const ARM_DATA = {
       range: 335,
       damage: 135,
       weaponType: "CANNON_TANK_LIGHT",
-      weaponDetails: [{"id": "CANNON_TANK_LIGHT", "name": "Light Tank Plasma Cannon", "damage": 135, "range": 335, "burst": 1, "reload": 1.5, "velocity": 220, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Light Tank Plasma Cannon",
-      strengths: ["Хорошая броня", "Сильный урон", "Универсальность"],      weaknesses: ["Средняя скорость", "Уступает тяжёлым танкам"],
+      weaponDetails: [{"id": "CANNON_TANK_LIGHT", "name": "Light Tank Plasma Cannon", "damage": 135, "range": 335, "burst": 1, "reload": 1.5, "burstrate": 0, "velocity": 220, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Light Tank Plasma Cannon",
+      strengths: ["Хорошая броня", "Сильный урон", "Универсальность"],      weaknesses: ["Средняя скорость", "Уступает тяжёлым танкам"],      counters: ["Тяжёлая броня", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.016,
@@ -1510,8 +1498,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня", "Артиллерия"],
-      counteredBy: ["Bulldog", "Тяжёлые танки", "ПТ-оружие"],
+    },      counteredBy: ["Bulldog", "Тяжёлые танки", "ПТ-оружие"],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -1539,8 +1526,8 @@ const ARM_DATA = {
       range: 900,
       damage: 64,
       weaponType: "CANNON_LART",
-      weaponDetails: [{"id": "CANNON_LART", "name": "Low Trajectory Spread Plasma Cannon", "damage": 64, "range": 900, "burst": 1, "reload": 0.25, "velocity": 360, "aoe": 128, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Low Trajectory Spread Plasma Cannon",
-      strengths: ["Очень дальняя дистанция", "Стреляет через преграды", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_LART", "name": "Low Trajectory Spread Plasma Cannon", "damage": 64, "range": 900, "burst": 1, "reload": 0.25, "burstrate": 0, "velocity": 360, "aoe": 128, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Low Trajectory Spread Plasma Cannon",
+      strengths: ["Очень дальняя дистанция", "Стреляет через преграды", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],      counters: ["Быстрые рейды", "Воздушные атаки"],
 
       fullStats: {
       acceleration: 0.008,
@@ -1616,8 +1603,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные атаки"],
-      counteredBy: ["Рейды пехоты", "Истребители", "Подвижная артиллерия"],
+    },      counteredBy: ["Рейды пехоты", "Истребители", "Подвижная артиллерия"],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: ["Штурм", "Артиллерия"],
@@ -1643,10 +1629,10 @@ const ARM_DATA = {
       hp: 812,
       speed: 1.25,
       range: 900,
-      damage: 45,
+      damage: 720,
       weaponType: "MISSILE_GF_HEAVY",
-      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
-      strengths: ["Эффективен против воздуха", "Мобильный", "Хорошая дальность"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],
+      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
+      strengths: ["Эффективен против воздуха", "Мобильный", "Хорошая дальность"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0.03,
@@ -1672,7 +1658,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 45,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ARM-MML5",
@@ -1722,8 +1708,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки", "Артиллерия"],
+    },      counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -1855,8 +1840,8 @@ const ARM_DATA = {
       range: 320,
       damage: 160,
       weaponType: "GAUSS",
-      weaponDetails: [{"id": "GAUSS", "name": "Gauss Cannon", "damage": 160, "range": 320, "burst": 1, "reload": 1, "velocity": 500, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Gauss Cannon",
-      strengths: ["Мощный урон", "Пробивает броню", "Хорошая дальность"],      weaknesses: ["Медленный", "Медленная перезарядка", "Уязвим для пехоты"],
+      weaponDetails: [{"id": "GAUSS", "name": "Gauss Cannon", "damage": 160, "range": 320, "burst": 1, "reload": 1, "burstrate": 0, "velocity": 500, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Gauss Cannon",
+      strengths: ["Мощный урон", "Пробивает броню", "Хорошая дальность"],      weaknesses: ["Медленный", "Медленная перезарядка", "Уязвим для пехоты"],      counters: ["Быстрые рейды", "Пехота"],
 
       fullStats: {
       acceleration: 0.018,
@@ -1932,8 +1917,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Пехота"],
-      counteredBy: ["Flea", "Лёгкие танки", "Артиллерия"],
+    },      counteredBy: ["Flea", "Лёгкие танки", "Артиллерия"],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -1961,7 +1945,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Быстрое строительство", "Воздушная мобильность", "Дешёвый"],      weaknesses: ["Очень хрупкий", "Слабое вооружение", "Нужен аэродром"],
+      weaponDetails: [],      strengths: ["Быстрое строительство", "Воздушная мобильность", "Дешёвый"],      weaknesses: ["Очень хрупкий", "Слабое вооружение", "Нужен аэродром"],      counters: ["Зенитное оружие"],
 
       fullStats: {
       acceleration: 0.07,
@@ -2037,8 +2021,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 60
-    },      counters: ["Зенитное оружие"],
-      counteredBy: ["ПВО", "Истребители"],
+    },      counteredBy: ["ПВО", "Истребители"],
       builtAt: "Air Factory",
       specialAbilities: ["Строительство зданий T1", "Ремонт"],
       tags: ["Строитель"],
@@ -2066,7 +2049,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Очень быстрый", "Дешёвый", "Идеален для разведки"],      weaknesses: ["Не вооружён", "Очень хрупкий"],
+      weaponDetails: [],      strengths: ["Очень быстрый", "Дешёвый", "Идеален для разведки"],      weaknesses: ["Не вооружён", "Очень хрупкий"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.5,
@@ -2142,8 +2125,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory",
       specialAbilities: ["Scout"],
       tags: [],
@@ -2169,10 +2151,10 @@ const ARM_DATA = {
       hp: 490,
       speed: 11.25,
       range: 600,
-      damage: 36,
+      damage: 576,
       weaponType: "MISSILE_VTOL",
-      weaponDetails: [{"id": "MISSILE_VTOL", "name": "Hybrid GF+AA Guided Missiles", "damage": 36, "range": 600, "burst": 1, "reload": 1.8, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}],      weaponName: "Hybrid GF+AA Guided Missiles",
-      strengths: ["Хорошая скорость", "Эффективен против воздуха", "Прикрытие"],      weaknesses: ["Слабый против наземных целей", "Среднее здоровье"],
+      weaponDetails: [{"id": "MISSILE_VTOL", "name": "Hybrid GF+AA Guided Missiles", "damage": 576, "range": 600, "burst": 1, "reload": 1.8, "burstrate": 0, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}],      weaponName: "Hybrid GF+AA Guided Missiles",
+      strengths: ["Хорошая скорость", "Эффективен против воздуха", "Прикрытие"],      weaknesses: ["Слабый против наземных целей", "Среднее здоровье"],      counters: ["Массовые воздушные атаки"],
 
       fullStats: {
       acceleration: 0.35,
@@ -2198,7 +2180,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 135,
-      damage: 36,
+      damage: 576,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFD-J9",
@@ -2248,8 +2230,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Массовые воздушные атаки"],
-      counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
+    },      counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
       builtAt: "Air Factory",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -2277,8 +2258,8 @@ const ARM_DATA = {
       range: 1280,
       damage: 180,
       weaponType: "BOMB",
-      weaponDetails: [{"id": "BOMB", "name": "Bombs", "damage": 180, "range": 1280, "burst": 1, "reload": 0.19, "velocity": 0, "aoe": 72, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "Bombs",
-      strengths: ["Сильный площадной урон", "Эффективен против скоплений", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для ПВО", "Одноразовая атака (нужно возвращаться)"],
+      weaponDetails: [{"id": "BOMB", "name": "Bombs", "damage": 180, "range": 1280, "burst": 1, "reload": 0.19, "burstrate": 0, "velocity": 0, "aoe": 72, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "Bombs",
+      strengths: ["Сильный площадной урон", "Эффективен против скоплений", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для ПВО", "Одноразовая атака (нужно возвращаться)"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.07,
@@ -2354,8 +2335,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители", "Маскировка"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители", "Маскировка"],
       builtAt: "Air Factory",
       specialAbilities: [],
       tags: [],
@@ -2381,10 +2361,10 @@ const ARM_DATA = {
       hp: 844,
       speed: 8,
       range: 375,
-      damage: 120,
+      damage: 480,
       weaponType: "DEPTHCHARGE",
-      weaponDetails: [{"id": "DEPTHCHARGE", "name": "Depth Charge", "damage": 120, "range": 375, "burst": 1, "reload": 2, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}],      weaponName: "Depth Charge",
-      strengths: ["Эффективен против подлодок", "Хорошая дальность", "Воздушная мобильность"],      weaknesses: ["Слабый против наземных целей", "Среднее здоровье"],
+      weaponDetails: [{"id": "DEPTHCHARGE", "name": "Depth Charge", "damage": 480, "range": 375, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}],      weaponName: "Depth Charge",
+      strengths: ["Эффективен против подлодок", "Хорошая дальность", "Воздушная мобильность"],      weaknesses: ["Слабый против наземных целей", "Среднее здоровье"],      counters: ["Зенитное оружие"],
 
       fullStats: {
       acceleration: 0.2,
@@ -2410,7 +2390,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 100,
-      damage: 120,
+      damage: 480,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFD-J9",
@@ -2460,8 +2440,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Зенитное оружие"],
-      counteredBy: ["ПВО", "Истребители"],
+    },      counteredBy: ["ПВО", "Истребители"],
       builtAt: "Air Factory",
       specialAbilities: ["Anti-Submarine"],
       tags: ["Торпеды", "Амфибия"],
@@ -2489,7 +2468,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Перевозка юнитов", "Быстрая переброска", "Преодоление преград"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Нужен аэродром"],
+      weaponDetails: [],      strengths: ["Перевозка юнитов", "Быстрая переброска", "Преодоление преград"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Нужен аэродром"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.16,
@@ -2565,8 +2544,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory",
       specialAbilities: ["Air Transport"],
       tags: ["Транспорт"],
@@ -2594,7 +2572,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит морские здания", "Водонепроницаемый", "Дешёвый"],      weaknesses: ["Слабое вооружение", "Медленный", "Уязвим для подлодок"],
+      weaponDetails: [],      strengths: ["Строит морские здания", "Водонепроницаемый", "Дешёвый"],      weaknesses: ["Слабое вооружение", "Медленный", "Уязвим для подлодок"],      counters: ["Подлодки", "Морская артиллерия"],
 
       fullStats: {
       acceleration: 0.009,
@@ -2670,8 +2648,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 150
-    },      counters: ["Подлодки", "Морская артиллерия"],
-      counteredBy: ["Подводные лодки", "Ракетные корабли"],
+    },      counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Naval Yard",
       specialAbilities: ["Строительство морских зданий"],
       tags: ["Строитель"],
@@ -2699,8 +2676,8 @@ const ARM_DATA = {
       range: 240,
       damage: 50,
       weaponType: "LASER_FAST",
-      weaponDetails: [{"id": "LASER_FAST", "name": "Laser", "damage": 50, "range": 240, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Laser",
-      strengths: ["Быстрый", "Обнаруживает подлодки", "Дешёвый"],      weaknesses: ["Слабое вооружение", "Хрупкий"],
+      weaponDetails: [{"id": "LASER_FAST", "name": "Laser", "damage": 50, "range": 240, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Laser",
+      strengths: ["Быстрый", "Обнаруживает подлодки", "Дешёвый"],      weaknesses: ["Слабое вооружение", "Хрупкий"],      counters: ["Боевые корабли"],
 
       fullStats: {
       acceleration: 0.3,
@@ -2776,8 +2753,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Боевые корабли"],
-      counteredBy: ["Фрегаты", "Подлодки"],
+    },      counteredBy: ["Фрегаты", "Подлодки"],
       builtAt: "Naval Yard",
       specialAbilities: ["Sonar"],
       tags: ["Штурм"],
@@ -2803,10 +2779,10 @@ const ARM_DATA = {
       hp: 1525,
       speed: 2.7,
       range: 600,
-      damage: 480,
+      damage: 1920,
       weaponType: "TORPEDO",
-      weaponDetails: [{"id": "TORPEDO", "name": "Unguided Torpedo", "damage": 480, "range": 600, "burst": 1, "reload": 3, "velocity": 150, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 0}],      weaponName: "Unguided Torpedo",
-      strengths: ["Скрытность", "Сильный урон торпедами", "Засады"],      weaknesses: ["Медленный", "Уязвим для глубинных бомб", "Не стреляет по наземным целям"],
+      weaponDetails: [{"id": "TORPEDO", "name": "Unguided Torpedo", "damage": 1920, "range": 600, "burst": 1, "reload": 3, "burstrate": 0, "velocity": 150, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 0}],      weaponName: "Unguided Torpedo",
+      strengths: ["Скрытность", "Сильный урон торпедами", "Засады"],      weaknesses: ["Медленный", "Уязвим для глубинных бомб", "Не стреляет по наземным целям"],      counters: ["Глубинные бомбы", "Сонар"],
 
       fullStats: {
       acceleration: 0.0495,
@@ -2832,7 +2808,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 480,
+      damage: 1920,
       damageModifier: 0.25,
       defaultMissionType: "Standby",
       designation: "ASD-SM",
@@ -2882,8 +2858,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 20,
       workerTime: 0
-    },      counters: ["Глубинные бомбы", "Сонар"],
-      counteredBy: ["Zephyr", "Противолодочные корабли", "Сонар"],
+    },      counteredBy: ["Zephyr", "Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard",
       specialAbilities: ["Stealth"],
       tags: ["Торпеды"],
@@ -2911,8 +2886,8 @@ const ARM_DATA = {
       range: 450,
       damage: 108,
       weaponType: "ROCKET",
-      weaponDetails: [{"id": "ROCKET", "name": "Rockets", "damage": 108, "range": 450, "burst": 1, "reload": 1.5, "velocity": 540, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 405}],      weaponName: "Rockets",
-      strengths: ["Универсальность", "Хорошая скорость", "Эффективен против подлодок"],      weaknesses: ["Средняя броня", "Уступает эсминцам"],
+      weaponDetails: [{"id": "ROCKET", "name": "Rockets", "damage": 108, "range": 450, "burst": 1, "reload": 1.5, "burstrate": 0, "velocity": 540, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 405}],      weaponName: "Rockets",
+      strengths: ["Универсальность", "Хорошая скорость", "Эффективен против подлодок"],      weaknesses: ["Средняя броня", "Уступает эсминцам"],      counters: ["Тяжёлые корабли", "Подлодки"],
 
       fullStats: {
       acceleration: 0.2475,
@@ -2988,8 +2963,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлые корабли", "Подлодки"],
-      counteredBy: ["Крейсеры", "Подводные лодки"],
+    },      counteredBy: ["Крейсеры", "Подводные лодки"],
       builtAt: "Naval Yard",
       specialAbilities: ["Anti-Submarine"],
       tags: [],
@@ -3015,10 +2989,10 @@ const ARM_DATA = {
       hp: 5740,
       speed: 2.35,
       range: 640,
-      damage: 216,
+      damage: 480,
       weaponType: "CANNON_ROY",
-      weaponDetails: [{"id": "CANNON_ROY", "name": "Destroyer Plasma Cannon", "damage": 216, "range": 640, "burst": 1, "reload": 2, "velocity": 320, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "DEPTHCHARGE", "name": "Depth Charge", "damage": 120, "range": 375, "burst": 1, "reload": 2, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}],      weaponName: "Destroyer Plasma Cannon",
-      strengths: ["Сильное вооружение", "Хорошая броня", "Контроль моря"],      weaknesses: ["Медленный", "Уязвим для подлодок", "Дорогой"],
+      weaponDetails: [{"id": "CANNON_ROY", "name": "Destroyer Plasma Cannon", "damage": 216, "range": 640, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 320, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "DEPTHCHARGE", "name": "Depth Charge", "damage": 480, "range": 375, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}],      weaponName: "Destroyer Plasma Cannon",
+      strengths: ["Сильное вооружение", "Хорошая броня", "Контроль моря"],      weaknesses: ["Медленный", "Уязвим для подлодок", "Дорогой"],      counters: ["Подлодки", "Береговые ракеты"],
 
       fullStats: {
       acceleration: 0.048,
@@ -3044,7 +3018,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 216,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ASD-SD",
@@ -3094,8 +3068,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Береговые ракеты"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard",
       specialAbilities: ["Anti-Submarine"],
       tags: ["Торпеды"],
@@ -3121,10 +3094,10 @@ const ARM_DATA = {
       hp: 1215,
       speed: 2.5,
       range: 900,
-      damage: 60,
+      damage: 720,
       weaponType: "MISSILE_GF_MEDIUM",
-      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "DEPTHCHARGE_LIGHT", "name": "Light Depth Charge", "damage": 60, "range": 300, "burst": 1, "reload": 2, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
-      strengths: ["Эффективен против подлодок и воздуха", "Быстрый", "Дешёвый"],      weaknesses: ["Слабый против надводных кораблей", "Средняя броня"],
+      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "DEPTHCHARGE_LIGHT", "name": "Light Depth Charge", "damage": 240, "range": 300, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
+      strengths: ["Эффективен против подлодок и воздуха", "Быстрый", "Дешёвый"],      weaknesses: ["Слабый против надводных кораблей", "Средняя броня"],      counters: ["Тяжёлые корабли"],
 
       fullStats: {
       acceleration: 0.165,
@@ -3150,7 +3123,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 60,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ASD-SS",
@@ -3200,8 +3173,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлые корабли"],
-      counteredBy: ["Эсминцы", "Крейсеры"],
+    },      counteredBy: ["Эсминцы", "Крейсеры"],
       builtAt: "Naval Yard",
       specialAbilities: ["Anti-Submarine", "Anti-Air"],
       tags: ["ПВО", "Торпеды"],
@@ -3260,7 +3232,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Перевозка нескольких юнитов", "Морской десант", "Дешёвый"],      weaknesses: ["Медленный", "Хрупкий", "Слабое вооружение"],
+      weaponDetails: [],      strengths: ["Перевозка нескольких юнитов", "Морской десант", "Дешёвый"],      weaknesses: ["Медленный", "Хрупкий", "Слабое вооружение"],      counters: ["Подлодки", "Морская артиллерия"],
 
       fullStats: {
       acceleration: 0.02,
@@ -3336,8 +3308,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Морская артиллерия"],
-      counteredBy: ["Подводные лодки", "Ракетные корабли"],
+    },      counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Naval Yard",
       specialAbilities: ["Naval Transport"],
       tags: ["Транспорт"],
@@ -3365,7 +3336,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Амфибийный", "Строит на берегу и воде", "Мобильный"],      weaknesses: ["Слабое вооружение", "Средняя скорость", "Дорогой"],
+      weaponDetails: [],      strengths: ["Амфибийный", "Строит на берегу и воде", "Мобильный"],      weaknesses: ["Слабое вооружение", "Средняя скорость", "Дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.06,
@@ -3441,8 +3412,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 90
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious", "Строительство зданий T1"],
       tags: ["Строитель"],
@@ -3470,8 +3440,8 @@ const ARM_DATA = {
       range: 180,
       damage: 36,
       weaponType: "LASER_FAV",
-      weaponDetails: [{"id": "LASER_FAV", "name": "Laser", "damage": 36, "range": 180, "burst": 1, "reload": 1, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Laser",
-      strengths: ["Быстрый", "Амфибийный", "Дешёвый"],      weaknesses: ["Очень хрупкий", "Слабое вооружение"],
+      weaponDetails: [{"id": "LASER_FAV", "name": "Laser", "damage": 36, "range": 180, "burst": 1, "reload": 1, "burstrate": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Laser",
+      strengths: ["Быстрый", "Амфибийный", "Дешёвый"],      weaknesses: ["Очень хрупкий", "Слабое вооружение"],      counters: ["Боевые hovercraft"],
 
       fullStats: {
       acceleration: 0.11,
@@ -3547,8 +3517,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Боевые hovercraft"],
-      counteredBy: ["Zapper", "Танки", "ПВО"],
+    },      counteredBy: ["Zapper", "Танки", "ПВО"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious"],
       tags: ["Амфибия"],
@@ -3576,8 +3545,8 @@ const ARM_DATA = {
       range: 210,
       damage: 168,
       weaponType: "LIGHTNING_LATNK",
-      weaponDetails: [{"id": "LIGHTNING_LATNK", "name": "Heavy Lightning Gun", "damage": 168, "range": 210, "burst": 1, "reload": 0.525, "velocity": 750, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Heavy Lightning Gun",
-      strengths: ["Оглушение", "Эффективен против пехоты", "Амфибийный"],      weaknesses: ["Слабая броня", "Средний урон", "Уязвим для тяжёлых танков"],
+      weaponDetails: [{"id": "LIGHTNING_LATNK", "name": "Heavy Lightning Gun", "damage": 168, "range": 210, "burst": 1, "reload": 0.525, "burstrate": 0, "velocity": 750, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Heavy Lightning Gun",
+      strengths: ["Оглушение", "Эффективен против пехоты", "Амфибийный"],      weaknesses: ["Слабая броня", "Средний урон", "Уязвим для тяжёлых танков"],      counters: ["Тяжёлая броня"],
 
       fullStats: {
       acceleration: 0.085,
@@ -3653,8 +3622,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня"],
-      counteredBy: ["Stumpy", "Тяжёлые танки", "Артиллерия"],
+    },      counteredBy: ["Stumpy", "Тяжёлые танки", "Артиллерия"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious", "Stun"],
       tags: ["Штурм", "Амфибия"],
@@ -3682,8 +3650,8 @@ const ARM_DATA = {
       range: 500,
       damage: 168,
       weaponType: "VSPAM_MH",
-      weaponDetails: [{"id": "VSPAM_MH", "name": "Starburst Missile", "damage": 168, "range": 500, "burst": 1, "reload": 2, "velocity": -5, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 720}],      weaponName: "Starburst Missile",
-      strengths: ["Хорошая дальность", "Сильный урон", "Амфибийный"],      weaknesses: ["Медленная скорострельность", "Средняя броня"],
+      weaponDetails: [{"id": "VSPAM_MH", "name": "Starburst Missile", "damage": 168, "range": 500, "burst": 1, "reload": 2, "burstrate": 0, "velocity": -5, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 720}],      weaponName: "Starburst Missile",
+      strengths: ["Хорошая дальность", "Сильный урон", "Амфибийный"],      weaknesses: ["Медленная скорострельность", "Средняя броня"],      counters: ["Быстрые рейды", "Воздушные атаки"],
 
       fullStats: {
       acceleration: 0.06,
@@ -3759,8 +3727,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные атаки"],
-      counteredBy: ["Flea", "Лёгкие танки", "Артиллерия"],
+    },      counteredBy: ["Flea", "Лёгкие танки", "Артиллерия"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious"],
       tags: ["Амфибия"],
@@ -3788,8 +3755,8 @@ const ARM_DATA = {
       range: 400,
       damage: 180,
       weaponType: "CANNON_TANK_MEDIUM",
-      weaponDetails: [{"id": "CANNON_TANK_MEDIUM", "name": "Medium Tank Plasma Cannon", "damage": 180, "range": 400, "burst": 1, "reload": 1.25, "velocity": 230, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Tank Plasma Cannon",
-      strengths: ["Универсальность", "Хорошее здоровье", "Амфибийный"],      weaknesses: ["Средняя скорость", "Уступает тяжёлым танкам"],
+      weaponDetails: [{"id": "CANNON_TANK_MEDIUM", "name": "Medium Tank Plasma Cannon", "damage": 180, "range": 400, "burst": 1, "reload": 1.25, "burstrate": 0, "velocity": 230, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Tank Plasma Cannon",
+      strengths: ["Универсальность", "Хорошее здоровье", "Амфибийный"],      weaknesses: ["Средняя скорость", "Уступает тяжёлым танкам"],      counters: ["Тяжёлая броня", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.07,
@@ -3865,8 +3832,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня", "Артиллерия"],
-      counteredBy: ["Bulldog", "Тяжёлые танки"],
+    },      counteredBy: ["Bulldog", "Тяжёлые танки"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious"],
       tags: ["Амфибия"],
@@ -3892,10 +3858,10 @@ const ARM_DATA = {
       hp: 750,
       speed: 1.55,
       range: 825,
-      damage: 96,
+      damage: 480,
       weaponType: "MISSILE_GF_MEDIUM",
-      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 96, "range": 320, "burst": 1, "reload": 6, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Missiles",
-      strengths: ["Эффективен против воздуха и подлодок", "Амфибийный", "Мобильный"],      weaknesses: ["Слабый против наземных целей", "Средняя броня"],
+      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 384, "range": 320, "burst": 1, "reload": 6, "burstrate": 0, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Missiles",
+      strengths: ["Эффективен против воздуха и подлодок", "Амфибийный", "Мобильный"],      weaknesses: ["Слабый против наземных целей", "Средняя броня"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0.08,
@@ -3921,7 +3887,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 96,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ARM-HAA",
@@ -3971,8 +3937,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки", "Артиллерия"],
+    },      counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious", "Anti-Air", "Anti-Submarine"],
       tags: ["ПВО", "Торпеды", "Амфибия"],
@@ -4000,7 +3965,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Очень быстрый", "Стелс", "Амфибийный", "Дешёвый"],      weaknesses: ["Очень хрупкий", "Слабый урон"],
+      weaponDetails: [],      strengths: ["Очень быстрый", "Стелс", "Амфибийный", "Дешёвый"],      weaknesses: ["Очень хрупкий", "Слабый урон"],      counters: ["Стелс-детекторы", "Радар"],
 
       fullStats: {
       acceleration: 0.06,
@@ -4076,8 +4041,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 30
-    },      counters: ["Стелс-детекторы", "Радар"],
-      counteredBy: ["Радарные башни", "Массовая оборона"],
+    },      counteredBy: ["Радарные башни", "Массовая оборона"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious", "Stealth"],
       tags: ["Амфибия", "Стелс"],
@@ -4105,7 +4069,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Перевозка юнитов", "Амфибийный", "Быстрая переброска"],      weaknesses: ["Медленный", "Хрупкий", "Слабое вооружение"],
+      weaponDetails: [],      strengths: ["Перевозка юнитов", "Амфибийный", "Быстрая переброска"],      weaknesses: ["Медленный", "Хрупкий", "Слабое вооружение"],      counters: ["Подлодки", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.035,
@@ -4181,8 +4145,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 4,
       workerTime: 0
-    },      counters: ["Подлодки", "Артиллерия"],
-      counteredBy: ["Подводные лодки", "Ракетные корабли"],
+    },      counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Hovercraft Platform",
       specialAbilities: ["Amphibious", "Hovercraft Transport"],
       tags: ["Амфибия", "Транспорт"],
@@ -4210,7 +4173,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T2", "Ремонт сооружений", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Дорогой"],
+      weaponDetails: [],      strengths: ["Строит здания T2", "Ремонт сооружений", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.18,
@@ -4286,8 +4249,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 240
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Kbot Lab T2",
       specialAbilities: ["Строительство зданий T2", "Ремонт"],
       tags: ["Ползущий", "Строитель"],
@@ -4315,8 +4277,8 @@ const ARM_DATA = {
       range: 240,
       damage: 9,
       weaponType: "EMG_FAST",
-      weaponDetails: [{"id": "EMG_FAST", "name": "EMG Burst", "damage": 9, "range": 240, "burst": 4, "reload": 0.4, "velocity": 425, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "EMG Burst",
-      strengths: ["Очень быстрый", "Дешёвый", "Идеален для рейдов"],      weaknesses: ["Хрупкий", "Слабый урон", "Не эффективен в открытом бою"],
+      weaponDetails: [{"id": "EMG_FAST", "name": "EMG Burst", "damage": 9, "range": 240, "burst": 4, "reload": 0.4, "burstrate": 0.05, "velocity": 425, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "EMG Burst",
+      strengths: ["Очень быстрый", "Дешёвый", "Идеален для рейдов"],      weaknesses: ["Хрупкий", "Слабый урон", "Не эффективен в открытом бою"],      counters: ["Массовая оборона", "Стационарные турели"],
 
       fullStats: {
       acceleration: 0.14,
@@ -4392,8 +4354,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Массовая оборона", "Стационарные турели"],
-      counteredBy: ["Турели", "Массовая оборона"],
+    },      counteredBy: ["Турели", "Массовая оборона"],
       builtAt: "Kbot Lab T2",
       specialAbilities: [],
       tags: [],
@@ -4421,8 +4382,8 @@ const ARM_DATA = {
       range: 180,
       damage: 180,
       weaponType: "LIGHTNING",
-      weaponDetails: [{"id": "LIGHTNING", "name": "Lightning Gun", "damage": 180, "range": 180, "burst": 1, "reload": 1.45, "velocity": 400, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Lightning Gun",
-      strengths: ["Высокое здоровье", "Сильный урон", "Универсальность"],      weaknesses: ["Медленный", "Дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "LIGHTNING", "name": "Lightning Gun", "damage": 180, "range": 180, "burst": 1, "reload": 1.45, "burstrate": 0, "velocity": 400, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Lightning Gun",
+      strengths: ["Высокое здоровье", "Сильный урон", "Универсальность"],      weaknesses: ["Медленный", "Дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.12,
@@ -4498,8 +4459,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлые танки", "Артиллерия", "Авиация"],
+    },      counteredBy: ["Тяжёлые танки", "Артиллерия", "Авиация"],
       builtAt: "Kbot Lab T2",
       specialAbilities: [],
       tags: [],
@@ -4528,7 +4488,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "PARALYZER",
       weaponName: "Paralyzer",
-      weaponDetails: [{"id": "PARALYZER", "name": "Paralyzer", "damage": 0, "range": 270, "burst": 1, "reload": 1.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Оглушение", "Стелс", "Лазание по горам", "Тактическая ценность"],      weaknesses: ["Низкий урон", "Среднее здоровье", "Дорогой"],
+      weaponDetails: [{"id": "PARALYZER", "name": "Paralyzer", "damage": 0, "range": 270, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Оглушение", "Стелс", "Лазание по горам", "Тактическая ценность"],      weaknesses: ["Низкий урон", "Среднее здоровье", "Дорогой"],      counters: ["Массовые атаки", "Стелс-детекторы"],
 
       fullStats: {
       acceleration: 0.18,
@@ -4604,8 +4564,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Массовые атаки", "Стелс-детекторы"],
-      counteredBy: ["Радар", "Массовые атаки"],
+    },      counteredBy: ["Радар", "Массовые атаки"],
       builtAt: "Kbot Lab T2",
       specialAbilities: ["EMP", "Climbing", "Stealth"],
       tags: ["Ползущий", "Стелс"],
@@ -4633,8 +4592,8 @@ const ARM_DATA = {
       range: 576,
       damage: 48,
       weaponType: "CANNON_FIDO",
-      weaponDetails: [{"id": "CANNON_FIDO", "name": "Fido Burst Plasma Cannon", "damage": 48, "range": 576, "burst": 6, "reload": 2.4, "velocity": 310, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Fido Burst Plasma Cannon",
-      strengths: ["Универсальность", "Хорошая скорость", "Сильный урон"],      weaknesses: ["Средняя броня", "Уступает тяжёлым юнитам"],
+      weaponDetails: [{"id": "CANNON_FIDO", "name": "Fido Burst Plasma Cannon", "damage": 48, "range": 576, "burst": 6, "reload": 2.4, "burstrate": 0.001, "velocity": 310, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Fido Burst Plasma Cannon",
+      strengths: ["Универсальность", "Хорошая скорость", "Сильный урон"],      weaknesses: ["Средняя броня", "Уступает тяжёлым юнитам"],      counters: ["Тяжёлая броня", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.15,
@@ -4710,8 +4669,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня", "Артиллерия"],
-      counteredBy: ["Zeus", "Тяжёлые танки"],
+    },      counteredBy: ["Zeus", "Тяжёлые танки"],
       builtAt: "Kbot Lab T2",
       specialAbilities: [],
       tags: [],
@@ -4737,10 +4695,10 @@ const ARM_DATA = {
       hp: 3890,
       speed: 1.1,
       range: 900,
-      damage: 45,
+      damage: 720,
       weaponType: "MISSILE_GF_HEAVY",
-      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
-      strengths: ["Высокая скорость стрельбы", "Эффективен против воздуха", "Дешёвый"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],
+      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
+      strengths: ["Высокая скорость стрельбы", "Эффективен против воздуха", "Дешёвый"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0.05,
@@ -4766,7 +4724,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 45,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "AHM",
@@ -4816,8 +4774,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки", "Артиллерия"],
+    },      counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Kbot Lab T2",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -4846,7 +4803,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "None",
       weaponDetails: [],      weaponName: "",
-      strengths: ["Маскировка", "Амфибийный", "Радарное подавление", "Шпионаж"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой"],
+      strengths: ["Маскировка", "Амфибийный", "Радарное подавление", "Шпионаж"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой"],      counters: ["Стелс-детекторы", "Радар"],
 
       fullStats: {
       acceleration: 0.2,
@@ -4922,8 +4879,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 120
-    },      counters: ["Стелс-детекторы", "Радар"],
-      counteredBy: ["Радар", "Стелс-детекторы"],
+    },      counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Kbot Lab T2",
       specialAbilities: ["Cloak", "Amphibious", "Radar Jamming"],
       tags: ["Амфибия", "Cloak"],
@@ -4951,7 +4907,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Радарное подавление", "Дешёвый", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Не эффективен в открытом бою"],
+      weaponDetails: [],      strengths: ["Радарное подавление", "Дешёвый", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Не эффективен в открытом бою"],      counters: ["Стелс-детекторы", "Массовые атаки"],
 
       fullStats: {
       acceleration: 0.1,
@@ -5027,8 +4983,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-детекторы", "Массовые атаки"],
-      counteredBy: ["Радар", "Стелс-детекторы"],
+    },      counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Kbot Lab T2",
       specialAbilities: ["Radar Jamming"],
       tags: ["Антирадар"],
@@ -5056,8 +5011,8 @@ const ARM_DATA = {
       range: 288,
       damage: 420,
       weaponType: "GAUSS_MAV",
-      weaponDetails: [{"id": "GAUSS_MAV", "name": "Advanced Gauss", "damage": 420, "range": 288, "burst": 1, "reload": 0.6, "velocity": 450, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 625, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Advanced Gauss",
-      strengths: ["Высокая скорость стрельбы", "Хороший урон", "Быстрый"],      weaknesses: ["Средняя броня", "Уступает тяжёлым юнитам"],
+      weaponDetails: [{"id": "GAUSS_MAV", "name": "Advanced Gauss", "damage": 420, "range": 288, "burst": 1, "reload": 0.6, "burstrate": 0, "velocity": 450, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 625, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Advanced Gauss",
+      strengths: ["Высокая скорость стрельбы", "Хороший урон", "Быстрый"],      weaknesses: ["Средняя броня", "Уступает тяжёлым юнитам"],      counters: ["Тяжёлая броня", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.03,
@@ -5133,8 +5088,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня", "Артиллерия"],
-      counteredBy: ["Zeus", "Тяжёлые танки"],
+    },      counteredBy: ["Zeus", "Тяжёлые танки"],
       builtAt: "Kbot Lab T2",
       specialAbilities: [],
       tags: [],
@@ -5162,8 +5116,8 @@ const ARM_DATA = {
       range: 825,
       damage: 675,
       weaponType: "GAUSS_SNIPE",
-      weaponDetails: [{"id": "GAUSS_SNIPE", "name": "Sniper Weapon", "damage": 675, "range": 825, "burst": 1, "reload": 3, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 675, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 960}],      weaponName: "Sniper Weapon",
-      strengths: ["Мощный урон", "Пробивает броню", "Дальняя дистанция"],      weaknesses: ["Медленный", "Дорогой (675E/выстрел)", "Медленная перезарядка"],
+      weaponDetails: [{"id": "GAUSS_SNIPE", "name": "Sniper Weapon", "damage": 675, "range": 825, "burst": 1, "reload": 3, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 675, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 960}],      weaponName: "Sniper Weapon",
+      strengths: ["Мощный урон", "Пробивает броню", "Дальняя дистанция"],      weaknesses: ["Медленный", "Дорогой (675E/выстрел)", "Медленная перезарядка"],      counters: ["Быстрые рейды", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.1,
@@ -5239,8 +5193,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Артиллерия"],
-      counteredBy: ["Рейды пехоты", "Артиллерия"],
+    },      counteredBy: ["Рейды пехоты", "Артиллерия"],
       builtAt: "Kbot Lab T2",
       specialAbilities: [],
       tags: ["Railgun"],
@@ -5268,8 +5221,8 @@ const ARM_DATA = {
       range: 320,
       damage: 420,
       weaponType: "GAUSS_MAV",
-      weaponDetails: [{"id": "GAUSS_MAV", "name": "Advanced Gauss", "damage": 420, "range": 288, "burst": 1, "reload": 0.6, "velocity": 450, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 625, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 96, "range": 320, "burst": 1, "reload": 6, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}],      weaponName: "Advanced Gauss",
-      strengths: ["Амфибийный", "Быстрый", "Универсальность"],      weaknesses: ["Средняя броня", "Средний урон"],
+      weaponDetails: [{"id": "GAUSS_MAV", "name": "Advanced Gauss", "damage": 420, "range": 288, "burst": 1, "reload": 0.6, "burstrate": 0, "velocity": 450, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 625, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 384, "range": 320, "burst": 1, "reload": 6, "burstrate": 0, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}],      weaponName: "Advanced Gauss",
+      strengths: ["Амфибийный", "Быстрый", "Универсальность"],      weaknesses: ["Средняя броня", "Средний урон"],      counters: ["Тяжёлая броня"],
 
       fullStats: {
       acceleration: 0.125,
@@ -5345,11 +5298,10 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня"],
-      counteredBy: ["Тяжёлые танки", "Артиллерия"],
+    },      counteredBy: ["Тяжёлые танки", "Артиллерия"],
       builtAt: "Kbot Lab T2",
       specialAbilities: ["Amphibious"],
-      tags: ["Штурм", "Торпеды", "Амфибия"],
+      tags: ["Торпеды", "Амфибия"],
       image: null,
       hotkey: "P"
     },
@@ -5374,8 +5326,8 @@ const ARM_DATA = {
       range: 480,
       damage: 180,
       weaponType: "LASER_DECOY",
-      weaponDetails: [{"id": "LASER_DECOY", "name": "J7 Laser", "damage": 45, "range": 320, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_DECOY", "name": "Starburst Missile", "damage": 60, "range": 480, "burst": 1, "reload": 0.6, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}, {"id": "DGUN_DECOY_ARM", "name": "Decoy Disintegrator", "damage": 180, "range": 240, "burst": 1, "reload": 1.2, "velocity": 200, "aoe": 56, "type": "", "energyPerShot": 100, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "J7 Laser",
-      strengths: ["Универсальный строитель", "Несёт ядерное оружие", "Высокое здоровье"],      weaknesses: ["Гибель = проигрыш", "Медленный", "Приоритетная цель"],
+      weaponDetails: [{"id": "LASER_DECOY", "name": "J7 Laser", "damage": 45, "range": 320, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_DECOY", "name": "Starburst Missile", "damage": 60, "range": 480, "burst": 1, "reload": 0.6, "burstrate": 0, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}, {"id": "DGUN_DECOY_ARM", "name": "Decoy Disintegrator", "damage": 180, "range": 240, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 200, "aoe": 56, "type": "", "energyPerShot": 100, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "J7 Laser",
+      strengths: ["Универсальный строитель", "Несёт ядерное оружие", "Высокое здоровье"],      weaknesses: ["Гибель = проигрыш", "Медленный", "Приоритетная цель"],      counters: ["Дальний обстрел", "EMP-оружие"],
 
       fullStats: {
       acceleration: 0.15,
@@ -5451,8 +5403,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 270
-    },      counters: ["Дальний обстрел", "EMP-оружие"],
-      counteredBy: ["Фрегаты", "Тяжёлые танки", "Артиллерия"],
+    },      counteredBy: ["Фрегаты", "Тяжёлые танки", "Артиллерия"],
       builtAt: "Commander (улучшенный)",
       specialAbilities: ["Строительство всех зданий", "Восстановление сооружений", "Несёт Nuke", "Модули улучшения"],
       tags: ["Строитель", "Cloak"],
@@ -5480,7 +5431,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T2", "Ремонт сооружений", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Дорогой"],
+      weaponDetails: [],      strengths: ["Строит здания T2", "Ремонт сооружений", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.018,
@@ -5556,8 +5507,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 300
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: ["Строительство зданий T2", "Ремонт"],
       tags: ["Строитель"],
@@ -5585,7 +5535,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Дальний радар", "Мобильный", "Раннее предупреждение"],      weaknesses: ["Слабое вооружение", "Средняя броня"],
+      weaponDetails: [],      strengths: ["Дальний радар", "Мобильный", "Раннее предупреждение"],      weaknesses: ["Слабое вооружение", "Средняя броня"],      counters: ["Стелс-юниты"],
 
       fullStats: {
       acceleration: 0.032,
@@ -5661,8 +5611,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-юниты"],
-      counteredBy: ["Любой боевой юнит", "Воздушные рейды"],
+    },      counteredBy: ["Любой боевой юнит", "Воздушные рейды"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: ["Радар"],
       tags: ["Радар"],
@@ -5690,8 +5639,8 @@ const ARM_DATA = {
       range: 450,
       damage: 324,
       weaponType: "CANNON_BULL",
-      weaponDetails: [{"id": "CANNON_BULL", "name": "Bulldog Plasma Cannon", "damage": 324, "range": 450, "burst": 1, "reload": 0.96, "velocity": 270, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Bulldog Plasma Cannon",
-      strengths: ["Высокое здоровье", "Сильный урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "CANNON_BULL", "name": "Bulldog Plasma Cannon", "damage": 324, "range": 450, "burst": 1, "reload": 0.96, "burstrate": 0, "velocity": 270, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Bulldog Plasma Cannon",
+      strengths: ["Высокое здоровье", "Сильный урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.02,
@@ -5767,8 +5716,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: [],
       tags: [],
@@ -5796,8 +5744,8 @@ const ARM_DATA = {
       range: 1344,
       damage: 900,
       weaponType: "VLAUNCH_TRUCK_ARM",
-      weaponDetails: [{"id": "VLAUNCH_TRUCK_ARM", "name": "Rocket", "damage": 900, "range": 1344, "burst": 1, "reload": 8, "velocity": 600, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Rocket",
-      strengths: ["Очень дальняя дистанция", "Площадной урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],
+      weaponDetails: [{"id": "VLAUNCH_TRUCK_ARM", "name": "Rocket", "damage": 900, "range": 1344, "burst": 1, "reload": 8, "burstrate": 0, "velocity": 600, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Rocket",
+      strengths: ["Очень дальняя дистанция", "Площадной урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],      counters: ["Быстрые рейды", "Воздушные атаки"],
 
       fullStats: {
       acceleration: 0.012,
@@ -5873,8 +5821,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные атаки"],
-      counteredBy: ["Рейды пехоты", "Истребители"],
+    },      counteredBy: ["Рейды пехоты", "Истребители"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -5902,8 +5849,8 @@ const ARM_DATA = {
       range: 1200,
       damage: 180,
       weaponType: "CANNON_ART_MEDIUM",
-      weaponDetails: [{"id": "CANNON_ART_MEDIUM", "name": "Medium Artillery Cannon", "damage": 180, "range": 1200, "burst": 1, "reload": 0.35, "velocity": 450, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Artillery Cannon",
-      strengths: ["Дальняя дистанция", "Стреляет через преграды", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_ART_MEDIUM", "name": "Medium Artillery Cannon", "damage": 180, "range": 1200, "burst": 1, "reload": 0.35, "burstrate": 0, "velocity": 450, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Artillery Cannon",
+      strengths: ["Дальняя дистанция", "Стреляет через преграды", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],      counters: ["Быстрые рейды", "Воздушные атаки"],
 
       fullStats: {
       acceleration: 0.008,
@@ -5979,8 +5926,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные атаки"],
-      counteredBy: ["Рейды пехоты", "Истребители"],
+    },      counteredBy: ["Рейды пехоты", "Истребители"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: [],
       tags: ["Артиллерия"],
@@ -6006,10 +5952,10 @@ const ARM_DATA = {
       hp: 1863,
       speed: 1.1,
       range: 825,
-      damage: 0,
+      damage: 480,
       weaponType: "FLAK",
       weaponName: "Flak Cannon",
-      weaponDetails: [{"id": "FLAK", "name": "Flak Cannon", "damage": 0, "range": 825, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Эффективен против воздуха", "Мобильный", "Хорошая дальность"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],
+      weaponDetails: [{"id": "FLAK", "name": "Flak Cannon", "damage": 480, "range": 825, "burst": 1, "reload": 0.14, "burstrate": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Эффективен против воздуха", "Мобильный", "Хорошая дальность"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0.03,
@@ -6035,7 +5981,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 0,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ARM-MML5",
@@ -6085,8 +6031,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки", "Артиллерия"],
+    },      counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -6115,7 +6060,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "ANTI_NUKE_MOB",
       weaponName: "Rocket",
-      weaponDetails: [{"id": "ANTI_NUKE_MOB", "name": "Rocket", "damage": 0, "range": 27000, "burst": 1, "reload": 120, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Перехват ракет", "Защита от ракетных атак", "Мобильный"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против прямых атак"],
+      weaponDetails: [{"id": "ANTI_NUKE_MOB", "name": "Rocket", "damage": 0, "range": 27000, "burst": 1, "reload": 120, "burstrate": 0, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Перехват ракет", "Защита от ракетных атак", "Мобильный"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против прямых атак"],      counters: ["Прямые атаки", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.015,
@@ -6191,8 +6136,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Прямые атаки", "Артиллерия"],
-      counteredBy: ["Танки", "Пехота", "Артиллерия"],
+    },      counteredBy: ["Танки", "Пехота", "Артиллерия"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: ["Anti-Missile"],
       tags: ["Anti-Nuke"],
@@ -6220,7 +6164,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Радарное подавление", "Мобильный", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Не эффективен в открытом бою"],
+      weaponDetails: [],      strengths: ["Радарное подавление", "Мобильный", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Не эффективен в открытом бою"],      counters: ["Стелс-детекторы", "Массовые атаки"],
 
       fullStats: {
       acceleration: 0.035,
@@ -6296,8 +6240,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-детекторы", "Массовые атаки"],
-      counteredBy: ["Радар", "Стелс-детекторы"],
+    },      counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: ["Radar Jamming"],
       tags: ["Антирадар"],
@@ -6323,10 +6266,10 @@ const ARM_DATA = {
       hp: 1835,
       speed: 2.15,
       range: 825,
-      damage: 168,
+      damage: 480,
       weaponType: "LIGHTNING_LATNK",
-      weaponDetails: [{"id": "LIGHTNING_LATNK", "name": "Heavy Lightning Gun", "damage": 168, "range": 210, "burst": 1, "reload": 0.525, "velocity": 750, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Heavy Lightning Gun",
-      strengths: ["Оглушение", "Хорошая скорость", "Эффективен против пехоты"],      weaknesses: ["Средняя броня", "Средний урон"],
+      weaponDetails: [{"id": "LIGHTNING_LATNK", "name": "Heavy Lightning Gun", "damage": 168, "range": 210, "burst": 1, "reload": 0.525, "burstrate": 0, "velocity": 750, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Heavy Lightning Gun",
+      strengths: ["Оглушение", "Хорошая скорость", "Эффективен против пехоты"],      weaknesses: ["Средняя броня", "Средний урон"],      counters: ["Тяжёлая броня"],
 
       fullStats: {
       acceleration: 0.9,
@@ -6352,7 +6295,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 168,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ARM-LAA2",
@@ -6402,8 +6345,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня"],
-      counteredBy: ["Bulldog", "Тяжёлые танки"],
+    },      counteredBy: ["Bulldog", "Тяжёлые танки"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: ["Stun"],
       tags: ["ПВО"],
@@ -6431,8 +6373,8 @@ const ARM_DATA = {
       range: 1000,
       damage: 2000,
       weaponType: "BLOD_MANNI",
-      weaponDetails: [{"id": "BLOD_MANNI", "name": "Mobile Annihilator Weapon", "damage": 2000, "range": 1000, "burst": 1, "reload": 6, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 2000, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Mobile Annihilator Weapon",
-      strengths: ["Мощный урон", "Пробивает броню", "Дальняя дистанция"],      weaknesses: ["Медленный", "Дорогой (2K E/выстрел)", "Медленная перезарядка"],
+      weaponDetails: [{"id": "BLOD_MANNI", "name": "Mobile Annihilator Weapon", "damage": 2000, "range": 1000, "burst": 1, "reload": 6, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 2000, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Mobile Annihilator Weapon",
+      strengths: ["Мощный урон", "Пробивает броню", "Дальняя дистанция"],      weaknesses: ["Медленный", "Дорогой (2K E/выстрел)", "Медленная перезарядка"],      counters: ["Быстрые рейды", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.004,
@@ -6508,8 +6450,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Артиллерия"],
-      counteredBy: ["Рейды пехоты", "Артиллерия"],
+    },      counteredBy: ["Рейды пехоты", "Артиллерия"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: [],
       tags: [],
@@ -6537,8 +6478,8 @@ const ARM_DATA = {
       range: 400,
       damage: 180,
       weaponType: "CANNON_TANK_MEDIUM",
-      weaponDetails: [{"id": "CANNON_TANK_MEDIUM", "name": "Medium Tank Plasma Cannon", "damage": 180, "range": 400, "burst": 1, "reload": 1.25, "velocity": 230, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Tank Plasma Cannon",
-      strengths: ["Амфибийный", "Хорошее здоровье", "Универсальность"],      weaknesses: ["Средняя скорость", "Уступает тяжёлым танкам"],
+      weaponDetails: [{"id": "CANNON_TANK_MEDIUM", "name": "Medium Tank Plasma Cannon", "damage": 180, "range": 400, "burst": 1, "reload": 1.25, "burstrate": 0, "velocity": 230, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Tank Plasma Cannon",
+      strengths: ["Амфибийный", "Хорошее здоровье", "Универсальность"],      weaknesses: ["Средняя скорость", "Уступает тяжёлым танкам"],      counters: ["Тяжёлая броня"],
 
       fullStats: {
       acceleration: 0.025,
@@ -6614,8 +6555,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня"],
-      counteredBy: ["Bulldog", "Тяжёлые танки"],
+    },      counteredBy: ["Bulldog", "Тяжёлые танки"],
       builtAt: "Vehicle Plant T2",
       specialAbilities: ["Amphibious"],
       tags: ["Амфибия"],
@@ -6747,7 +6687,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T2", "Воздушная мобильность", "Высокое здоровье"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Нужен аэродром"],
+      weaponDetails: [],      strengths: ["Строит здания T2", "Воздушная мобильность", "Высокое здоровье"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Нужен аэродром"],      counters: ["Зенитное оружие"],
 
       fullStats: {
       acceleration: 0.06,
@@ -6823,8 +6763,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 150
-    },      counters: ["Зенитное оружие"],
-      counteredBy: ["ПВО", "Истребители"],
+    },      counteredBy: ["ПВО", "Истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Строительство зданий T2", "Ремонт"],
       tags: ["Строитель"],
@@ -6852,7 +6791,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Стелс", "Радар", "Сонар", "Очень быстрый"],      weaknesses: ["Не вооружён", "Хрупкий", "Дорогой"],
+      weaponDetails: [],      strengths: ["Стелс", "Радар", "Сонар", "Очень быстрый"],      weaknesses: ["Не вооружён", "Хрупкий", "Дорогой"],      counters: ["Стелс-детекторы", "Радар"],
 
       fullStats: {
       acceleration: 0.36,
@@ -6928,8 +6867,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-детекторы", "Радар"],
-      counteredBy: ["Радар", "Стелс-детекторы"],
+    },      counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Scout", "Stealth", "Sonar", "Radar"],
       tags: ["Стелс", "Радар", "Сонар"],
@@ -6955,10 +6893,10 @@ const ARM_DATA = {
       hp: 765,
       speed: 11.25,
       range: 720,
-      damage: 24,
+      damage: 768,
       weaponType: "MISSILE_VTOL_GF",
-      weaponDetails: [{"id": "MISSILE_VTOL_GF", "name": "GF Only Guided Missiles", "damage": 24, "range": 600, "burst": 1, "reload": 1.8, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}, {"id": "MISSILE_VTOL_ADV_1", "name": "Guided Missiles", "damage": 1, "range": 720, "burst": 1, "reload": 1.7, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}, {"id": "MISSILE_VTOL_ADV_2", "name": "Guided Missiles", "damage": 1, "range": 720, "burst": 1, "reload": 1.9, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}],      weaponName: "GF Only Guided Missiles",
-      strengths: ["Стелс", "Сильный урон", "Высокая скорость"],      weaknesses: ["Слабый против наземных целей", "Дорогой"],
+      weaponDetails: [{"id": "MISSILE_VTOL_GF", "name": "GF Only Guided Missiles", "damage": 24, "range": 600, "burst": 1, "reload": 1.8, "burstrate": 0, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}, {"id": "MISSILE_VTOL_ADV_1", "name": "Guided Missiles", "damage": 768, "range": 720, "burst": 1, "reload": 1.7, "burstrate": 0, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}, {"id": "MISSILE_VTOL_ADV_2", "name": "Guided Missiles", "damage": 768, "range": 720, "burst": 1, "reload": 1.9, "burstrate": 0, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}],      weaponName: "GF Only Guided Missiles",
+      strengths: ["Стелс", "Сильный урон", "Высокая скорость"],      weaknesses: ["Слабый против наземных целей", "Дорогой"],      counters: ["Массовые воздушные атаки"],
 
       fullStats: {
       acceleration: 0.45,
@@ -6984,7 +6922,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 160,
-      damage: 24,
+      damage: 768,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFD-J9",
@@ -7034,8 +6972,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Массовые воздушные атаки"],
-      counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
+    },      counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Stealth"],
       tags: ["ПВО", "Стелс"],
@@ -7061,10 +6998,10 @@ const ARM_DATA = {
       hp: 1880,
       speed: 9,
       range: 1280,
-      damage: 0,
+      damage: 360,
       weaponType: "BOMB_ADV",
       weaponName: "Heavy Bombs",
-      weaponDetails: [{"id": "BOMB_ADV", "name": "Heavy Bombs", "damage": 0, "range": 1280, "burst": 1, "reload": 0.28, "velocity": 0, "aoe": 108, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Огромный площадной урон", "Разрушает укрепления", "Эффективен против скоплений"],      weaknesses: ["Медленный", "Уязвим для ПВО", "Очень дорогой"],
+      weaponDetails: [{"id": "BOMB_ADV", "name": "Heavy Bombs", "damage": 360, "range": 1280, "burst": 1, "reload": 0.28, "burstrate": 0, "velocity": 0, "aoe": 108, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Огромный площадной урон", "Разрушает укрепления", "Эффективен против скоплений"],      weaknesses: ["Медленный", "Уязвим для ПВО", "Очень дорогой"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.09,
@@ -7090,7 +7027,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 200,
-      damage: 0,
+      damage: 360,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFD-HAB",
@@ -7140,11 +7077,10 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: [],
-      tags: [],
+      tags: ["Штурм"],
       image: null,
       hotkey: "R"
     },
@@ -7169,8 +7105,8 @@ const ARM_DATA = {
       range: 480,
       damage: 18,
       weaponType: "EMG_VTOL",
-      weaponDetails: [{"id": "EMG_VTOL", "name": "E.M.G.", "damage": 18, "range": 480, "burst": 3, "reload": 0.4, "velocity": 675, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "E.M.G.",
-      strengths: ["Мощное стрелковое вооружение", "Эффективен против пехоты", "Быстрый"],      weaknesses: ["Слабый против брони", "Уязвим для ПВО"],
+      weaponDetails: [{"id": "EMG_VTOL", "name": "E.M.G.", "damage": 18, "range": 480, "burst": 3, "reload": 0.4, "burstrate": 0.1, "velocity": 675, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "E.M.G.",
+      strengths: ["Мощное стрелковое вооружение", "Эффективен против пехоты", "Быстрый"],      weaknesses: ["Слабый против брони", "Уязвим для ПВО"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.25,
@@ -7246,8 +7182,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: [],
       tags: ["Штурм"],
@@ -7273,10 +7208,10 @@ const ARM_DATA = {
       hp: 1850,
       speed: 9.7,
       range: 640,
-      damage: 480,
+      damage: 1920,
       weaponType: "TORPEDO_SEAP",
-      weaponDetails: [{"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}, {"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}],      weaponName: "Torpedo Launcher",
-      strengths: ["Эффективен против подлодок", "Воздушная мобильность", "Хорошая дальность"],      weaknesses: ["Слабый против наземных целей", "Уязвим для ПВО"],
+      weaponDetails: [{"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}, {"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}],      weaponName: "Torpedo Launcher",
+      strengths: ["Эффективен против подлодок", "Воздушная мобильность", "Хорошая дальность"],      weaknesses: ["Слабый против наземных целей", "Уязвим для ПВО"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.2,
@@ -7302,7 +7237,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 120,
-      damage: 480,
+      damage: 1920,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFD-J9",
@@ -7352,8 +7287,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Anti-Submarine"],
       tags: ["Торпеды"],
@@ -7382,7 +7316,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "None",
       weaponDetails: [],      weaponName: "",
-      strengths: ["Перевозка нескольких юнитов", "Быстрая переброска", "Преодоление преград"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Очень дорогой"],
+      strengths: ["Перевозка нескольких юнитов", "Быстрая переброска", "Преодоление преград"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Очень дорогой"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.1,
@@ -7458,8 +7392,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T2",
       specialAbilities: ["Multi-Unit Air Transport"],
       tags: ["Транспорт"],
@@ -7487,7 +7420,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит морские здания T2", "Подводный", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Уязвим для глубинных бомб"],
+      weaponDetails: [],      strengths: ["Строит морские здания T2", "Подводный", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Уязвим для глубинных бомб"],      counters: ["Глубинные бомбы", "Сонар"],
 
       fullStats: {
       acceleration: 0.032,
@@ -7563,8 +7496,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 20,
       workerTime: 360
-    },      counters: ["Глубинные бомбы", "Сонар"],
-      counteredBy: ["Противолодочные корабли", "Сонар"],
+    },      counteredBy: ["Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Строительство морских зданий T2"],
       tags: ["Строитель"],
@@ -7590,10 +7522,10 @@ const ARM_DATA = {
       hp: 1740,
       speed: 2,
       range: 900,
-      damage: 960,
+      damage: 3840,
       weaponType: "TORPEDO_SNIPE",
-      weaponDetails: [{"id": "TORPEDO_SNIPE", "name": "Torpedo", "damage": 960, "range": 900, "burst": 1, "reload": 4, "velocity": 225, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 225}],      weaponName: "Torpedo",
-      strengths: ["Эффективен против подлодок", "Хорошая дальность", "Быстрый"],      weaknesses: ["Слабый против надводных кораблей", "Средняя броня"],
+      weaponDetails: [{"id": "TORPEDO_SNIPE", "name": "Torpedo", "damage": 3840, "range": 900, "burst": 1, "reload": 4, "burstrate": 0, "velocity": 225, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 225}],      weaponName: "Torpedo",
+      strengths: ["Эффективен против подлодок", "Хорошая дальность", "Быстрый"],      weaknesses: ["Слабый против надводных кораблей", "Средняя броня"],      counters: ["Тяжёлые корабли"],
 
       fullStats: {
       acceleration: 0.15,
@@ -7619,7 +7551,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 960,
+      damage: 3840,
       damageModifier: 0.25,
       defaultMissionType: "Standby",
       designation: "ASD-SK",
@@ -7669,8 +7601,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 20,
       workerTime: 0
-    },      counters: ["Тяжёлые корабли"],
-      counteredBy: ["Крейсеры", "Эсминцы"],
+    },      counteredBy: ["Крейсеры", "Эсминцы"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Anti-Submarine"],
       tags: ["Торпеды"],
@@ -7698,8 +7629,8 @@ const ARM_DATA = {
       range: 768,
       damage: 300,
       weaponType: "GAUSS_CRUS",
-      weaponDetails: [{"id": "GAUSS_CRUS", "name": "Cruiser Gauss", "damage": 300, "range": 768, "burst": 1, "reload": 0.35, "velocity": 650, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Cruiser Gauss",
-      strengths: ["Сильное вооружение", "Хорошая броня", "Универсальность"],      weaknesses: ["Медленный", "Дорогой", "Уязвим для подлодок"],
+      weaponDetails: [{"id": "GAUSS_CRUS", "name": "Cruiser Gauss", "damage": 300, "range": 768, "burst": 1, "reload": 0.35, "burstrate": 0, "velocity": 650, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Cruiser Gauss",
+      strengths: ["Сильное вооружение", "Хорошая броня", "Универсальность"],      weaknesses: ["Медленный", "Дорогой", "Уязвим для подлодок"],      counters: ["Подлодки", "Береговые ракеты"],
 
       fullStats: {
       acceleration: 0.033,
@@ -7775,8 +7706,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Береговые ракеты"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Anti-Submarine"],
       tags: ["Штурм"],
@@ -7804,8 +7734,8 @@ const ARM_DATA = {
       range: 1536,
       damage: 1000,
       weaponType: "VLAUNCH_SHIP_ARM",
-      weaponDetails: [{"id": "VLAUNCH_SHIP_ARM", "name": "Rocket", "damage": 1000, "range": 1536, "burst": 1, "reload": 10, "velocity": 450, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Rocket",
-      strengths: ["Дальняя дистанция", "Площадной урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для подлодок", "Медленная перезарядка"],
+      weaponDetails: [{"id": "VLAUNCH_SHIP_ARM", "name": "Rocket", "damage": 1000, "range": 1536, "burst": 1, "reload": 10, "burstrate": 0, "velocity": 450, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Rocket",
+      strengths: ["Дальняя дистанция", "Площадной урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для подлодок", "Медленная перезарядка"],      counters: ["Подлодки", "Быстрые корабли"],
 
       fullStats: {
       acceleration: 0.04,
@@ -7881,8 +7811,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Быстрые корабли"],
-      counteredBy: ["Подводные лодки", "Эсминцы"],
+    },      counteredBy: ["Подводные лодки", "Эсминцы"],
       builtAt: "Naval Yard T2",
       specialAbilities: [],
       tags: [],
@@ -7908,10 +7837,10 @@ const ARM_DATA = {
       hp: 59720,
       speed: 1.85,
       range: 640,
-      damage: 480,
+      damage: 1920,
       weaponType: "TORPEDO_SMART",
-      weaponDetails: [{"id": "TORPEDO_SMART", "name": "Guided Torpedo", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 125}, {"id": "TORPEDO_SMART", "name": "Guided Torpedo", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 125}],      weaponName: "Guided Torpedo",
-      strengths: ["Скрытность", "Сильный урон", "Засады"],      weaknesses: ["Медленный", "Уязвим для глубинных бомб"],
+      weaponDetails: [{"id": "TORPEDO_SMART", "name": "Guided Torpedo", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 125}, {"id": "TORPEDO_SMART", "name": "Guided Torpedo", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 125}],      weaponName: "Guided Torpedo",
+      strengths: ["Скрытность", "Сильный урон", "Засады"],      weaknesses: ["Медленный", "Уязвим для глубинных бомб"],      counters: ["Глубинные бомбы", "Сонар"],
 
       fullStats: {
       acceleration: 0.03,
@@ -7937,7 +7866,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 480,
+      damage: 1920,
       damageModifier: 0.25,
       defaultMissionType: "Standby",
       designation: "ASD-SM",
@@ -7987,8 +7916,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 20,
       workerTime: 0
-    },      counters: ["Глубинные бомбы", "Сонар"],
-      counteredBy: ["Piranha", "Противолодочные корабли"],
+    },      counteredBy: ["Piranha", "Противолодочные корабли"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Stealth"],
       tags: ["Торпеды"],
@@ -8014,10 +7942,10 @@ const ARM_DATA = {
       hp: 3934,
       speed: 2.4,
       range: 825,
-      damage: 180,
+      damage: 720,
       weaponType: "DEPTHCHARGE_ADV",
-      weaponDetails: [{"id": "DEPTHCHARGE_ADV", "name": "Depth Charge", "damage": 180, "range": 480, "burst": 1, "reload": 0.9, "velocity": 150, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 150}, {"id": "FLAK", "name": "Flak Cannon", "damage": 0, "range": 825, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Depth Charge",
-      strengths: ["Универсальность", "Хорошая скорость", "Эффективен против подлодок"],      weaknesses: ["Средняя броня", "Уступает крейсерам"],
+      weaponDetails: [{"id": "DEPTHCHARGE_ADV", "name": "Depth Charge", "damage": 720, "range": 480, "burst": 1, "reload": 0.9, "burstrate": 0, "velocity": 150, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 150}, {"id": "FLAK", "name": "Flak Cannon", "damage": 480, "range": 825, "burst": 1, "reload": 0.14, "burstrate": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Depth Charge",
+      strengths: ["Универсальность", "Хорошая скорость", "Эффективен против подлодок"],      weaknesses: ["Средняя броня", "Уступает крейсерам"],      counters: ["Тяжёлые корабли"],
 
       fullStats: {
       acceleration: 0.12,
@@ -8043,7 +7971,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 180,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ASD-SB",
@@ -8093,8 +8021,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлые корабли"],
-      counteredBy: ["Крейсеры", "Подводные лодки"],
+    },      counteredBy: ["Крейсеры", "Подводные лодки"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Anti-Submarine"],
       tags: ["ПВО", "Торпеды"],
@@ -8120,10 +8047,10 @@ const ARM_DATA = {
       hp: 16950,
       speed: 1.7,
       range: 32000,
-      damage: 1,
+      damage: 720,
       weaponType: "ANTI_NUKE",
-      weaponDetails: [{"id": "ANTI_NUKE", "name": "Rocket", "damage": 0, "range": 32000, "burst": 1, "reload": 120, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Rocket",
-      strengths: ["Ремонт союзных кораблей", "Радар", "Противоракетная система", "+375E"],      weaknesses: ["Очень медленный", "Очень дорогой", "Слабое вооружение"],
+      weaponDetails: [{"id": "ANTI_NUKE", "name": "Rocket", "damage": 0, "range": 32000, "burst": 1, "reload": 120, "burstrate": 0, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Rocket",
+      strengths: ["Ремонт союзных кораблей", "Радар", "Противоракетная система", "+375E"],      weaknesses: ["Очень медленный", "Очень дорогой", "Слабое вооружение"],      counters: ["Подлодки", "Ракетные атаки"],
 
       fullStats: {
       acceleration: 0.015,
@@ -8149,7 +8076,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 1,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ASD-SC",
@@ -8199,8 +8126,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 720
-    },      counters: ["Подлодки", "Ракетные атаки"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Ремонт", "Radar", "Anti-Nuke", "+375 Energy"],
       tags: ["Anti-Nuke"],
@@ -8228,7 +8154,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Радарное подавление", "Скрытность", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой (-500E)"],
+      weaponDetails: [],      strengths: ["Радарное подавление", "Скрытность", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой (-500E)"],      counters: ["Сонар", "Стелс-детекторы"],
 
       fullStats: {
       acceleration: 0.2,
@@ -8304,8 +8230,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 20,
       workerTime: 0
-    },      counters: ["Сонар", "Стелс-детекторы"],
-      counteredBy: ["Сонар", "Противолодочные корабли"],
+    },      counteredBy: ["Сонар", "Противолодочные корабли"],
       builtAt: "Naval Yard T2",
       specialAbilities: ["Radar Jamming", "Stealth"],
       tags: ["Антирадар"],
@@ -8333,8 +8258,8 @@ const ARM_DATA = {
       range: 1152,
       damage: 180,
       weaponType: "CANNON_BATS",
-      weaponDetails: [{"id": "CANNON_BATS", "name": "Primary Battlecruiser Cannon", "damage": 180, "range": 1152, "burst": 1, "reload": 0.625, "velocity": 385, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_BATS", "name": "Primary Battlecruiser Cannon", "damage": 180, "range": 1152, "burst": 1, "reload": 0.625, "velocity": 385, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Primary Battlecruiser Cannon",
-      strengths: ["Дальняя дистанция", "Мощный урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для подлодок", "Очень дорогой"],
+      weaponDetails: [{"id": "CANNON_BATS", "name": "Primary Battlecruiser Cannon", "damage": 180, "range": 1152, "burst": 1, "reload": 0.625, "burstrate": 0, "velocity": 385, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_BATS", "name": "Primary Battlecruiser Cannon", "damage": 180, "range": 1152, "burst": 1, "reload": 0.625, "burstrate": 0, "velocity": 385, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Primary Battlecruiser Cannon",
+      strengths: ["Дальняя дистанция", "Мощный урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для подлодок", "Очень дорогой"],      counters: ["Подлодки", "Быстрые корабли"],
 
       fullStats: {
       acceleration: 0.03,
@@ -8410,8 +8335,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Быстрые корабли"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T2",
       specialAbilities: [],
       tags: [],
@@ -8439,7 +8363,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T2", "Амфибийный", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Дорогой"],
+      weaponDetails: [],      strengths: ["Строит здания T2", "Амфибийный", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.04,
@@ -8515,8 +8439,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 270
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Hovercraft Platform T2",
       specialAbilities: ["Amphibious", "Строительство зданий T2"],
       tags: ["Строитель"],
@@ -8544,8 +8467,8 @@ const ARM_DATA = {
       range: 700,
       damage: 160,
       weaponType: "VSPAM_ALL",
-      weaponDetails: [{"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}],      weaponName: "Starburst Missile",
-      strengths: ["Универсальность", "Хорошая дальность", "Амфибийный"],      weaknesses: ["Средняя броня", "Медленная скорострельность"],
+      weaponDetails: [{"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "burstrate": 0, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}],      weaponName: "Starburst Missile",
+      strengths: ["Универсальность", "Хорошая дальность", "Амфибийный"],      weaknesses: ["Средняя броня", "Медленная скорострельность"],      counters: ["Тяжёлая броня"],
 
       fullStats: {
       acceleration: 0.035,
@@ -8621,8 +8544,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлая броня"],
-      counteredBy: ["Bulldog", "Тяжёлые танки"],
+    },      counteredBy: ["Bulldog", "Тяжёлые танки"],
       builtAt: "Hovercraft Platform T2",
       specialAbilities: ["Amphibious"],
       tags: ["Штурм", "Амфибия"],
@@ -8650,8 +8572,8 @@ const ARM_DATA = {
       range: 320,
       damage: 144,
       weaponType: "GAUSS_SHOT",
-      weaponDetails: [{"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "EMG", "name": "E.M.G.", "damage": 8, "range": 180, "burst": 3, "reload": 0.4, "velocity": 300, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Shotgun Cannon",
-      strengths: ["Мощный урон на ближней дистанции", "Эффективен против пехоты", "Амфибийный"],      weaknesses: ["Короткая дальность", "Средняя броня"],
+      weaponDetails: [{"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "burstrate": 0.001, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "EMG", "name": "E.M.G.", "damage": 8, "range": 180, "burst": 3, "reload": 0.4, "burstrate": 0.1, "velocity": 300, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Shotgun Cannon",
+      strengths: ["Мощный урон на ближней дистанции", "Эффективен против пехоты", "Амфибийный"],      weaknesses: ["Короткая дальность", "Средняя броня"],      counters: ["Дальний обстрел", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.05,
@@ -8727,8 +8649,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Дальний обстрел", "Артиллерия"],
-      counteredBy: ["Артиллерия", "Ракеты"],
+    },      counteredBy: ["Артиллерия", "Ракеты"],
       builtAt: "Hovercraft Platform T2",
       specialAbilities: ["Amphibious"],
       tags: ["Штурм", "Амфибия"],
@@ -8756,8 +8677,8 @@ const ARM_DATA = {
       range: 288,
       damage: 420,
       weaponType: "PARALYZER",
-      weaponDetails: [{"id": "PARALYZER", "name": "Paralyzer", "damage": 0, "range": 270, "burst": 1, "reload": 1.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "PARALYZER", "name": "Paralyzer", "damage": 0, "range": 270, "burst": 1, "reload": 1.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "GAUSS_MAV", "name": "Advanced Gauss", "damage": 420, "range": 288, "burst": 1, "reload": 0.6, "velocity": 450, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 625, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Paralyzer",
-      strengths: ["Оглушение", "Тактическая ценность", "Амфибийный"],      weaknesses: ["Низкий урон", "Средняя броня", "Дорогой"],
+      weaponDetails: [{"id": "PARALYZER", "name": "Paralyzer", "damage": 0, "range": 270, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "PARALYZER", "name": "Paralyzer", "damage": 0, "range": 270, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "GAUSS_MAV", "name": "Advanced Gauss", "damage": 420, "range": 288, "burst": 1, "reload": 0.6, "burstrate": 0, "velocity": 450, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 625, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Paralyzer",
+      strengths: ["Оглушение", "Тактическая ценность", "Амфибийный"],      weaknesses: ["Низкий урон", "Средняя броня", "Дорогой"],      counters: ["Массовые атаки"],
 
       fullStats: {
       acceleration: 0.12,
@@ -8833,8 +8754,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Массовые атаки"],
-      counteredBy: ["Массовые атаки", "Дальний обстрел"],
+    },      counteredBy: ["Массовые атаки", "Дальний обстрел"],
       builtAt: "Hovercraft Platform T2",
       specialAbilities: ["Amphibious", "Stun"],
       tags: ["EMP", "Амфибия"],
@@ -8862,8 +8782,8 @@ const ARM_DATA = {
       range: 1200,
       damage: 180,
       weaponType: "CANNON_ART_MEDIUM",
-      weaponDetails: [{"id": "CANNON_ART_MEDIUM", "name": "Medium Artillery Cannon", "damage": 180, "range": 1200, "burst": 1, "reload": 0.35, "velocity": 450, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Artillery Cannon",
-      strengths: ["Дальняя дистанция", "Стреляет через преграды", "Амфибийный"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_ART_MEDIUM", "name": "Medium Artillery Cannon", "damage": 180, "range": 1200, "burst": 1, "reload": 0.35, "burstrate": 0, "velocity": 450, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Artillery Cannon",
+      strengths: ["Дальняя дистанция", "Стреляет через преграды", "Амфибийный"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Медленная перезарядка"],      counters: ["Быстрые рейды", "Воздушные атаки"],
 
       fullStats: {
       acceleration: 0.05,
@@ -8939,8 +8859,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные атаки"],
-      counteredBy: ["Рейды пехоты", "Истребители"],
+    },      counteredBy: ["Рейды пехоты", "Истребители"],
       builtAt: "Hovercraft Platform T2",
       specialAbilities: ["Amphibious"],
       tags: ["Артиллерия", "Амфибия"],
@@ -8966,10 +8885,10 @@ const ARM_DATA = {
       hp: 1650,
       speed: 1.4,
       range: 825,
-      damage: 480,
+      damage: 1920,
       weaponType: "TORPEDO_SMART",
-      weaponDetails: [{"id": "TORPEDO_SMART", "name": "Guided Torpedo", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 125}, {"id": "FLAK", "name": "Flak Cannon", "damage": 0, "range": 825, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Guided Torpedo",
-      strengths: ["Эффективен против воздуха", "Мобильный", "Амфибийный"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],
+      weaponDetails: [{"id": "TORPEDO_SMART", "name": "Guided Torpedo", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 125}, {"id": "FLAK", "name": "Flak Cannon", "damage": 480, "range": 825, "burst": 1, "reload": 0.14, "burstrate": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Guided Torpedo",
+      strengths: ["Эффективен против воздуха", "Мобильный", "Амфибийный"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0.07,
@@ -8995,7 +8914,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 480,
+      damage: 1920,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ARM-FHG",
@@ -9045,8 +8964,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки", "Артиллерия"],
+    },      counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Hovercraft Platform T2",
       specialAbilities: ["Amphibious", "Anti-Air"],
       tags: ["ПВО", "Амфибия", "Торпеды"],
@@ -9072,10 +8990,10 @@ const ARM_DATA = {
       hp: 7425,
       speed: 1.4,
       range: 900,
-      damage: 96,
+      damage: 720,
       weaponType: "MISSILE_GF_HEAVY",
-      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 96, "range": 320, "burst": 1, "reload": 6, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
-      strengths: ["Ремонт союзных.hovercraft", "Радар", "+100E"],      weaknesses: ["Медленный", "Дорогой", "Слабое вооружение"],
+      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 384, "range": 320, "burst": 1, "reload": 6, "burstrate": 0, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
+      strengths: ["Ремонт союзных.hovercraft", "Радар", "+100E"],      weaknesses: ["Медленный", "Дорогой", "Слабое вооружение"],      counters: ["Подлодки", "Ракетные атаки"],
 
       fullStats: {
       acceleration: 0.07,
@@ -9101,7 +9019,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 96,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ARM-HG",
@@ -9151,8 +9069,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 720
-    },      counters: ["Подлодки", "Ракетные атаки"],
-      counteredBy: ["Подводные лодки", "Ракетные корабли"],
+    },      counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Hovercraft Platform T2",
       specialAbilities: ["Amphibious", "Ремонт", "Radar", "+100 Energy"],
       tags: ["Авианосец"],
@@ -9284,7 +9201,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T3", "Ремонт сооружений", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],
+      weaponDetails: [],      strengths: ["Строит здания T3", "Ремонт сооружений", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.15,
@@ -9360,8 +9277,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 720
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["Строительство зданий T3", "Ремонт"],
       tags: ["Ползущий", "Строитель"],
@@ -9387,10 +9303,10 @@ const ARM_DATA = {
       hp: 8380,
       speed: 1.7,
       range: 900,
-      damage: 120,
+      damage: 720,
       weaponType: "ROCKET_HSPID",
-      weaponDetails: [{"id": "ROCKET_HSPID", "name": "Hybrid Burst Rockets", "damage": 120, "range": 500, "burst": 2, "reload": 0.05, "velocity": 600, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 225, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Hybrid Burst Rockets",
-      strengths: ["Высокая скорость стрельбы", "Дальняя дистанция", "Площадной урон"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Дорогой"],
+      weaponDetails: [{"id": "ROCKET_HSPID", "name": "Hybrid Burst Rockets", "damage": 480, "range": 500, "burst": 2, "reload": 0.05, "burstrate": 0.001, "velocity": 600, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 225, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Hybrid Burst Rockets",
+      strengths: ["Высокая скорость стрельбы", "Дальняя дистанция", "Площадной урон"],      weaknesses: ["Медленный", "Уязвим в ближнем бою", "Дорогой"],      counters: ["Быстрые рейды", "Воздушные атаки"],
 
       fullStats: {
       acceleration: 0.05,
@@ -9416,7 +9332,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 120,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "AHM",
@@ -9466,8 +9382,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные атаки"],
-      counteredBy: ["Рейды пехоты", "Истребители"],
+    },      counteredBy: ["Рейды пехоты", "Истребители"],
       builtAt: "Kbot Lab T3",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -9493,10 +9408,10 @@ const ARM_DATA = {
       hp: 60480,
       speed: 1.1,
       range: 900,
-      damage: 700,
+      damage: 720,
       weaponType: "CANNON_CERB",
-      weaponDetails: [{"id": "CANNON_CERB", "name": "Heavy Burst Plasma Cannon", "damage": 700, "range": 672, "burst": 1, "reload": 0.3, "velocity": 325, "aoe": 128, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 750, "metalPerShot": 0, "accuracy": 1500, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Heavy Burst Plasma Cannon",
-      strengths: ["Очень высокое здоровье", "Сильный урон", "Универсальность"],      weaknesses: ["Очень медленный", "Очень дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "CANNON_CERB", "name": "Heavy Burst Plasma Cannon", "damage": 700, "range": 672, "burst": 1, "reload": 0.3, "burstrate": 0, "velocity": 325, "aoe": 128, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 750, "metalPerShot": 0, "accuracy": 1500, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Heavy Burst Plasma Cannon",
+      strengths: ["Очень высокое здоровье", "Сильный урон", "Универсальность"],      weaknesses: ["Очень медленный", "Очень дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.125,
@@ -9522,7 +9437,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 700,
+      damage: 720,
       damageModifier: 0.390625,
       defaultMissionType: "Standby",
       designation: "ARM-HBM",
@@ -9572,8 +9487,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Kbot Lab T3",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -9601,8 +9515,8 @@ const ARM_DATA = {
       range: 750,
       damage: 240,
       weaponType: "GAUSS_SHOT",
-      weaponDetails: [{"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "PARALYZER_EMP_BLAST", "name": "Large Shockwave Paralytic Blast", "damage": 0, "range": 384, "burst": 1, "reload": 1, "velocity": 0, "aoe": 768, "type": "", "energyPerShot": 3840, "paralyzer": true, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "ASPID_STOMP", "name": "Lil Stomp Crush", "damage": 240, "range": 750, "burst": 300, "reload": 10, "velocity": 10, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "Shotgun Cannon",
-      strengths: ["Массовое оглушение", "Амфибийный", "Тактическая ценность"],      weaknesses: ["Низкий урон", "Очень дорогой (4.8K E/выстрел)", "Медленный"],
+      weaponDetails: [{"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "burstrate": 0.001, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "PARALYZER_EMP_BLAST", "name": "Large Shockwave Paralytic Blast", "damage": 0, "range": 384, "burst": 1, "reload": 1, "burstrate": 0, "velocity": 0, "aoe": 768, "type": "", "energyPerShot": 3840, "paralyzer": true, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "ASPID_STOMP", "name": "Lil Stomp Crush", "damage": 240, "range": 750, "burst": 300, "reload": 10, "burstrate": 0.066, "velocity": 10, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "Shotgun Cannon",
+      strengths: ["Массовое оглушение", "Амфибийный", "Тактическая ценность"],      weaknesses: ["Низкий урон", "Очень дорогой (4.8K E/выстрел)", "Медленный"],      counters: ["Массовые атаки", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.015,
@@ -9678,11 +9592,10 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Массовые атаки", "Дальний обстрел"],
-      counteredBy: ["Дальний обстрел", "Авиация"],
+    },      counteredBy: ["Дальний обстрел", "Авиация"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["EMP", "Amphibious"],
-      tags: ["Штурм", "EMP"],
+      tags: ["EMP"],
       image: null,
       hotkey: "R"
     },
@@ -9707,8 +9620,8 @@ const ARM_DATA = {
       range: 3072,
       damage: 1350,
       weaponType: "CANNON_NOVA",
-      weaponDetails: [{"id": "CANNON_NOVA", "name": "Mobile Long Range Plasma Cannon", "damage": 1350, "range": 3072, "burst": 1, "reload": 0.5, "velocity": 600, "aoe": 256, "type": "", "energyPerShot": 4050, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Mobile Long Range Plasma Cannon",
-      strengths: ["Очень дальняя дистанция", "Мощный урон", "Разрушает укрепления"],      weaknesses: ["Очень медленный", "Очень дорогой (5.4K E/залп)", "Уязвим в ближнем бою"],
+      weaponDetails: [{"id": "CANNON_NOVA", "name": "Mobile Long Range Plasma Cannon", "damage": 1350, "range": 3072, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 600, "aoe": 256, "type": "", "energyPerShot": 4050, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Mobile Long Range Plasma Cannon",
+      strengths: ["Очень дальняя дистанция", "Мощный урон", "Разрушает укрепления"],      weaknesses: ["Очень медленный", "Очень дорогой (5.4K E/залп)", "Уязвим в ближнем бою"],      counters: ["Быстрые рейды", "Воздушные атаки"],
 
       fullStats: {
       acceleration: 0.015,
@@ -9784,8 +9697,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Воздушные атаки"],
-      counteredBy: ["Рейды пехоты", "Истребители"],
+    },      counteredBy: ["Рейды пехоты", "Истребители"],
       builtAt: "Kbot Lab T3",
       specialAbilities: [],
       tags: [],
@@ -9814,7 +9726,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "None",
       weaponDetails: [],      weaponName: "",
-      strengths: ["Телепортация юнитов", "Амфибийный", "Быстрая переброска"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Дорогой"],
+      strengths: ["Телепортация юнитов", "Амфибийный", "Быстрая переброска"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Дорогой"],      counters: ["Прямые атаки", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.05,
@@ -9890,8 +9802,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Прямые атаки", "Артиллерия"],
-      counteredBy: ["Танки", "Артиллерия"],
+    },      counteredBy: ["Танки", "Артиллерия"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["Teleporter", "Amphibious"],
       tags: ["Телепорт"],
@@ -9919,7 +9830,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Воскрешение сооружений", "Амфибийный", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Медленный"],
+      weaponDetails: [],      strengths: ["Воскрешение сооружений", "Амфибийный", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Медленный"],      counters: ["Прямые атаки", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.18,
@@ -9995,8 +9906,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 480
-    },      counters: ["Прямые атаки", "Артиллерия"],
-      counteredBy: ["Танки", "Артиллерия"],
+    },      counteredBy: ["Танки", "Артиллерия"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["Resurrection", "Amphibious"],
       tags: ["Ползущий", "Воскрешение"],
@@ -10025,7 +9935,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "None",
       weaponDetails: [],      weaponName: "",
-      strengths: ["Радарное подавление", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой (-500E)"],
+      strengths: ["Радарное подавление", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой (-500E)"],      counters: ["Стелс-детекторы", "Массовые атаки"],
 
       fullStats: {
       acceleration: 0.03,
@@ -10101,8 +10011,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-детекторы", "Массовые атаки"],
-      counteredBy: ["Радар", "Стелс-детекторы"],
+    },      counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["Radar Jamming"],
       tags: ["Cloak"],
@@ -10130,8 +10039,8 @@ const ARM_DATA = {
       range: 700,
       damage: 1800,
       weaponType: "HYPER_MECH",
-      weaponDetails: [{"id": "HYPER_MECH", "name": "Hyper Gauss Weapon", "damage": 384, "range": 480, "burst": 1, "reload": 0.25, "velocity": 700, "aoe": 48, "type": "", "energyPerShot": 576, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MCV_CRUSH", "name": "Crush of Death", "damage": 1800, "range": 480, "burst": 2, "reload": 3.2, "velocity": 10, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}],      weaponName: "Hyper Gauss Weapon",
-      strengths: ["Очень высокое здоровье", "Самоисцеление", "Устойчивость к EMP", "Амфибийный"],      weaknesses: ["Очень медленный", "Очень дорогой (3K E/выстрел)", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "HYPER_MECH", "name": "Hyper Gauss Weapon", "damage": 384, "range": 480, "burst": 1, "reload": 0.25, "burstrate": 0, "velocity": 700, "aoe": 48, "type": "", "energyPerShot": 576, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MCV_CRUSH", "name": "Crush of Death", "damage": 1800, "range": 480, "burst": 2, "reload": 3.2, "burstrate": 0.4, "velocity": 10, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "burstrate": 0, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}],      weaponName: "Hyper Gauss Weapon",
+      strengths: ["Очень высокое здоровье", "Самоисцеление", "Устойчивость к EMP", "Амфибийный"],      weaknesses: ["Очень медленный", "Очень дорогой (3K E/выстрел)", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.375,
@@ -10207,8 +10116,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Kbot Lab T3",
       specialAbilities: ["Self-Heal", "Anti-Stun", "Amphibious"],
       tags: ["Амфибия", "Самоисцеление"],
@@ -10236,7 +10144,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T3", "Ремонт сооружений", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],
+      weaponDetails: [],      strengths: ["Строит здания T3", "Ремонт сооружений", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.18,
@@ -10312,8 +10220,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 900
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Строительство зданий T3", "Ремонт"],
       tags: ["Строитель"],
@@ -10342,7 +10249,7 @@ const ARM_DATA = {
       damage: 32,
       weaponType: "BURST_ST",
       weaponName: "Enahnced Energized Gauss",
-      weaponDetails: [{"id": "BURST_ST", "name": "Enahnced Energized Gauss", "damage": 32, "range": 300, "burst": 2, "reload": 0.165, "velocity": 484, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Самый быстрый транспорт", "Стелс", "Дешёвый"],      weaknesses: ["Очень хрупкий", "Слабое вооружение"],
+      weaponDetails: [{"id": "BURST_ST", "name": "Enahnced Energized Gauss", "damage": 32, "range": 300, "burst": 2, "reload": 0.165, "burstrate": 0.033, "velocity": 484, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Самый быстрый транспорт", "Стелс", "Дешёвый"],      weaknesses: ["Очень хрупкий", "Слабое вооружение"],      counters: ["Стелс-детекторы", "Радар"],
 
       fullStats: {
       acceleration: 0.96,
@@ -10418,8 +10325,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-детекторы", "Радар"],
-      counteredBy: ["Радар", "Массовая оборона"],
+    },      counteredBy: ["Радар", "Массовая оборона"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Stealth"],
       tags: [],
@@ -10447,8 +10353,8 @@ const ARM_DATA = {
       range: 825,
       damage: 600,
       weaponType: "CANNON_HVY",
-      weaponDetails: [{"id": "CANNON_HVY", "name": "Behemoth Plasma Cannon", "damage": 600, "range": 600, "burst": 1, "reload": 0.5, "velocity": 480, "aoe": 128, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1500, "metalPerShot": 0, "accuracy": 300, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Behemoth Plasma Cannon",
-      strengths: ["Очень высокое здоровье", "Сильный урон", "Модули улучшения"],      weaknesses: ["Очень медленный", "Очень дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "CANNON_HVY", "name": "Behemoth Plasma Cannon", "damage": 600, "range": 600, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 480, "aoe": 128, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1500, "metalPerShot": 0, "accuracy": 300, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      weaponName: "Behemoth Plasma Cannon",
+      strengths: ["Очень высокое здоровье", "Сильный урон", "Модули улучшения"],      weaknesses: ["Очень медленный", "Очень дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.008,
@@ -10524,8 +10430,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Upgradable"],
       tags: ["ПВО"],
@@ -10553,8 +10458,8 @@ const ARM_DATA = {
       range: 720,
       damage: 672,
       weaponType: "LIGHTNING_LGTNK",
-      weaponDetails: [{"id": "LIGHTNING_LGTNK", "name": "Lightning Gun", "damage": 672, "range": 720, "burst": 1, "reload": 1.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 336, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LIGHTNING_LGTNK", "name": "Lightning Gun", "damage": 672, "range": 720, "burst": 1, "reload": 1.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 336, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LIGHTNING", "name": "Lightning Gun", "damage": 180, "range": 180, "burst": 1, "reload": 1.45, "velocity": 400, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Lightning Gun",
-      strengths: ["Оглушение", "Сильный урон", "Высокое здоровье"],      weaknesses: ["Медленный", "Очень дорогой (450E/сек)", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "LIGHTNING_LGTNK", "name": "Lightning Gun", "damage": 672, "range": 720, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 336, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LIGHTNING_LGTNK", "name": "Lightning Gun", "damage": 672, "range": 720, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 336, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LIGHTNING", "name": "Lightning Gun", "damage": 180, "range": 180, "burst": 1, "reload": 1.45, "burstrate": 0, "velocity": 400, "aoe": 8, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Lightning Gun",
+      strengths: ["Оглушение", "Сильный урон", "Высокое здоровье"],      weaknesses: ["Медленный", "Очень дорогой (450E/сек)", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.006,
@@ -10630,8 +10535,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Stun"],
       tags: [],
@@ -10659,8 +10563,8 @@ const ARM_DATA = {
       range: 1792,
       damage: 180,
       weaponType: "BURST_SIEGE",
-      weaponDetails: [{"id": "BURST_SIEGE", "name": "Hitman's Tri-Dimensional Railgun", "damage": 180, "range": 1792, "burst": 30, "reload": 7.5, "velocity": 1000, "aoe": 16, "type": "", "energyPerShot": 8640, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 1000}],      weaponName: "Hitman's Tri-Dimensional Railgun",
-      strengths: ["Пробивает броню", "Очень дальняя дистанция", "Мощный урон"],      weaknesses: ["Очень медленный", "Очень дорогой (9K E/выстрел)", "Медленная перезарядка"],
+      weaponDetails: [{"id": "BURST_SIEGE", "name": "Hitman's Tri-Dimensional Railgun", "damage": 180, "range": 1792, "burst": 30, "reload": 7.5, "burstrate": 0.001, "velocity": 1000, "aoe": 16, "type": "", "energyPerShot": 8640, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 1000}],      weaponName: "Hitman's Tri-Dimensional Railgun",
+      strengths: ["Пробивает броню", "Очень дальняя дистанция", "Мощный урон"],      weaknesses: ["Очень медленный", "Очень дорогой (9K E/выстрел)", "Медленная перезарядка"],      counters: ["Быстрые рейды", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.0025,
@@ -10736,8 +10640,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Быстрые рейды", "Артиллерия"],
-      counteredBy: ["Рейды пехоты", "Авиация"],
+    },      counteredBy: ["Рейды пехоты", "Авиация"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: [],
       tags: ["Артиллерия", "Railgun"],
@@ -10763,10 +10666,10 @@ const ARM_DATA = {
       hp: 10380,
       speed: 0.875,
       range: 1792,
-      damage: 100,
+      damage: 1600,
       weaponType: "MISSILE_TALOS",
       weaponName: "Missiles",
-      weaponDetails: [{"id": "MISSILE_TALOS", "name": "Missiles", "damage": 100, "range": 600, "burst": 1, "reload": 0.2, "velocity": 750, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 12000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 375}, {"id": "MISSILE_SCAR", "name": "Missiles", "damage": 1, "range": 1792, "burst": 1, "reload": 0.2, "velocity": 900, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1200, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Эффективен против воздуха", "Мобильный", "Дальняя дистанция"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],
+      weaponDetails: [{"id": "MISSILE_TALOS", "name": "Missiles", "damage": 100, "range": 600, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 750, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 12000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 375}, {"id": "MISSILE_SCAR", "name": "Missiles", "damage": 1600, "range": 1792, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 900, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1200, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Эффективен против воздуха", "Мобильный", "Дальняя дистанция"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0.008,
@@ -10792,7 +10695,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 100,
+      damage: 1600,
       damageModifier: 0.8,
       defaultMissionType: "Standby",
       designation: "AAASAM",
@@ -10842,11 +10745,10 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки", "Артиллерия"],
+    },      counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: [],
-      tags: ["Радар"],
+      tags: ["Штурм", "Радар"],
       image: null,
       hotkey: "Y"
     },
@@ -10871,8 +10773,8 @@ const ARM_DATA = {
       range: 27000,
       damage: 160,
       weaponType: "ANTI_NUKE_ADV",
-      weaponDetails: [{"id": "ANTI_NUKE_ADV", "name": "Rocket", "damage": 0, "range": 27000, "burst": 3, "reload": 120, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Rocket",
-      strengths: ["Ремонт союзных танков", "Радар", "+1.25K E"],      weaknesses: ["Медленный", "Дорогой", "Слабое вооружение"],
+      weaponDetails: [{"id": "ANTI_NUKE_ADV", "name": "Rocket", "damage": 0, "range": 27000, "burst": 3, "reload": 120, "burstrate": 0.2, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "burstrate": 0, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "burstrate": 0.001, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Rocket",
+      strengths: ["Ремонт союзных танков", "Радар", "+1.25K E"],      weaknesses: ["Медленный", "Дорогой", "Слабое вооружение"],      counters: ["Подлодки", "Ракетные атаки"],
 
       fullStats: {
       acceleration: 0.0027,
@@ -10948,8 +10850,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 2160
-    },      counters: ["Подлодки", "Ракетные атаки"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Ремонт", "Radar", "+1250 Energy"],
       tags: ["Anti-Nuke", "Авианосец"],
@@ -10977,7 +10878,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Амфибийный", "Бронированный", "Перевозка юнитов"],      weaknesses: ["Медленный", "Дорогой", "Слабое вооружение"],
+      weaponDetails: [],      strengths: ["Амфибийный", "Бронированный", "Перевозка юнитов"],      weaknesses: ["Медленный", "Дорогой", "Слабое вооружение"],      counters: ["Подлодки", "Артиллерия"],
 
       fullStats: {
       acceleration: 0.009,
@@ -11053,8 +10954,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 40,
       workerTime: 0
-    },      counters: ["Подлодки", "Артиллерия"],
-      counteredBy: ["Подводные лодки", "Ракетные корабли"],
+    },      counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Amphibious", "Armored Transport"],
       tags: ["Амфибия", "Транспорт"],
@@ -11082,8 +10982,8 @@ const ARM_DATA = {
       range: 1344,
       damage: 540,
       weaponType: "CANNON_MCV",
-      weaponDetails: [{"id": "CANNON_MCV", "name": "Empyrrean Dreadnought Cannon", "damage": 540, "range": 1344, "burst": 1, "reload": 0.18, "velocity": 420, "aoe": 144, "type": "", "energyPerShot": 1680, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_MCV", "name": "Heavy Rockets", "damage": 68, "range": 1344, "burst": 1, "reload": 0.18, "velocity": -10, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 1280}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Empyrrean Dreadnought Cannon",
-      strengths: ["Очень высокое здоровье", "Самоисцеление", "Мощный урон"],      weaknesses: ["Очень медленный", "Очень дорогой (1.25K E/выстрел)", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "CANNON_MCV", "name": "Empyrrean Dreadnought Cannon", "damage": 540, "range": 1344, "burst": 1, "reload": 0.18, "burstrate": 0, "velocity": 420, "aoe": 144, "type": "", "energyPerShot": 1680, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_MCV", "name": "Heavy Rockets", "damage": 68, "range": 1344, "burst": 1, "reload": 0.18, "burstrate": 0, "velocity": -10, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 1280}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "burstrate": 0.001, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Empyrrean Dreadnought Cannon",
+      strengths: ["Очень высокое здоровье", "Самоисцеление", "Мощный урон"],      weaknesses: ["Очень медленный", "Очень дорогой (1.25K E/выстрел)", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.0048,
@@ -11159,8 +11059,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Vehicle Plant T3",
       specialAbilities: ["Self-Heal"],
       tags: ["Самоисцеление"],
@@ -11188,7 +11087,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T3", "Воздушная мобильность", "Высокое здоровье"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Очень дорогой"],
+      weaponDetails: [],      strengths: ["Строит здания T3", "Воздушная мобильность", "Высокое здоровье"],      weaknesses: ["Хрупкий", "Слабое вооружение", "Очень дорогой"],      counters: ["Зенитное оружие"],
 
       fullStats: {
       acceleration: 0.06,
@@ -11264,8 +11163,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 450
-    },      counters: ["Зенитное оружие"],
-      counteredBy: ["ПВО", "Истребители"],
+    },      counteredBy: ["ПВО", "Истребители"],
       builtAt: "Air Factory T3",
       specialAbilities: ["Строительство зданий T3", "Ремонт"],
       tags: ["Строитель"],
@@ -11294,7 +11192,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "None",
       weaponName: "",
-      weaponDetails: [],      strengths: ["Стелс", "Широкий обзор", "Очень быстрый"],      weaknesses: ["Не вооружён", "Хрупкий", "Дорогой (-200E)"],
+      weaponDetails: [],      strengths: ["Стелс", "Широкий обзор", "Очень быстрый"],      weaknesses: ["Не вооружён", "Хрупкий", "Дорогой (-200E)"],      counters: ["Стелс-детекторы", "Радар"],
 
       fullStats: {
       acceleration: 0.09,
@@ -11370,8 +11268,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-детекторы", "Радар"],
-      counteredBy: ["Радар", "Стелс-детекторы"],
+    },      counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Air Factory T3",
       specialAbilities: ["Scout", "Stealth", "Wide Area Scout"],
       tags: ["Антирадар"],
@@ -11397,10 +11294,10 @@ const ARM_DATA = {
       hp: 4860,
       speed: 11.25,
       range: 1152,
-      damage: 40,
+      damage: 1280,
       weaponType: "MISSILE_SFOIL_FAST",
       weaponName: "Guided Missiles",
-      weaponDetails: [{"id": "MISSILE_SFOIL_FAST", "name": "Guided Missiles", "damage": 40, "range": 576, "burst": 1, "reload": 0.3, "velocity": 640, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 18000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "MISSILE_SFOIL_FAST", "name": "Guided Missiles", "damage": 40, "range": 576, "burst": 1, "reload": 0.3, "velocity": 640, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 18000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "MISSILE_SFOIL", "name": "Ultra Guided Missiles", "damage": 1, "range": 1152, "burst": 1, "reload": 1.8, "velocity": 900, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 18000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 700}],      strengths: ["Сильный урон", "Высокая скорость", "Воздушное превосходство"],      weaknesses: ["Слабый против наземных целей", "Дорогой"],
+      weaponDetails: [{"id": "MISSILE_SFOIL_FAST", "name": "Guided Missiles", "damage": 640, "range": 576, "burst": 1, "reload": 0.3, "burstrate": 0, "velocity": 640, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 18000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "MISSILE_SFOIL_FAST", "name": "Guided Missiles", "damage": 640, "range": 576, "burst": 1, "reload": 0.3, "burstrate": 0, "velocity": 640, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 18000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "MISSILE_SFOIL", "name": "Ultra Guided Missiles", "damage": 1280, "range": 1152, "burst": 1, "reload": 1.8, "burstrate": 0, "velocity": 900, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 18000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 700}],      strengths: ["Сильный урон", "Высокая скорость", "Воздушное превосходство"],      weaknesses: ["Слабый против наземных целей", "Дорогой"],      counters: ["Массовые воздушные атаки"],
 
       fullStats: {
       acceleration: 0.3,
@@ -11426,7 +11323,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 180,
-      damage: 40,
+      damage: 1280,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFD-J9",
@@ -11476,8 +11373,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Массовые воздушные атаки"],
-      counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
+    },      counteredBy: ["Зенитное оружие", "Многоцелевые истребители"],
       builtAt: "Air Factory T3",
       specialAbilities: [],
       tags: ["Штурм"],
@@ -11506,7 +11402,7 @@ const ARM_DATA = {
       damage: 2160,
       weaponType: "BOMB_SBOMBER",
       weaponName: "big bomb",
-      weaponDetails: [{"id": "BOMB_SBOMBER", "name": "big bomb", "damage": 2160, "range": 1280, "burst": 1, "reload": 0.13, "velocity": 0, "aoe": 288, "type": "", "energyPerShot": 1080, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "BOMB_SBOMBER", "name": "big bomb", "damage": 2160, "range": 1280, "burst": 1, "reload": 0.13, "velocity": 0, "aoe": 288, "type": "", "energyPerShot": 1080, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Стелс", "Огромный урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для ПВО", "Очень дорогой (5K E/бомба)"],
+      weaponDetails: [{"id": "BOMB_SBOMBER", "name": "big bomb", "damage": 2160, "range": 1280, "burst": 1, "reload": 0.13, "burstrate": 0, "velocity": 0, "aoe": 288, "type": "", "energyPerShot": 1080, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "BOMB_SBOMBER", "name": "big bomb", "damage": 2160, "range": 1280, "burst": 1, "reload": 0.13, "burstrate": 0, "velocity": 0, "aoe": 288, "type": "", "energyPerShot": 1080, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Стелс", "Огромный урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для ПВО", "Очень дорогой (5K E/бомба)"],      counters: ["ПВО", "Стелс-детекторы"],
 
       fullStats: {
       acceleration: 0.3,
@@ -11582,8 +11478,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Стелс-детекторы"],
-      counteredBy: ["Зенитные ракеты", "Стелс-детекторы"],
+    },      counteredBy: ["Зенитные ракеты", "Стелс-детекторы"],
       builtAt: "Air Factory T3",
       specialAbilities: ["Stealth"],
       tags: ["Уничтожитель", "Стелс"],
@@ -11612,7 +11507,7 @@ const ARM_DATA = {
       damage: 400,
       weaponType: "VSPAM_SGS",
       weaponName: "Heavy Rockets",
-      weaponDetails: [{"id": "VSPAM_SGS", "name": "Heavy Rockets", "damage": 400, "range": 810, "burst": 1, "reload": 0.25, "velocity": 900, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Мощный урон", "Контроль поверхности", "Универсальность"],      weaknesses: ["Медленный", "Уязвим для ПВО", "Дорогой"],
+      weaponDetails: [{"id": "VSPAM_SGS", "name": "Heavy Rockets", "damage": 400, "range": 810, "burst": 1, "reload": 0.25, "burstrate": 0, "velocity": 900, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Мощный урон", "Контроль поверхности", "Универсальность"],      weaknesses: ["Медленный", "Уязвим для ПВО", "Дорогой"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.2,
@@ -11688,8 +11583,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T3",
       specialAbilities: [],
       tags: [],
@@ -11715,10 +11609,10 @@ const ARM_DATA = {
       hp: 7695,
       speed: 9.7,
       range: 960,
-      damage: 1440,
+      damage: 5760,
       weaponType: "TORPEDO_T3SEAP",
-      weaponDetails: [{"id": "TORPEDO_T3SEAP", "name": "Torpedo Launcher", "damage": 1440, "range": 960, "burst": 1, "reload": 2.4, "velocity": 150, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 150}, {"id": "TORPEDO_T3SEAP", "name": "Torpedo Launcher", "damage": 1440, "range": 960, "burst": 1, "reload": 2.4, "velocity": 150, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 150}, {"id": "MISSILE_VTOL_ADV_2", "name": "Guided Missiles", "damage": 1, "range": 720, "burst": 1, "reload": 1.9, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}],      weaponName: "Torpedo Launcher",
-      strengths: ["Эффективен против подлодок", "Воздушная мобильность", "Сильный урон"],      weaknesses: ["Слабый против наземных целей", "Уязвим для ПВО"],
+      weaponDetails: [{"id": "TORPEDO_T3SEAP", "name": "Torpedo Launcher", "damage": 5760, "range": 960, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 150, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 150}, {"id": "TORPEDO_T3SEAP", "name": "Torpedo Launcher", "damage": 5760, "range": 960, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 150, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 150}, {"id": "MISSILE_VTOL_ADV_2", "name": "Guided Missiles", "damage": 768, "range": 720, "burst": 1, "reload": 1.9, "burstrate": 0, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}],      weaponName: "Torpedo Launcher",
+      strengths: ["Эффективен против подлодок", "Воздушная мобильность", "Сильный урон"],      weaknesses: ["Слабый против наземных целей", "Уязвим для ПВО"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.2,
@@ -11744,7 +11638,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 180,
-      damage: 1440,
+      damage: 5760,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFS-U6",
@@ -11794,8 +11688,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T3",
       specialAbilities: ["Anti-Submarine"],
       tags: ["Торпеды", "Амфибия"],
@@ -12032,7 +11925,7 @@ const ARM_DATA = {
       damage: 1024,
       weaponType: "GAUSS_WING",
       weaponName: "Stratus Vulcan Gauss",
-      weaponDetails: [{"id": "GAUSS_WING", "name": "Stratus Vulcan Gauss", "damage": 1024, "range": 640, "burst": 1, "reload": 0.2, "velocity": 850, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      strengths: ["Очень высокое здоровье", "Самоисцеление", "Мощный урон"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для ПВО"],
+      weaponDetails: [{"id": "GAUSS_WING", "name": "Stratus Vulcan Gauss", "damage": 1024, "range": 640, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 850, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      strengths: ["Очень высокое здоровье", "Самоисцеление", "Мощный урон"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для ПВО"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.06,
@@ -12108,8 +12001,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T3",
       specialAbilities: ["Self-Heal"],
       tags: ["ПВО", "Самоисцеление"],
@@ -12137,7 +12029,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит морские здания T3", "Высокое здоровье", "Ремонт"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],
+      weaponDetails: [],      strengths: ["Строит морские здания T3", "Высокое здоровье", "Ремонт"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],      counters: ["Подлодки", "Морская артиллерия"],
 
       fullStats: {
       acceleration: 0.007,
@@ -12213,8 +12105,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 1350
-    },      counters: ["Подлодки", "Морская артиллерия"],
-      counteredBy: ["Подводные лодки", "Ракетные корабли"],
+    },      counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Строительство морских зданий T3", "Ремонт"],
       tags: ["Строитель"],
@@ -12240,10 +12131,10 @@ const ARM_DATA = {
       hp: 7720,
       speed: 3.15,
       range: 900,
-      damage: 32,
+      damage: 720,
       weaponType: "EMG_HVY",
-      weaponDetails: [{"id": "EMG_HVY", "name": "EMG Burst", "damage": 32, "range": 300, "burst": 4, "reload": 0.33, "velocity": 425, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "EMG Burst",
-      strengths: ["Очень быстрый", "Хорошая скорость", "Дешёвый"],      weaknesses: ["Слабая броня", "Средний урон"],
+      weaponDetails: [{"id": "EMG_HVY", "name": "EMG Burst", "damage": 32, "range": 300, "burst": 4, "reload": 0.33, "burstrate": 0.05, "velocity": 425, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "EMG Burst",
+      strengths: ["Очень быстрый", "Хорошая скорость", "Дешёвый"],      weaknesses: ["Слабая броня", "Средний урон"],      counters: ["Тяжёлые корабли"],
 
       fullStats: {
       acceleration: 0.15,
@@ -12269,7 +12160,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 32,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ASD-SS",
@@ -12319,8 +12210,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлые корабли"],
-      counteredBy: ["Крейсеры", "Эсминцы"],
+    },      counteredBy: ["Крейсеры", "Эсминцы"],
       builtAt: "Naval Yard T3",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -12346,10 +12236,10 @@ const ARM_DATA = {
       hp: 23625,
       speed: 1.7,
       range: 768,
-      damage: 720,
+      damage: 2880,
       weaponType: "LIGHTNING_LGTNK",
-      weaponDetails: [{"id": "LIGHTNING_LGTNK", "name": "Lightning Gun", "damage": 672, "range": 720, "burst": 1, "reload": 1.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 336, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LIGHTNING_LGTNK", "name": "Lightning Gun", "damage": 672, "range": 720, "burst": 1, "reload": 1.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 336, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "TORPEDO_ATL", "name": "Advanced Guided Torpedo", "damage": 720, "range": 768, "burst": 1, "reload": 1.2, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 90}],      weaponName: "Lightning Gun",
-      strengths: ["Оглушение", "Сильный урон", "Эффективен против подлодок"],      weaknesses: ["Медленный", "Дорогой", "Уязвим для ракет"],
+      weaponDetails: [{"id": "LIGHTNING_LGTNK", "name": "Lightning Gun", "damage": 672, "range": 720, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 336, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LIGHTNING_LGTNK", "name": "Lightning Gun", "damage": 672, "range": 720, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 336, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "TORPEDO_ATL", "name": "Advanced Guided Torpedo", "damage": 2880, "range": 768, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 90}],      weaponName: "Lightning Gun",
+      strengths: ["Оглушение", "Сильный урон", "Эффективен против подлодок"],      weaknesses: ["Медленный", "Дорогой", "Уязвим для ракет"],      counters: ["Ракетные корабли", "Подлодки"],
 
       fullStats: {
       acceleration: 0.0165,
@@ -12375,7 +12265,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 720,
+      damage: 2880,
       damageModifier: 0.28125,
       defaultMissionType: "Standby",
       designation: "ASD-SC",
@@ -12425,8 +12315,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Ракетные корабли", "Подлодки"],
-      counteredBy: ["Ракетные крейсеры", "Подводные лодки"],
+    },      counteredBy: ["Ракетные крейсеры", "Подводные лодки"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Anti-Submarine"],
       tags: ["Штурм", "Торпеды"],
@@ -12455,7 +12344,7 @@ const ARM_DATA = {
       damage: 7200,
       weaponType: "TORPEDO_LR_ARM",
       weaponName: "Experimental Guided Torpedo",
-      weaponDetails: [{"id": "TORPEDO_LR_ARM", "name": "Experimental Guided Torpedo", "damage": 7200, "range": 1792, "burst": 1, "reload": 10, "velocity": 450, "aoe": 384, "type": "", "energyPerShot": 7200, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 300}, {"id": "TORPEDO", "name": "Unguided Torpedo", "damage": 480, "range": 600, "burst": 1, "reload": 3, "velocity": 150, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 0}],      strengths: ["Огромный урон", "Ядерное оружие", "Скрытность"],      weaknesses: ["Очень медленный", "Очень дорогой (30K E/выстрел)", "Медленная перезарядка"],
+      weaponDetails: [{"id": "TORPEDO_LR_ARM", "name": "Experimental Guided Torpedo", "damage": 7200, "range": 1792, "burst": 1, "reload": 10, "burstrate": 0, "velocity": 450, "aoe": 384, "type": "", "energyPerShot": 7200, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 300}, {"id": "TORPEDO", "name": "Unguided Torpedo", "damage": 1920, "range": 600, "burst": 1, "reload": 3, "burstrate": 0, "velocity": 150, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 0}],      strengths: ["Огромный урон", "Ядерное оружие", "Скрытность"],      weaknesses: ["Очень медленный", "Очень дорогой (30K E/выстрел)", "Медленная перезарядка"],      counters: ["Глубинные бомбы", "Сонар"],
 
       fullStats: {
       acceleration: 0.008,
@@ -12531,8 +12420,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 25,
       workerTime: 0
-    },      counters: ["Глубинные бомбы", "Сонар"],
-      counteredBy: ["Противолодочные корабли", "Сонар"],
+    },      counteredBy: ["Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Stealth", "Nuclear"],
       tags: [],
@@ -12560,8 +12448,8 @@ const ARM_DATA = {
       range: 5376,
       damage: 1800,
       weaponType: "CANNON_LRPC_ARM",
-      weaponDetails: [{"id": "CANNON_LRPC_ARM", "name": "Big Bertha Plasma Cannon", "damage": 1800, "range": 5376, "burst": 1, "reload": 0.25, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 5400, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Big Bertha Plasma Cannon",
-      strengths: ["Очень дальняя дистанция", "Мощный урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для подлодок", "Очень дорогой"],
+      weaponDetails: [{"id": "CANNON_LRPC_ARM", "name": "Big Bertha Plasma Cannon", "damage": 1800, "range": 5376, "burst": 1, "reload": 0.25, "burstrate": 0, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 5400, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Big Bertha Plasma Cannon",
+      strengths: ["Очень дальняя дистанция", "Мощный урон", "Разрушает укрепления"],      weaknesses: ["Медленный", "Уязвим для подлодок", "Очень дорогой"],      counters: ["Подлодки", "Быстрые корабли"],
 
       fullStats: {
       acceleration: 0.0165,
@@ -12637,8 +12525,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Быстрые корабли"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T3",
       specialAbilities: [],
       tags: ["Артиллерия"],
@@ -12664,10 +12551,10 @@ const ARM_DATA = {
       hp: 42000,
       speed: 1.7,
       range: 1792,
-      damage: 360,
+      damage: 960,
       weaponType: "ROCKET_HEAVY",
-      weaponDetails: [{"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}, {"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "MISSILE_AA_ADV", "name": "Missiles", "damage": 1, "range": 1792, "burst": 1, "reload": 0.125, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 640}],      weaponName: "Ultra LOS Rockets",
-      strengths: ["Очень высокое здоровье", "Сильный урон", "Хорошая броня"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для подлодок"],
+      weaponDetails: [{"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}, {"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "burstrate": 0, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "MISSILE_AA_ADV", "name": "Missiles", "damage": 960, "range": 1792, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 640}],      weaponName: "Ultra LOS Rockets",
+      strengths: ["Очень высокое здоровье", "Сильный урон", "Хорошая броня"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для подлодок"],      counters: ["Подлодки", "Ракетные атаки"],
 
       fullStats: {
       acceleration: 0.0165,
@@ -12693,7 +12580,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 360,
+      damage: 960,
       damageModifier: 0.5625,
       defaultMissionType: "Standby",
       designation: "ASD-SC",
@@ -12743,8 +12630,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Ракетные атаки"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T3",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -12772,8 +12658,8 @@ const ARM_DATA = {
       range: 8064,
       damage: 9600,
       weaponType: "NUKE_OPS",
-      weaponDetails: [{"id": "NUKE_OPS", "name": "Operational Nuclear Missile", "damage": 9600, "range": 8064, "burst": 1, "reload": 300, "velocity": 700, "aoe": 640, "type": "", "energyPerShot": 300000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 3000, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_SCAR", "name": "Missiles", "damage": 1, "range": 1792, "burst": 1, "reload": 0.2, "velocity": 900, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1200, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Operational Nuclear Missile",
-      strengths: ["Ремонт союзных кораблей", "Радар", "Противоракетная система", "+1.5K E"],      weaknesses: ["Очень медленный", "Очень дорогой", "Слабое вооружение"],
+      weaponDetails: [{"id": "NUKE_OPS", "name": "Operational Nuclear Missile", "damage": 9600, "range": 8064, "burst": 1, "reload": 300, "burstrate": 0, "velocity": 700, "aoe": 640, "type": "", "energyPerShot": 300000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 3000, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_SCAR", "name": "Missiles", "damage": 1600, "range": 1792, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 900, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1200, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Operational Nuclear Missile",
+      strengths: ["Ремонт союзных кораблей", "Радар", "Противоракетная система", "+1.5K E"],      weaknesses: ["Очень медленный", "Очень дорогой", "Слабое вооружение"],      counters: ["Подлодки", "Ракетные атаки"],
 
       fullStats: {
       acceleration: 0.015,
@@ -12849,8 +12735,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 2160
-    },      counters: ["Подлодки", "Ракетные атаки"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Ремонт", "Radar", "Anti-Nuke", "+1500 Energy"],
       tags: ["Авианосец"],
@@ -12878,7 +12763,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Радарное подавление", "Скрытность", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой (-500E)"],
+      weaponDetails: [],      strengths: ["Радарное подавление", "Скрытность", "Тактическая ценность"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой (-500E)"],      counters: ["Сонар", "Стелс-детекторы"],
 
       fullStats: {
       acceleration: 0.2,
@@ -12954,8 +12839,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 20,
       workerTime: 0
-    },      counters: ["Сонар", "Стелс-детекторы"],
-      counteredBy: ["Сонар", "Противолодочные корабли"],
+    },      counteredBy: ["Сонар", "Противолодочные корабли"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Radar Jamming", "Stealth"],
       tags: ["Антирадар"],
@@ -12984,7 +12868,7 @@ const ARM_DATA = {
       damage: 640,
       weaponType: "CANNON_DREAD",
       weaponName: "Dreadnought Cannon",
-      weaponDetails: [{"id": "CANNON_DREAD", "name": "Dreadnought Cannon", "damage": 640, "range": 2016, "burst": 1, "reload": 0.32, "velocity": 525, "aoe": 144, "type": "", "energyPerShot": 1920, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_DREAD_ARM", "name": "Heavy Rockets", "damage": 64, "range": 2016, "burst": 1, "reload": 0.16, "velocity": -1, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 720}, {"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}],      strengths: ["Очень высокое здоровье", "Самоисцеление", "Мощный урон"],      weaknesses: ["Очень медленный", "Очень дорогой (2.5K E/выстрел)", "Уязвим для подлодок"],
+      weaponDetails: [{"id": "CANNON_DREAD", "name": "Dreadnought Cannon", "damage": 640, "range": 2016, "burst": 1, "reload": 0.32, "burstrate": 0, "velocity": 525, "aoe": 144, "type": "", "energyPerShot": 1920, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_DREAD_ARM", "name": "Heavy Rockets", "damage": 64, "range": 2016, "burst": 1, "reload": 0.16, "burstrate": 0, "velocity": -1, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 720}, {"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}],      strengths: ["Очень высокое здоровье", "Самоисцеление", "Мощный урон"],      weaknesses: ["Очень медленный", "Очень дорогой (2.5K E/выстрел)", "Уязвим для подлодок"],      counters: ["Подлодки", "Ракетные атаки"],
 
       fullStats: {
       acceleration: 0.002,
@@ -13060,8 +12944,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Ракетные атаки"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T3",
       specialAbilities: ["Self-Heal"],
       tags: ["Уничтожитель", "Самоисцеление"],
@@ -13089,7 +12972,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания T3", "Амфибийный", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],
+      weaponDetails: [],      strengths: ["Строит здания T3", "Амфибийный", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.04,
@@ -13165,8 +13048,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 810
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious", "Строительство зданий T3"],
       tags: ["Строитель"],
@@ -13194,7 +13076,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Стелс", "Очень быстрый", "Амфибийный", "Широкий обзор"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой (-500E)"],
+      weaponDetails: [],      strengths: ["Стелс", "Очень быстрый", "Амфибийный", "Широкий обзор"],      weaknesses: ["Хрупкий", "Слабый урон", "Дорогой (-500E)"],      counters: ["Стелс-детекторы", "Радар"],
 
       fullStats: {
       acceleration: 0.07,
@@ -13270,8 +13152,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Стелс-детекторы", "Радар"],
-      counteredBy: ["Радар", "Стелс-детекторы"],
+    },      counteredBy: ["Радар", "Стелс-детекторы"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious", "Stealth", "Wide Area Scout"],
       tags: ["Стелс", "Антирадар"],
@@ -13299,8 +13180,8 @@ const ARM_DATA = {
       range: 1000,
       damage: 2000,
       weaponType: "BLOD_MANNI",
-      weaponDetails: [{"id": "BLOD_MANNI", "name": "Mobile Annihilator Weapon", "damage": 2000, "range": 1000, "burst": 1, "reload": 6, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 2000, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Mobile Annihilator Weapon",
-      strengths: ["Мощный урон", "Высокая скорость стрельбы", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "BLOD_MANNI", "name": "Mobile Annihilator Weapon", "damage": 2000, "range": 1000, "burst": 1, "reload": 6, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 2000, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Mobile Annihilator Weapon",
+      strengths: ["Мощный урон", "Высокая скорость стрельбы", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.02,
@@ -13376,8 +13257,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious"],
       tags: ["Уничтожитель", "Амфибия"],
@@ -13405,8 +13285,8 @@ const ARM_DATA = {
       range: 600,
       damage: 600,
       weaponType: "CANNON_HVY",
-      weaponDetails: [{"id": "CANNON_HVY", "name": "Behemoth Plasma Cannon", "damage": 600, "range": 600, "burst": 1, "reload": 0.5, "velocity": 480, "aoe": 128, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1500, "metalPerShot": 0, "accuracy": 300, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "DEPTHCHARGE", "name": "Depth Charge", "damage": 120, "range": 375, "burst": 1, "reload": 2, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}],      weaponName: "Behemoth Plasma Cannon",
-      strengths: ["Эффективен против кораблей", "Амфибийный", "Сильный урон"],      weaknesses: ["Средняя броня", "Дорогой"],
+      weaponDetails: [{"id": "CANNON_HVY", "name": "Behemoth Plasma Cannon", "damage": 600, "range": 600, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 480, "aoe": 128, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1500, "metalPerShot": 0, "accuracy": 300, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "DEPTHCHARGE", "name": "Depth Charge", "damage": 480, "range": 375, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}],      weaponName: "Behemoth Plasma Cannon",
+      strengths: ["Эффективен против кораблей", "Амфибийный", "Сильный урон"],      weaknesses: ["Средняя броня", "Дорогой"],      counters: ["Тяжёлые корабли"],
 
       fullStats: {
       acceleration: 0.025,
@@ -13482,8 +13362,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Тяжёлые корабли"],
-      counteredBy: ["Крейсеры", "Линкоры"],
+    },      counteredBy: ["Крейсеры", "Линкоры"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious", "Anti-Ship"],
       tags: ["Торпеды", "Амфибия"],
@@ -13509,10 +13388,10 @@ const ARM_DATA = {
       hp: 23625,
       speed: 1.1,
       range: 900,
-      damage: 360,
+      damage: 720,
       weaponType: "ROCKET_HEAVY",
-      weaponDetails: [{"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}, {"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Ultra LOS Rockets",
-      strengths: ["Очень высокое здоровье", "Сильный урон", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}, {"id": "ROCKET_HEAVY", "name": "Ultra LOS Rockets", "damage": 360, "range": 720, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 850, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 500}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Ultra LOS Rockets",
+      strengths: ["Очень высокое здоровье", "Сильный урон", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.04,
@@ -13538,7 +13417,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 360,
+      damage: 720,
       damageModifier: 0.390625,
       defaultMissionType: "Standby",
       designation: "COR-ASS",
@@ -13588,8 +13467,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious"],
       tags: ["ПВО"],
@@ -13615,10 +13493,10 @@ const ARM_DATA = {
       hp: 16000,
       speed: 1.25,
       range: 1344,
-      damage: 480,
+      damage: 1920,
       weaponType: "MISSILE_TALOS",
-      weaponDetails: [{"id": "MISSILE_TALOS", "name": "Missiles", "damage": 100, "range": 600, "burst": 1, "reload": 0.2, "velocity": 750, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 12000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 375}, {"id": "TORPEDO_SMART", "name": "Guided Torpedo", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 125}, {"id": "FLAK_FAST", "name": "Guided Flak Cannon", "damage": 0, "range": 1344, "burst": 1, "reload": 0, "velocity": 1440, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 12000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Missiles",
-      strengths: ["Эффективен против воздуха", "Амфибийный", "Дальняя дистанция"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],
+      weaponDetails: [{"id": "MISSILE_TALOS", "name": "Missiles", "damage": 100, "range": 600, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 750, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 12000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 375}, {"id": "TORPEDO_SMART", "name": "Guided Torpedo", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 125}, {"id": "FLAK_FAST", "name": "Guided Flak Cannon", "damage": 800, "range": 1344, "burst": 1, "reload": 1.4, "burstrate": 0, "velocity": 1440, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 12000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Missiles",
+      strengths: ["Эффективен против воздуха", "Амфибийный", "Дальняя дистанция"],      weaknesses: ["Не стреляет по наземным целям", "Слабый против брони"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0.025,
@@ -13644,7 +13522,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 480,
+      damage: 1920,
       damageModifier: 0.8,
       defaultMissionType: "Standby",
       designation: "ARM-THG",
@@ -13694,8 +13572,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки", "Артиллерия"],
+    },      counteredBy: ["Пехота", "Танки", "Артиллерия"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious", "Anti-Air"],
       tags: ["ПВО", "Торпеды"],
@@ -13723,8 +13600,8 @@ const ARM_DATA = {
       range: 1344,
       damage: 540,
       weaponType: "CANNON_MCV",
-      weaponDetails: [{"id": "CANNON_MCV", "name": "Empyrrean Dreadnought Cannon", "damage": 540, "range": 1344, "burst": 1, "reload": 0.18, "velocity": 420, "aoe": 144, "type": "", "energyPerShot": 1680, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_MCV", "name": "Heavy Rockets", "damage": 68, "range": 1344, "burst": 1, "reload": 0.18, "velocity": -10, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 1280}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Empyrrean Dreadnought Cannon",
-      strengths: ["Очень высокое здоровье", "Самоисцеление", "Мощный урон", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой (1.25K E/выстрел)", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "CANNON_MCV", "name": "Empyrrean Dreadnought Cannon", "damage": 540, "range": 1344, "burst": 1, "reload": 0.18, "burstrate": 0, "velocity": 420, "aoe": 144, "type": "", "energyPerShot": 1680, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_MCV", "name": "Heavy Rockets", "damage": 68, "range": 1344, "burst": 1, "reload": 0.18, "burstrate": 0, "velocity": -10, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 1280}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "burstrate": 0.001, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Empyrrean Dreadnought Cannon",
+      strengths: ["Очень высокое здоровье", "Самоисцеление", "Мощный урон", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой (1.25K E/выстрел)", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.009,
@@ -13800,8 +13677,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Hovercraft Platform T3",
       specialAbilities: ["Amphibious", "Self-Heal"],
       tags: ["Самоисцеление"],
@@ -13827,10 +13703,10 @@ const ARM_DATA = {
       hp: 15725,
       speed: 0,
       range: 2688,
-      damage: 200,
+      damage: 3200,
       weaponType: "MISSILE_SMB_GF",
       weaponName: "Missiles",
-      weaponDetails: [{"id": "MISSILE_SMB_GF", "name": "Missiles", "damage": 200, "range": 900, "burst": 1, "reload": 0.8, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 640}, {"id": "MISSILE_SMB_AA", "name": "Missiles", "damage": 1, "range": 2688, "burst": 1, "reload": 0.8, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 10000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 720}],      strengths: ["Очень дальняя дистанция", "Мощный урон", "Радар"],      weaknesses: ["Стационарный", "Не стреляет по наземным целям", "Дорогой"],
+      weaponDetails: [{"id": "MISSILE_SMB_GF", "name": "Missiles", "damage": 200, "range": 900, "burst": 1, "reload": 0.8, "burstrate": 0, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 640}, {"id": "MISSILE_SMB_AA", "name": "Missiles", "damage": 3200, "range": 2688, "burst": 1, "reload": 0.8, "burstrate": 0, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 10000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 720}],      strengths: ["Очень дальняя дистанция", "Мощный урон", "Радар"],      weaknesses: ["Стационарный", "Не стреляет по наземным целям", "Дорогой"],      counters: ["Наземные войска", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -13856,7 +13732,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 200,
+      damage: 3200,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "A-102-C",
@@ -13906,8 +13782,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска", "Артиллерия"],
-      counteredBy: ["Артиллерия", "Ракеты"],
+    },      counteredBy: ["Артиллерия", "Ракеты"],
       builtAt: "Defense Facility T3",
       specialAbilities: ["Radar"],
       tags: ["ПВО", "Радар"],
@@ -13936,7 +13811,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "PARALYZER_STUN",
       weaponName: "Heavy Paralyzer",
-      weaponDetails: [{"id": "PARALYZER_STUN", "name": "Heavy Paralyzer", "damage": 0, "range": 1050, "burst": 1, "reload": 0.8, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 2160, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "PARALYZER_STUN", "name": "Heavy Paralyzer", "damage": 0, "range": 1050, "burst": 1, "reload": 0.8, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 2160, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "PARALYZER_STUN", "name": "Heavy Paralyzer", "damage": 0, "range": 1050, "burst": 1, "reload": 0.8, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 2160, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Массовое оглушение", "Маскировка", "Самоисцеление", "Тактическая ценность"],      weaknesses: ["Низкий урон", "Очень дорогой (4.5K E/залп)", "Стационарный"],
+      weaponDetails: [{"id": "PARALYZER_STUN", "name": "Heavy Paralyzer", "damage": 0, "range": 1050, "burst": 1, "reload": 0.8, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 2160, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "PARALYZER_STUN", "name": "Heavy Paralyzer", "damage": 0, "range": 1050, "burst": 1, "reload": 0.8, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 2160, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "PARALYZER_STUN", "name": "Heavy Paralyzer", "damage": 0, "range": 1050, "burst": 1, "reload": 0.8, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 2160, "paralyzer": true, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Массовое оглушение", "Маскировка", "Самоисцеление", "Тактическая ценность"],      weaknesses: ["Низкий урон", "Очень дорогой (4.5K E/залп)", "Стационарный"],      counters: ["Дальний обстрел", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -14012,8 +13887,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Дальний обстрел", "Артиллерия"],
-      counteredBy: ["Артиллерия", "Ракеты"],
+    },      counteredBy: ["Артиллерия", "Ракеты"],
       builtAt: "Defense Facility T3",
       specialAbilities: ["EMP", "Cloak", "Self-Heal"],
       tags: [],
@@ -14041,7 +13915,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Подводный", "Производит металл", "Высокая производительность"],      weaknesses: ["Потребляет энергию (-75E)", "Уязвим для подлодок", "Стационарный"],
+      weaponDetails: [],      strengths: ["Подводный", "Производит металл", "Высокая производительность"],      weaknesses: ["Потребляет энергию (-75E)", "Уязвим для подлодок", "Стационарный"],      counters: ["Подлодки", "Диверсанты"],
 
       fullStats: {
       acceleration: 0,
@@ -14117,8 +13991,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Диверсанты"],
-      counteredBy: ["Подводные лодки", "Десант"],
+    },      counteredBy: ["Подводные лодки", "Десант"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: [],
@@ -14146,7 +14019,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Улучшает командира", "Авто-нацеливание", "Повышает точность"],      weaknesses: ["Потребляет энергию (-2.5K E)", "Дорогой", "Стационарный"],
+      weaponDetails: [],      strengths: ["Улучшает командира", "Авто-нацеливание", "Повышает точность"],      weaknesses: ["Потребляет энергию (-2.5K E)", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -14222,8 +14095,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 30
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Auto-Targeting", "Commander Upgrade"],
       tags: ["Автонаведение"],
@@ -14251,7 +14123,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит металл", "Высокая производительность"],      weaknesses: ["Потребляет энергию (-75E)", "Уязвим для артиллерии", "Стационарный"],
+      weaponDetails: [],      strengths: ["Производит металл", "Высокая производительность"],      weaknesses: ["Потребляет энергию (-75E)", "Уязвим для артиллерии", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -14327,8 +14199,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: [],
       tags: [],
@@ -14356,7 +14227,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Защитные щиты", "Самоисцеление", "Защищает сооружения"],      weaknesses: ["Потребляет много энергии", "Дорогой", "Стационарный"],
+      weaponDetails: [],      strengths: ["Защитные щиты", "Самоисцеление", "Защищает сооружения"],      weaknesses: ["Потребляет много энергии", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -14432,8 +14303,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 480
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Shield", "Self-Heal"],
       tags: [],
@@ -14462,7 +14332,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "None",
       weaponName: "",
-      weaponDetails: [],      strengths: ["Омни-обнаружение", "Видит стелс", "Видит подлодки"],      weaknesses: ["Потребляет энергию (-500E)", "Дорогой", "Стационарный"],
+      weaponDetails: [],      strengths: ["Омни-обнаружение", "Видит стелс", "Видит подлодки"],      weaknesses: ["Потребляет энергию (-500E)", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -14538,8 +14408,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Omni Sensor"],
       tags: ["Радар", "Антирадар"],
@@ -14567,8 +14436,8 @@ const ARM_DATA = {
       range: 5376,
       damage: 1800,
       weaponType: "CANNON_LRPC_ARM",
-      weaponDetails: [{"id": "CANNON_LRPC_ARM", "name": "Big Bertha Plasma Cannon", "damage": 1800, "range": 5376, "burst": 1, "reload": 0.25, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 5400, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Big Bertha Plasma Cannon",
-      strengths: ["Очень дальняя дистанция", "Высокая скорострельность", "Мощный урон"],      weaknesses: ["Стационарный", "Очень дорогой (5.4K E/выстрел)", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_LRPC_ARM", "name": "Big Bertha Plasma Cannon", "damage": 1800, "range": 5376, "burst": 1, "reload": 0.25, "burstrate": 0, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 5400, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Big Bertha Plasma Cannon",
+      strengths: ["Очень дальняя дистанция", "Высокая скорострельность", "Мощный урон"],      weaknesses: ["Стационарный", "Очень дорогой (5.4K E/выстрел)", "Медленная перезарядка"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -14644,8 +14513,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: [],
       tags: ["Пушка"],
@@ -14671,10 +14539,10 @@ const ARM_DATA = {
       hp: 1640625,
       speed: 2.5,
       range: 3584,
-      damage: 2250,
+      damage: 6400,
       weaponType: "BLOD_FFLAG",
       weaponName: "Hyper Annihilator Weapon",
-      weaponDetails: [{"id": "BLOD_FFLAG", "name": "Hyper Annihilator Weapon", "damage": 1200, "range": 1200, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 2400, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_FFLAG", "name": "Missiles", "damage": 1, "range": 2688, "burst": 1, "reload": 0, "velocity": 960, "aoe": 144, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_FFLAG_ARM", "name": "Bertha Class Plasma Cannon", "damage": 2250, "range": 3584, "burst": 1, "reload": 2, "velocity": 800, "aoe": 144, "type": "", "energyPerShot": 9000, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Очень высокое здоровье", "Командные способности", "Мощный урон"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для ПВО"],
+      weaponDetails: [{"id": "BLOD_FFLAG", "name": "Hyper Annihilator Weapon", "damage": 1200, "range": 1200, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 2400, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_FFLAG", "name": "Missiles", "damage": 6400, "range": 2688, "burst": 1, "reload": 10, "burstrate": 0, "velocity": 960, "aoe": 144, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_FFLAG_ARM", "name": "Bertha Class Plasma Cannon", "damage": 2250, "range": 3584, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 800, "aoe": 144, "type": "", "energyPerShot": 9000, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Очень высокое здоровье", "Командные способности", "Мощный урон"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для ПВО"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.08,
@@ -14700,7 +14568,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 188,
-      damage: 2250,
+      damage: 6400,
       damageModifier: 0.0144,
       defaultMissionType: "standby",
       designation: "WB-X-AT",
@@ -14750,8 +14618,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T4",
       specialAbilities: ["Command Unit"],
       tags: ["ПВО", "Артиллерия"],
@@ -14777,10 +14644,10 @@ const ARM_DATA = {
       hp: 432000,
       speed: 0.725,
       range: 2688,
-      damage: 3000,
+      damage: 4800,
       weaponType: "BLOD_FLAG",
       weaponName: "Annihilator Weapon",
-      weaponDetails: [{"id": "BLOD_FLAG", "name": "Annihilator Weapon", "damage": 1200, "range": 1200, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 1200, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_HFLAG", "name": "Missiles", "damage": 1200, "range": 1344, "burst": 1, "reload": 0, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_HFLAG_ARM", "name": "Super Cannon", "damage": 3000, "range": 2688, "burst": 1, "reload": 0.8, "velocity": 1280, "aoe": 256, "type": "", "energyPerShot": 9000, "paralyzer": false, "lineOfSight": 1, "tolerance": 1820, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Очень высокое здоровье", "Мощный урон", "Штурм укреплений", "Амфибийный"],      weaknesses: ["Очень медленный", "Очень дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "BLOD_FLAG", "name": "Annihilator Weapon", "damage": 1200, "range": 1200, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 1200, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_AA_HFLAG", "name": "Missiles", "damage": 4800, "range": 1344, "burst": 1, "reload": 5, "burstrate": 0, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_HFLAG_ARM", "name": "Super Cannon", "damage": 3000, "range": 2688, "burst": 1, "reload": 0.8, "burstrate": 0, "velocity": 1280, "aoe": 256, "type": "", "energyPerShot": 9000, "paralyzer": false, "lineOfSight": 1, "tolerance": 1820, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Очень высокое здоровье", "Мощный урон", "Штурм укреплений", "Амфибийный"],      weaknesses: ["Очень медленный", "Очень дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.007,
@@ -14806,7 +14673,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 3000,
+      damage: 4800,
       damageModifier: 0.0546875,
       defaultMissionType: "Standby",
       designation: "ARM-HXF1A1",
@@ -14856,8 +14723,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Hovercraft Platform T4",
       specialAbilities: ["Amphibious"],
       tags: ["ПВО", "Амфибия"],
@@ -14886,7 +14752,7 @@ const ARM_DATA = {
       damage: 28800,
       weaponType: "NUKE_SUPER",
       weaponName: "Super Nuclear Missile",
-      weaponDetails: [{"id": "NUKE_SUPER", "name": "Super Nuclear Missile", "damage": 28800, "range": 13440, "burst": 3, "reload": 225, "velocity": 525, "aoe": 1920, "type": "", "energyPerShot": 1687500, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 16875, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_FFLAG", "name": "Missiles", "damage": 1, "range": 2688, "burst": 1, "reload": 0, "velocity": 960, "aoe": 144, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Ремонт союзных кораблей", "Радар", "Противоракетная система", "+5K E"],      weaknesses: ["Очень медленный", "Очень дорогой", "Слабое вооружение"],
+      weaponDetails: [{"id": "NUKE_SUPER", "name": "Super Nuclear Missile", "damage": 28800, "range": 13440, "burst": 3, "reload": 225, "burstrate": 1, "velocity": 525, "aoe": 1920, "type": "", "energyPerShot": 1687500, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 16875, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_FFLAG", "name": "Missiles", "damage": 6400, "range": 2688, "burst": 1, "reload": 10, "burstrate": 0, "velocity": 960, "aoe": 144, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Ремонт союзных кораблей", "Радар", "Противоракетная система", "+5K E"],      weaknesses: ["Очень медленный", "Очень дорогой", "Слабое вооружение"],      counters: ["Подлодки", "Ракетные атаки"],
 
       fullStats: {
       acceleration: 0.01,
@@ -14962,8 +14828,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 6480
-    },      counters: ["Подлодки", "Ракетные атаки"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T4",
       specialAbilities: ["Ремонт", "Radar", "Anti-Nuke", "+5000 Energy"],
       tags: ["ПВО", "Nuke", "Авианосец"],
@@ -14992,7 +14857,7 @@ const ARM_DATA = {
       damage: 14400,
       weaponType: "TORPEDO_NUKE_ARM",
       weaponName: "High Trajaectory Water Plasma Cannon",
-      weaponDetails: [{"id": "TORPEDO_NUKE_ARM", "name": "High Trajaectory Water Plasma Cannon", "damage": 14400, "range": 5376, "burst": 1, "reload": 0.5, "velocity": 800, "aoe": 810, "type": "", "energyPerShot": 225000, "paralyzer": false, "lineOfSight": 0, "tolerance": 63000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 0}, {"id": "LIGHTNING_USUB", "name": "Lightning Gun", "damage": 960, "range": 720, "burst": 1, "reload": 0, "velocity": 825, "aoe": 16, "type": "", "energyPerShot": 960, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 0}],      strengths: ["Ядерное оружие", "Скрытность", "Командные способности"],      weaknesses: ["Очень медленный", "Очень дорогой (225K E/выстрел)", "Медленная перезарядка"],
+      weaponDetails: [{"id": "TORPEDO_NUKE_ARM", "name": "High Trajaectory Water Plasma Cannon", "damage": 14400, "range": 5376, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 800, "aoe": 810, "type": "", "energyPerShot": 225000, "paralyzer": false, "lineOfSight": 0, "tolerance": 63000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 0}, {"id": "LIGHTNING_USUB", "name": "Lightning Gun", "damage": 960, "range": 720, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 825, "aoe": 16, "type": "", "energyPerShot": 960, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 0}],      strengths: ["Ядерное оружие", "Скрытность", "Командные способности"],      weaknesses: ["Очень медленный", "Очень дорогой (225K E/выстрел)", "Медленная перезарядка"],      counters: ["Глубинные бомбы", "Сонар"],
 
       fullStats: {
       acceleration: 0.008,
@@ -15068,8 +14933,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 25,
       workerTime: 0
-    },      counters: ["Глубинные бомбы", "Сонар"],
-      counteredBy: ["Противолодочные корабли", "Сонар"],
+    },      counteredBy: ["Противолодочные корабли", "Сонар"],
       builtAt: "Naval Yard T4",
       specialAbilities: ["Stealth", "Nuclear", "Command Unit"],
       tags: ["Штурм", "Торпеды", "Nuke"],
@@ -15098,7 +14962,7 @@ const ARM_DATA = {
       damage: 19200,
       weaponType: "BOMB_NB",
       weaponName: "Big Ass Bomb",
-      weaponDetails: [{"id": "BOMB_NB", "name": "Big Ass Bomb", "damage": 19200, "range": 1280, "burst": 1, "reload": 0.26, "velocity": 0, "aoe": 1440, "type": "", "energyPerShot": 300000, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "FLAK_FAST", "name": "Guided Flak Cannon", "damage": 0, "range": 1344, "burst": 1, "reload": 0, "velocity": 1440, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 12000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Ядерное оружие", "Огромный урон", "Разрушает всё"],      weaknesses: ["Медленный", "Очень дорогой (300K E/бомба)", "Одноразовая атака"],
+      weaponDetails: [{"id": "BOMB_NB", "name": "Big Ass Bomb", "damage": 19200, "range": 1280, "burst": 1, "reload": 0.26, "burstrate": 0, "velocity": 0, "aoe": 1440, "type": "", "energyPerShot": 300000, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "FLAK_FAST", "name": "Guided Flak Cannon", "damage": 800, "range": 1344, "burst": 1, "reload": 1.4, "burstrate": 0, "velocity": 1440, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 12000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Ядерное оружие", "Огромный урон", "Разрушает всё"],      weaknesses: ["Медленный", "Очень дорогой (300K E/бомба)", "Одноразовая атака"],      counters: ["ПВО", "Истребители"],
 
       fullStats: {
       acceleration: 0.3,
@@ -15174,8 +15038,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["ПВО", "Истребители"],
-      counteredBy: ["Зенитные ракеты", "Истребители"],
+    },      counteredBy: ["Зенитные ракеты", "Истребители"],
       builtAt: "Air Factory T4",
       specialAbilities: ["Nuclear"],
       tags: ["ПВО"],
@@ -15203,7 +15066,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит экспериментальные здания", "Амфибийный", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],
+      weaponDetails: [],      strengths: ["Строит экспериментальные здания", "Амфибийный", "Высокое здоровье"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.04,
@@ -15279,8 +15142,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 6480
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Hovercraft Platform T4",
       specialAbilities: ["Amphibious", "Experimental Construction"],
       tags: ["Строитель"],
@@ -15308,7 +15170,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Всесторонняя разведка", "Видит стелс", "Маскировка"],      weaknesses: ["Потребляет много энергии", "Дорогой", "Стационарный"],
+      weaponDetails: [],      strengths: ["Всесторонняя разведка", "Видит стелс", "Маскировка"],      weaknesses: ["Потребляет много энергии", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -15384,8 +15246,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Omni Sensor", "Cloak"],
       tags: ["Радар"],
@@ -15446,7 +15307,7 @@ const ARM_DATA = {
       damage: 7200,
       weaponType: "CANNON_FLAG_BATS",
       weaponName: "Flagship Battlecruiser Cannon",
-      weaponDetails: [{"id": "CANNON_FLAG_BATS", "name": "Flagship Battlecruiser Cannon", "damage": 270, "range": 1200, "burst": 1, "reload": 0.1, "velocity": 400, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "BLOD_FLAG", "name": "Annihilator Weapon", "damage": 1200, "range": 1200, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 1200, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_FLAG_ARM", "name": "Arm Flagship Primary Cannon", "damage": 7200, "range": 4032, "burst": 1, "reload": 0.375, "velocity": 700, "aoe": 480, "type": "", "energyPerShot": 28800, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Очень высокое здоровье", "Мощный урон", "Командные способности"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для подлодок"],
+      weaponDetails: [{"id": "CANNON_FLAG_BATS", "name": "Flagship Battlecruiser Cannon", "damage": 270, "range": 1200, "burst": 1, "reload": 0.1, "burstrate": 0, "velocity": 400, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "BLOD_FLAG", "name": "Annihilator Weapon", "damage": 1200, "range": 1200, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 1200, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_FLAG_ARM", "name": "Arm Flagship Primary Cannon", "damage": 7200, "range": 4032, "burst": 1, "reload": 0.375, "burstrate": 0, "velocity": 700, "aoe": 480, "type": "", "energyPerShot": 28800, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Очень высокое здоровье", "Мощный урон", "Командные способности"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для подлодок"],      counters: ["Подлодки", "Ракетные атаки"],
 
       fullStats: {
       acceleration: 0.002,
@@ -15522,8 +15383,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Ракетные атаки"],
-      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
+    },      counteredBy: ["Подводные лодки", "Ракетные крейсеры"],
       builtAt: "Naval Yard T4",
       specialAbilities: ["Command Unit"],
       tags: [],
@@ -15551,8 +15411,8 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "LAB_DIR",
-      weaponDetails: [{"id": "LAB_DIR", "name": "LAB_DIR", "damage": 0, "range": 0, "burst": 1, "reload": 0, "velocity": 0, "aoe": 0, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "LAB_DIR",
-      strengths: ["Производит экспериментальные юниты", "Уникальные возможности"],      weaknesses: ["Потребляет много энергии", "Дорогой", "Стационарный"],
+      weaponDetails: [{"id": "LAB_DIR", "name": "LAB_DIR", "damage": 0, "range": 0, "burst": 1, "reload": 0, "burstrate": 0, "velocity": 0, "aoe": 0, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "LAB_DIR",
+      strengths: ["Производит экспериментальные юниты", "Уникальные возможности"],      weaknesses: ["Потребляет много энергии", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -15628,8 +15488,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 19200
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Experimental Production"],
       tags: [],
@@ -15658,7 +15517,7 @@ const ARM_DATA = {
       damage: 28800,
       weaponType: "CANNON_OLYMPUS",
       weaponName: "Olympus Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_OLYMPUS", "name": "Olympus Plasma Cannon", "damage": 28800, "range": 10752, "burst": 1, "reload": 15, "velocity": 1090, "aoe": 2880, "type": "", "energyPerShot": 750000, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MCV_CRUSH", "name": "Crush of Death", "damage": 1800, "range": 480, "burst": 2, "reload": 3.2, "velocity": 10, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Ядерное оружие", "Очень дальняя дистанция", "Огромный урон", "Амфибийный"],      weaknesses: ["Очень медленный", "Очень дорогой (750K E/выстрел)", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_OLYMPUS", "name": "Olympus Plasma Cannon", "damage": 28800, "range": 10752, "burst": 1, "reload": 15, "burstrate": 0, "velocity": 1090, "aoe": 2880, "type": "", "energyPerShot": 750000, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MCV_CRUSH", "name": "Crush of Death", "damage": 1800, "range": 480, "burst": 2, "reload": 3.2, "burstrate": 0.4, "velocity": 10, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Ядерное оружие", "Очень дальняя дистанция", "Огромный урон", "Амфибийный"],      weaknesses: ["Очень медленный", "Очень дорогой (750K E/выстрел)", "Медленная перезарядка"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.03,
@@ -15734,8 +15593,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Vehicle Plant T4",
       specialAbilities: ["Amphibious", "Nuclear"],
       tags: ["Уничтожитель"],
@@ -15764,7 +15622,7 @@ const ARM_DATA = {
       damage: 160,
       weaponType: "ANTI_NUKE_ADV",
       weaponName: "Rocket",
-      weaponDetails: [{"id": "ANTI_NUKE_ADV", "name": "Rocket", "damage": 0, "range": 27000, "burst": 3, "reload": 120, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Строит экспериментальные здания", "Высокое здоровье", "Ремонт"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],
+      weaponDetails: [{"id": "ANTI_NUKE_ADV", "name": "Rocket", "damage": 0, "range": 27000, "burst": 3, "reload": 120, "burstrate": 0.2, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "burstrate": 0, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "burstrate": 0.001, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Строит экспериментальные здания", "Высокое здоровье", "Ремонт"],      weaknesses: ["Слабое вооружение", "Медленный", "Очень дорогой"],      counters: ["Любой боевой юнит"],
 
       fullStats: {
       acceleration: 0.0027,
@@ -15840,8 +15698,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 2160
-    },      counters: ["Любой боевой юнит"],
-      counteredBy: ["Рейды", "Воздушные атаки"],
+    },      counteredBy: ["Рейды", "Воздушные атаки"],
       builtAt: "Vehicle Plant T4",
       specialAbilities: ["Experimental Construction", "Repair"],
       tags: ["Anti-Nuke", "Авианосец"],
@@ -15869,8 +15726,8 @@ const ARM_DATA = {
       range: 600,
       damage: 576,
       weaponType: "LASER_SFIDO",
-      weaponDetails: [{"id": "LASER_SFIDO", "name": "High Energy Hyper Laser", "damage": 576, "range": 512, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 32, "type": "", "energyPerShot": 864, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_GF_ADV", "name": "Missiles", "damage": 60, "range": 600, "burst": 1, "reload": 0.125, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 640}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "High Energy Hyper Laser",
-      strengths: ["Очень высокое здоровье", "Мощный урон", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "LASER_SFIDO", "name": "High Energy Hyper Laser", "damage": 576, "range": 512, "burst": 1, "reload": 0.267, "burstrate": 0, "velocity": 1920, "aoe": 32, "type": "", "energyPerShot": 864, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "MISSILE_GF_ADV", "name": "Missiles", "damage": 60, "range": 600, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 640}, {"id": "GAUSS_SHOT", "name": "Shotgun Cannon", "damage": 144, "range": 320, "burst": 8, "reload": 0.36, "burstrate": 0.001, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "High Energy Hyper Laser",
+      strengths: ["Очень высокое здоровье", "Мощный урон", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.1875,
@@ -15946,8 +15803,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Kbot Lab T4",
       specialAbilities: ["Amphibious"],
       tags: ["Амфибия"],
@@ -15975,8 +15831,8 @@ const ARM_DATA = {
       range: 1200,
       damage: 1200,
       weaponType: "BLOD_FLAG",
-      weaponDetails: [{"id": "BLOD_FLAG", "name": "Annihilator Weapon", "damage": 1200, "range": 1200, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 1200, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_FLAG_BATS", "name": "Flagship Battlecruiser Cannon", "damage": 270, "range": 1200, "burst": 1, "reload": 0.1, "velocity": 400, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_LFLAG_ARM", "name": "High Energy Hyper Laser", "damage": 1080, "range": 1152, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 32, "type": "", "energyPerShot": 2160, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Annihilator Weapon",
-      strengths: ["Очень высокое здоровье", "Мощный урон", "Командные способности", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "BLOD_FLAG", "name": "Annihilator Weapon", "damage": 1200, "range": 1200, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 1200, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "CANNON_FLAG_BATS", "name": "Flagship Battlecruiser Cannon", "damage": 270, "range": 1200, "burst": 1, "reload": 0.1, "burstrate": 0, "velocity": 400, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_LFLAG_ARM", "name": "High Energy Hyper Laser", "damage": 1080, "range": 1152, "burst": 1, "reload": 0.6, "burstrate": 0, "velocity": 1920, "aoe": 32, "type": "", "energyPerShot": 2160, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Annihilator Weapon",
+      strengths: ["Очень высокое здоровье", "Мощный урон", "Командные способности", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.003,
@@ -16052,8 +15908,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Vehicle Plant T4",
       specialAbilities: ["Amphibious", "Command Unit"],
       tags: [],
@@ -16079,10 +15934,10 @@ const ARM_DATA = {
       hp: 315000,
       speed: 1.05,
       range: 2688,
-      damage: 2400,
+      damage: 6400,
       weaponType: "BIG_STOMP",
       weaponName: "Stomp Crush",
-      weaponDetails: [{"id": "BIG_STOMP", "name": "Stomp Crush", "damage": 2400, "range": 750, "burst": 300, "reload": 10, "velocity": 10, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_FFLAG", "name": "Missiles", "damage": 1, "range": 2688, "burst": 1, "reload": 0, "velocity": 960, "aoe": 144, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Очень высокое здоровье", "+5K E", "Радар", "Радарное подавление", "Дезориентирование", "Модули улучшения", "Амфибийный"],      weaknesses: ["Очень медленный", "Очень дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "BIG_STOMP", "name": "Stomp Crush", "damage": 2400, "range": 750, "burst": 300, "reload": 10, "burstrate": 0.066, "velocity": 10, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_FFLAG", "name": "Missiles", "damage": 6400, "range": 2688, "burst": 1, "reload": 10, "burstrate": 0, "velocity": 960, "aoe": 144, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Очень высокое здоровье", "+5K E", "Радар", "Радарное подавление", "Дезориентирование", "Модули улучшения", "Амфибийный"],      weaknesses: ["Очень медленный", "Очень дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.05,
@@ -16108,7 +15963,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 2400,
+      damage: 6400,
       damageModifier: 0.075,
       defaultMissionType: "Standby",
       designation: "TRO-IS-CRABBY",
@@ -16158,8 +16013,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация", "Ракеты"],
       builtAt: "Kbot Lab T4",
       specialAbilities: ["Amphibious", "Radar", "Radar Jamming", "Disruptor", "Upgradable", "+5000 Energy"],
       tags: ["Штурм", "Самоисцеление", "Амфибия"],
@@ -16188,7 +16042,7 @@ const ARM_DATA = {
       damage: 240,
       weaponType: "ASPID_STOMP",
       weaponName: "Lil Stomp Crush",
-      weaponDetails: [{"id": "ASPID_STOMP", "name": "Lil Stomp Crush", "damage": 240, "range": 750, "burst": 300, "reload": 10, "velocity": 10, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Ядерное оружие", "Огромный урон", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой (-500E)", "Медленная перезарядка"],
+      weaponDetails: [{"id": "ASPID_STOMP", "name": "Lil Stomp Crush", "damage": 240, "range": 750, "burst": 300, "reload": 10, "burstrate": 0.066, "velocity": 10, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Ядерное оружие", "Огромный урон", "Амфибийный"],      weaknesses: ["Медленный", "Очень дорогой (-500E)", "Медленная перезарядка"],      counters: ["Артиллерия", "Дальний обстрел"],
 
       fullStats: {
       acceleration: 0.015,
@@ -16264,8 +16118,7 @@ const ARM_DATA = {
       veterancyThresholds: "50 100 150 200 250",
       waterLine: 0,
       workerTime: 4320
-    },      counters: ["Артиллерия", "Дальний обстрел"],
-      counteredBy: ["Тяжёлая артиллерия", "Авиация"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Авиация"],
       builtAt: "Vehicle Plant T4",
       specialAbilities: ["Amphibious", "Nuclear"],
       tags: ["Штурм", "Амфибия", "Камикадзе"],
@@ -16293,7 +16146,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Улучшает броню союзных юнитов", "Увеличивает здоровье"],      weaknesses: ["Потребляет много энергии", "Дорогой", "Стационарный"],
+      weaponDetails: [],      strengths: ["Улучшает броню союзных юнитов", "Увеличивает здоровье"],      weaknesses: ["Потребляет много энергии", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -16369,8 +16222,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Vehicle",
       specialAbilities: ["Armor Upgrade"],
       tags: [],
@@ -16398,7 +16250,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Бесплатная энергия на воде", "Не требует топлива", "Дешёвый"],      weaknesses: ["Только на воде", "Низкая производительность", "Уязвим для подлодок"],
+      weaponDetails: [],      strengths: ["Бесплатная энергия на воде", "Не требует топлива", "Дешёвый"],      weaknesses: ["Только на воде", "Низкая производительность", "Уязвим для подлодок"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -16474,8 +16326,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 1,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки", "Десантные юниты"],
+    },      counteredBy: ["Подводные лодки", "Десантные юниты"],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["+Энергия"],
@@ -16503,7 +16354,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Самый дешёвый", "Быстрое строительство", "Не требует топлива"],      weaknesses: ["Зависимость от ветра", "Непредсказуемая производительность", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Самый дешёвый", "Быстрое строительство", "Не требует топлива"],      weaknesses: ["Зависимость от ветра", "Непредсказуемая производительность", "Хрупкий"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -16579,8 +16430,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Construction KBot",
       specialAbilities: ["Wind-Dependent"],
       tags: ["+Энергия"],
@@ -16608,7 +16458,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Стабильная энергия", "Ночью работает", "Предсказуемый"],      weaknesses: ["Ночью пониженная эффективность", "Средняя стоимость"],
+      weaponDetails: [],      strengths: ["Стабильная энергия", "Ночью работает", "Предсказуемый"],      weaknesses: ["Ночью пониженная эффективность", "Средняя стоимость"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -16684,8 +16534,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Construction KBot",
       specialAbilities: ["Day/Night Cycle"],
       tags: ["+Энергия"],
@@ -16713,7 +16562,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["+5000 энергии", "Бонус соседства", "Дешёвый"],      weaknesses: ["Стационарный", "Не производит энергию"],
+      weaponDetails: [],      strengths: ["+5000 энергии", "Бонус соседства", "Дешёвый"],      weaknesses: ["Стационарный", "Не производит энергию"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -16789,8 +16638,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Construction KBot",
       specialAbilities: ["Adjacency Bonus"],
       tags: ["Хранилище E"],
@@ -16818,7 +16666,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["+1000 металла", "Дешёвый", "Простое строительство"],      weaknesses: ["Стационарный", "Не производит металл"],
+      weaponDetails: [],      strengths: ["+1000 металла", "Дешёвый", "Простое строительство"],      weaknesses: ["Стационарный", "Не производит металл"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -16894,8 +16742,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["Хранилище М"],
@@ -16923,7 +16770,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит металл", "Основа экономики", "Дешёвый"],      weaknesses: ["Потребляет энергию (-3E)", "Только на месторождениях", "Стационарный"],
+      weaponDetails: [],      strengths: ["Производит металл", "Основа экономики", "Дешёвый"],      weaknesses: ["Потребляет энергию (-3E)", "Только на месторождениях", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -16999,8 +16846,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел", "Диверсанты"],
+    },      counteredBy: ["Любой обстрел", "Диверсанты"],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["+Металл"],
@@ -17028,7 +16874,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит металл из энергии", "Не зависит от месторождений", "Надёжный"],      weaknesses: ["Очень энергоёмкий (100E/1M)", "Медленная производительность", "Дорогой"],
+      weaponDetails: [],      strengths: ["Производит металл из энергии", "Не зависит от месторождений", "Надёжный"],      weaknesses: ["Очень энергоёмкий (100E/1M)", "Медленная производительность", "Дорогой"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -17104,8 +16950,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["Конвертер"],
@@ -17133,8 +16978,8 @@ const ARM_DATA = {
       range: 700,
       damage: 160,
       weaponType: "VSPAM_ALL",
-      weaponDetails: [{"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}],      weaponName: "Starburst Missile",
-      strengths: ["300 энергии", "Улучшается", "Мощный"],      weaknesses: ["Только на геотермальных источниках", "Дорогой", "Стационарный"],
+      weaponDetails: [{"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "burstrate": 0, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}],      weaponName: "Starburst Missile",
+      strengths: ["300 энергии", "Улучшается", "Мощный"],      weaknesses: ["Только на геотермальных источниках", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -17210,8 +17055,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 120
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction KBot",
       specialAbilities: ["Upgradable"],
       tags: ["+Энергия"],
@@ -17239,7 +17083,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Обнаруживает врагов", "Раннее предупреждение", "Дешёвый"],      weaknesses: ["Потребляет энергию (-10E)", "Стационарный", "Уязвим для диверсантов"],
+      weaponDetails: [],      strengths: ["Обнаруживает врагов", "Раннее предупреждение", "Дешёвый"],      weaknesses: ["Потребляет энергию (-10E)", "Стационарный", "Уязвим для диверсантов"],      counters: ["Диверсанты", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -17315,8 +17159,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Диверсанты", "Артиллерия"],
-      counteredBy: ["Стелс-юниты", "Диверсанты"],
+    },      counteredBy: ["Стелс-юниты", "Диверсанты"],
       builtAt: "Construction KBot",
       specialAbilities: ["Radar"],
       tags: ["Радар"],
@@ -17344,7 +17187,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Ремонт авиации", "Улучшается", "Незаменимый"],      weaknesses: ["Только для воздуха", "Стационарный", "Потребляет энергию"],
+      weaponDetails: [],      strengths: ["Ремонт авиации", "Улучшается", "Незаменимый"],      weaknesses: ["Только для воздуха", "Стационарный", "Потребляет энергию"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -17420,8 +17263,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 540
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Construction KBot",
       specialAbilities: ["Repair", "Upgradable"],
       tags: ["Авианосец"],
@@ -17449,7 +17291,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Очень дешёвый", "Высокое здоровье", "Блокирует юнитов"],      weaknesses: ["Не стреляет", "Стационарный", "Можно разрушить"],
+      weaponDetails: [],      strengths: ["Очень дешёвый", "Высокое здоровье", "Блокирует юнитов"],      weaknesses: ["Не стреляет", "Стационарный", "Можно разрушить"],      counters: ["Артиллерия", "Танки"],
 
       fullStats: {
       acceleration: 0,
@@ -17525,8 +17367,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Танки"],
-      counteredBy: ["Тяжёлая техника", "Артиллерия"],
+    },      counteredBy: ["Тяжёлая техника", "Артиллерия"],
       builtAt: "Construction KBot",
       specialAbilities: ["Wall"],
       tags: ["Стена"],
@@ -17554,7 +17395,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Морской радар", "Обнаруживает подлодки", "Раннее предупреждение"],      weaknesses: ["Потребляет энергию (-10E)", "Стационарный", "Уязвим для подлодок"],
+      weaponDetails: [],      strengths: ["Морской радар", "Обнаруживает подлодки", "Раннее предупреждение"],      weaknesses: ["Потребляет энергию (-10E)", "Стационарный", "Уязвим для подлодок"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -17630,8 +17471,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 1,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки", "Ракетные корабли"],
+    },      counteredBy: ["Подводные лодки", "Ракетные корабли"],
       builtAt: "Construction Ship",
       specialAbilities: ["Radar"],
       tags: ["Радар"],
@@ -17659,7 +17499,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["+5000 энергии под водой", "Дешёвый", "Незаменимый"],      weaknesses: ["Стационарный", "Только под водой"],
+      weaponDetails: [],      strengths: ["+5000 энергии под водой", "Дешёвый", "Незаменимый"],      weaknesses: ["Стационарный", "Только под водой"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -17735,8 +17575,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки"],
+    },      counteredBy: ["Подводные лодки"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: ["Хранилище E"],
@@ -17764,7 +17603,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["+1000 металла под водой", "Дешёвый", "Незаменимый"],      weaknesses: ["Стационарный", "Только под водой"],
+      weaponDetails: [],      strengths: ["+1000 металла под водой", "Дешёвый", "Незаменимый"],      weaknesses: ["Стационарный", "Только под водой"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -17840,8 +17679,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки"],
+    },      counteredBy: ["Подводные лодки"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: ["Хранилище М"],
@@ -17869,7 +17707,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит металл под водой", "Основа морской экономики", "Дешёвый"],      weaknesses: ["Потребляет энергию (-3E)", "Только на подводных месторождениях", "Уязвим"],
+      weaponDetails: [],      strengths: ["Производит металл под водой", "Основа морской экономики", "Дешёвый"],      weaknesses: ["Потребляет энергию (-3E)", "Только на подводных месторождениях", "Уязвим"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -17945,8 +17783,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки", "Десантные юниты"],
+    },      counteredBy: ["Подводные лодки", "Десантные юниты"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: ["+Металл"],
@@ -17974,7 +17811,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит металл из энергии под водой", "Не зависит от месторождений", "Надёжный"],      weaknesses: ["Очень энергоёмкий (75E/1M)", "Медленная производительность", "Дорогой"],
+      weaponDetails: [],      strengths: ["Производит металл из энергии под водой", "Не зависит от месторождений", "Надёжный"],      weaknesses: ["Очень энергоёмкий (75E/1M)", "Медленная производительность", "Дорогой"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -18050,8 +17887,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 4,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки"],
+    },      counteredBy: ["Подводные лодки"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: ["Конвертер"],
@@ -18079,7 +17915,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Очень дешёвый", "Высокое здоровье", "Блокирует подводных юнитов"],      weaknesses: ["Не стреляет", "Стационарный", "Только под водой"],
+      weaponDetails: [],      strengths: ["Очень дешёвый", "Высокое здоровье", "Блокирует подводных юнитов"],      weaknesses: ["Не стреляет", "Стационарный", "Только под водой"],      counters: ["Артиллерия", "Подлодки"],
 
       fullStats: {
       acceleration: 0,
@@ -18155,8 +17991,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 12,
       workerTime: 0
-    },      counters: ["Артиллерия", "Подлодки"],
-      counteredBy: ["Торпеды", "Подводные лодки"],
+    },      counteredBy: ["Торпеды", "Подводные лодки"],
       builtAt: "Construction Ship",
       specialAbilities: ["Wall"],
       tags: ["Стена"],
@@ -18184,7 +18019,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Обнаруживает подлодки", "Раннее предупреждение", "Дешёвый"],      weaknesses: ["Потребляет энергию (-15E)", "Стационарный", "Уязвим для диверсантов"],
+      weaponDetails: [],      strengths: ["Обнаруживает подлодки", "Раннее предупреждение", "Дешёвый"],      weaknesses: ["Потребляет энергию (-15E)", "Стационарный", "Уязвим для диверсантов"],      counters: ["Диверсанты", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -18260,8 +18095,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 12,
       workerTime: 0
-    },      counters: ["Диверсанты", "Артиллерия"],
-      counteredBy: ["Стелс-подлодки", "Диверсанты"],
+    },      counteredBy: ["Стелс-подлодки", "Диверсанты"],
       builtAt: "Construction Ship",
       specialAbilities: ["Sonar"],
       tags: ["Сонар"],
@@ -18289,8 +18123,8 @@ const ARM_DATA = {
       range: 450,
       damage: 80,
       weaponType: "LASER_LIGHT",
-      weaponDetails: [{"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Light Laser",
-      strengths: ["Дешёвый", "Эффективен против пехоты", "Быстрое строительство"],      weaknesses: ["Слабый против брони", "Стационарный", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Light Laser",
+      strengths: ["Дешёвый", "Эффективен против пехоты", "Быстрое строительство"],      weaknesses: ["Слабый против брони", "Стационарный", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Тяжёлая броня"],
 
       fullStats: {
       acceleration: 0,
@@ -18366,8 +18200,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Тяжёлая броня"],
-      counteredBy: ["Танки", "Артиллерия"],
+    },      counteredBy: ["Танки", "Артиллерия"],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["Лазер"],
@@ -18395,8 +18228,8 @@ const ARM_DATA = {
       range: 540,
       damage: 120,
       weaponType: "LASER_FLLT",
-      weaponDetails: [{"id": "LASER_FLLT", "name": "Light Laser", "damage": 120, "range": 540, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 30, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Light Laser",
-      strengths: ["Морская оборона", "Дешёвый", "Защищает прибрежные сооружения"],      weaknesses: ["Слабый против брони", "Стационарный", "Только на воде"],
+      weaponDetails: [{"id": "LASER_FLLT", "name": "Light Laser", "damage": 120, "range": 540, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 30, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Light Laser",
+      strengths: ["Морская оборона", "Дешёвый", "Защищает прибрежные сооружения"],      weaknesses: ["Слабый против брони", "Стационарный", "Только на воде"],      counters: ["Артиллерия", "Тяжёлая броня"],
 
       fullStats: {
       acceleration: 0,
@@ -18472,8 +18305,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 1,
       workerTime: 0
-    },      counters: ["Артиллерия", "Тяжёлая броня"],
-      counteredBy: ["Танки", "Артиллерия", "Подлодки"],
+    },      counteredBy: ["Танки", "Артиллерия", "Подлодки"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: ["Лазер"],
@@ -18499,10 +18331,10 @@ const ARM_DATA = {
       hp: 403,
       speed: 0,
       range: 900,
-      damage: 45,
+      damage: 720,
       weaponType: "MISSILE_GF_HEAVY",
-      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
-      strengths: ["Морская ПВО", "Эффективен против воздуха", "Дешёвый"],      weaknesses: ["Не стреляет по наземным целям", "Стационарный", "Слабый против брони"],
+      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
+      strengths: ["Морская ПВО", "Эффективен против воздуха", "Дешёвый"],      weaknesses: ["Не стреляет по наземным целям", "Стационарный", "Слабый против брони"],      counters: ["Наземные войска"],
 
       fullStats: {
       acceleration: 0,
@@ -18528,7 +18360,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 45,
+      damage: 720,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "AS-TDS",
@@ -18578,8 +18410,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0.3,
       workerTime: 0
-    },      counters: ["Наземные войска"],
-      counteredBy: ["Пехота", "Танки"],
+    },      counteredBy: ["Пехота", "Танки"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -18605,10 +18436,10 @@ const ARM_DATA = {
       hp: 295,
       speed: 0,
       range: 900,
-      damage: 45,
+      damage: 720,
       weaponType: "MISSILE_GF_HEAVY",
-      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
-      strengths: ["Эффективен против воздуха", "Дешёвый", "Быстрое строительство"],      weaknesses: ["Не стреляет по наземным целям", "Стационарный", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      weaponName: "Missiles",
+      strengths: ["Эффективен против воздуха", "Дешёвый", "Быстрое строительство"],      weaknesses: ["Не стреляет по наземным целям", "Стационарный", "Уязвим для артиллерии"],      counters: ["Наземные войска", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -18634,7 +18465,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 45,
+      damage: 720,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "ARM-SRDS",
@@ -18684,8 +18515,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска", "Артиллерия"],
-      counteredBy: ["Танки", "Артиллерия"],
+    },      counteredBy: ["Танки", "Артиллерия"],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -18713,8 +18543,8 @@ const ARM_DATA = {
       range: 600,
       damage: 300,
       weaponType: "LASER_HEAVY",
-      weaponDetails: [{"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "High Energy Laser",
-      strengths: ["Мощный урон", "Дальняя дистанция", "Улучшается"],      weaknesses: ["Дорогой", "Стационарный", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "High Energy Laser",
+      strengths: ["Мощный урон", "Дальняя дистанция", "Улучшается"],      weaknesses: ["Дорогой", "Стационарный", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -18790,8 +18620,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 120
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction KBot",
       specialAbilities: ["Upgradable"],
       tags: ["Лазер"],
@@ -18819,8 +18648,8 @@ const ARM_DATA = {
       range: 1344,
       damage: 360,
       weaponType: "CANNON_MRPC",
-      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Range Plasma Cannon",
-      strengths: ["Высокий урон", "Средняя дальность", "Улучшается"],      weaknesses: ["Энергоёмкий (-400E/выстрел)", "Стационарный", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Range Plasma Cannon",
+      strengths: ["Высокий урон", "Средняя дальность", "Улучшается"],      weaknesses: ["Энергоёмкий (-400E/выстрел)", "Стационарный", "Медленная перезарядка"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -18896,8 +18725,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 120
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction KBot",
       specialAbilities: ["Upgradable"],
       tags: ["Пушка"],
@@ -18925,8 +18753,8 @@ const ARM_DATA = {
       range: 750,
       damage: 450,
       weaponType: "LASER_FHLT",
-      weaponDetails: [{"id": "LASER_FHLT", "name": "High Energy Laser", "damage": 450, "range": 750, "burst": 1, "reload": 0.75, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 225, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "High Energy Laser",
-      strengths: ["Морская тяжёлая оборона", "Мощный урон", "Эффективен против кораблей"],      weaknesses: ["Дорогой", "Стационарный", "Только на воде"],
+      weaponDetails: [{"id": "LASER_FHLT", "name": "High Energy Laser", "damage": 450, "range": 750, "burst": 1, "reload": 0.75, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 225, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "High Energy Laser",
+      strengths: ["Морская тяжёлая оборона", "Мощный урон", "Эффективен против кораблей"],      weaknesses: ["Дорогой", "Стационарный", "Только на воде"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -19002,8 +18830,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 1,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: ["Лазер"],
@@ -19031,8 +18858,8 @@ const ARM_DATA = {
       range: 1344,
       damage: 360,
       weaponType: "CANNON_MRPC",
-      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Range Plasma Cannon",
-      strengths: ["Морская плазменная оборона", "Высокий урон", "Эффективен против брони"],      weaknesses: ["Энергоёмкий (-400E/выстрел)", "Стационарный", "Только на воде"],
+      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Range Plasma Cannon",
+      strengths: ["Морская плазменная оборона", "Высокий урон", "Эффективен против брони"],      weaknesses: ["Энергоёмкий (-400E/выстрел)", "Стационарный", "Только на воде"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -19108,8 +18935,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 1,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: ["Пушка"],
@@ -19135,10 +18961,10 @@ const ARM_DATA = {
       hp: 2900,
       speed: 0,
       range: 576,
-      damage: 360,
+      damage: 1440,
       weaponType: "TORPEDO_COAX",
-      weaponDetails: [{"id": "TORPEDO_COAX", "name": "Torpedo Launcher", "damage": 360, "range": 576, "burst": 1, "reload": 1.2, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 0}],      weaponName: "Torpedo Launcher",
-      strengths: ["Эффективен против подлодок", "Дешёвый", "Быстрое строительство"],      weaknesses: ["Только под водой", "Стационарный", "Уязвим для десанта"],
+      weaponDetails: [{"id": "TORPEDO_COAX", "name": "Torpedo Launcher", "damage": 1440, "range": 576, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 0}],      weaponName: "Torpedo Launcher",
+      strengths: ["Эффективен против подлодок", "Дешёвый", "Быстрое строительство"],      weaknesses: ["Только под водой", "Стационарный", "Уязвим для десанта"],      counters: ["Десант", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -19164,7 +18990,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 360,
+      damage: 1440,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "AS-TDS",
@@ -19214,8 +19040,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 10,
       workerTime: 0
-    },      counters: ["Десант", "Артиллерия"],
-      counteredBy: ["Десантные юниты", "Артиллерия"],
+    },      counteredBy: ["Десантные юниты", "Артиллерия"],
       builtAt: "Construction Ship",
       specialAbilities: [],
       tags: [],
@@ -19243,7 +19068,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["1000 энергии", "Улучшается", "Мощный"],      weaknesses: ["Дорогой", "Стационарный", "Уязвим для артиллерии"],
+      weaponDetails: [],      strengths: ["1000 энергии", "Улучшается", "Мощный"],      weaknesses: ["Дорогой", "Стационарный", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -19319,8 +19144,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 240
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Upgradable"],
       tags: ["+Энергия"],
@@ -19348,7 +19172,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит энергию или металл", "Гибкость", "Сбалансированный"],      weaknesses: ["Средняя производительность", "Стационарный", "Потребляет ресурсы"],
+      weaponDetails: [],      strengths: ["Производит энергию или металл", "Гибкость", "Сбалансированный"],      weaknesses: ["Средняя производительность", "Стационарный", "Потребляет ресурсы"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -19424,8 +19248,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["+Энергия", "+Металл"],
@@ -19453,7 +19276,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["+25000 энергии", "Огромная вместимость", "Незаменимый"],      weaknesses: ["Стационарный", "Не производит энергию"],
+      weaponDetails: [],      strengths: ["+25000 энергии", "Огромная вместимость", "Незаменимый"],      weaknesses: ["Стационарный", "Не производит энергию"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -19529,8 +19352,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Хранилище E"],
@@ -19558,7 +19380,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Высокая производительность", "Основа поздней экономики", "Надёжный"],      weaknesses: ["Потребляет энергию (-15E)", "Дорогой", "Стационарный"],
+      weaponDetails: [],      strengths: ["Высокая производительность", "Основа поздней экономики", "Надёжный"],      weaknesses: ["Потребляет энергию (-15E)", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -19634,8 +19456,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["+Металл"],
@@ -19663,7 +19484,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит 12 металла", "Не зависит от месторождений", "Мощный"],      weaknesses: ["Очень энергоёмкий (1000E/12M)", "Дорогой", "Стационарный"],
+      weaponDetails: [],      strengths: ["Производит 12 металла", "Не зависит от месторождений", "Мощный"],      weaknesses: ["Очень энергоёмкий (1000E/12M)", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -19739,8 +19560,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Любой обстрел"],
+    },      counteredBy: ["Любой обстрел"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Конвертер"],
@@ -19768,7 +19588,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Огромная дальность обнаружения", "Стратегическая ценность", "Надёжный"],      weaknesses: ["Потребляет энергию (-50E)", "Стационарный", "Уязвим для диверсантов"],
+      weaponDetails: [],      strengths: ["Огромная дальность обнаружения", "Стратегическая ценность", "Надёжный"],      weaknesses: ["Потребляет энергию (-50E)", "Стационарный", "Уязвим для диверсантов"],      counters: ["Диверсанты", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -19844,8 +19664,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Диверсанты", "Артиллерия"],
-      counteredBy: ["Стелс-юниты", "Диверсанты"],
+    },      counteredBy: ["Стелс-юниты", "Диверсанты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Advanced Radar"],
       tags: ["Радар"],
@@ -19871,10 +19690,10 @@ const ARM_DATA = {
       hp: 1905,
       speed: 0,
       range: 825,
-      damage: 0,
+      damage: 480,
       weaponType: "FLAK",
       weaponName: "Flak Cannon",
-      weaponDetails: [{"id": "FLAK", "name": "Flak Cannon", "damage": 0, "range": 825, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Площадной урон", "Эффективен против группировок", "Мощный"],      weaknesses: ["Не стреляет по наземным целям", "Стационарный", "Средняя дальность"],
+      weaponDetails: [{"id": "FLAK", "name": "Flak Cannon", "damage": 480, "range": 825, "burst": 1, "reload": 0.14, "burstrate": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Площадной урон", "Эффективен против группировок", "Мощный"],      weaknesses: ["Не стреляет по наземным целям", "Стационарный", "Средняя дальность"],      counters: ["Наземные войска", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -19900,7 +19719,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 0,
+      damage: 480,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "ARM-AAHE",
@@ -19950,8 +19769,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска", "Артиллерия"],
-      counteredBy: ["Танки", "Артиллерия"],
+    },      counteredBy: ["Танки", "Артиллерия"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -19979,8 +19797,8 @@ const ARM_DATA = {
       range: 1536,
       damage: 5000,
       weaponType: "BLOD_ANNI",
-      weaponDetails: [{"id": "BLOD_ANNI", "name": "Annihilator Weapon", "damage": 5000, "range": 1536, "burst": 1, "reload": 4, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 5000, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Annihilator Weapon",
-      strengths: ["Мгновенный урон", "Огромный урон", "Эффективен против всего"],      weaknesses: ["Очень энергоёмкий (5000E/выстрел)", "Дорогой", "Стационарный"],
+      weaponDetails: [{"id": "BLOD_ANNI", "name": "Annihilator Weapon", "damage": 5000, "range": 1536, "burst": 1, "reload": 4, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 5000, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Annihilator Weapon",
+      strengths: ["Мгновенный урон", "Огромный урон", "Эффективен против всего"],      weaknesses: ["Очень энергоёмкий (5000E/выстрел)", "Дорогой", "Стационарный"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -20056,8 +19874,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -20085,8 +19902,8 @@ const ARM_DATA = {
       range: 700,
       damage: 160,
       weaponType: "VSPAM_ALL",
-      weaponDetails: [{"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}],      weaponName: "Starburst Missile",
-      strengths: ["Всплывающая маскировка", "Универсальное вооружение", "Неожиданность"],      weaknesses: ["Стационарный", "Средний урон", "Медленная перезарядка"],
+      weaponDetails: [{"id": "VSPAM_ALL", "name": "Starburst Missile", "damage": 160, "range": 700, "burst": 1, "reload": 0.45, "burstrate": 0, "velocity": -10, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 480}],      weaponName: "Starburst Missile",
+      strengths: ["Всплывающая маскировка", "Универсальное вооружение", "Неожиданность"],      weaknesses: ["Стационарный", "Средний урон", "Медленная перезарядка"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -20162,8 +19979,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Pop-up"],
       tags: [],
@@ -20189,10 +20005,10 @@ const ARM_DATA = {
       hp: 8260,
       speed: 0,
       range: 1792,
-      damage: 60,
+      damage: 960,
       weaponType: "MISSILE_GF_ADV",
       weaponName: "Missiles",
-      weaponDetails: [{"id": "MISSILE_GF_ADV", "name": "Missiles", "damage": 60, "range": 600, "burst": 1, "reload": 0.125, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 640}, {"id": "MISSILE_AA_ADV", "name": "Missiles", "damage": 1, "range": 1792, "burst": 1, "reload": 0.125, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 640}],      strengths: ["Дальняя дистанция", "Мощный урон", "Эффективен против стратегической авиации"],      weaknesses: ["Не стреляет по наземным целям", "Дорогой", "Стационарный"],
+      weaponDetails: [{"id": "MISSILE_GF_ADV", "name": "Missiles", "damage": 60, "range": 600, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 640}, {"id": "MISSILE_AA_ADV", "name": "Missiles", "damage": 960, "range": 1792, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 960, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 640}],      strengths: ["Дальняя дистанция", "Мощный урон", "Эффективен против стратегической авиации"],      weaknesses: ["Не стреляет по наземным целям", "Дорогой", "Стационарный"],      counters: ["Наземные войска", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -20218,7 +20034,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 60,
+      damage: 960,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "ARM-SRDS",
@@ -20268,8 +20084,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Наземные войска", "Артиллерия"],
-      counteredBy: ["Танки", "Артиллерия"],
+    },      counteredBy: ["Танки", "Артиллерия"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -20297,8 +20112,8 @@ const ARM_DATA = {
       range: 600,
       damage: 300,
       weaponType: "LASER_HEAVY",
-      weaponDetails: [{"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "High Energy Laser",
-      strengths: ["Всплывающая маскировка", "Радарное подавление", "Мощный урон"],      weaknesses: ["Стационарный", "Дорогой", "Уязвим для артиллерии"],
+      weaponDetails: [{"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "High Energy Laser",
+      strengths: ["Всплывающая маскировка", "Радарное подавление", "Мощный урон"],      weaknesses: ["Стационарный", "Дорогой", "Уязвим для артиллерии"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -20374,8 +20189,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Pop-up", "Radar Jamming"],
       tags: ["Лазер"],
@@ -20403,8 +20217,8 @@ const ARM_DATA = {
       range: 1344,
       damage: 360,
       weaponType: "CANNON_MRPC",
-      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Range Plasma Cannon",
-      strengths: ["Всплывающая маскировка", "Мощный урон", "Засады"],      weaknesses: ["Энергоёмкий (-400E/выстрел)", "Стационарный", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Medium Range Plasma Cannon",
+      strengths: ["Всплывающая маскировка", "Мощный урон", "Засады"],      weaknesses: ["Энергоёмкий (-400E/выстрел)", "Стационарный", "Медленная перезарядка"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -20480,8 +20294,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
+    },      counteredBy: ["Тяжёлая артиллерия", "Ракеты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Pop-up"],
       tags: ["Пушка"],
@@ -20507,10 +20320,10 @@ const ARM_DATA = {
       hp: 9360,
       speed: 0,
       range: 768,
-      damage: 720,
+      damage: 2880,
       weaponType: "TORPEDO_ATL",
-      weaponDetails: [{"id": "TORPEDO_ATL", "name": "Advanced Guided Torpedo", "damage": 720, "range": 768, "burst": 1, "reload": 1.2, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 90}],      weaponName: "Advanced Guided Torpedo",
-      strengths: ["Увеличенная дальность", "Высокий урон", "Эффективен против кораблей"],      weaknesses: ["Только под водой", "Стационарный", "Дорогой"],
+      weaponDetails: [{"id": "TORPEDO_ATL", "name": "Advanced Guided Torpedo", "damage": 2880, "range": 768, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 90}],      weaponName: "Advanced Guided Torpedo",
+      strengths: ["Увеличенная дальность", "Высокий урон", "Эффективен против кораблей"],      weaknesses: ["Только под водой", "Стационарный", "Дорогой"],      counters: ["Десант", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -20536,7 +20349,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 720,
+      damage: 2880,
       damageModifier: 0,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "AS-TDS",
@@ -20586,8 +20399,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Десант", "Артиллерия"],
-      counteredBy: ["Десантные юниты", "Артиллерия"],
+    },      counteredBy: ["Десантные юниты", "Артиллерия"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: [],
       tags: [],
@@ -20615,7 +20427,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Подавляет радар", "Скрывает юнитов", "Стратегическая ценность"],      weaknesses: ["Потребляет энергию (-100E)", "Стационарный", "Уязвим для диверсантов"],
+      weaponDetails: [],      strengths: ["Подавляет радар", "Скрывает юнитов", "Стратегическая ценность"],      weaknesses: ["Потребляет энергию (-100E)", "Стационарный", "Уязвим для диверсантов"],      counters: ["Диверсанты", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -20691,8 +20503,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Диверсанты", "Артиллерия"],
-      counteredBy: ["Диверсанты", "Артиллерия"],
+    },      counteredBy: ["Диверсанты", "Артиллерия"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Radar Jamming"],
       tags: ["Антирадар"],
@@ -20721,7 +20532,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "ANTI_NUKE",
       weaponName: "Rocket",
-      weaponDetails: [{"id": "ANTI_NUKE", "name": "Rocket", "damage": 0, "range": 32000, "burst": 1, "reload": 120, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Перехват ракет", "Защита сооружений", "Стратегическая ценность"],      weaknesses: ["Стационарный", "Не стреляет по юнитам", "Дорогой"],
+      weaponDetails: [{"id": "ANTI_NUKE", "name": "Rocket", "damage": 0, "range": 32000, "burst": 1, "reload": 120, "burstrate": 0, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Перехват ракет", "Защита сооружений", "Стратегическая ценность"],      weaknesses: ["Стационарный", "Не стреляет по юнитам", "Дорогой"],      counters: ["Артиллерия", "Массовые ракетные атаки"],
 
       fullStats: {
       acceleration: 0,
@@ -20797,8 +20608,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Массовые ракетные атаки"],
-      counteredBy: ["Артиллерия", "Массовые атаки"],
+    },      counteredBy: ["Артиллерия", "Массовые атаки"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Anti-Missile"],
       tags: ["Anti-Nuke"],
@@ -20826,7 +20636,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Огромная дальность обнаружения", "Обнаруживает стелс-подлодки", "Стратегическая ценность"],      weaknesses: ["Потребляет энергию (-75E)", "Стационарный", "Уязвим для диверсантов"],
+      weaponDetails: [],      strengths: ["Огромная дальность обнаружения", "Обнаруживает стелс-подлодки", "Стратегическая ценность"],      weaknesses: ["Потребляет энергию (-75E)", "Стационарный", "Уязвим для диверсантов"],      counters: ["Диверсанты", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -20902,8 +20712,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 24,
       workerTime: 0
-    },      counters: ["Диверсанты", "Артиллерия"],
-      counteredBy: ["Стелс-подлодки", "Диверсанты"],
+    },      counteredBy: ["Стелс-подлодки", "Диверсанты"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: ["Advanced Sonar"],
       tags: ["Сонар"],
@@ -20931,7 +20740,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Подавляет радар и сонар", "Скрывает подводных юнитов", "Морская маскировка"],      weaknesses: ["Потребляет энергию (-125E)", "Стационарный", "Только на воде"],
+      weaponDetails: [],      strengths: ["Подавляет радар и сонар", "Скрывает подводных юнитов", "Морская маскировка"],      weaknesses: ["Потребляет энергию (-125E)", "Стационарный", "Только на воде"],      counters: ["Десант", "Артиллерия"],
 
       fullStats: {
       acceleration: 0,
@@ -21007,8 +20816,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 11,
       workerTime: 0
-    },      counters: ["Десант", "Артиллерия"],
-      counteredBy: ["Десантные юниты", "Артиллерия"],
+    },      counteredBy: ["Десантные юниты", "Артиллерия"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: ["Radar Jamming", "Sonar Jamming"],
       tags: [],
@@ -21036,8 +20844,8 @@ const ARM_DATA = {
       range: 3584,
       damage: 6400,
       weaponType: "NUKE_TAC_ARM",
-      weaponDetails: [{"id": "NUKE_TAC_ARM", "name": "Tactical Nuclear Missile", "damage": 6400, "range": 3584, "burst": 1, "reload": 240, "velocity": 700, "aoe": 672, "type": "", "energyPerShot": 120000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 1200, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "Tactical Nuclear Missile",
-      strengths: ["Огромный area-of-effect урон", "Дальняя дистанция", "Разрушает базы"],      weaknesses: ["Стационарный", "Очень дорогой", "Медленная перезарядка"],
+      weaponDetails: [{"id": "NUKE_TAC_ARM", "name": "Tactical Nuclear Missile", "damage": 6400, "range": 3584, "burst": 1, "reload": 240, "burstrate": 0, "velocity": 700, "aoe": 672, "type": "", "energyPerShot": 120000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 1200, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      weaponName: "Tactical Nuclear Missile",
+      strengths: ["Огромный area-of-effect урон", "Дальняя дистанция", "Разрушает базы"],      weaknesses: ["Стационарный", "Очень дорогой", "Медленная перезарядка"],      counters: ["Противоракетная оборона", "Быстрое уничтожение"],
 
       fullStats: {
       acceleration: 0,
@@ -21113,8 +20921,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Противоракетная оборона", "Быстрое уничтожение"],
-      counteredBy: ["Противоракетная оборона", "Диверсанты"],
+    },      counteredBy: ["Противоракетная оборона", "Диверсанты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Nuclear"],
       tags: ["Nuke"],
@@ -21142,8 +20949,8 @@ const ARM_DATA = {
       range: 5376,
       damage: 1800,
       weaponType: "CANNON_LRPC_ARM",
-      weaponDetails: [{"id": "CANNON_LRPC_ARM", "name": "Big Bertha Plasma Cannon", "damage": 1800, "range": 5376, "burst": 1, "reload": 0.25, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 5400, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Big Bertha Plasma Cannon",
-      strengths: ["Огромная дальность", "Мощный урон", "Улучшается"],      weaknesses: ["Очень энергоёмкий (5400E/выстрел)", "Стационарный", "Медленная перезарядка"],
+      weaponDetails: [{"id": "CANNON_LRPC_ARM", "name": "Big Bertha Plasma Cannon", "damage": 1800, "range": 5376, "burst": 1, "reload": 0.25, "burstrate": 0, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 5400, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      weaponName: "Big Bertha Plasma Cannon",
+      strengths: ["Огромная дальность", "Мощный урон", "Улучшается"],      weaknesses: ["Очень энергоёмкий (5400E/выстрел)", "Стационарный", "Медленная перезарядка"],      counters: ["Артиллерия", "Ракеты"],
 
       fullStats: {
       acceleration: 0,
@@ -21219,8 +21026,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 240
-    },      counters: ["Артиллерия", "Ракеты"],
-      counteredBy: ["Тактические ракеты", "Диверсанты"],
+    },      counteredBy: ["Тактические ракеты", "Диверсанты"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Upgradable"],
       tags: ["Пушка"],
@@ -21248,7 +21054,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["1000 энергии под водой", "Мощный", "Незаменимый"],      weaknesses: ["Дорогой", "Стационарный", "Только под водой"],
+      weaponDetails: [],      strengths: ["1000 энергии под водой", "Мощный", "Незаменимый"],      weaknesses: ["Дорогой", "Стационарный", "Только под водой"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -21324,8 +21130,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки", "Десант"],
+    },      counteredBy: ["Подводные лодки", "Десант"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: [],
       tags: ["+Энергия"],
@@ -21353,7 +21158,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["100 энергии под водой", "Дешёвый", "Компактный"],      weaknesses: ["Низкая производительность", "Стационарный", "Только под водой"],
+      weaponDetails: [],      strengths: ["100 энергии под водой", "Дешёвый", "Компактный"],      weaknesses: ["Низкая производительность", "Стационарный", "Только под водой"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -21429,8 +21234,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки", "Десант"],
+    },      counteredBy: ["Подводные лодки", "Десант"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: [],
       tags: ["+Энергия"],
@@ -21458,7 +21262,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["+25000 энергии и +5000 металла", "Компактный", "Универсальный"],      weaknesses: ["Дорогой", "Стационарный", "Только под водой"],
+      weaponDetails: [],      strengths: ["+25000 энергии и +5000 металла", "Компактный", "Универсальный"],      weaknesses: ["Дорогой", "Стационарный", "Только под водой"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -21534,8 +21338,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки", "Десант"],
+    },      counteredBy: ["Подводные лодки", "Десант"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: [],
       tags: [],
@@ -21563,7 +21366,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Высокая производительность под водой", "Основа подводной экономики", "Надёжный"],      weaknesses: ["Потребляет энергию (-15E)", "Только под водой", "Дорогой"],
+      weaponDetails: [],      strengths: ["Высокая производительность под водой", "Основа подводной экономики", "Надёжный"],      weaknesses: ["Потребляет энергию (-15E)", "Только под водой", "Дорогой"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -21639,8 +21442,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки", "Десант"],
+    },      counteredBy: ["Подводные лодки", "Десант"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: [],
       tags: ["+Металл"],
@@ -21668,7 +21470,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит 15 металла под водой", "Не зависит от месторождений", "Мощный"],      weaknesses: ["Очень энергоёмкий (1000E/15M)", "Дорогой", "Только под водой"],
+      weaponDetails: [],      strengths: ["Производит 15 металла под водой", "Не зависит от месторождений", "Мощный"],      weaknesses: ["Очень энергоёмкий (1000E/15M)", "Дорогой", "Только под водой"],      counters: ["Подлодки", "Десант"],
 
       fullStats: {
       acceleration: 0,
@@ -21744,8 +21546,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Подлодки", "Десант"],
-      counteredBy: ["Подводные лодки", "Десант"],
+    },      counteredBy: ["Подводные лодки", "Десант"],
       builtAt: "Adv. Construction Ship",
       specialAbilities: [],
       tags: ["Конвертер"],
@@ -21773,7 +21574,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Очень высокое здоровье", "Блокирует юнитов", "Дешёвый"],      weaknesses: ["Не стреляет", "Стационарный", "Можно разрушить"],
+      weaponDetails: [],      strengths: ["Очень высокое здоровье", "Блокирует юнитов", "Дешёвый"],      weaknesses: ["Не стреляет", "Стационарный", "Можно разрушить"],      counters: ["Артиллерия", "Танки"],
 
       fullStats: {
       acceleration: 0,
@@ -21849,8 +21650,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: ["Артиллерия", "Танки"],
-      counteredBy: ["Тяжёлая техника", "Артиллерия"],
+    },      counteredBy: ["Тяжёлая техника", "Артиллерия"],
       builtAt: "Adv. Construction KBot",
       specialAbilities: ["Wall"],
       tags: ["Стена"],
@@ -21878,7 +21678,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -21954,8 +21754,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 300
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -21983,7 +21782,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.07,
@@ -22059,8 +21858,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 150
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -22088,7 +21886,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.16,
@@ -22164,8 +21962,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 240
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: ["Ползущий", "Строитель"],
@@ -22193,7 +21990,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.04,
@@ -22269,8 +22066,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 20,
       workerTime: 360
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -22298,7 +22094,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.016,
@@ -22374,8 +22170,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 300
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -22401,10 +22196,10 @@ const ARM_DATA = {
       hp: 780,
       speed: 1.55,
       range: 825,
-      damage: 96,
+      damage: 480,
       weaponType: "MISSILE_GF_MEDIUM",
       weaponName: "Missiles",
-      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 96, "range": 320, "burst": 1, "reload": 6, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      strengths: ["Амфибия", "Быстрый"],      weaknesses: ["Слабая броня", "Малый урон"],
+      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 384, "range": 320, "burst": 1, "reload": 6, "burstrate": 0, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      strengths: ["Амфибия", "Быстрый"],      weaknesses: ["Слабая броня", "Малый урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.08,
@@ -22430,7 +22225,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 96,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "COR-MRJ",
@@ -22480,8 +22275,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
       tags: ["ПВО", "Торпеды", "Амфибия"],
@@ -22510,7 +22304,7 @@ const ARM_DATA = {
       damage: 30,
       weaponType: "LASER_GATOR",
       weaponName: "Laser",
-      weaponDetails: [{"id": "LASER_GATOR", "name": "Laser", "damage": 30, "range": 180, "burst": 1, "reload": 0.3, "velocity": 400, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Массовый", "Дешёвый", "Быстрый"],      weaknesses: ["Низкое здоровье", "Слабый урон"],
+      weaponDetails: [{"id": "LASER_GATOR", "name": "Laser", "damage": 30, "range": 180, "burst": 1, "reload": 0.3, "burstrate": 0, "velocity": 400, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Массовый", "Дешёвый", "Быстрый"],      weaknesses: ["Низкое здоровье", "Слабый урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.1,
@@ -22586,8 +22380,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: ["Штурм"],
@@ -22615,7 +22408,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -22691,8 +22484,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 300
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -22718,10 +22510,10 @@ const ARM_DATA = {
       hp: 3450,
       speed: 1.5,
       range: 320,
-      damage: 224,
+      damage: 384,
       weaponType: "LASER_MAK",
       weaponName: "High Energy Laser",
-      weaponDetails: [{"id": "LASER_MAK", "name": "High Energy Laser", "damage": 224, "range": 270, "burst": 1, "reload": 0.7, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 96, "range": 320, "burst": 1, "reload": 6, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}],      strengths: ["Высокий урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой"],
+      weaponDetails: [{"id": "LASER_MAK", "name": "High Energy Laser", "damage": 224, "range": 270, "burst": 1, "reload": 0.7, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "TORPEDO_LIGHT", "name": "Torpedo", "damage": 384, "range": 320, "burst": 1, "reload": 6, "burstrate": 0, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}],      strengths: ["Высокий урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой"],      counters: [],
 
       fullStats: {
       acceleration: 0.03,
@@ -22747,7 +22539,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 224,
+      damage: 384,
       damageModifier: 0.25,
       defaultMissionType: "Standby",
       designation: "KB-LM2",
@@ -22797,8 +22589,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: ["Торпеды", "Амфибия"],
@@ -22826,7 +22617,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -22902,8 +22693,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -22932,7 +22722,7 @@ const ARM_DATA = {
       damage: 18,
       weaponType: "ROCKET_VTOL",
       weaponName: "Mini Burst Rockets",
-      weaponDetails: [{"id": "ROCKET_VTOL", "name": "Mini Burst Rockets", "damage": 18, "range": 480, "burst": 3, "reload": 0.4, "velocity": 675, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Воздушное превосходство"],      weaknesses: ["Уязвим для ПВО"],
+      weaponDetails: [{"id": "ROCKET_VTOL", "name": "Mini Burst Rockets", "damage": 18, "range": 480, "burst": 3, "reload": 0.4, "burstrate": 0.1, "velocity": 675, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 6000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Воздушное превосходство"],      weaknesses: ["Уязвим для ПВО"],      counters: [],
 
       fullStats: {
       acceleration: 0.14,
@@ -23008,11 +22798,10 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
-      tags: ["Штурм"],
+      tags: [],
       image: null,
       hotkey: ""
     },
@@ -23037,7 +22826,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Стационарная оборона", "Не требует управления"],      weaknesses: ["Не移动", "Можно обойти"],
+      weaponDetails: [],      strengths: ["Стационарная оборона", "Не требует управления"],      weaknesses: ["Не移动", "Можно обойти"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -23113,8 +22902,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Радар"],
@@ -23140,10 +22928,10 @@ const ARM_DATA = {
       hp: 4084,
       speed: 2.35,
       range: 825,
-      damage: 180,
+      damage: 720,
       weaponType: "DEPTHCHARGE_ADV",
       weaponName: "Depth Charge",
-      weaponDetails: [{"id": "DEPTHCHARGE_ADV", "name": "Depth Charge", "damage": 180, "range": 480, "burst": 1, "reload": 0.9, "velocity": 150, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 150}, {"id": "FLAK", "name": "Flak Cannon", "damage": 0, "range": 825, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "DEPTHCHARGE_ADV", "name": "Depth Charge", "damage": 720, "range": 480, "burst": 1, "reload": 0.9, "burstrate": 0, "velocity": 150, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 150}, {"id": "FLAK", "name": "Flak Cannon", "damage": 480, "range": 825, "burst": 1, "reload": 0.14, "burstrate": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0.132,
@@ -23169,7 +22957,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 180,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "ASD-SB",
@@ -23219,8 +23007,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["ПВО", "Торпеды"],
@@ -23248,7 +23035,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -23324,8 +23111,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 3,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -23353,7 +23139,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -23429,8 +23215,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 540
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -23459,7 +23244,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "LAB_DIR",
       weaponName: "LAB_DIR",
-      weaponDetails: [{"id": "LAB_DIR", "name": "LAB_DIR", "damage": 0, "range": 0, "burst": 1, "reload": 0, "velocity": 0, "aoe": 0, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [{"id": "LAB_DIR", "name": "LAB_DIR", "damage": 0, "range": 0, "burst": 1, "reload": 0, "burstrate": 0, "velocity": 0, "aoe": 0, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -23535,8 +23320,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 1,
       workerTime: 300
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -23562,10 +23346,10 @@ const ARM_DATA = {
       hp: 10116,
       speed: 0,
       range: 768,
-      damage: 720,
+      damage: 2880,
       weaponType: "TORPEDO_ATL",
       weaponName: "Advanced Guided Torpedo",
-      weaponDetails: [{"id": "TORPEDO_ATL", "name": "Advanced Guided Torpedo", "damage": 720, "range": 768, "burst": 1, "reload": 1.2, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 90}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],
+      weaponDetails: [{"id": "TORPEDO_ATL", "name": "Advanced Guided Torpedo", "damage": 2880, "range": 768, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 90}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -23591,7 +23375,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 720,
+      damage: 2880,
       damageModifier: 0,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "TC-GT",
@@ -23641,8 +23425,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: [],
@@ -23670,7 +23453,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -23746,8 +23529,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 300
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -23775,7 +23557,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Быстрый", "Обнаружение врагов"],      weaknesses: ["Безоружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Быстрый", "Обнаружение врагов"],      weaknesses: ["Безоружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.36,
@@ -23851,8 +23633,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
       tags: ["Стелс", "Радар", "Сонар"],
@@ -23881,7 +23662,7 @@ const ARM_DATA = {
       damage: 450,
       weaponType: "CANNON_BATS",
       weaponName: "Primary Battlecruiser Cannon",
-      weaponDetails: [{"id": "CANNON_BATS", "name": "Primary Battlecruiser Cannon", "damage": 180, "range": 1152, "burst": 1, "reload": 0.625, "velocity": 385, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_FHLT", "name": "High Energy Laser", "damage": 450, "range": 750, "burst": 1, "reload": 0.75, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 225, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Мощное вооружение", "Высокое здоровье"],      weaknesses: ["Медленный", "Дорогой"],
+      weaponDetails: [{"id": "CANNON_BATS", "name": "Primary Battlecruiser Cannon", "damage": 180, "range": 1152, "burst": 1, "reload": 0.625, "burstrate": 0, "velocity": 385, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_FHLT", "name": "High Energy Laser", "damage": 450, "range": 750, "burst": 1, "reload": 0.75, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 225, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Мощное вооружение", "Высокое здоровье"],      weaknesses: ["Медленный", "Дорогой"],      counters: [],
 
       fullStats: {
       acceleration: 0.025,
@@ -23957,8 +23738,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: [],
@@ -23987,7 +23767,7 @@ const ARM_DATA = {
       damage: 2000,
       weaponType: "CANNON_LRPC_CORE",
       weaponName: "Intimidator Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_LRPC_CORE", "name": "Intimidator Plasma Cannon", "damage": 2000, "range": 5376, "burst": 1, "reload": 0.3, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 6000, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "CANNON_LRPC_CORE", "name": "Intimidator Plasma Cannon", "damage": 2000, "range": 5376, "burst": 1, "reload": 0.3, "burstrate": 0, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 6000, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -24063,8 +23843,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Ultra Construction Kbot",
       specialAbilities: [],
       tags: ["Пушка"],
@@ -24092,7 +23871,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.06,
@@ -24168,8 +23947,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 60
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -24198,7 +23976,7 @@ const ARM_DATA = {
       damage: 125,
       weaponType: "LASER_CAN",
       weaponName: "High Energy Laser",
-      weaponDetails: [{"id": "LASER_CAN", "name": "High Energy Laser", "damage": 125, "range": 300, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Высокий урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой"],
+      weaponDetails: [{"id": "LASER_CAN", "name": "High Energy Laser", "damage": 125, "range": 300, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Высокий урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой"],      counters: [],
 
       fullStats: {
       acceleration: 0.1,
@@ -24274,8 +24052,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -24301,10 +24078,10 @@ const ARM_DATA = {
       hp: 17500,
       speed: 1.8,
       range: 32000,
-      damage: 1,
+      damage: 720,
       weaponType: "ANTI_NUKE",
       weaponName: "Rocket",
-      weaponDetails: [{"id": "ANTI_NUKE", "name": "Rocket", "damage": 0, "range": 32000, "burst": 1, "reload": 120, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],
+      weaponDetails: [{"id": "ANTI_NUKE", "name": "Rocket", "damage": 0, "range": 32000, "burst": 1, "reload": 120, "burstrate": 0, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],      counters: [],
 
       fullStats: {
       acceleration: 0.018,
@@ -24330,7 +24107,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 1,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "SB-3-VT",
@@ -24380,8 +24157,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 720
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: ["ПВО", "Anti-Nuke", "Авианосец"],
@@ -24409,7 +24185,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.06,
@@ -24485,8 +24261,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 90
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -24514,7 +24289,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.107,
@@ -24590,8 +24365,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 90
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -24620,7 +24394,7 @@ const ARM_DATA = {
       damage: 30000,
       weaponType: "LASER_COM",
       weaponName: "J7 Laser",
-      weaponDetails: [{"id": "LASER_COM", "name": "J7 Laser", "damage": 90, "range": 320, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_COM", "name": "Starburst Missile", "damage": 240, "range": 480, "burst": 1, "reload": 0.6, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}, {"id": "DGUN_CORE", "name": "AM Disintegrator", "damage": 30000, "range": 240, "burst": 1, "reload": 1.2, "velocity": 200, "aoe": 72, "type": "", "energyPerShot": 500, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный строитель", "Несёт ядерное оружие", "Высокое здоровье", "Ремонт и восстановление"],      weaknesses: ["Гибель = проигрыш", "Медленный", "Приоритетная цель противника"],
+      weaponDetails: [{"id": "LASER_COM", "name": "J7 Laser", "damage": 90, "range": 320, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_COM", "name": "Starburst Missile", "damage": 240, "range": 480, "burst": 1, "reload": 0.6, "burstrate": 0, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}, {"id": "DGUN_CORE", "name": "AM Disintegrator", "damage": 30000, "range": 240, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 200, "aoe": 72, "type": "", "energyPerShot": 500, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный строитель", "Несёт ядерное оружие", "Высокое здоровье", "Ремонт и восстановление"],      weaknesses: ["Гибель = проигрыш", "Медленный", "Приоритетная цель противника"],      counters: [],
 
       fullStats: {
       acceleration: 0.16,
@@ -24696,8 +24470,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 360
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Commander (начальный юнит)",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -24723,10 +24496,10 @@ const ARM_DATA = {
       hp: 480,
       speed: 1.35,
       range: 825,
-      damage: 30,
+      damage: 480,
       weaponType: "MISSILE_GF_MEDIUM",
       weaponName: "Missiles",
-      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      strengths: ["ПВО", "Защита от авиации"],      weaknesses: ["Слабый урон по земле"],
+      weaponDetails: [{"id": "MISSILE_GF_MEDIUM", "name": "Missiles", "damage": 30, "range": 400, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 550}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      strengths: ["ПВО", "Защита от авиации"],      weaknesses: ["Слабый урон по земле"],      counters: [],
 
       fullStats: {
       acceleration: 0.1,
@@ -24752,7 +24525,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 30,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "KA-M12",
@@ -24802,8 +24575,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -24832,7 +24604,7 @@ const ARM_DATA = {
       damage: 324,
       weaponType: "RIOT_CRUS",
       weaponName: "Heavy Riot Cannon",
-      weaponDetails: [{"id": "RIOT_CRUS", "name": "Heavy Riot Cannon", "damage": 324, "range": 750, "burst": 1, "reload": 1.2, "velocity": 825, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Мощное вооружение", "Высокое здоровье"],      weaknesses: ["Медленный", "Дорогой"],
+      weaponDetails: [{"id": "RIOT_CRUS", "name": "Heavy Riot Cannon", "damage": 324, "range": 750, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 825, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Мощное вооружение", "Высокое здоровье"],      weaknesses: ["Медленный", "Дорогой"],      counters: [],
 
       fullStats: {
       acceleration: 0.036,
@@ -24908,8 +24680,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: ["Штурм"],
@@ -24937,7 +24708,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.008,
@@ -25013,8 +24784,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 150
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -25042,7 +24812,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.05,
@@ -25118,8 +24888,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 60
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Seaplane Platform",
       specialAbilities: [],
       tags: ["Амфибия", "Строитель"],
@@ -25147,7 +24916,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Строит здания", "Ремонт сооружений"],      weaknesses: ["Слабо вооружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.011,
@@ -25223,8 +24992,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -25253,7 +25021,7 @@ const ARM_DATA = {
       damage: 180,
       weaponType: "LASER_DECOY",
       weaponName: "J7 Laser",
-      weaponDetails: [{"id": "LASER_DECOY", "name": "J7 Laser", "damage": 45, "range": 320, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_DECOY", "name": "Starburst Missile", "damage": 60, "range": 480, "burst": 1, "reload": 0.6, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}, {"id": "DGUN_DECOY_CORE", "name": "Decoy Disintegrator", "damage": 180, "range": 240, "burst": 1, "reload": 1.2, "velocity": 200, "aoe": 56, "type": "", "energyPerShot": 100, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный строитель", "Несёт ядерное оружие", "Высокое здоровье", "Ремонт и восстановление"],      weaknesses: ["Гибель = проигрыш", "Медленный", "Приоритетная цель противника"],
+      weaponDetails: [{"id": "LASER_DECOY", "name": "J7 Laser", "damage": 45, "range": 320, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_DECOY", "name": "Starburst Missile", "damage": 60, "range": 480, "burst": 1, "reload": 0.6, "burstrate": 0, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}, {"id": "DGUN_DECOY_CORE", "name": "Decoy Disintegrator", "damage": 180, "range": 240, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 200, "aoe": 56, "type": "", "energyPerShot": 100, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный строитель", "Несёт ядерное оружие", "Высокое здоровье", "Ремонт и восстановление"],      weaknesses: ["Гибель = проигрыш", "Медленный", "Приоритетная цель противника"],      counters: [],
 
       fullStats: {
       acceleration: 0.16,
@@ -25329,8 +25097,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 270
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Commander (начальный юнит)",
       specialAbilities: [],
       tags: ["Строитель"],
@@ -25359,7 +25126,7 @@ const ARM_DATA = {
       damage: 2400,
       weaponType: "BLOD_DOOM",
       weaponName: "Doomsday Weapon",
-      weaponDetails: [{"id": "BLOD_DOOM", "name": "Doomsday Weapon", "damage": 2400, "range": 1344, "burst": 1, "reload": 2, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 2400, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [{"id": "BLOD_DOOM", "name": "Doomsday Weapon", "damage": 2400, "range": 1344, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 2400, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -25435,8 +25202,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: ["Лазер"],
@@ -25464,7 +25230,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -25540,8 +25306,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -25569,7 +25334,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Хранение ресурсов"],      weaknesses: ["Не вооружён", "Стационарный"],
+      weaponDetails: [],      strengths: ["Хранение ресурсов"],      weaknesses: ["Не вооружён", "Стационарный"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -25645,8 +25410,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -25674,7 +25438,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.031,
@@ -25750,8 +25514,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: ["Антирадар"],
@@ -25780,7 +25543,7 @@ const ARM_DATA = {
       damage: 50,
       weaponType: "LASER_FAST",
       weaponName: "Laser",
-      weaponDetails: [{"id": "LASER_FAST", "name": "Laser", "damage": 50, "range": 240, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [{"id": "LASER_FAST", "name": "Laser", "damage": 50, "range": 240, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.5,
@@ -25856,8 +25619,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -25886,7 +25648,7 @@ const ARM_DATA = {
       damage: 36,
       weaponType: "LASER_FAV",
       weaponName: "Laser",
-      weaponDetails: [{"id": "LASER_FAV", "name": "Laser", "damage": 36, "range": 180, "burst": 1, "reload": 1, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Быстрый", "Разведка"],      weaknesses: ["Безоружён", "Хрупкий"],
+      weaponDetails: [{"id": "LASER_FAV", "name": "Laser", "damage": 36, "range": 180, "burst": 1, "reload": 1, "burstrate": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Быстрый", "Разведка"],      weaknesses: ["Безоружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.036,
@@ -25962,8 +25724,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -25991,7 +25752,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -26067,8 +25828,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 3,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -26097,7 +25857,7 @@ const ARM_DATA = {
       damage: 450,
       weaponType: "LASER_FHLT",
       weaponName: "High Energy Laser",
-      weaponDetails: [{"id": "LASER_FHLT", "name": "High Energy Laser", "damage": 450, "range": 750, "burst": 1, "reload": 0.75, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 225, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "LASER_FHLT", "name": "High Energy Laser", "damage": 450, "range": 750, "burst": 1, "reload": 0.75, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 225, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -26173,8 +25933,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 3,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Лазер"],
@@ -26202,7 +25961,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Быстрый", "Обнаружение врагов"],      weaknesses: ["Безоружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Быстрый", "Обнаружение врагов"],      weaknesses: ["Безоружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.4,
@@ -26278,8 +26037,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
       tags: [],
@@ -26305,10 +26063,10 @@ const ARM_DATA = {
       hp: 1986,
       speed: 0,
       range: 825,
-      damage: 0,
+      damage: 480,
       weaponType: "FLAK",
       weaponName: "Flak Cannon",
-      weaponDetails: [{"id": "FLAK", "name": "Flak Cannon", "damage": 0, "range": 825, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "FLAK", "name": "Flak Cannon", "damage": 480, "range": 825, "burst": 1, "reload": 0.14, "burstrate": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -26334,7 +26092,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 0,
+      damage: 480,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "F-AA1",
@@ -26384,8 +26142,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -26414,7 +26171,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "ANTI_NUKE",
       weaponName: "Rocket",
-      weaponDetails: [{"id": "ANTI_NUKE", "name": "Rocket", "damage": 0, "range": 32000, "burst": 1, "reload": 120, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "ANTI_NUKE", "name": "Rocket", "damage": 0, "range": 32000, "burst": 1, "reload": 120, "burstrate": 0, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -26490,8 +26247,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Anti-Nuke"],
@@ -26519,7 +26275,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -26595,8 +26351,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 22,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["Конвертер"],
@@ -26624,7 +26379,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Блокирует юнитов", "Высокое здоровье"],      weaknesses: ["Не стреляет", "Можно разрушить"],
+      weaponDetails: [],      strengths: ["Блокирует юнитов", "Высокое здоровье"],      weaknesses: ["Не стреляет", "Можно разрушить"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -26700,8 +26455,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -26727,10 +26481,10 @@ const ARM_DATA = {
       hp: 464,
       speed: 0,
       range: 900,
-      damage: 45,
+      damage: 720,
       weaponType: "MISSILE_GF_HEAVY",
       weaponName: "Missiles",
-      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -26756,7 +26510,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 45,
+      damage: 720,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "FF-R8",
@@ -26806,8 +26560,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 4,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -26835,7 +26588,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Генерация энергии", "Бонус соседства"],      weaknesses: ["Не вооружён", "Стационарный"],
+      weaponDetails: [],      strengths: ["Генерация энергии", "Бонус соседства"],      weaknesses: ["Не вооружён", "Стационарный"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -26911,8 +26664,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 240
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -26941,7 +26693,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "LAB_DIR",
       weaponName: "LAB_DIR",
-      weaponDetails: [{"id": "LAB_DIR", "name": "LAB_DIR", "damage": 0, "range": 0, "burst": 1, "reload": 0, "velocity": 0, "aoe": 0, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [{"id": "LAB_DIR", "name": "LAB_DIR", "damage": 0, "range": 0, "burst": 1, "reload": 0, "burstrate": 0, "velocity": 0, "aoe": 0, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -27017,8 +26769,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 1200
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Ultra Kbot Gantry",
       specialAbilities: [],
       tags: [],
@@ -27047,7 +26798,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "None",
       weaponName: "",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -27123,8 +26874,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Ultra Construction Kbot",
       specialAbilities: [],
       tags: ["Телепорт"],
@@ -27153,7 +26903,7 @@ const ARM_DATA = {
       damage: 30,
       weaponType: "LASER_GATOR",
       weaponName: "Laser",
-      weaponDetails: [{"id": "LASER_GATOR", "name": "Laser", "damage": 30, "range": 180, "burst": 1, "reload": 0.3, "velocity": 400, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],
+      weaponDetails: [{"id": "LASER_GATOR", "name": "Laser", "damage": 30, "range": 180, "burst": 1, "reload": 0.3, "burstrate": 0, "velocity": 400, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.02,
@@ -27229,8 +26979,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -27259,7 +27008,7 @@ const ARM_DATA = {
       damage: 360,
       weaponType: "RIOT_ALL",
       weaponName: "Geothermal Riot Cannon",
-      weaponDetails: [{"id": "RIOT_ALL", "name": "Geothermal Riot Cannon", "damage": 360, "range": 500, "burst": 1, "reload": 1.2, "velocity": 700, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [{"id": "RIOT_ALL", "name": "Geothermal Riot Cannon", "damage": 360, "range": 500, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 700, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -27335,8 +27084,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -27365,7 +27113,7 @@ const ARM_DATA = {
       damage: 500,
       weaponType: "CANNON_GOL",
       weaponName: "Goliath Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_GOL", "name": "Goliath Plasma Cannon", "damage": 500, "range": 700, "burst": 1, "reload": 3.6, "velocity": 500, "aoe": 144, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 300, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],
+      weaponDetails: [{"id": "CANNON_GOL", "name": "Goliath Plasma Cannon", "damage": 500, "range": 700, "burst": 1, "reload": 3.6, "burstrate": 0, "velocity": 500, "aoe": 144, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 300, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.01,
@@ -27441,8 +27189,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -27471,7 +27218,7 @@ const ARM_DATA = {
       damage: 300,
       weaponType: "LASER_HEAVY",
       weaponName: "High Energy Laser",
-      weaponDetails: [{"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -27547,8 +27294,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Лазер"],
@@ -27576,7 +27322,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -27652,8 +27398,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 180
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
       tags: [],
@@ -27682,7 +27427,7 @@ const ARM_DATA = {
       damage: 160,
       weaponType: "ROCKET_HRK",
       weaponName: "MRLS Heavy Rocket",
-      weaponDetails: [{"id": "ROCKET_HRK", "name": "MRLS Heavy Rocket", "damage": 160, "range": 720, "burst": 1, "reload": 0.5, "velocity": 800, "aoe": 88, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 800}, {"id": "VLAUNCH_HRK", "name": "MRLS Heavy Rocket", "damage": 160, "range": 720, "burst": 1, "reload": 0.5, "velocity": 400, "aoe": 88, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}],      strengths: ["Дальний обстрел", "Сильный урон"],      weaknesses: ["Ближний бой", "Хрупкий"],
+      weaponDetails: [{"id": "ROCKET_HRK", "name": "MRLS Heavy Rocket", "damage": 160, "range": 720, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 800, "aoe": 88, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 800}, {"id": "VLAUNCH_HRK", "name": "MRLS Heavy Rocket", "damage": 160, "range": 720, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 400, "aoe": 88, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 200}],      strengths: ["Дальний обстрел", "Сильный урон"],      weaknesses: ["Ближний бой", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.01,
@@ -27758,8 +27503,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -27787,7 +27531,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Воздушное превосходство"],      weaknesses: ["Уязвим для ПВО"],
+      weaponDetails: [],      strengths: ["Воздушное превосходство"],      weaknesses: ["Уязвим для ПВО"],      counters: [],
 
       fullStats: {
       acceleration: 0.05,
@@ -27863,8 +27607,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Seaplane Platform",
       specialAbilities: [],
       tags: ["Амфибия", "Радар", "Сонар"],
@@ -27890,10 +27633,10 @@ const ARM_DATA = {
       hp: 1920,
       speed: 9,
       range: 1280,
-      damage: 0,
+      damage: 360,
       weaponType: "BOMB_ADV",
       weaponName: "Heavy Bombs",
-      weaponDetails: [{"id": "BOMB_ADV", "name": "Heavy Bombs", "damage": 0, "range": 1280, "burst": 1, "reload": 0.28, "velocity": 0, "aoe": 108, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Сильный урон по земле", "Быстрый"],      weaknesses: ["Уязвим для ПВО", "Ограниченное вооружение"],
+      weaponDetails: [{"id": "BOMB_ADV", "name": "Heavy Bombs", "damage": 360, "range": 1280, "burst": 1, "reload": 0.28, "burstrate": 0, "velocity": 0, "aoe": 108, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Сильный урон по земле", "Быстрый"],      weaknesses: ["Уязвим для ПВО", "Ограниченное вооружение"],      counters: [],
 
       fullStats: {
       acceleration: 0.09,
@@ -27919,7 +27662,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 200,
-      damage: 0,
+      damage: 360,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "VA-B3",
@@ -27969,8 +27712,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
       tags: [],
@@ -27999,7 +27741,7 @@ const ARM_DATA = {
       damage: 2000,
       weaponType: "CANNON_LRPC_CORE",
       weaponName: "Intimidator Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_LRPC_CORE", "name": "Intimidator Plasma Cannon", "damage": 2000, "range": 5376, "burst": 1, "reload": 0.3, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 6000, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "CANNON_LRPC_CORE", "name": "Intimidator Plasma Cannon", "damage": 2000, "range": 5376, "burst": 1, "reload": 0.3, "burstrate": 0, "velocity": 800, "aoe": 160, "type": "", "energyPerShot": 6000, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 375, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -28075,8 +27817,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 240
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Ultra Construction Kbot",
       specialAbilities: [],
       tags: ["Пушка"],
@@ -28105,7 +27846,7 @@ const ARM_DATA = {
       damage: 4800,
       weaponType: "BLOD_KROG",
       weaponName: "Annihilator Weapon",
-      weaponDetails: [{"id": "BLOD_KROG", "name": "Annihilator Weapon", "damage": 4800, "range": 640, "burst": 1, "reload": 3, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 4800, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_KROG", "name": "Heavy Rockets", "damage": 900, "range": 720, "burst": 1, "reload": 0.75, "velocity": 550, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 250}, {"id": "HYPER_KROG", "name": "Ultra Gauss Cannon", "damage": 900, "range": 448, "burst": 1, "reload": 0.75, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 1350, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Высокий урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой"],
+      weaponDetails: [{"id": "BLOD_KROG", "name": "Annihilator Weapon", "damage": 4800, "range": 640, "burst": 1, "reload": 3, "burstrate": 0, "velocity": 960, "aoe": 32, "type": "", "energyPerShot": 4800, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "VSPAM_KROG", "name": "Heavy Rockets", "damage": 900, "range": 720, "burst": 1, "reload": 0.75, "burstrate": 0, "velocity": 550, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 250}, {"id": "HYPER_KROG", "name": "Ultra Gauss Cannon", "damage": 900, "range": 448, "burst": 1, "reload": 0.75, "burstrate": 0, "velocity": 500, "aoe": 48, "type": "", "energyPerShot": 1350, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Высокий урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой"],      counters: [],
 
       fullStats: {
       acceleration: 0.09,
@@ -28181,8 +27922,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Ultra Kbot Gantry",
       specialAbilities: [],
       tags: ["Амфибия", "Самоисцеление"],
@@ -28210,7 +27950,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -28286,8 +28026,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -28316,7 +28055,7 @@ const ARM_DATA = {
       damage: 180,
       weaponType: "RIOT_LEVLR",
       weaponName: "Riot Cannon",
-      weaponDetails: [{"id": "RIOT_LEVLR", "name": "Riot Cannon", "damage": 180, "range": 180, "burst": 1, "reload": 1, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],
+      weaponDetails: [{"id": "RIOT_LEVLR", "name": "Riot Cannon", "damage": 180, "range": 180, "burst": 1, "reload": 1, "burstrate": 0, "velocity": 500, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.04,
@@ -28392,8 +28131,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -28422,7 +28160,7 @@ const ARM_DATA = {
       damage: 80,
       weaponType: "LASER_LIGHT",
       weaponName: "Light Laser",
-      weaponDetails: [{"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Стационарная оборона", "Не требует управления"],      weaknesses: ["Не移动", "Можно обойти"],
+      weaponDetails: [{"id": "LASER_LIGHT", "name": "Light Laser", "damage": 80, "range": 450, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 20, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Стационарная оборона", "Не требует управления"],      weaknesses: ["Не移动", "Можно обойти"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -28498,8 +28236,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["Лазер"],
@@ -28528,7 +28265,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "ANTI_NUKE_MOB",
       weaponName: "Rocket",
-      weaponDetails: [{"id": "ANTI_NUKE_MOB", "name": "Rocket", "damage": 0, "range": 27000, "burst": 1, "reload": 120, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [{"id": "ANTI_NUKE_MOB", "name": "Rocket", "damage": 0, "range": 27000, "burst": 1, "reload": 120, "burstrate": 0, "velocity": 800, "aoe": 96, "type": "", "energyPerShot": 24000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 240, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.015,
@@ -28604,8 +28341,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: ["Anti-Nuke"],
@@ -28633,7 +28369,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -28709,8 +28445,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["Конвертер"],
@@ -28739,7 +28474,7 @@ const ARM_DATA = {
       damage: 180,
       weaponType: "CANNON_ART_MEDIUM",
       weaponName: "Medium Artillery Cannon",
-      weaponDetails: [{"id": "CANNON_ART_MEDIUM", "name": "Medium Artillery Cannon", "damage": 180, "range": 1200, "burst": 1, "reload": 0.35, "velocity": 450, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Дальний обстрел", "Сильный урон"],      weaknesses: ["Слабая защита в ближнем бою"],
+      weaponDetails: [{"id": "CANNON_ART_MEDIUM", "name": "Medium Artillery Cannon", "damage": 180, "range": 1200, "burst": 1, "reload": 0.35, "burstrate": 0, "velocity": 450, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Дальний обстрел", "Сильный урон"],      weaknesses: ["Слабая защита в ближнем бою"],      counters: [],
 
       fullStats: {
       acceleration: 0.006,
@@ -28815,11 +28550,10 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
-      tags: ["Штурм", "Артиллерия"],
+      tags: ["Артиллерия"],
       image: null,
       hotkey: ""
     },
@@ -28844,7 +28578,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Добыча металла", "Основа экономики"],      weaknesses: ["Стационарный", "Уязвим для рейдов"],
+      weaponDetails: [],      strengths: ["Добыча металла", "Основа экономики"],      weaknesses: ["Стационарный", "Уязвим для рейдов"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -28920,8 +28654,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -28950,7 +28683,7 @@ const ARM_DATA = {
       damage: 168,
       weaponType: "VSPAM_MH",
       weaponName: "Starburst Missile",
-      weaponDetails: [{"id": "VSPAM_MH", "name": "Starburst Missile", "damage": 168, "range": 500, "burst": 1, "reload": 2, "velocity": -5, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 720}],      strengths: ["Амфибия", "Быстрый"],      weaknesses: ["Слабая броня", "Малый урон"],
+      weaponDetails: [{"id": "VSPAM_MH", "name": "Starburst Missile", "damage": 168, "range": 500, "burst": 1, "reload": 2, "burstrate": 0, "velocity": -5, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 720}],      strengths: ["Амфибия", "Быстрый"],      weaknesses: ["Слабая броня", "Малый урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.06,
@@ -29026,8 +28759,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
       tags: ["Амфибия"],
@@ -29053,10 +28785,10 @@ const ARM_DATA = {
       hp: 818,
       speed: 1.2,
       range: 900,
-      damage: 45,
+      damage: 720,
       weaponType: "MISSILE_GF_HEAVY",
       weaponName: "Missiles",
-      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["ПВО", "Защита от авиации"],      weaknesses: ["Слабый урон по земле"],
+      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["ПВО", "Защита от авиации"],      weaknesses: ["Слабый урон по земле"],      counters: [],
 
       fullStats: {
       acceleration: 0.027,
@@ -29082,7 +28814,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 45,
+      damage: 720,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "MA-GM2",
@@ -29132,8 +28864,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -29161,7 +28892,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -29237,8 +28968,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Конвертер"],
@@ -29266,7 +28996,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Добыча металла", "Основа экономики"],      weaknesses: ["Стационарный", "Уязвим для рейдов"],
+      weaponDetails: [],      strengths: ["Добыча металла", "Основа экономики"],      weaknesses: ["Стационарный", "Уязвим для рейдов"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -29342,8 +29072,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -29372,7 +29101,7 @@ const ARM_DATA = {
       damage: 96,
       weaponType: "CANNON_MORT",
       weaponName: "Morty Artillery Cannon",
-      weaponDetails: [{"id": "CANNON_MORT", "name": "Morty Artillery Cannon", "damage": 96, "range": 1050, "burst": 1, "reload": 1.6, "velocity": 375, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 200, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [{"id": "CANNON_MORT", "name": "Morty Artillery Cannon", "damage": 96, "range": 1050, "burst": 1, "reload": 1.6, "burstrate": 0, "velocity": 375, "aoe": 80, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 200, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.1,
@@ -29448,8 +29177,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: ["Ползущий"],
@@ -29478,7 +29206,7 @@ const ARM_DATA = {
       damage: 1200,
       weaponType: "VLAUNCH_SHIP_CORE",
       weaponName: "Rocket",
-      weaponDetails: [{"id": "VLAUNCH_SHIP_CORE", "name": "Rocket", "damage": 1200, "range": 1536, "burst": 1, "reload": 12, "velocity": 450, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Мощное вооружение", "Высокое здоровье"],      weaknesses: ["Медленный", "Дорогой"],
+      weaponDetails: [{"id": "VLAUNCH_SHIP_CORE", "name": "Rocket", "damage": 1200, "range": 1536, "burst": 1, "reload": 12, "burstrate": 0, "velocity": 450, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Мощное вооружение", "Высокое здоровье"],      weaknesses: ["Медленный", "Дорогой"],      counters: [],
 
       fullStats: {
       acceleration: 0.036,
@@ -29554,8 +29282,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -29583,7 +29310,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Хранение ресурсов"],      weaknesses: ["Не вооружён", "Стационарный"],
+      weaponDetails: [],      strengths: ["Хранение ресурсов"],      weaknesses: ["Не вооружён", "Стационарный"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -29659,8 +29386,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -29688,7 +29414,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.15,
@@ -29764,8 +29490,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 480
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: ["Ползущий", "Воскрешение"],
@@ -29794,7 +29519,7 @@ const ARM_DATA = {
       damage: 40,
       weaponType: "FLAMETHROWER_PLAS",
       weaponName: "FlameThrower",
-      weaponDetails: [{"id": "FLAMETHROWER_PLAS", "name": "FlameThrower", "damage": 40, "range": 450, "burst": 6, "reload": 0.3, "velocity": 432, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "FLAMETHROWER_PLAS", "name": "FlameThrower", "damage": 40, "range": 450, "burst": 6, "reload": 0.3, "burstrate": 0.025, "velocity": 432, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -29870,8 +29595,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -29899,7 +29623,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -29975,8 +29699,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 33,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -30005,7 +29728,7 @@ const ARM_DATA = {
       damage: 50,
       weaponType: "LASER_FAST",
       weaponName: "Laser",
-      weaponDetails: [{"id": "LASER_FAST", "name": "Laser", "damage": 50, "range": 240, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],
+      weaponDetails: [{"id": "LASER_FAST", "name": "Laser", "damage": 50, "range": 240, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],      counters: [],
 
       fullStats: {
       acceleration: 0.32,
@@ -30081,8 +29804,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
       tags: ["Штурм"],
@@ -30111,7 +29833,7 @@ const ARM_DATA = {
       damage: 360,
       weaponType: "CANNON_MRPC",
       weaponName: "Medium Range Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -30187,8 +29909,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Пушка"],
@@ -30217,7 +29938,7 @@ const ARM_DATA = {
       damage: 10,
       weaponType: "FLAMETHROWER",
       weaponName: "Flame Thrower",
-      weaponDetails: [{"id": "FLAMETHROWER", "name": "Flame Thrower", "damage": 10, "range": 160, "burst": 17, "reload": 1.2, "velocity": 188, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 200, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [{"id": "FLAMETHROWER", "name": "Flame Thrower", "damage": 10, "range": 160, "burst": 17, "reload": 1.2, "burstrate": 0.04, "velocity": 188, "aoe": 32, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 200, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.15,
@@ -30293,8 +30014,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -30322,7 +30042,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Стационарная оборона", "Не требует управления"],      weaknesses: ["Не移动", "Можно обойти"],
+      weaponDetails: [],      strengths: ["Стационарная оборона", "Не требует управления"],      weaknesses: ["Не移动", "Можно обойти"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -30398,8 +30118,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["Радар"],
@@ -30428,7 +30147,7 @@ const ARM_DATA = {
       damage: 135,
       weaponType: "CANNON_TANK_LIGHT",
       weaponName: "Light Tank Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_TANK_LIGHT", "name": "Light Tank Plasma Cannon", "damage": 135, "range": 335, "burst": 1, "reload": 1.5, "velocity": 220, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],
+      weaponDetails: [{"id": "CANNON_TANK_LIGHT", "name": "Light Tank Plasma Cannon", "damage": 135, "range": 335, "burst": 1, "reload": 1.5, "burstrate": 0, "velocity": 220, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.013,
@@ -30504,8 +30223,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -30534,7 +30252,7 @@ const ARM_DATA = {
       damage: 160,
       weaponType: "RIOT_REAPER",
       weaponName: "Reaper Riot Cannon",
-      weaponDetails: [{"id": "RIOT_REAPER", "name": "Reaper Riot Cannon", "damage": 160, "range": 360, "burst": 1, "reload": 0.2, "velocity": 540, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],
+      weaponDetails: [{"id": "RIOT_REAPER", "name": "Reaper Riot Cannon", "damage": 160, "range": 360, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 540, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 3000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.024,
@@ -30610,8 +30328,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -30637,10 +30354,10 @@ const ARM_DATA = {
       hp: 300,
       speed: 0,
       range: 900,
-      damage: 45,
+      damage: 720,
       weaponType: "MISSILE_GF_HEAVY",
       weaponName: "Missiles",
-      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 1, "range": 900, "burst": 1, "reload": 0.125, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "MISSILE_GF_HEAVY", "name": "Missiles", "damage": 45, "range": 450, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 600}, {"id": "MISSILE_AA_HEAVY", "name": "Missiles", "damage": 720, "range": 900, "burst": 1, "reload": 0.125, "burstrate": 0, "velocity": 900, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 600}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -30666,7 +30383,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 45,
+      damage: 720,
       damageModifier: 0.25,
       defaultMissionType: "GUARD_NOMOVE",
       designation: "F-R14",
@@ -30716,8 +30433,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -30742,10 +30458,11 @@ const ARM_DATA = {
       sourceWeapons: "fbi",
       hp: 468,
       speed: 1.95,
-      range: 0,
-      damage: 0,
-      weaponType: "None",
-      weaponDetails: [],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],
+      range: 112,
+      damage: 1440,
+      weaponType: "CRAWL_BLASTMED",
+      weaponName: "Medium Crawling Bomb",
+      weaponDetails: [{"id": "CRAWL_BLASTMED", "name": "Medium Crawling Bomb", "damage": 1440, "range": 112, "burst": 1, "reload": 3.6, "burstrate": 0, "velocity": 250, "aoe": 300, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.99,
@@ -30771,7 +30488,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 40000000,
       cruiseAlt: 0,
-      damage: 0,
+      damage: 1440,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "UV-2-AB",
@@ -30803,7 +30520,7 @@ const ARM_DATA = {
       onOffable: false,
       radar: 24,
       radarJam: 0,
-      range: 0,
+      range: 112,
       selfDestructAs: "CRAWL_BLASTMED",
       selfDestructCountdown: 0,
       sight: 512,
@@ -30821,11 +30538,10 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
-      tags: ["Ползущий", "Камикадзе"],
+      tags: ["Штурм", "Ползущий", "Камикадзе"],
       image: null,
       hotkey: ""
     },
@@ -30848,10 +30564,10 @@ const ARM_DATA = {
       hp: 5985,
       speed: 2.4,
       range: 640,
-      damage: 216,
+      damage: 480,
       weaponType: "CANNON_ROY",
       weaponName: "Destroyer Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_ROY", "name": "Destroyer Plasma Cannon", "damage": 216, "range": 640, "burst": 1, "reload": 2, "velocity": 320, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "DEPTHCHARGE", "name": "Depth Charge", "damage": 120, "range": 375, "burst": 1, "reload": 2, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],
+      weaponDetails: [{"id": "CANNON_ROY", "name": "Destroyer Plasma Cannon", "damage": 216, "range": 640, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 320, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}, {"id": "DEPTHCHARGE", "name": "Depth Charge", "damage": 480, "range": 375, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 120, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 120}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],      counters: [],
 
       fullStats: {
       acceleration: 0.0405,
@@ -30877,7 +30593,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 216,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "SA-AS4",
@@ -30927,8 +30643,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
       tags: ["Торпеды"],
@@ -30957,7 +30672,7 @@ const ARM_DATA = {
       damage: 180,
       weaponType: "CANNON_TANK_MEDIUM",
       weaponName: "Medium Tank Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_TANK_MEDIUM", "name": "Medium Tank Plasma Cannon", "damage": 180, "range": 400, "burst": 1, "reload": 1.25, "velocity": 230, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],
+      weaponDetails: [{"id": "CANNON_TANK_MEDIUM", "name": "Medium Tank Plasma Cannon", "damage": 180, "range": 400, "burst": 1, "reload": 1.25, "burstrate": 0, "velocity": 230, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Хорошая броня", "Мобильность"],      weaknesses: ["Средний урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.03,
@@ -31033,8 +30748,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: ["Амфибия"],
@@ -31060,10 +30774,10 @@ const ARM_DATA = {
       hp: 1890,
       speed: 10.5,
       range: 640,
-      damage: 480,
+      damage: 1920,
       weaponType: "TORPEDO_SEAP",
       weaponName: "Torpedo Launcher",
-      weaponDetails: [{"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}, {"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}, {"id": "MISSILE_VTOL", "name": "Hybrid GF+AA Guided Missiles", "damage": 36, "range": 600, "burst": 1, "reload": 1.8, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}],      strengths: ["Сильный урон по земле", "Быстрый"],      weaknesses: ["Уязвим для ПВО", "Ограниченное вооружение"],
+      weaponDetails: [{"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}, {"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}, {"id": "MISSILE_VTOL", "name": "Hybrid GF+AA Guided Missiles", "damage": 576, "range": 600, "burst": 1, "reload": 1.8, "burstrate": 0, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}],      strengths: ["Сильный урон по земле", "Быстрый"],      weaknesses: ["Уязвим для ПВО", "Ограниченное вооружение"],      counters: [],
 
       fullStats: {
       acceleration: 0.26,
@@ -31089,7 +30803,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 75,
-      damage: 480,
+      damage: 1920,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "SB-BR4",
@@ -31139,8 +30853,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Seaplane Platform",
       specialAbilities: [],
       tags: ["Торпеды", "Амфибия"],
@@ -31166,10 +30879,10 @@ const ARM_DATA = {
       hp: 2055,
       speed: 1.05,
       range: 825,
-      damage: 0,
+      damage: 480,
       weaponType: "FLAK",
       weaponName: "Flak Cannon",
-      weaponDetails: [{"id": "FLAK", "name": "Flak Cannon", "damage": 0, "range": 825, "burst": 1, "reload": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["ПВО", "Защита от авиации"],      weaknesses: ["Слабый урон по земле"],
+      weaponDetails: [{"id": "FLAK", "name": "Flak Cannon", "damage": 480, "range": 825, "burst": 1, "reload": 0.14, "burstrate": 0, "velocity": 1920, "aoe": 192, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 2000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["ПВО", "Защита от авиации"],      weaknesses: ["Слабый урон по земле"],      counters: [],
 
       fullStats: {
       acceleration: 0.04,
@@ -31195,7 +30908,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 0,
+      damage: 480,
       damageModifier: 0,
       defaultMissionType: "Standby",
       designation: "KG-EHL",
@@ -31245,8 +30958,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -31272,10 +30984,10 @@ const ARM_DATA = {
       hp: 880,
       speed: 11,
       range: 720,
-      damage: 24,
+      damage: 768,
       weaponType: "MISSILE_VTOL_GF",
       weaponName: "GF Only Guided Missiles",
-      weaponDetails: [{"id": "MISSILE_VTOL_GF", "name": "GF Only Guided Missiles", "damage": 24, "range": 600, "burst": 1, "reload": 1.8, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}, {"id": "MISSILE_VTOL_ADV_1", "name": "Guided Missiles", "damage": 1, "range": 720, "burst": 1, "reload": 1.7, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}, {"id": "MISSILE_VTOL_ADV_2", "name": "Guided Missiles", "damage": 1, "range": 720, "burst": 1, "reload": 1.9, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}],      strengths: ["Воздушное превосходство", "Быстрый"],      weaknesses: ["Слабый урон по земле"],
+      weaponDetails: [{"id": "MISSILE_VTOL_GF", "name": "GF Only Guided Missiles", "damage": 24, "range": 600, "burst": 1, "reload": 1.8, "burstrate": 0, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}, {"id": "MISSILE_VTOL_ADV_1", "name": "Guided Missiles", "damage": 768, "range": 720, "burst": 1, "reload": 1.7, "burstrate": 0, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}, {"id": "MISSILE_VTOL_ADV_2", "name": "Guided Missiles", "damage": 768, "range": 720, "burst": 1, "reload": 1.9, "burstrate": 0, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}],      strengths: ["Воздушное превосходство", "Быстрый"],      weaknesses: ["Слабый урон по земле"],      counters: [],
 
       fullStats: {
       acceleration: 0.38,
@@ -31301,7 +31013,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 160,
-      damage: 24,
+      damage: 768,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "SB-BR4",
@@ -31351,8 +31063,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Seaplane Platform",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -31381,7 +31092,7 @@ const ARM_DATA = {
       damage: 36,
       weaponType: "LASER_FAV",
       weaponName: "Laser",
-      weaponDetails: [{"id": "LASER_FAV", "name": "Laser", "damage": 36, "range": 180, "burst": 1, "reload": 1, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Амфибия", "Быстрый"],      weaknesses: ["Слабая броня", "Малый урон"],
+      weaponDetails: [{"id": "LASER_FAV", "name": "Laser", "damage": 36, "range": 180, "burst": 1, "reload": 1, "burstrate": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Амфибия", "Быстрый"],      weaknesses: ["Слабая броня", "Малый урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.1,
@@ -31457,8 +31168,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
       tags: ["Амфибия"],
@@ -31487,7 +31197,7 @@ const ARM_DATA = {
       damage: 180,
       weaponType: "BOMB",
       weaponName: "Bombs",
-      weaponDetails: [{"id": "BOMB", "name": "Bombs", "damage": 180, "range": 1280, "burst": 1, "reload": 0.19, "velocity": 0, "aoe": 72, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Сильный урон по земле", "Быстрый"],      weaknesses: ["Уязвим для ПВО", "Ограниченное вооружение"],
+      weaponDetails: [{"id": "BOMB", "name": "Bombs", "damage": 180, "range": 1280, "burst": 1, "reload": 0.19, "burstrate": 0, "velocity": 0, "aoe": 72, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": true, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Сильный урон по земле", "Быстрый"],      weaknesses: ["Уязвим для ПВО", "Ограниченное вооружение"],      counters: [],
 
       fullStats: {
       acceleration: 0.07,
@@ -31563,8 +31273,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
       tags: [],
@@ -31590,10 +31299,10 @@ const ARM_DATA = {
       hp: 1656,
       speed: 2.1,
       range: 900,
-      damage: 960,
+      damage: 3840,
       weaponType: "TORPEDO_SNIPE",
       weaponName: "Torpedo",
-      weaponDetails: [{"id": "TORPEDO_SNIPE", "name": "Torpedo", "damage": 960, "range": 900, "burst": 1, "reload": 4, "velocity": 225, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 225}],      strengths: ["Скрытность под водой", "Торпеды"],      weaknesses: ["Уязвим для сонара"],
+      weaponDetails: [{"id": "TORPEDO_SNIPE", "name": "Torpedo", "damage": 3840, "range": 900, "burst": 1, "reload": 4, "burstrate": 0, "velocity": 225, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 225}],      strengths: ["Скрытность под водой", "Торпеды"],      weaknesses: ["Уязвим для сонара"],      counters: [],
 
       fullStats: {
       acceleration: 0.06,
@@ -31619,7 +31328,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 960,
+      damage: 3840,
       damageModifier: 0.25,
       defaultMissionType: "Standby",
       designation: "SBS-T2",
@@ -31669,8 +31378,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 20,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: ["Торпеды"],
@@ -31699,7 +31407,7 @@ const ARM_DATA = {
       damage: 19200,
       weaponType: "NUKE_CORE",
       weaponName: "Strategic Nuclear Missile",
-      weaponDetails: [{"id": "NUKE_CORE", "name": "Strategic Nuclear Missile", "damage": 19200, "range": 30720, "burst": 1, "reload": 300, "velocity": 525, "aoe": 1440, "type": "", "energyPerShot": 450000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 4500, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "NUKE_CORE", "name": "Strategic Nuclear Missile", "damage": 19200, "range": 30720, "burst": 1, "reload": 300, "burstrate": 0, "velocity": 525, "aoe": 1440, "type": "", "energyPerShot": 450000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 4500, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -31775,8 +31483,7 @@ const ARM_DATA = {
       veterancyThresholds: "20 40 60 80 100",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Ultra Construction Kbot",
       specialAbilities: [],
       tags: ["Nuke"],
@@ -31804,7 +31511,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],
+      weaponDetails: [],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],      counters: [],
 
       fullStats: {
       acceleration: 0.08,
@@ -31880,8 +31587,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: ["Антирадар"],
@@ -31910,7 +31616,7 @@ const ARM_DATA = {
       damage: 180,
       weaponType: "CANNON_TANK_MEDIUM",
       weaponName: "Medium Tank Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_TANK_MEDIUM", "name": "Medium Tank Plasma Cannon", "damage": 180, "range": 400, "burst": 1, "reload": 1.25, "velocity": 230, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Амфибия", "Быстрый"],      weaknesses: ["Слабая броня", "Малый урон"],
+      weaponDetails: [{"id": "CANNON_TANK_MEDIUM", "name": "Medium Tank Plasma Cannon", "damage": 180, "range": 400, "burst": 1, "reload": 1.25, "burstrate": 0, "velocity": 230, "aoe": 64, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 0, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Амфибия", "Быстрый"],      weaknesses: ["Слабая броня", "Малый урон"],      counters: [],
 
       fullStats: {
       acceleration: 0.065,
@@ -31986,8 +31692,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Hovercraft Platform",
       specialAbilities: [],
       tags: ["Амфибия"],
@@ -32015,7 +31720,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Генерация энергии", "Бонус соседства"],      weaknesses: ["Не вооружён", "Стационарный"],
+      weaponDetails: [],      strengths: ["Генерация энергии", "Бонус соседства"],      weaknesses: ["Не вооружён", "Стационарный"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -32091,8 +31796,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -32120,7 +31824,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -32196,8 +31900,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 12,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -32225,7 +31928,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Дальний радар", "Раннее предупреждение"],      weaknesses: ["Слабое вооружение"],
+      weaponDetails: [],      strengths: ["Дальний радар", "Раннее предупреждение"],      weaknesses: ["Слабое вооружение"],      counters: [],
 
       fullStats: {
       acceleration: 0.1,
@@ -32301,8 +32004,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: ["Антирадар"],
@@ -32331,7 +32033,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "None",
       weaponName: "",
-      weaponDetails: [],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [],      strengths: ["Универсальный"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.2,
@@ -32407,8 +32109,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: ["Амфибия", "Cloak"],
@@ -32434,10 +32135,10 @@ const ARM_DATA = {
       hp: 11445,
       speed: 1.95,
       range: 640,
-      damage: 720,
+      damage: 2880,
       weaponType: "TORPEDO_SSUB",
       weaponName: "Torpedo Launcher",
-      weaponDetails: [{"id": "TORPEDO_SSUB", "name": "Torpedo Launcher", "damage": 720, "range": 640, "burst": 1, "reload": 2.4, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}, {"id": "TORPEDO_SSUB", "name": "Torpedo Launcher", "damage": 720, "range": 640, "burst": 1, "reload": 2.4, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}],      strengths: ["Скрытность под водой", "Торпеды"],      weaknesses: ["Уязвим для сонара"],
+      weaponDetails: [{"id": "TORPEDO_SSUB", "name": "Torpedo Launcher", "damage": 2880, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}, {"id": "TORPEDO_SSUB", "name": "Torpedo Launcher", "damage": 2880, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 100, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 100}],      strengths: ["Скрытность под водой", "Торпеды"],      weaknesses: ["Уязвим для сонара"],      counters: [],
 
       fullStats: {
       acceleration: 0.025,
@@ -32463,7 +32164,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 720,
+      damage: 2880,
       damageModifier: 0.25,
       defaultMissionType: "Standby",
       designation: "ASD-SK",
@@ -32513,8 +32214,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 25,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Shipyard",
       specialAbilities: [],
       tags: ["Торпеды"],
@@ -32543,7 +32243,7 @@ const ARM_DATA = {
       damage: 108,
       weaponType: "ROCKET",
       weaponName: "Rockets",
-      weaponDetails: [{"id": "ROCKET", "name": "Rockets", "damage": 108, "range": 450, "burst": 1, "reload": 1.5, "velocity": 540, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 405}],      strengths: ["Дальний обстрел", "Сильный урон"],      weaknesses: ["Ближний бой", "Хрупкий"],
+      weaponDetails: [{"id": "ROCKET", "name": "Rockets", "damage": 108, "range": 450, "burst": 1, "reload": 1.5, "burstrate": 0, "velocity": 540, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 750, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 405}],      strengths: ["Дальний обстрел", "Сильный урон"],      weaknesses: ["Ближний бой", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.03,
@@ -32619,8 +32319,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -32646,10 +32345,10 @@ const ARM_DATA = {
       hp: 1475,
       speed: 2.8,
       range: 600,
-      damage: 480,
+      damage: 1920,
       weaponType: "TORPEDO",
       weaponName: "Unguided Torpedo",
-      weaponDetails: [{"id": "TORPEDO", "name": "Unguided Torpedo", "damage": 480, "range": 600, "burst": 1, "reload": 3, "velocity": 150, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 0}],      strengths: ["Скрытность под водой", "Торпеды"],      weaknesses: ["Уязвим для сонара"],
+      weaponDetails: [{"id": "TORPEDO", "name": "Unguided Torpedo", "damage": 1920, "range": 600, "burst": 1, "reload": 3, "burstrate": 0, "velocity": 150, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 0}],      strengths: ["Скрытность под водой", "Торпеды"],      weaknesses: ["Уязвим для сонара"],      counters: [],
 
       fullStats: {
       acceleration: 0.045,
@@ -32675,7 +32374,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 480,
+      damage: 1920,
       damageModifier: 0.25,
       defaultMissionType: "Standby",
       designation: "SAS-T4",
@@ -32725,8 +32424,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 20,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
       tags: ["Торпеды"],
@@ -32755,7 +32453,7 @@ const ARM_DATA = {
       damage: 768,
       weaponType: "LASER_SUMO",
       weaponName: "Advanced Heavy Laser Weapon",
-      weaponDetails: [{"id": "LASER_SUMO", "name": "Advanced Heavy Laser Weapon", "damage": 768, "range": 750, "burst": 1, "reload": 0.5, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 768, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Высокий урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой"],
+      weaponDetails: [{"id": "LASER_SUMO", "name": "Advanced Heavy Laser Weapon", "damage": 768, "range": 750, "burst": 1, "reload": 0.5, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 768, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Высокий урон", "Хорошая броня"],      weaknesses: ["Медленный", "Дорогой"],      counters: [],
 
       fullStats: {
       acceleration: 0.008,
@@ -32831,8 +32529,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Kbot Lab",
       specialAbilities: [],
       tags: [],
@@ -32861,7 +32558,7 @@ const ARM_DATA = {
       damage: 0,
       weaponType: "LAB_DIR",
       weaponName: "LAB_DIR",
-      weaponDetails: [{"id": "LAB_DIR", "name": "LAB_DIR", "damage": 0, "range": 0, "burst": 1, "reload": 0, "velocity": 0, "aoe": 0, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [{"id": "LAB_DIR", "name": "LAB_DIR", "damage": 0, "range": 0, "burst": 1, "reload": 0, "burstrate": 0, "velocity": 0, "aoe": 0, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 0, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -32937,8 +32634,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 1,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -32966,7 +32662,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Перевозка юнитов"],      weaknesses: ["Безоружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Перевозка юнитов"],      weaknesses: ["Безоружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.04,
@@ -33042,8 +32738,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 4,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
       tags: ["Амфибия", "Транспорт"],
@@ -33072,7 +32767,7 @@ const ARM_DATA = {
       damage: 84,
       weaponType: "CANNON_ART_LIGHT",
       weaponName: "Light Artillery Cannon",
-      weaponDetails: [{"id": "CANNON_ART_LIGHT", "name": "Light Artillery Cannon", "damage": 84, "range": 675, "burst": 1, "reload": 2, "velocity": 285, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Дальний обстрел", "Сильный урон"],      weaknesses: ["Ближний бой", "Хрупкий"],
+      weaponDetails: [{"id": "CANNON_ART_LIGHT", "name": "Light Artillery Cannon", "damage": 84, "range": 675, "burst": 1, "reload": 2, "burstrate": 0, "velocity": 285, "aoe": 96, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 0, "tolerance": 1000, "metalPerShot": 0, "accuracy": 250, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Дальний обстрел", "Сильный урон"],      weaknesses: ["Ближний бой", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.03,
@@ -33148,8 +32843,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: ["Артиллерия", "Ползущий"],
@@ -33177,7 +32871,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Генерация энергии", "Бонус соседства"],      weaknesses: ["Не вооружён", "Стационарный"],
+      weaponDetails: [],      strengths: ["Генерация энергии", "Бонус соседства"],      weaknesses: ["Не вооружён", "Стационарный"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -33253,8 +32947,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 2,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -33280,10 +32973,10 @@ const ARM_DATA = {
       hp: 1875,
       speed: 9.5,
       range: 640,
-      damage: 480,
+      damage: 1920,
       weaponType: "TORPEDO_SEAP",
       weaponName: "Torpedo Launcher",
-      weaponDetails: [{"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}, {"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 480, "range": 640, "burst": 1, "reload": 2.4, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}],      strengths: ["Сильный урон по земле", "Быстрый"],      weaknesses: ["Уязвим для ПВО", "Ограниченное вооружение"],
+      weaponDetails: [{"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}, {"id": "TORPEDO_SEAP", "name": "Torpedo Launcher", "damage": 1920, "range": 640, "burst": 1, "reload": 2.4, "burstrate": 0, "velocity": 125, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": false, "startVelocity": 125}],      strengths: ["Сильный урон по земле", "Быстрый"],      weaknesses: ["Уязвим для ПВО", "Ограниченное вооружение"],      counters: [],
 
       fullStats: {
       acceleration: 0.15,
@@ -33309,7 +33002,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 120,
-      damage: 480,
+      damage: 1920,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFD-J9",
@@ -33359,8 +33052,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
       tags: ["Торпеды"],
@@ -33386,10 +33078,10 @@ const ARM_DATA = {
       hp: 3040,
       speed: 0,
       range: 576,
-      damage: 360,
+      damage: 1440,
       weaponType: "TORPEDO_COAX",
       weaponName: "Torpedo Launcher",
-      weaponDetails: [{"id": "TORPEDO_COAX", "name": "Torpedo Launcher", "damage": 360, "range": 576, "burst": 1, "reload": 1.2, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 0}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],
+      weaponDetails: [{"id": "TORPEDO_COAX", "name": "Torpedo Launcher", "damage": 1440, "range": 576, "burst": 1, "reload": 1.2, "burstrate": 0, "velocity": 180, "aoe": 16, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 32767, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": true, "turret": true, "startVelocity": 0}],      strengths: ["Морская мощь"],      weaknesses: ["Только на воде"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -33415,7 +33107,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 0,
-      damage: 360,
+      damage: 1440,
       damageModifier: 0.25,
       defaultMissionType: "",
       designation: "",
@@ -33465,8 +33157,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 10,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Shipyard",
       specialAbilities: [],
       tags: [],
@@ -33495,7 +33186,7 @@ const ARM_DATA = {
       damage: 360,
       weaponType: "CANNON_MRPC",
       weaponName: "Medium Range Plasma Cannon",
-      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "CANNON_MRPC", "name": "Medium Range Plasma Cannon", "damage": 360, "range": 1344, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 400, "aoe": 128, "type": "", "energyPerShot": 540, "paralyzer": false, "lineOfSight": 0, "tolerance": 500, "metalPerShot": 0, "accuracy": 750, "ballistic": true, "beamWeapon": false, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -33571,8 +33262,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Пушка"],
@@ -33601,7 +33291,7 @@ const ARM_DATA = {
       damage: 6400,
       weaponType: "NUKE_TAC_CORE",
       weaponName: "Tactical Nuclear Missile",
-      weaponDetails: [{"id": "NUKE_TAC_CORE", "name": "Tactical Nuclear Missile", "damage": 6400, "range": 3584, "burst": 1, "reload": 240, "velocity": 700, "aoe": 672, "type": "", "energyPerShot": 120000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 1200, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "NUKE_TAC_CORE", "name": "Tactical Nuclear Missile", "damage": 6400, "range": 3584, "burst": 1, "reload": 240, "burstrate": 0, "velocity": 700, "aoe": 672, "type": "", "energyPerShot": 120000, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 1200, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": true, "commandFire": true, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -33677,8 +33367,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Nuke"],
@@ -33706,7 +33395,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Перевозка юнитов"],      weaknesses: ["Безоружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Перевозка юнитов"],      weaknesses: ["Безоружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.02,
@@ -33782,8 +33471,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
       tags: ["Транспорт"],
@@ -33811,7 +33499,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Хранение ресурсов"],      weaknesses: ["Не вооружён", "Стационарный"],
+      weaponDetails: [],      strengths: ["Хранение ресурсов"],      weaknesses: ["Не вооружён", "Стационарный"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -33887,8 +33575,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -33916,7 +33603,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -33992,8 +33679,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction Ship",
       specialAbilities: [],
       tags: [],
@@ -34021,7 +33707,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Добыча металла", "Основа экономики"],      weaknesses: ["Стационарный", "Уязвим для рейдов"],
+      weaponDetails: [],      strengths: ["Добыча металла", "Основа экономики"],      weaknesses: ["Стационарный", "Уязвим для рейдов"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -34097,8 +33783,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -34126,7 +33811,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Хранение ресурсов"],      weaknesses: ["Не вооружён", "Стационарный"],
+      weaponDetails: [],      strengths: ["Хранение ресурсов"],      weaknesses: ["Не вооружён", "Стационарный"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -34202,8 +33887,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
@@ -34231,7 +33915,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Перевозка юнитов"],      weaknesses: ["Безоружён", "Хрупкий"],
+      weaponDetails: [],      strengths: ["Перевозка юнитов"],      weaknesses: ["Безоружён", "Хрупкий"],      counters: [],
 
       fullStats: {
       acceleration: 0.16,
@@ -34307,8 +33991,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
       tags: ["Транспорт"],
@@ -34334,10 +34017,10 @@ const ARM_DATA = {
       hp: 735,
       speed: 11.25,
       range: 720,
-      damage: 24,
+      damage: 768,
       weaponType: "MISSILE_VTOL_GF",
       weaponName: "GF Only Guided Missiles",
-      weaponDetails: [{"id": "MISSILE_VTOL_GF", "name": "GF Only Guided Missiles", "damage": 24, "range": 600, "burst": 1, "reload": 1.8, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}, {"id": "MISSILE_VTOL_ADV_1", "name": "Guided Missiles", "damage": 1, "range": 720, "burst": 1, "reload": 1.7, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}, {"id": "MISSILE_VTOL_ADV_2", "name": "Guided Missiles", "damage": 1, "range": 720, "burst": 1, "reload": 1.9, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}],      strengths: ["Воздушное превосходство", "Быстрый"],      weaknesses: ["Слабый урон по земле"],
+      weaponDetails: [{"id": "MISSILE_VTOL_GF", "name": "GF Only Guided Missiles", "damage": 24, "range": 600, "burst": 1, "reload": 1.8, "burstrate": 0, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}, {"id": "MISSILE_VTOL_ADV_1", "name": "Guided Missiles", "damage": 768, "range": 720, "burst": 1, "reload": 1.7, "burstrate": 0, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}, {"id": "MISSILE_VTOL_ADV_2", "name": "Guided Missiles", "damage": 768, "range": 720, "burst": 1, "reload": 1.9, "burstrate": 0, "velocity": 720, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 8000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": false, "startVelocity": 540}],      strengths: ["Воздушное превосходство", "Быстрый"],      weaknesses: ["Слабый урон по земле"],      counters: [],
 
       fullStats: {
       acceleration: 0.5,
@@ -34363,7 +34046,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 160,
-      damage: 24,
+      damage: 768,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "AFD-J9",
@@ -34413,11 +34096,10 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Aircraft Plant",
       specialAbilities: [],
-      tags: ["Стелс"],
+      tags: ["Штурм", "Стелс"],
       image: null,
       hotkey: ""
     },
@@ -34440,10 +34122,10 @@ const ARM_DATA = {
       hp: 505,
       speed: 11.25,
       range: 600,
-      damage: 36,
+      damage: 576,
       weaponType: "MISSILE_VTOL",
       weaponName: "Hybrid GF+AA Guided Missiles",
-      weaponDetails: [{"id": "MISSILE_VTOL", "name": "Hybrid GF+AA Guided Missiles", "damage": 36, "range": 600, "burst": 1, "reload": 1.8, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}],      strengths: ["Воздушное превосходство", "Быстрый"],      weaknesses: ["Слабый урон по земле"],
+      weaponDetails: [{"id": "MISSILE_VTOL", "name": "Hybrid GF+AA Guided Missiles", "damage": 576, "range": 600, "burst": 1, "reload": 1.8, "burstrate": 0, "velocity": 600, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 9000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 450}],      strengths: ["Воздушное превосходство", "Быстрый"],      weaknesses: ["Слабый урон по земле"],      counters: [],
 
       fullStats: {
       acceleration: 0.4,
@@ -34469,7 +34151,7 @@ const ARM_DATA = {
       cloakCost: 0,
       cloakCostMoving: 0,
       cruiseAlt: 135,
-      damage: 36,
+      damage: 576,
       damageModifier: 0.25,
       defaultMissionType: "VTOL_standby",
       designation: "VA-GM15",
@@ -34519,8 +34201,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Aircraft Plant",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -34549,7 +34230,7 @@ const ARM_DATA = {
       damage: 300,
       weaponType: "LASER_HEAVY",
       weaponName: "High Energy Laser",
-      weaponDetails: [{"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],
+      weaponDetails: [{"id": "LASER_HEAVY", "name": "High Energy Laser", "damage": 300, "range": 600, "burst": 1, "reload": 0.2, "burstrate": 0, "velocity": 960, "aoe": 16, "type": "", "energyPerShot": 150, "paralyzer": false, "lineOfSight": 1, "tolerance": 1000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": true, "guidance": false, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": false, "waterWeapon": false, "turret": true, "startVelocity": 0}],      strengths: ["Базовый юнит"],      weaknesses: ["Нет особых слабостей"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -34625,8 +34306,7 @@ const ARM_DATA = {
       veterancyThresholds: "10 20 30 40 50",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Construction KBot",
       specialAbilities: [],
       tags: ["Лазер"],
@@ -34654,7 +34334,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Дальний радар", "Раннее предупреждение"],      weaknesses: ["Слабое вооружение"],
+      weaponDetails: [],      strengths: ["Дальний радар", "Раннее предупреждение"],      weaknesses: ["Слабое вооружение"],      counters: [],
 
       fullStats: {
       acceleration: 0.041,
@@ -34730,8 +34410,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Kbot Lab",
       specialAbilities: [],
       tags: ["Радар"],
@@ -34759,7 +34438,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],
+      weaponDetails: [],      strengths: ["Производит юниты", "Основа экономики"],      weaknesses: ["Стационарный", "Дорогой", "Приоритетная цель"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -34835,8 +34514,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 120
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Vehicle Plant",
       specialAbilities: [],
       tags: [],
@@ -34864,7 +34542,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.03,
@@ -34940,8 +34618,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: ["Радар"],
@@ -34970,7 +34647,7 @@ const ARM_DATA = {
       damage: 1080,
       weaponType: "VLAUNCH_TRUCK_CORE",
       weaponName: "Rocket",
-      weaponDetails: [{"id": "VLAUNCH_TRUCK_CORE", "name": "Rocket", "damage": 1080, "range": 1344, "burst": 1, "reload": 9.6, "velocity": 600, "aoe": 72, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 1, "range": 825, "burst": 1, "reload": 0.4, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],
+      weaponDetails: [{"id": "VLAUNCH_TRUCK_CORE", "name": "Rocket", "damage": 1080, "range": 1344, "burst": 1, "reload": 9.6, "burstrate": 0, "velocity": 600, "aoe": 72, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 4000, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": true, "toAirWeapon": false, "waterWeapon": false, "turret": false, "startVelocity": 0}, {"id": "MISSILE_AA_MEDIUM", "name": "Missiles", "damage": 480, "range": 825, "burst": 1, "reload": 0.4, "burstrate": 0, "velocity": 825, "aoe": 48, "type": "", "energyPerShot": 0, "paralyzer": false, "lineOfSight": 1, "tolerance": 1500, "metalPerShot": 0, "accuracy": 0, "ballistic": false, "beamWeapon": false, "guidance": true, "stockpile": false, "commandFire": false, "noAutoRange": false, "toAirWeapon": true, "waterWeapon": false, "turret": true, "startVelocity": 550}],      strengths: ["Мобильность", "Универсальность"],      weaknesses: ["Средние характеристики"],      counters: [],
 
       fullStats: {
       acceleration: 0.016,
@@ -35046,8 +34723,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Adv. Vehicle Plant",
       specialAbilities: [],
       tags: ["ПВО"],
@@ -35075,7 +34751,7 @@ const ARM_DATA = {
       range: 0,
       damage: 0,
       weaponType: "None",
-      weaponDetails: [],      strengths: ["Генерация энергии", "Бонус соседства"],      weaknesses: ["Не вооружён", "Стационарный"],
+      weaponDetails: [],      strengths: ["Генерация энергии", "Бонус соседства"],      weaknesses: ["Не вооружён", "Стационарный"],      counters: [],
 
       fullStats: {
       acceleration: 0,
@@ -35151,8 +34827,7 @@ const ARM_DATA = {
       veterancyThresholds: "",
       waterLine: 0,
       workerTime: 0
-    },      counters: [],
-      counteredBy: [],
+    },      counteredBy: [],
       builtAt: "Construction KBot",
       specialAbilities: [],
       tags: [],
