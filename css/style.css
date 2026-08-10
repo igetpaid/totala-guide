@@ -387,6 +387,18 @@ body {
 }
 .faq-item.open .faq-answer { display: block; }
 
+/* ═══════ FAQ DETAIL (страница с деталями) ═══════ */
+.faq-item-detail { cursor: pointer; }
+.faq-item-detail .faq-question { display: flex; justify-content: space-between; align-items: center; }
+.faq-arrow {
+  font-size: 20px; color: var(--accent); font-weight: 700;
+  transition: transform 0.2s ease;
+}
+.faq-item-detail:hover .faq-arrow { transform: translateX(4px); }
+.faq-detail-content { font-size: 14px; color: var(--text-secondary); line-height: 1.7; }
+.faq-detail-content h4 { color: var(--yellow); margin-bottom: 8px; }
+.faq-detail-content p { margin-bottom: 8px; }
+
 /* ═══════ SETTINGS ═══════ */
 .settings-page { padding: 16px; max-width: 600px; margin: 0 auto; }
 .setting-item {

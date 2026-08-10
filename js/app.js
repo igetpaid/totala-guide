@@ -7,6 +7,7 @@ const App = {
   _scrollPosition: 0,
   _buildTab: "t1",
   _tipsSubPage: null,
+  _faqDetailId: null,
   faction: localStorage.getItem('ta-faction') || 'arm',
 
   init() {
@@ -39,10 +40,12 @@ const App = {
       this._unitDetailId = params ? params.unitId : null;
     } else if (view === "tips") {
       this._tipsSubPage = (params && params.sub) || null;
+    } else if (view === "faq-detail") {
+      this._faqDetailId = params ? params.faqId : null;
     }
 
     this.render();
-    if (view === "unit-detail") {
+    if (view === "unit-detail" || view === "faq-detail") {
       const el = document.getElementById("app");
       if (el) el.scrollTop = 0;
     }
@@ -71,6 +74,9 @@ const App = {
         break;
       case "faq":
         content = UI.renderFAQ();
+        break;
+      case "faq-detail":
+        content = UI.renderFaqDetail(this._faqDetailId);
         break;
       default:
         content = UI.renderHome();

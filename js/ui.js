@@ -1103,7 +1103,8 @@ const UI = {
       { q: "Как работает телепорт?", a: "Teleporter Kbot или Galactic Gates перемещают юнитов на огромные расстояния." },
       { q: "Что такое D-Gun?", a: "Disintegrator Gun командора. Мгновенно уничтожает любой юнит. Очень дорого." },
       { q: "Чем борется Krogoth?", a: "Raptor (ARM) или специализированные T3 юниты. Лучше \u2014 уничтожить до постройки." },
-      { q: "Зачем нужен Cloak/Stealth?", a: "Cloak делает невидимым глазами (тратит энергию). Stealth \u2014 для радара." }
+      { q: "Зачем нужен Cloak/Stealth?", a: "Cloak делает невидимым глазами (тратит энергию). Stealth \u2014 для радара." },
+      { q: "Режимы перемещения войск", a: "Hold Position, Maneuver, Roam \u2014 три режима движения юнитов. Нажми, чтобы узнать подробнее.", hasDetail: true, detailId: "movement-modes" }
     ];
 
     let html = `<div class="page-header">
@@ -1112,13 +1113,108 @@ const UI = {
     </div>
     <div class="faq-page">`;
     for (let i = 0; i < items.length; i++) {
-      html += `<div class="faq-item" onclick="this.classList.toggle('open')">
-        <div class="faq-question">${items[i].q}</div>
-        <div class="faq-answer">${items[i].a}</div>
-      </div>`;
+      if (items[i].hasDetail) {
+        html += `<div class="faq-item faq-item-detail" onclick="App.navigate('faq-detail',{faqId:'${items[i].detailId}'})">
+          <div class="faq-question">${items[i].q} <span class="faq-arrow">&#8250;</span></div>
+          <div class="faq-answer">${items[i].a}</div>
+        </div>`;
+      } else {
+        html += `<div class="faq-item" onclick="this.classList.toggle('open')">
+          <div class="faq-question">${items[i].q}</div>
+          <div class="faq-answer">${items[i].a}</div>
+        </div>`;
+      }
     }
     html += `</div>`;
     return html;
+  },
+
+  renderFaqDetail(faqId) {
+    const faqData = this._getFaqDetail(faqId);
+    if (!faqData) {
+      return `<div class="page-header">
+        <button class="back-btn" onclick="App.goBack()">&#8592;</button>
+        <h2>Не найдено</h2>
+      </div>`;
+    }
+
+    let html = `<div class="page-header">
+      <button class="back-btn" onclick="App.goBack()">&#8592;</button>
+      <h2>${faqData.title}</h2>
+    </div>
+    <div class="detail-page">`;
+
+    html += `<div class="detail-section">
+      <h3>Кратко</h3>
+      <p>${faqData.brief}</p>
+    </div>`;
+
+    html += `<div class="detail-section">
+      <details class="full-stats" open>
+        <summary>Подробная информация</summary>
+        <div class="faq-detail-content" style="margin-top:12px">
+          ${faqData.detailed}
+        </div>
+      </details>
+    </div>`;
+
+    if (faqData.tips) {
+      html += `<div class="detail-section">
+        <h3>Советы</h3>
+        <div class="faq-detail-content">${faqData.tips}</div>
+      </div>`;
+    }
+
+    html += `</div>`;
+    return html;
+  },
+
+  _getFaqDetail(faqId) {
+    const details = {
+      "movement-modes": {
+        title: "Режимы перемещения войск",
+        brief: "В Total Annihilation есть три режима движения юнитов: <b>Hold Position</b> (стоять на месте), <b>Maneuver</b> (манёвр) и <b>Roam</b> (свободное перемещение). Переключаются клавишей <b>V</b> или кнопкой в панели управления. Режим определяет, как далеко юнит может отходить от своей позиции для преследования врага.",
+        detailed: `
+<h4 style="color:var(--yellow);margin-bottom:8px">Hold Position (Удерживать позицию)</h4>
+<p style="margin-bottom:12px">Юнит <b>полностью неподвижен</b>. Он стреляет по целям в пределах своей дальности, но ни на шаг не отходит от назначенной позиции. Даже если цель уходит из зоны поражения — юнит остаётся на месте.</p>
+<p style="margin-bottom:16px;color:var(--text-secondary)"><b>Когда использовать:</b> Артиллерия, ПВО, зенитки, самолёты на патруле. Любые юниты, которые должны оставаться на определённом маршруте.</p>
+
+<h4 style="color:var(--yellow);margin-bottom:8px">Maneuver (Манёвр)</h4>
+<p style="margin-bottom:12px">Юнит <b>немного преследует цель</b>, но в пределах короткого радиуса от исходной позиции. Если враг убежал далеко — юнит бросает погоню и возвращается на место. Это режим по умолчанию.</p>
+<p style="margin-bottom:16px;color:var(--text-secondary)"><b>Когда использовать:</b> Танки и киботы в обороне. Юниты будут немного подреагировать на приближение врага, но не убегут со своих позиций.</p>
+
+<h4 style="color:var(--yellow);margin-bottom:8px">Roam (Свободное перемещение)</h4>
+<p style="margin-bottom:12px">Юнит <b>преследует цель до конца</b>. Если враг уходит — юнит идёт за ним по всей карте, пока не убьёт или пока его не убьют. Нет ограничений на расстояние погони.</p>
+<p style="margin-bottom:16px;color:var(--text-secondary)"><b>Когда использовать:</b> Рейды, атаки, любые ситуации, когда юниты должны сами догонять и добивать врага без микроменеджмента.</p>
+
+<h4 style="color:var(--yellow);margin-bottom:8px">Техническая разница</h4>
+<p style="margin-bottom:8px">В коде игры это параметр <b>ManeuverLeashLength</b> — длина «поводка», определяющая как далеко юнит может отойти от точки:</p>
+<div class="stat-row" style="flex-direction:column;gap:4px;margin-bottom:16px">
+  <span>• <b>Hold Position</b> = 0 (поводок нулевой длины)</span>
+  <span>• <b>Maneuver</b> = значение по умолчанию (небольшой радиус)</span>
+  <span>• <b>Roam</b> = бесконечность (без ограничений)</span>
+</div>
+
+<h4 style="color:var(--yellow);margin-bottom:8px">Визуальный пример</h4>
+<p style="margin-bottom:8px">Представь, что ты поставил танк на патруль в точке A. Враг идёт мимо:</p>
+<div style="margin-bottom:16px;padding:10px;background:var(--bg-secondary);border-radius:8px;font-size:14px">
+  <div style="margin-bottom:6px"><b>Hold Position:</b> Танк стреляет, пока враг в радиусе. Враг ушёл — танк стоит, даже если за углом ещё 10 врагов.</div>
+  <div style="margin-bottom:6px"><b>Maneuver:</b> Танк стреляет, немного подъезжает к врагу. Враг ушёл дальше радиуса — танк возвращается на патруль.</div>
+  <div><b>Roam:</b> Танк стреляет и едет за врагом. Догоняет, убивает, ищет следующего. Может уехать на другой конец карты.</div>
+</div>
+        `,
+        tips: `
+<div style="font-size:14px;color:var(--text-secondary);line-height:1.6">
+  <p style="margin-bottom:8px">• <b>Для наземных юнитов</b> обычно ставят <span style="color:var(--yellow)">Roam</span> — так они сами преследуют и уничтожают цели без лишнего микроменеджмента.</p>
+  <p style="margin-bottom:8px">• <b>Для артиллерии и ПВО</b> — <span style="color:var(--yellow)">Hold Position</span>. Иначе они уедут с позиции и перестанут выполнять свою функцию.</p>
+  <p style="margin-bottom:8px">• <b>Для самолётов на патруле</b> — <span style="color:var(--yellow)">Hold Position</span>. Иначе они сбросятся с маршрута и полетят за каждым врагом.</p>
+  <p style="margin-bottom:8px">• <b>Для рейдов</b> (Flash, Jeffy) — <span style="color:var(--yellow)">Roam</span> + Patrol. Юниты будут патрулировать зону и сами атаковать приближающихся врагов.</p>
+  <p>• <b>Maneuver</b> полезен, когда нужно чтобы юниты немного сдвинулись для выстрела, но не уходили далеко от позиции.</p>
+</div>
+        `
+      }
+    };
+    return details[faqId] || null;
   },
 
   renderSettings() {
