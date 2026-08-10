@@ -852,13 +852,12 @@ const UI = {
 
     // Weapon section — separate block with per-weapon details
     const weapons = unit.weaponDetails || [];
-    if (weapons.length > 0 && (unit.damage > 0 || unit.sourceWeapons === 'fbi' || unit.sourceWeapons === 'wiki')) {
-      html += `<div class="detail-section"><h3>Оружие</h3>${this.renderSourceBadge(unit.sourceWeapons)}`;
+    if (weapons.length > 0 && (unit.damage > 0 || unit.sourceWeapons === 'fbi' || unit.sourceWeapons === 'wiki' || unit.sourceWeapons === 'modinfo')) {
+      html += `<div class="detail-section"><h3>Оружие</h3>${this.renderSourceIcon(unit.sourceWeapons)}${this.renderSourceBadge(unit.sourceWeapons)}`;
       for (const w of weapons) {
-        // DPS accounts for burst: total cycle = burst shots + reload
-        // cycle time = (burst - 1) * burstrate + reload
-        const cycle = w.reload > 0 ? (w.reload + ((w.burst || 1) - 1) * (w.burstrate || 0)) : 0;
-        const dps = cycle > 0 ? ((w.damage * (w.burst || 1)) / cycle).toFixed(1) : "0";
+        // DPS: reloadtime from the game is the full cycle (between volleys),
+        // already accounting for the burst. So DPS = damage*burst/reload.
+        const dps = w.reload > 0 ? ((w.damage * (w.burst || 1)) / w.reload).toFixed(1) : "0";
         const burstTime = (w.burst > 1 && w.burstrate > 0) ? (w.burstrate * ((w.burst || 1) - 1)).toFixed(2) : 0;
         html += `
           <div style="padding:8px 0;border-bottom:1px solid var(--border)">
@@ -897,6 +896,9 @@ const UI = {
 
     // Все характеристики — раскрывающийся блок (details/summary)
     if (unit.fullStats) {
+      // Источник для стат-полей (cost/hp/speed и т.д.) и для оружия
+      const statsSrc = unit.sourceStats || "ai";
+      const wpnSrc = unit.sourceWeapons || "ai";
       html += `<div class="detail-section">
         <details class="full-stats">
           <summary>Все характеристики <span style="color:var(--text-secondary);font-weight:400;font-size:12px">(нажми, чтобы развернуть)</span></summary>
@@ -908,7 +910,12 @@ const UI = {
               else if (v === null || v === undefined || v === "") { txt = "-"; }
               else { txt = v; }
               const label = FULL_STATS_LABELS[k] || k;
-              return `<div class="full-stats-row"><span class="full-stats-label">${label}</span><span class="full-stats-value">${txt}</span></div>`;
+              // Поля оружия (range/damage) — источник оружия, остальные — источник статов
+              const src = (k === "range" || k === "damage") ? wpnSrc : statsSrc;
+              return `<div class="full-stats-row">
+                <span class="full-stats-label">${label}</span>
+                <span class="full-stats-value">${txt} ${this.renderSourceIcon(src)}</span>
+              </div>`;
             }).join('')}
           </div>
         </details>
@@ -943,6 +950,9 @@ const UI = {
       html += `</div></div>`;
     }
 
+    // Легенда источников данных
+    html += this.renderSourceLegend(unit);
+
     html += `</div>`;
     return html;
   },
@@ -950,10 +960,50 @@ const UI = {
   renderSourceBadge(source) {
     const badges = {
       'fbi': '<span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(74,222,128,0.12);border:1px solid rgba(74,222,128,0.25);font-size:12px;font-weight:600;color:#4ade80;margin-left:8px" title="Файлы игры (100%)">&#128190; ИГРА</span>',
+      'modinfo': '<span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(234,179,8,0.12);border:1px solid rgba(234,179,8,0.25);font-size:12px;font-weight:600;color:#eab308;margin-left:8px" title="Официальный справочник TAESC (modinfo)">&#128218; MODINFO</span>',
       'wiki': '<span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(96,165,250,0.12);border:1px solid rgba(96,165,250,0.25);font-size:12px;font-weight:600;color:#60a5fa;margin-left:8px" title="taesc.tauniverse.com (старая версия)">TAESC</span>',
       'ai': '<span style="display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:4px;background:rgba(248,113,113,0.12);border:1px solid rgba(248,113,113,0.25);font-size:12px;font-weight:600;color:#f87171;margin-left:8px" title="Нет данных">&#10005; НЕТ ДАННЫХ</span>'
     };
     return badges[source] || badges['ai'];
+  },
+
+  // Маленькая иконка-логотип источника данных.
+  // fbi  = файлы установленной игры (распакованные .fbi)
+  // modinfo = официальный справочник TAESC (script-adjusted оружие)
+  // wiki = старая версия со старого сайта
+  // ai   = нет данных
+  renderSourceIcon(source) {
+    const icons = {
+      'fbi': '<span class="src-icon src-fbi" title="Файлы игры">&#128190;</span>',
+      'modinfo': '<span class="src-icon src-modinfo" title="Официальный справочник TAESC">&#128218;</span>',
+      'wiki': '<span class="src-icon src-wiki" title="Старый сайт TAESC">&#128279;</span>',
+      'ai': '<span class="src-icon src-ai" title="Нет данных">&#10005;</span>'
+    };
+    return icons[source] || '';
+  },
+
+  // Легенда источников данных (внизу страницы юнита)
+  renderSourceLegend(unit) {
+    const legend = [];
+    const add = (key, icon, name, desc) => {
+      legend.push(`<div class="legend-row">${this.renderSourceIcon(key)} <b>${name}</b> — ${desc}</div>`);
+    };
+    if (unit.sourceStats === "fbi" || unit.sourceCost === "fbi") {
+      add('fbi', 'fbi', 'Файлы игры', 'стоимость, HP и характеристики — из распакованных файлов установленной версии TAESC');
+    }
+    if (unit.sourceWeapons === "modinfo") {
+      add('modinfo', 'modinfo', 'Официальный справочник', 'оружие (урон, перезарядка, очередь) — из официального справочника TAESC, с учётом скриптов');
+    } else if (unit.sourceWeapons === "fbi") {
+      add('fbi', 'fbi', 'Файлы игры', 'оружие — из распакованных файлов установленной версии TAESC');
+    }
+    if (unit.sourceStats === "wiki" || unit.sourceWeapons === "wiki") {
+      add('wiki', 'wiki', 'Старый сайт', 'значение из старого справочника taesc.tauniverse.com');
+    }
+    if (unit.sourceStats === "ai" || unit.sourceCost === "ai") {
+      add('ai', 'ai', 'Нет данных', 'точных данных нет');
+    }
+    if (!legend.length) return '';
+    return `<div class="detail-section"><h3>Источники данных</h3>${legend.join('')}</div>`;
   },
 
   renderTips(subPage) {
